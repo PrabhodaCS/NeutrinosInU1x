@@ -1,0 +1,972 @@
+\documentclass[11pt,letterpaper]{article}
+%\pdfoutput=1
+\usepackage{mathtools}
+\usepackage{axodraw2}
+\usepackage{tikz}
+\usepackage{tikz-feynman}
+\usepackage{amscd}
+\usepackage{amsmath}
+\usepackage{slashed}
+\usepackage{gensymb}
+\usepackage{bm}
+\usepackage{jheppub} % for details on the use of the package, please
+\usepackage{booktabs}
+\usepackage{array}  
+\usepackage{cleveref}
+
+\newcommand{\model}{${B_3-L_e-2L_\mu}$ model }
+\newcommand{\bsll}{$b \rightarrow s \ell^+ \ell^-$}
+\newcommand{\bsmm}{$b \rightarrow s \mu^+ \mu^-$}
+\newcommand{\bsee}{$b \rightarrow s e^+ e^-$}
+
+\newcommand{\bc}[1]{\textcolor{blue}{BA: #1}}
+\newcommand{\pcs}[1]{\textcolor{red}{PCS: #1}}
+
+\title{\centering
+% Uncomment closer to the time of publication
+Neutrino masses and mixing in the $3B_3-L_e-2L_\mu$ model}
+
+\author[a]{Ben Allanach}
+\affiliation[a]{DAMTP, University of Cambridge, Wilberforce Road, Cambridge, 
+  CB3 0WA, United Kingdom}
+\emailAdd{ben.allanach.work@gmail.com}
+
+\author[a,1]{and Prabhoda Chandra Sarjapur\note{Corresponding author.}}
+\emailAdd{prabhodacs@gmail.com}
+
+\abstract{The $3B_3-L_e-2L_\mu$ model is based on adding an additional
+  spontaneously broken  $U(1)$
+  gauge symmetry to the Standard Model (SM) with family dependent
+  couplings that necessarily includes three right-handed neutrino fields in
+  order to be anomaly-free. It was proposed
+  to ameleriorate fits of the SM to observables 
+  involving the $b\rightarrow s l^+ l^-$ transition whilst simulataneously
+  explaining the relatively large mass of the third family of quarks, compared
+  to the first two. 
+  We investigate its implications for neutrino masses and mixings.
+  The model can naturally implement the Froggatt-Nielsen mechanism for neutrino
+  mass and mixing hierarchies which leads to an
+  inverted hierarchy and a pattern of neutrino masses and mixing which agrees
+  with those inferred from neutrino oscillations. A normal hierarchy requires the currently
+  unexplained percent-level suppression of a single neutrino Yukawa coupling.}   
+
+\keywords{$B-$anomalies, beyond the Standard Model, flavour changing neutral
+  currents, neutrino masses}
+
+\begin{document} 
+
+\maketitle
+\flushbottom
+
+\section{Introduction \label{sec:intro}}
+
+Various measurements of $B-$meson decays at LHC experiments are in tension
+with state-of-the-art SM predictions, particularly when there is a bottom to
+strange flavour transition accompanied by a di-lepton (i.e.\ di-electron or
+di-muon) pair.
+Measurements in various di-muon invariant mass-squared ($q^2$)
+bins of the branching ratio of the $B_s$ meson decaying to a $\phi$ meson and
+a di-muon pair
+$BR(B_s \rightarrow \phi \mu^+ \mu^-)$ are up to $4\sigma$ smaller than the SM
+predictions~\cite{LHCb:2021zwz,CDF:2012qwd}.
+Some angular distributions in $B \rightarrow K^\ast \mu^+ \mu^-$
+decays have been measured by LHC
+experiments~\cite{LHCb:2013ghj,LHCb:2015svh,ATLAS:2018gqc,CMS:2017rzx,CMS:2015bcy,Bobeth:2017vxj}
+to be several $\sigma$ short of state-of-the-art SM
+predictions and
+the same can be said of $BR(B \rightarrow K^\ast \mu^+
+\mu^-)$~\cite{Parrott:2022zte}. On the other hand, measurements agree with the
+prediction of the SM (to
+within 1$\sigma$ or so) of lepton flavour universality in $b \rightarrow s
+l^+ l^-$ transitions\footnote{When we mention \bsll\ transitions, we
+implicitly include the $CP$ conjugate mode $\bar b \rightarrow \bar s l^+
+l^-$.}~\cite{LHCb:2022qnv} and of $B_s-{\overline{B_s}}$ mixing~\cite{}.
+In Ref.~\cite{Allanach:2023uxz}, it was shown that the $3B_3-L_e-2L_\mu$ model can
+greatly ameliorate a global fit of the SM to flavour observables via the predicted
+family non-universal 
+interactions of the model's TeV-scale $Z^\prime$ vector boson; the total $\chi^2$ (of
+hundreds of observables) improved by 34 units in the model, which has only two
+effective fit parameters. 
+The best-fit point simultaneously
+satisfies constraints from LEP2 di-lepton production, which receives contributions
+from an intermediate tree-level off-shell $Z^\prime$ boson. Current LHC bounds upon
+direct searches for
+the $Z^\prime$ are rather modest: $M_{Z^\prime} > 1.2$~TeV~\cite{Allanach:2024jls}.  
+
+\bc{Describe Frogatt-Nielsen models}
+
+\pcs{Changing order}
+
+\bc{Describe $3B3-L_e-2L_\mu$ model and its charged fermion mass properties}
+
+\bc{Then: we wish to investigate the neutrino mass properties of the model because
+it's ``interesting'' from that point of view.}
+
+\bc{Type I See-saw review. }
+
+\bc{In the rest of this paper, we ...}
+
+\section{Origin of neutrino masses and mixing}
+
+The \model augments the gauge symmetry of the SM by an additional $U(1)_X$
+factor, where the $U(1)_X$ family-dependent fermionic field charges are fixed
+to be three times third family baryon number minus electron number, minus
+twice muon number. In order for the model to be free of quantum field
+theoretic anomalies, one requires it to contain at least two further
+right-handed neutrino $\nu_{R_{1,2}}$ fields. A third, $\nu_{R_3}$, is added so that the
+three families of fermionic field are identical from the point of view of the SM symmetries. This $U(1)_X$ symmetry is broken by the complex scalar field dubbed the flavon, $\theta$, at the TeV scale ($\langle \theta \rangle \sim \mathcal{O}(\text{TeV})$).
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{10pt}     % horizontal padding
+\renewcommand{\arraystretch}{1.2}  % vertical padding
+\begin{tabular}{|c|c|c|c|c|c|}
+    \toprule
+     & $L_1, \,\, L_2, \,\, L_3$ & $e_1, \,\, e_2, \,\, e_3$ & $\nu_1, \,\, \nu_2, \,\, \nu_3$& $H$ &$\theta$\\
+    \midrule
+    $SU(3)$ & $\bm{1}$ & $\bm{1}$ & $\bm{1}$ & $\bm{1}$ & $\bm{1}$ \\
+    $SU(2)$ & $\bm{2}$ & $\bm{1}$ & $\bm{1}$ & $\bm{2}$ & $\bm{1}$ \\
+    $U(1)_Y$ & -3 & -6 & 0 & 3 & 0 \\
+    $U(1)_X$ & $-1, \,\, -2, \,\, 0$  & $-1, \,\, -2, \,\, 0$ & $-1, \,\, -2, \,\, 0$ & 0 & 1 \\
+    \bottomrule
+\end{tabular}
+\caption{Lepton charge assignments under 
+$SU(3)\!\times\!SU(2)\!\times\!U(1)_Y\!\times\!U(1)_X$. $L_i$ are left-handed Weyl fermion fields, whereas the rest of the fields are right-handed and $H$ and $\theta$ are the complex scalar Higgs doublet and the complex scalar flavon}
+\label{tab:lepton_charges}
+\end{table}
+
+Furnished with the $\nu_{R_i}$ fields, the model could potentially implement the Type I see-saw mechanism of neutrino masses via the dimension-4 Lagrangian density terms
+\begin{equation} \label{Neutrino Mass Lagrangian}
+  {\mathcal L} = \ldots - {\overline L_i} (Y_\nu)_{ij} \tilde{H} \nu_{R_j} - \frac{1}{2}
+  {\overline{(\nu_{R_i})^c}} M_{ij} \nu_{R_j} + \textrm{H.c.},
+  \end{equation}
+where $i,j \in \{1,2,3\}$ are family indices (with an implied Einstein summation convention on repeated indices) and gauge indices have been suppressed. $(Y_\nu)_{ij}$ is a matrix of dimensionless Yukawa couplings and $M_{ij}$ is a matrix of mass-dimension 1 Majorana masses.
+
+Upon spontaneous symmetry breaking, we can write the Higgs field as $H = (0, (v+h)/\sqrt{2})^T$ and generate mass-like terms for the neutrinos through the Yukawa terms. Combining this with the Majorana terms, we can write \cref{Neutrino Mass Lagrangian} as 
+\begin{equation}
+    \mathcal{L}_\nu \supset - \frac{1}{2}\begin{pmatrix}
+        \bm{\bar{\nu}}_L & \bm{\bar{\nu}}_R
+    \end{pmatrix} \bm{M}_\nu \begin{pmatrix}
+        \bm{\bar{\nu}}_L \\ \bm{\bar{\nu}}_R
+    \end{pmatrix},
+\end{equation}
+where $\bm{M}_\nu$ is a 6 by 6 complex symmetric matrix is
+\begin{equation}
+    \bm{M}_\nu = \begin{pmatrix}
+        0 & m_{\nu D} \\
+        m_{\nu D}^T & M
+    \end{pmatrix}
+\end{equation}
+and $m_{\nu D} = v\bm{Y}_\nu/\sqrt{2}$
+
+\pcs{seesaw?}
+
+However, the Yukawa matrix $\bm{Y}_\nu$ and $\bm{M}$  are diagonal by virtue of remaining invariant under the $U(1)_X$ charge assignment given in \cref{tab:lepton_charges}.
+\begin{equation}
+    Y_{\nu}  =   
+    \begin{pmatrix}
+    \times & 0 & 0 \\
+    0 & \times & 0 \\
+    0 & 0 & \times 
+    \end{pmatrix}, \,\,\,\,\,\,
+    M_R  =   
+    \begin{pmatrix}
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
+    0 & 0 & \times 
+    \end{pmatrix},
+\end{equation}
+
+\section{Neutrino masses}
+the Yukawa and Majorana matrices are diagonal by virtue of remaining invariant under the new gauge group charges,
+
+The neutrino mass matrix has the form
+\begin{equation} \label{Full neutrino mass matrix}
+    M_\nu = \begin{pmatrix}
+        0 & m_{\nu D} \\ m_{\nu D}^T & M_R 
+    \end{pmatrix},
+\end{equation} 
+where $m_{\nu D} = \frac{v}{\sqrt{2}} Y_\nu$ and $M_R$ is a complex, symmetric $3 \times 3$ matrix, whose eigenvalues $(M_1, M_2, M_3)$ are the three heavy neutrino masses.
+
+For the LH neutrino masses, we get: $m_\nu = m_{\nu D} M_R^{-1}m_{\nu D}^T = \frac{v^2}{2} Y_{\nu} M_R^{-1}Y_{\nu}^T$. For the charged lepton sector, we get $Y_e$ diagonal too, with the current bounds on $\mu \rightarrow e \gamma$ \cite{navas_review_2024} enforcing close to zero off-diagonal terms. This further implies that to go from the mass eigenbasis to the weak eigenbasis, one needs only the similarity transform matrix that diagonalizes the $m_\nu$ matrix, that is, $U_{PMNS} = V^\dagger_{\nu_L}$.
+
+\subsection{Off-Diagonal entries and the Froggatt-Nielsen Mechanism}
+According to \ref{Yukawa Lagrangian} and \ref{Full neutrino mass matrix}, the resulting $m_\nu$ matrix would also be diagonal. However, from neutrino oscillations, we know that the weak eigenstates and mass eigenstates of neutrinos are not the same. This implies that there are non-zero, however suppressed off-diagonal entries in both the Yukawa and Majorana matrices. The simplest known way to generate these suppressed entries is through the Froggatt-Nielsen (FN) mechanism \cite{froggatt_hierarchy_1979}. 
+
+In this approach, we assume that the complex scalar field, the flavon \footnote{In the model, the flavon upon spontaneous symmetry breaking, gives the $Z'$ its mass}, $\Theta$, is also charged under the $U(1)_X$ group with charge $-1$. This allows us to write down non-renormalizable terms, which remain fully gauge-invariant under the full gauge group,
+\begin{equation} \label{Yukawa Lagrangian FN}
+    \small
+    -\mathcal{L}_Y  \supset  \Bar{\bm{L}}_{L i} y_{ ij} \Big( \frac{\langle\Theta\rangle}{\Lambda}\Big)^{|-X_i + X_j|} \Tilde{H} \bm{\nu}_{R j}  +  \frac{M_0}{2}  \Bar{\bm{\nu}}_R^c a_{ij}  \Big( \frac{\langle\Theta\rangle}{\Lambda}\Big)^{|X_i + X_j|} \bm{\nu}_R + H.c.,
+\end{equation}
+where $y_{ij} \ \text{and} \ m_{ij}$ are of the order $\mathcal{O}(1)$, since we have shifted the hierarchical structure of the mass matrix onto the FN mechanism with entries being approximately equal.
+
+Denoting $\frac{\langle\Theta\rangle}{\Lambda} = \epsilon$, we get the matrices as:
+
+\begin{equation} \label{FN Y and M}
+    Y_{\nu L} = 
+    \begin{pmatrix}
+        y_{11} &\epsilon y_{12} & \epsilon y_{13} \\
+        \epsilon y_{21}&y_{22}&\epsilon^{2}y_{23}\\
+        \epsilon y_{31}& \epsilon^{2}y_{32}&y_{33}
+    \end{pmatrix}, \,\ 
+    M_R = M_0
+    \begin{pmatrix}
+    \epsilon^{2}a_{11}&\epsilon^{3}a_{12}&\epsilon a_{13}\\
+    
+    \epsilon^{3} a_{21} & \epsilon^{4} a_{22}& \epsilon^{2} a_{23}\\
+    
+    \epsilon a_{31} & \epsilon^{2}a_{32}&a_{33} 
+    \end{pmatrix},
+\end{equation}
+
+Here, we have extracted the dimensional mass term out front as $M_0$, which is of the order of the GUT scale of $10^{14} - 10^{16} \text{GeV}$. The remaining parameters $a_{ij}$ are $\mathcal{O}(1)$.
+
+\subsection{Analytic expansion of masses and mixing angles}
+The inverse majorana mass matrix takes the form of a complex symmetric matrix 
+
+\begin{equation}
+    A = \begin{pmatrix}
+        \alpha_{11}\epsilon^{-2} & \alpha_{12}\epsilon^{-3}  & \alpha_{13}\epsilon^{-1} \\
+        \alpha_{12}\epsilon^{-3} & \alpha_{22}\epsilon^{-4}  & \alpha_{23}\epsilon^{-2} \\
+        \alpha_{13}\epsilon^{-1} & \alpha_{23} \epsilon^{-2} & \alpha_{33} 
+    \end{pmatrix}, 
+\end{equation}
+
+
+The matrix $Y_\nu$ has 9 $\mathcal{O}(1)$ independent parameters, and $A/M$ has 6 independent real parameters. including $\epsilon$ and $M_0$, we get 17 independent parameters. 
+
+Given this, the left handed neutrino mass matrix is given by $m_\nu \sim \frac{v^2}{2} Y_{\nu L} M^{-1} Y_{\nu L}^T$,
+\begin{equation}
+    m_\nu = \frac{v^2}{2M_0} \begin{pmatrix}
+        y_{11} &\epsilon y_{12} & \epsilon y_{13} \\
+        \epsilon y_{21}&y_{22}&\epsilon^{2}y_{23}\\
+        \epsilon y_{31}& \epsilon^{2}y_{32}&y_{33}
+    \end{pmatrix}
+    \begin{pmatrix}
+    \epsilon^{2}a_{11}&\epsilon^{3}a_{12}&\epsilon a_{13}\\
+    
+    \epsilon^{3} a_{21} & \epsilon^{4} a_{22}& \epsilon^{2} a_{23}\\
+    
+    \epsilon a_{31} & \epsilon^{2}a_{32}&a_{33} 
+    \end{pmatrix}^{-1}
+    \begin{pmatrix}
+        y_{11} & y_{21}& \epsilon y_{31} \\
+        \epsilon  y_{12}&y_{22}&\epsilon^{2}y_{32}\\
+        \epsilon y_{13}& \epsilon^{2}y_{23}&y_{33}
+    \end{pmatrix},
+\end{equation}
+
+Extracting the singular part of the $\epsilon$ factors, we can expand the matrix in a series in $\epsilon$ as follows:
+
+\begin{equation} 
+    m_\nu \approx \frac{v^2}{2M_0} \epsilon^{-4} (X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \cdots) 
+\end{equation}
+where:
+\begin{equation} \label{Lowest order - Unchanged}
+    X^{(0)} = \begin{pmatrix}
+        0 &  0  & 0 \\
+        0  & y_{22}^2 \alpha_{22} &  0  \\
+        0  & 0  & 0
+    \end{pmatrix}
+\end{equation}
+
+\begin{equation}
+    X^{(1)} = \begin{pmatrix}
+        0 &  y_{22}y_{11}\alpha_{12} + y_{22}y_{21}\alpha_{22}  & 0 \\
+        y_{22}y_{21}\alpha_{22} + y_{22}y_{11}\alpha_{12}   & 0 &  0  \\
+        0  & 0  & 0
+    \end{pmatrix} 
+\end{equation}
+
+\begin{equation}
+    \resizebox{1\textwidth}{!}{$
+    X^{(2)} = \begin{pmatrix}
+    y_{11}^2\alpha_{11} + y_{21}^2\alpha_{22} + 2y_{11}y_{21}\Re(\alpha_{12}) & 0 & 0 \\[6pt]
+    0 & 2y_{12}y_{22}\Re(\alpha_{12}) & y_{22}y_{23}\alpha_{22} + y_{22}y_{33}\alpha_{23} + y_{13}y_{22}\alpha_{12} \\[6pt]
+    0 & y_{13}y_{22}\alpha_{12} + y_{22}y_{23}\alpha_{22} + y_{22}y_{33}\alpha_{23} & 0
+    \end{pmatrix}$}
+\end{equation}
+
+where the inverse elements of the Majorana matrix are denoted by $M_{R ij}^{-1}=\epsilon^{-(X_i+X_j)}\alpha_{ij}$. Using second order perturbation theory, we get $(X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)}) (\psi^{(0)} + \epsilon \psi^{(1)} + \epsilon^2 \psi^{(2)})  = (\lambda^{(0)} + \epsilon \lambda^{(1)} + \epsilon^2 \lambda^{(2)}) (\psi^{(0)} + \epsilon \psi^{(1)} + \epsilon^2 \psi^{(2)})$. 
+
+Using this, we find that the three eigenvalues (masses) of the left-handed (LH) neutrinos are: 
+
+\begin{equation}\label{NormalHierarchy}
+\begin{aligned}
+    m_{\nu_3} &\approx \frac{v^2 \epsilon^{-4}}{2M_0}\Bigg[
+    y_{22}^2\alpha_{22}
+    + \epsilon^{2}\Big(
+    y_{11}^2\alpha_{11} + y_{21}^2\alpha_{22}
+    + 2y_{11}y_{21}\Re(\alpha_{12}) 
+    -\frac{\big|y_{22}y_{21}\alpha_{22}+y_{22}y_{11}\alpha_{12}\big|^2}{y_{22}^2 \alpha_{22}}
+    \Big)
+    \Bigg],\\[6pt]
+    m_{\nu_2} &\approx \frac{v^2 \epsilon^{-2}}{2 M_0}\Bigg[
+    2y_{22}y_{12}\Re(\alpha_{12})
+    -\frac{\big|y_{22}y_{11}\alpha_{12}+y_{22}y_{21}\alpha_{22}\big|^2}{y_{22}^2 \alpha_{22}}
+    \Bigg],\\[4pt]
+    m_{\nu_1} &\approx 0 .
+\end{aligned}
+\end{equation}
+
+using this, we can approximate the order of magnitude of the FN suppression factor $\epsilon$,
+
+\begin{align}    
+    &\epsilon^{-2} \sim \frac{m_{\nu 3}}{m_{\nu 2}}   \\
+    &\epsilon^{-2} \sim \sqrt{\frac{\Delta m^2_{31}}{\Delta m^2_{21}}} \\
+    &\epsilon = \Big(\frac{8 \times 10^{-5}}{2.5 \times 10^{-3}} \Big)^{0.25} = 0.42,
+\end{align}
+this fixes the scale of the right-handed (RH) neutrinos $M_0 \approx 10^ {15} \text{GeV}$. The eigenvector matrix is 
+\begin{equation}
+    U_{\text{PMNS}} \approx 
+    \begin{pmatrix}
+         \frac{\varepsilon  (\alpha_{12} y_{11} y_{22} + \alpha_{22} y_{21} y_{22})}{\alpha_{22} y_{22}^2} & 1 & 0 \\
+         1 & -\frac{\varepsilon  (\alpha_{12} y_{11}+\alpha_{22} y_{21})}{\alpha_{22} y_{22}} & 0 \\
+         0 & 0 & 1
+    \end{pmatrix}
+\end{equation}
+
+This can be made more accurate through numerical analysis, but this explicitly shows (\ref{Lowest order - Unchanged}) that the $\epsilon^{-4}$ enhancement from the Majorana mass matrix forces the third mass ($\nu_3$) eigenstate to be purely $\nu_\tau$.
+
+Analysing the matrix determinant, we get $\det(m_\nu) = \det[\text{diag}(m_1,m_2,m_3)]$. This implies: 
+\begin{equation}
+    \det(m) = m_1m_2m_3 = -\Big(\frac{v^2}{2}\Big)^3\frac{\det(Y_{\nu L})^2}{\det(M)}    
+\end{equation}
+Provided M is not singular, we can extract the $\epsilon$ dependance from it, we can see that the eigenvalues depends on the square of
+\begin{align} \label{mnu dets}
+    m_1m_2m_3 &\propto 
+    \epsilon^{-6} y_{11} y_{22} y_{33}  - \epsilon^{-4} y_{13} y_{22} y_{31} - \epsilon^{-4}y_{12} y_{21} y_{33} +  \epsilon^{-2}y_{12} y_{23} y_{31} + \epsilon^{-2} y_{13} y_{21} y_{32} - 
+    \epsilon^{-2}y_{11} y_{23} y_{32} 
+\end{align}
+
+To reduce the severity of the hierarchy, we will need to kill the terms with an $\epsilon^{-4}$ dependence. Looking at \ref{Lowest order - Unchanged} and \ref{mnu dets}, we can either demand $y_{22} = 0$ or $\alpha_{22}=0 \implies m_{11} = m_{13} =0$
+
+\subsection{CASE I: Setting $y_{22} = 0$} 
+\begin{equation} \label{Textured Yukawa Neutrino}
+    Y_{\nu L} \approx
+    \begin{pmatrix}
+        y_{11} &\epsilon y_{12} & \epsilon y_{13} \\
+        \epsilon y_{21}&0&\epsilon^{2}y_{23}\\
+        \epsilon y_{31}& \epsilon^{2}y_{32}&y_{33}
+    \end{pmatrix},
+\end{equation}
+
+\begin{equation}
+    m_\nu \approx \frac{v^2}{2M_0} \epsilon^{-2} (X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \cdots) 
+\end{equation}
+where:
+
+\begin{equation}
+    X^{(0)} = \begin{pmatrix}
+        \times &  0 & 0 \\
+        0  & 0  &  0  \\
+        0  & 0  & 0
+    \end{pmatrix}, \,\,\,\,  X^{(1)} = \begin{pmatrix}
+        0 & \times & 
+        \times \\
+        \times &  0 &0  \\
+        \times  & 0  & 0
+    \end{pmatrix}, \,\,\,\, 
+     X^{(2)} = \begin{pmatrix}
+    \times & 0 & 0 \\
+    0 & \times & \times  \\
+    0& \times &\times 
+    \end{pmatrix}
+\end{equation}
+
+At first order, $\text{Diag}(m_{\nu 1},m_{\nu 2},m_{\nu 3}) \approx \frac{v^2 \epsilon^{-2}}{2M_0}(\lambda_1^{(0)},0,0)$. First-order corrections are zero. Going to the second order, we get that the eigenvalues are of the form (the detailed eigenvalues are given in the Appendix)
+\begin{align}
+    m_3 &= m (A_3 + \epsilon^2 B_3)\\
+    m_2 &= m \epsilon^2 B_2\\
+    m_1 &= m \epsilon^2 B_1
+\end{align}
+Analyzing this, we can see that it is normally ordered.
+So:
+\begin{align}
+    &\frac{\Delta m_{{32}}^2}{\Delta m_{{12}}^2} \approx \Big(\frac{8 \times 10^{-5}}{2.5 \times 10^{-3}} \Big) \approx 0.03\\
+    & \epsilon^4 \frac{(B_3-B_2)^2}{A_1^2} \approx 0.03 \\
+    &\implies \epsilon  \approx 0.4
+\end{align}
+
+The unnormalized PMNS matrix has the approximate form:
+\begin{equation}
+    U\approx 
+    \begin{pmatrix}
+    1 + \epsilon^2 u_{11}'' & \epsilon u_{12}' & \epsilon u_{13}' \\
+    \epsilon u_{21}' & u_{22} & u_{23} \\
+    \epsilon u_{31}' & u_{32} & u_{33}
+    \end{pmatrix}
+\end{equation}
+Therefore, we get the mixing angles as
+\begin{align} \label{NO matching}
+    \sin \theta_{13} &= {|U_{e3}|} \sim  \epsilon u_{13}' \approx 0.15,
+    \\
+    \tan \theta_{12} &= \frac{{|U_{e2}}|}{|U_{e1}|} \sim \frac{\epsilon u_{12}'}{ 1+\epsilon^2u_{11}''} \approx \epsilon u_{12}' \approx 0.66, \\
+    \tan \theta_{23} &= \frac{|{U_{\mu3}}|}{|{U_{\tau3}}|} \sim \frac{u_{23}}{u_{33}} \approx 1.15.
+\end{align}
+Given that the $u_{ij}$ are products and sums of many $y_{ij}$ and $a_{ij}$ which are $\mathcal{O}(1)$, we see that the conditions \ref{NO matching} are quite plausible, which is verified below in \ref{Posterior Dist for the three angles (Normal Ordering)} and \ref{Posterior Distribution for the mass squared differences (Normal Ordering)} by a Bayesian sampling over all $y_{ij},a_{ij}, \epsilon, M_0$ values.
+
+\begin{figure}[h!]
+    \includegraphics[width=1.2\textwidth]{angles_panel_modern.png}
+    \caption{Posterior Dist for the Mixing angles (Normal Ordering)}
+    \label{Posterior Dist for the three angles (Normal Ordering)}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{dm_splittings_with_exp.png}
+    \caption{Posterior Dist for the mass squared differences (Normal Ordering)}
+    \label{Posterior Distribution for the mass squared differences (Normal Ordering)}
+\end{figure}
+
+The diagnostics reads: 
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+        Observable & Theoretical Mean & Experimental Value & $\sigma$ & p-value \\
+        \hline
+        \hline
+        $\Delta m_{21}^2$ & $7.49 \times 10^{-5}$
+        & $7.50\times 10^{-5}$ & $1.80\times 10^{-6}$ & $0.977187972$ \\
+        $\Delta m_{31}^2$ & $0.002499481$
+        & $0.0025$ & $4.00 \times 10^{-5}$ & $0.989639549$ \\
+        $\theta_{12}$ & $0.587334844$
+        & $0.587252369$ & $0.013008147$ & $0.994941208$ \\
+        $\theta_{13}$ & $0.148192059$
+        & $0.148190018$ & $0.002396768$ & $0.999320427$ \\
+        $\theta_{23}$ & $0.822187699$
+        & $0.822432016$ & $0.020054986$ & $0.990280147$    \\
+        \hline
+        Combined \textbf{PPP} & &  & & $0.499817$ \\
+        \hline
+        $\epsilon$ & $0.3785$ &  & $0.0922$ & \\
+        $\log M_0$ & $15.1088$ &  & $0.5346$ & \\        
+    \hline
+    \end{tabular}
+    \caption{Posterior means and p-values for the normal hierarchy (NH) fit.
+    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 5.2 (2024) global fits \cite{navas_review_2024}. 
+    The PPP entries represent the posterior predictive probabilities for the full observable set}
+    \label{NO Table}
+\end{table}
+
+\subsection{CASE II : Setting $m_{11}=m_{13}=m_{31}=0$}
+
+Repeating the same calculations as the previous section, we get the eigenvalues of the form:
+
+\begin{align}
+    m_3 &= m (A_3 + \epsilon B_3 + \epsilon^2 C_3)\\
+    m_2 &= m (-A_3 + \epsilon B_3 + \epsilon^2 C_2)\\
+    m_1 &= 0
+\end{align}
+
+This gives us an inverted hierarchy with $m_3 > m_2 \gg m_1$
+
+\begin{align} 
+    \frac{\Delta m_{32}^2}{\Delta m_{31}^2} &\sim \epsilon \sim \left( \frac{8 \times 10^{-5}}{ 2.5 \times 10^{-3}} \right) \\
+    \epsilon &\sim 0.32
+\end{align}
+
+The PMNS matrix has the (unnormalized) form:
+
+\begin{equation}
+    U \approx 
+    \begin{pmatrix}
+        -1+ \epsilon u_{11}' +\epsilon^2 u_{11}'' & 1 + \epsilon u_{12}' +\epsilon^2 u_{12}'' & \epsilon u_{13}' +\epsilon^2 u_{13}'' \\
+        1 + \epsilon u_{21}' +\epsilon^2 u_{21}'' & -1 + \epsilon u_{22}' +\epsilon^2 u_{22}'' &  \epsilon u_{23}' +\epsilon^2 u_{23}'' \\
+        -\epsilon u_{31} &  \epsilon^2 u_{32}'' & 1 + \epsilon^2 u_{33}''
+    \end{pmatrix}
+\end{equation}
+
+\begin{align}
+    \sin \theta_{13} &= |U_{e3}| \sim  \epsilon u_{13}' +\epsilon^2 u_{13}'' \approx 0.15 \\
+    \tan \theta_{12} &= \frac{|{U_{e2}}|}{{|U_{e1}|}} \sim \frac{1 + \epsilon u_{12}' +\epsilon^2 u_{12}''}{-1 + \epsilon u_{11}' +\epsilon^2 u_{11}''}\approx 1 + \epsilon u_{12}' +\epsilon^2 (u_{12}'' - u_{11}')  \approx 0.66 \\
+    \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \sim \frac{ \epsilon u_{23}' +\epsilon^2 u_{23}''}{ 1 +\epsilon^2 u_{33}''} \approx 1.15
+\end{align}
+
+\begin{figure}[h!]
+    \includegraphics[width=1.2\textwidth]{angles_panel_modern.png}
+    \caption{Posterior Dist for the Mixing angles (Inverted Hierarchy)}
+    \label{Posterior Dist for the three angles (Inverted Hierarchy)}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{dm_splittings_with_exp.png}
+    \caption{Posterior Dist for the mass squared differences (Inverted Hierarchy)}
+    \label{Posterior Distribution for the mass squared differences (Inverted Hierarchy)}
+\end{figure}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+        Observable & Theoretical Mean & Experimental Value & $\sigma$ & p-value \\
+        \hline
+        \hline
+        $\Delta m_{21}^2$ & $7.4979\times 10^{-5}$ 
+        & $7.50\times 10^{-5}$ & $1.80\times 10^{-6}$ & $0.990481$ \\
+        $\Delta m_{31}^2$ & $2.4992\times 10^{-3}$ 
+        & $2.50\times 10^{-3}$ & $4.00\times 10^{-5}$ & $0.983272$ \\
+        $\theta_{12}$ & $0.5871$
+        & $0.5873$ & $0.0131$ & $0.991675$ \\
+        $\theta_{13}$ & $0.1482$
+        & $0.1482$ & $0.0024$ & $0.998844$ \\
+        $\theta_{23}$ & $0.8241$
+        & $0.8224$ & $0.0201$ & $0.935521$ \\
+        \hline
+        Combined \textbf{PPP} & & & & $0.497842$ \\
+        \hline
+        $\epsilon$ & $0.3908$ &  & $0.0809$ &  \\
+        $\log M_0$ & $15.2376$ &  & $0.5394$ &  \\
+      \hline
+    \end{tabular}
+    \caption{Posterior means and p-values for the inverted hierarchy (IO) fit.
+    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 5.2 (2024) global fits \cite{navas_review_2024}. 
+    The PPP entries represent the posterior predictive probabilities for the full observable set.}
+    \label{IO Table}
+\end{table}
+
+
+\section{Flavon UV}
+\subsection{Yukawa Mediators}
+Three vector-like heavy Fermions
+\begin{table}[h]
+\centering
+\begin{tabular}{ | c | c | } 
+  \hline
+  Fermion & $SU(3)_c \times SU(2)_L  \times  U(1)_Y \times U(1)_X$  \\ 
+  \hline
+  \hline
+  $\Psi^A_{L/R}$ & $(\mathbf{1},\mathbf{2},\mathbf{-\frac{1}{2}},\mathbf{-2})$ \\ 
+  \hline
+  $\Psi^B_{L/R}$ & $(\mathbf{1},\mathbf{2},\mathbf{-\frac{1}{2}},\mathbf{-1})$ \\ 
+  \hline
+  $\Psi^C_{L/R}$ & $(\mathbf{1},\mathbf{2},\mathbf{-\frac{1}{2}},\mathbf{0})$ \\ 
+  \hline
+\end{tabular}
+\caption{FN charge assignments for the leptons.}
+\label{Table 1}
+\end{table}
+
+So for: 
+\begin{equation} \label{General Yukawa Neutrino}
+    Y_{\nu L} = 
+    \begin{pmatrix}
+        y_{11} &\epsilon y_{12} & \epsilon y_{13} \\
+        \epsilon y_{21}&y_{22}&\epsilon^{2}y_{23}\\
+        \epsilon y_{31}& \epsilon^{2}y_{32}&y_{33}
+    \end{pmatrix},
+\end{equation}
+
+\begin{align}
+    -\mathcal{L}_{12} &\supset M_A\bar{\Psi}^A_{L}\Psi_{R}^A
+    + \lambda_{1}\bar{L}_{1L}\Theta^\dagger \Psi_{R}^A
+    + \lambda_{2}\bar{\Psi}_{L}^A \tilde{H} \nu_{R2} \\
+    -\mathcal{L}_{13} &\supset M_C\bar{\Psi}^C_{L}\Psi_{R}^C + \lambda_{1}\bar{L}_{1L}  \Theta \Psi_{R}^C + \lambda_{2}\bar{\Psi}_{L}^C \tilde{H} \nu_{R3}\\
+    -\mathcal{L}_{21} &\supset M_B\bar{\Psi}^B_{L}\Psi_{R}^B + \lambda_{1}\bar{L}_{2L}  \Theta \Psi_{R}^B + \lambda_{2}\bar{\Psi}_{L}^B \tilde{H} \nu_{R1} \\
+    -\mathcal{L}_{23} &\supset M_B\bar{\Psi}^B_{L}\Psi_{R}^B + M_C\bar{\Psi}^C_{L}\Psi_{R}^C + \lambda_{1}\bar{L}_{2L}  \Theta \Psi_{R}^B + + \lambda_2 \bar{\Psi}_L^C \Theta^\dagger \Psi_R^B + \lambda_{3}\bar{\Psi}_{L}^C \tilde{H} \nu_{R3} \\
+    -\mathcal{L}_{31} &\supset M_B\bar{\Psi}^B_{L}\Psi_{R}^B + \lambda_{1}\bar{L}_{3L}  \Theta^\dagger \Psi_{R}^B + \lambda_{2}\bar{\Psi}_{L}^B \tilde{H} \nu_{R1} \\
+    -\mathcal{L}_{32} &\supset M_A\bar{\Psi}^A_{L}\Psi_{R}^A + M_B\bar{\Psi}^B_{L}\Psi_{R}^B + \lambda_{1}\bar{L}_{3L}  \Theta^\dagger \Psi_{R}^B + + \lambda_2 \bar{\Psi}_L^A \Theta \Psi_R^B+  \lambda_{3}\bar{\Psi}_{L}^A \tilde{H} \nu_{R2} 
+\end{align}
+
+\begin{figure}[h!]
+    \centering
+    % Equation as part of the caption
+    \centering
+    \begin{tikzpicture}
+    \begin{feynman}
+        \vertex (2) at (2, 0);
+        \vertex (3) at (2, 2);
+        \node[crossed dot] (4) at (4, 0);
+        \vertex (5) at (6, 0);
+        \vertex (6) at (6, 2);
+        \vertex (7) at (8, 0);
+        \vertex (8) at (0, 0);
+        \diagram*{
+            (2) --[scalar,edge label'={\(\langle\theta\rangle\)}] (3),
+            (2) --[fermion,edge label'={\(\Psi^A\)}] (4),
+            (4) --[anti fermion,edge label'={\(\Psi^A\)}] (5),
+            (5) --[scalar,edge label={\(\langle H\rangle\)}] (6),
+            (5) --[fermion,edge label'={\(\nu_{R2}\)}] (7),
+            (8) --[anti fermion,edge label={\(\bar{L}_{L1}\)}] (2)
+        };
+    \end{feynman}
+    \end{tikzpicture}
+    \caption{\(y_{12}\) :
+    \(-\mathcal{L}_{12} \supset M_A\bar{\Psi}^A_{L}\Psi_{R}^A
+    + \lambda_{1}\bar{L}_{1L}\Theta^\dagger \Psi_{R}^A
+    + \lambda_{2}\bar{\Psi}_{L}^A \tilde{H} \nu_{R2}\).}
+    \label{fig:y12}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    % Equation as part of the caption
+    \centering
+        \begin{tikzpicture}
+        \begin{feynman}
+        \vertex (2) at (2, 0);
+        \vertex (3) at (2, 2);
+        \node[crossed dot] (4) at (4, 0);
+        \vertex (5) at (6, 0);
+        \vertex (6) at (6, 2);
+        \vertex (7) at (8, 0);
+        \vertex (8) at (0, 0);
+        \diagram*{
+        	(2) --[scalar,edge label'={\(\langle\theta\rangle\)}] (3),
+        	(2) --[fermion,edge label'={\(\Psi^C\)}] (4),
+        	(4) --[anti fermion,edge label'={\(\Psi^C\)}] (5),
+        	(5) --[scalar,edge label={\(\langle H\rangle\)}] (6),
+        	(5) --[fermion,edge label'={\(\nu_{R3}\)}] (7),
+        	(2) --[fermion,edge label={\(\bar{L}_{L1}\)}] (8)
+        };
+        \end{feynman}
+        \end{tikzpicture}
+    \caption{\(y_{13}\) :
+    \(
+    -\mathcal{L}_{13} \supset M_C\bar{\Psi}^C_{L}\Psi_{R}^C + \lambda_{1}\bar{L}_{1L}  \Theta \Psi_{R}^C + \lambda_{2}\bar{\Psi}_{L}^C \tilde{H} \nu_{R3}\).}
+    \label{fig:y13}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    % Equation as part of the caption
+    \centering    
+        \begin{tikzpicture}
+        \begin{feynman}
+        \vertex (2) at (2, 0);
+        \vertex (3) at (2, 2);
+        \node[crossed dot] (4) at (4, 0);
+        \vertex (5) at (6, 0);
+        \vertex (6) at (6, 2);
+        \vertex (7) at (8, 0);
+        \vertex (8) at (0, 0);
+        \diagram*{
+        	(2) --[scalar,edge label'={\(\langle\theta\rangle\)}] (3),
+        	(2) --[fermion,edge label'={\(\Psi^B\)}] (4),
+        	(4) --[anti fermion,edge label'={\(\Psi^B\)}] (5),
+        	(5) --[scalar,edge label={\(\langle H\rangle\)}] (6),
+        	(5) --[fermion,edge label'={\(\nu_{R1}\)}] (7),
+        	(2) --[fermion,edge label={\(\bar{L}_{L2}\)}] (8)
+        };
+        \end{feynman}
+        \end{tikzpicture}
+    \caption{\(y_{21}\) :
+    \(-\mathcal{L}_{21} \supset M_B\bar{\Psi}^B_{L}\Psi_{R}^B + \lambda_{1}\bar{L}_{2L}  \Theta \Psi_{R}^B + \lambda_{2}\bar{\Psi}_{L}^B \tilde{H} \nu_{R1}\).}
+    \label{fig:y21}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    % Equation as part of the caption
+    \centering    
+    \begin{tikzpicture}
+    \begin{feynman}
+    \vertex (2) at (2, 0);
+    \vertex (3) at (2, 2);
+    \node[crossed dot] (4) at (4, 0);
+    \vertex (5) at (6, 0);
+    \vertex (6) at (6, 2);
+    \node[crossed dot] (7) at (8, 0);
+    \vertex (8) at (0, 0);
+    \vertex (9) at (10, 0);
+    \vertex (10) at (10, 2);
+    \vertex (11) at (12, 0);
+    \diagram*{
+    	(2) --[scalar,edge label'={\(\langle\theta\rangle\)}] (3),
+    	(2) --[fermion,edge label'={\(\Psi^B\)}] (4),
+    	(4) --[anti fermion,edge label'={\(\Psi^B\)}] (5),
+    	(5) --[scalar,edge label={\(\langle \theta \rangle\)}] (6),
+    	(5) --[fermion,edge label'={\(\Psi^C\)}] (7),
+    	(2) --[fermion,edge label={\(\bar{L}_{L2}\)}] (8),
+    	(4) --[plain] (5),
+    	(7) --[anti fermion,edge label'={\(\Psi^C\)}] (9),
+    	(9) --[scalar,edge label={\(\langle H \rangle\)}] (10),
+    	(9) --[plain,edge label'={\(\nu_{R3}\)}] (11)
+    };
+    \end{feynman}
+    \end{tikzpicture}
+    \caption{\(y_{23}\) :
+    \(-\mathcal{L}_{23} \supset M_B\bar{\Psi}^B_{L}\Psi_{R}^B + M_C\bar{\Psi}^C_{L}\Psi_{R}^C + \lambda_{1}\bar{L}_{2L}  \Theta \Psi_{R}^B + + \lambda_2 \bar{\Psi}_L^C \Theta^\dagger \Psi_R^B + \lambda_{3}\bar{\Psi}_{L}^C \tilde{H} \nu_{R3}\).}
+    \label{fig:y23}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    % Equation as part of the caption
+    \centering
+    
+    \begin{tikzpicture}
+    \begin{feynman}
+    \vertex (2) at (2, 0);
+    \vertex (3) at (2, 2);
+    \node[crossed dot] (4) at (4, 0);
+    \vertex (5) at (6, 0);
+    \vertex (6) at (6, 2);
+    \vertex (7) at (8, 0);
+    \vertex (8) at (0, 0);
+    \diagram*{
+    (2) --[scalar,edge label'={\(\langle\theta\rangle\)}] (3),
+    (2) --[fermion,edge label'={\(\Psi^B\)}] (4),
+    (4) --[anti fermion,edge label'={\(\Psi^B\)}] (5),
+    (5) --[scalar,edge label={\(\langle H\rangle\)}] (6),
+    (5) --[fermion,edge label'={\(\nu_{R3}\)}] (7),
+    (2) --[fermion,edge label={\(\bar{L}_{L1}\)}] (8)
+    };
+    \end{feynman}
+    \end{tikzpicture}
+    \caption{\(y_{31}\) :
+    \(
+    -\mathcal{L}_{31} \supset M_B\bar{\Psi}^B_{L}\Psi_{R}^B + \lambda_{1}\bar{L}_{3L}  \Theta^\dagger \Psi_{R}^B + \lambda_{2}\bar{\Psi}_{L}^B \tilde{H} \nu_{R1}\).}
+    \label{fig:y31}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    % Equation as part of the caption
+    \centering
+    \begin{tikzpicture}
+    \begin{feynman}
+    \vertex (2) at (2, 0);
+    \vertex (3) at (2, 2);
+    \node[crossed dot] (4) at (4, 0);
+    \vertex (5) at (6, 0);
+    \vertex (6) at (6, 2);
+    \node[crossed dot] (7) at (8, 0);
+    \vertex (8) at (0, 0);
+    \vertex (9) at (10, 0);
+    \vertex (10) at (10, 2);
+    \vertex (11) at (12, 0);
+    \diagram*{
+    	(2) --[scalar,edge label'={\(\langle\theta\rangle\)}] (3),
+    	(2) --[fermion,edge label'={\(\Psi^B\)}] (4),
+    	(4) --[anti fermion,edge label'={\(\Psi^B\)}] (5),
+    	(5) --[scalar,edge label={\(\langle \theta \rangle\)}] (6),
+    	(5) --[fermion,edge label'={\(\Psi^A\)}] (7),
+    	(2) --[fermion,edge label={\(\bar{L}_{L3}\)}] (8),
+    	(4) --[plain] (5),
+    	(7) --[anti fermion,edge label'={\(\Psi^A\)}] (9),
+    	(9) --[scalar,edge label={\(\langle H \rangle\)}] (10),
+    	(9) --[plain,edge label'={\(\nu_{R2}\)}] (11)
+    };
+    \end{feynman}
+    \end{tikzpicture}
+    \caption{\(y_{32}\) :
+    \(
+    -\mathcal{L}_{32} \supset M_A\bar{\Psi}^A_{L}\Psi_{R}^A + M_B\bar{\Psi}^B_{L}\Psi_{R}^B + \lambda_{1}\bar{L}_{3L}  \Theta^\dagger \Psi_{R}^B + + \lambda_2 \bar{\Psi}_L^A \Theta \Psi_R^B+  \lambda_{3}\bar{\Psi}_{L}^A \tilde{H} \nu_{R2}\).}
+    \label{fig:y32}
+\end{figure}
+
+\subsection{Majorana Mediators}
+The Majorana mass matrix is:
+
+
+\begin{equation} \label{General Majorana Mass}
+    M = M_0
+    \begin{pmatrix}
+    \epsilon^{2}m_{11}&\epsilon^{3}m_{12}&\epsilon m_{13}\\
+    
+    \epsilon^{3} m_{21} & \epsilon^{4} m_{22}& \epsilon^{2} m_{23}\\
+    
+    \epsilon m_{31} & \epsilon^{2}m_{32}&m_{33} 
+    \end{pmatrix},
+\end{equation}
+
+given by Lagrangian:
+\begin{equation}
+    -\mathcal{L}_{M} \supset M_0 \bigg(\frac{\langle \theta \rangle}{\Lambda} \bigg)^{X_i + X_j} m_{ij} \bar{\nu}^c_{Ri} \nu_{Rj} + \text{h.c.}
+\end{equation}
+
+\begin{figure}
+
+    \centering
+    \begin{tikzpicture}
+      \begin{feynman}
+        % --- Vertices ---
+        \vertex (nu_c) at (0, 4);
+        \vertex (nu)   at (0, 0);
+        \vertex (s_vertex) at (2, 2);
+    
+        % The blob. Add the 'label=above:{...}' option here.
+        \node[blob, label=above:{\(c_{ij}\)}] (blob_vertex) at (6, 2) {};
+    
+        % The theta VEVs. Add the labels directly to the vertices.
+        \vertex[label=right:{\(\langle \theta \rangle\)}] (theta1) at (8, 4);
+        \vertex[label=right:{\(\langle \theta \rangle\)}] (theta2) at (8, 2);
+        \vertex[label=right:{\(\langle \theta \rangle\)}] (theta3) at (8, 0);
+    
+        % --- Diagram Connections ---
+        \diagram*{
+            (nu_c) --[anti fermion, edge label'={\(\bar{\nu}^c_{Ri}\)}] (s_vertex),
+            (nu)   --[fermion, edge label'={\(\nu_{Rj}\)}] (s_vertex),
+            (s_vertex) --[scalar, edge label={\(S_{ij}\)}] (blob_vertex),
+            
+            % The labels are now on the vertices, so we don't need 'edge label' here.
+            (theta1) --[scalar] (blob_vertex),
+            (blob_vertex) --[scalar] (theta2),
+            (blob_vertex) --[scalar] (theta3)
+        };
+      \end{feynman}
+    \end{tikzpicture}
+    \caption{Here specifically, \(M_{12} = M_{21}\) :
+    \(
+    -\mathcal{L}_{12} \supset \lambda S_{12} \bar{\nu}^c_{1} \nu_{2} + M_{12}^2 S^\dagger_{12}S_{12} + c_{12} S_{12} \theta^{3} + \text{h.c.}\).}
+    \label{fig:M12}
+\end{figure}
+
+
+\begin{equation}
+    -\mathcal{L}_{M} \supset \lambda S_{ij} \bar{\nu}^c_{Ri} \nu_{Rj} + M_{ij}^2 S^\dagger_{ij}S_{ij} + c_{ij} S_{ij} \theta^{X_i + X_j} + \text{h.c.}
+\end{equation}
+
+where $c_{ij} \, , \, S_{ij} \theta^{X_i + X_j} $ is an operator of variable dimension. For $S_{12}\theta^3$ it is a dim-4 operator and $c_{12}$ is dimless.
+
+For $M_{22}$, the coefficient and operator  $c_{22} \, , \, S_{22} \theta^{4}$, it is a non-renormalizable operator with $c_{22}$ having inverse mass dimensions.
+
+
+
+\subsection{No-go theorem for cyclic discrete symmetries}
+
+After SSB, if $U(1)_X \rightarrow \mathbb{Z}_N$, we can show that no $\mathbb{Z}_m$ (The $m$ here need not be the same as the charge of the flavon, no $\mathbb{Z}_m$ can satisfy the conditions) can forbid only $(2,2)$ entry of the neutrino Yukawa matrix in Plan~B, while leaving the suppression pattern of all other entries unchanged.
+
+\paragraph{Setup.}
+With Plan~B $U(1)_X$ charges $X=(1,2,0)$, the Froggatt–Nielsen exponents for the neutrino Yukawa matrix are
+\begin{equation}
+    \epsilon^{ij} ;=;
+    \begin{pmatrix}
+    0 & 1 & 1  \\
+    1 & 0 & 2  \\
+    1 & 2 & 0
+    \end{pmatrix},
+\end{equation}
+so that the $(i,j)$ entry requires $\epsilon_{ij}$ flavon insertions.
+
+Let $l_i, r_j, \theta \in \mathbb{Z}$ denote the $Z_N$ (For some arbitrary N) charges of $L_i, \nu_{R_j}$, and the flavon $\Theta$, respectively.
+
+The invariance condition under $Z_N$ for the operator generating entry $(i,j)$ is
+\begin{equation}
+-l_i + r_j + m_{ij} \theta \equiv 0 \pmod N.
+\label{eq:invariance}
+\end{equation}
+
+We demand that every entry except $y_{22}$ satisfies \eqref{eq:invariance}, while $y_{22}$ violates it.
+
+
+\paragraph{Constraints from allowed entries.}
+From the Yukawa matrix: 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ c | c | c | c } 
+  \,\ &  $\nu_1$ &  $\nu_2$ &  $\nu_3$  \\ 
+  \hline
+  $\bar{L}_1$ & $-l_1 + r_1$ & $-l_1 + r_2$ & $-l_1 + r_3$  \\ 
+  \hline
+  $\bar{L}_2$ &  $-l_2 + r_1$  & $-l_2 + r_2$ & $-l_2 + r_3$ \\ 
+  \hline
+  $\bar{L}_3$ &  $-l_3 + r_1$ &  $-l_3 + r_2$ & $-l_3 + r_3$ 
+\end{tabular}
+\end{table} 
+\begin{equation}
+    \begin{pmatrix}
+        0 & 1 & 1 \\ 
+        1 & \times & 2 \\
+        1 & 2 & 0
+    \end{pmatrix}
+\end{equation}
+
+Giving us the equations: 
+
+\begin{equation}
+\begin{array}{c|c|c}
+  -l_1 + r_1 \equiv 0& -l_1 + r_2 + \theta \equiv0 & -l_1 + r_3 + \theta \equiv 0 \\
+  \hline
+  -l_2 + r_1 + \theta \equiv 0 & -l_2 + r_2 \not\equiv 0 & -l_2 + r_3 + 2\theta \equiv 0\\
+  \hline
+  -l_3 + r_1 + \theta \equiv 0 & -l_3 + r_2+ 2\theta \equiv 0 & -l_3 + r_3 \equiv 0
+\end{array} 
+    \pmod N
+\end{equation}
+
+\paragraph{The forbidden entry $(2,2)$.}
+Firstly, from this, we obtain: $l_1 = r_1,\,\ l_3 = r_3$.
+
+Adding $(1,3) + (3,1) \implies$
+\begin{equation}
+    2 \theta \equiv 0 \pmod N
+\end{equation}
+
+Next, $(1,2) + (2,1) \implies$
+\begin{equation}
+    -l_2 + r_2 + 2 \theta \equiv 0 \pmod N
+\end{equation}
+
+Next, $(2,3) + (3,2) \implies$
+\begin{equation}
+    -l_2 + r_2 + 4 \theta \equiv 0 \pmod N
+\end{equation}
+
+From these three equations, we get $l_2 = r_2$, regardless of $N$. Therefore, by this charge allocation, $y_{22}$ must be permitted.
+
+\paragraph{Conclusion.}
+    The constraints from the allowed entries force $2 \theta \equiv 0$, which in turn guarantees invariance of the $(2,2)$ operator. Therefore no cyclic symmetry $Z_n$ can remove only the $(2,2)$ entry of the Plan~B Yukawa matrix while leaving all other entries intact. This proof should be extendable to all Abelian groups? This implies we should search for a non-abelian symmetry to obtain the texture zero $y_{22} = 0$.
+
+\section{All possible zeroes}
+
+
+\textbf{One texture zero;} $y_{22} = 0$ only (Normal Hierarchy)
+\begin{equation} \label{General Yukawa Neutrino}
+    Y_{\nu L} = 
+    \begin{pmatrix}
+        y_{11} &\epsilon y_{12} & \epsilon y_{13} \\
+        \epsilon y_{21}&0&\epsilon^{2}y_{23}\\
+        \epsilon y_{31}& \epsilon^{2}y_{32}&y_{33}
+    \end{pmatrix},
+\end{equation}
+
+and for the Majorana mass term:
+
+\begin{equation} \label{General Majorana Mass}
+    M = M_0
+    \begin{pmatrix}
+    \epsilon^{2}m_{11}&\epsilon^{3}m_{12}&\epsilon m_{13}\\
+    
+    \epsilon^{3} m_{21} & \epsilon^{4} m_{22}& \epsilon^{2} m_{23}\\
+    
+    \epsilon m_{31} & \epsilon^{2}m_{32}&m_{33} 
+    \end{pmatrix},
+\end{equation}
+
+\textbf{Two texture zeros;} $m_{11} = m_{13} = 0$ or $m_{33} = m_{13} = 0$ only (Inverted Hierarchy)
+
+\begin{equation} \label{General Yukawa Neutrino}
+    Y_{\nu L} = 
+    \begin{pmatrix}
+        y_{11} &\epsilon y_{12} & \epsilon y_{13} \\
+        \epsilon y_{21}&y_{22}&\epsilon^{2}y_{23}\\
+        \epsilon y_{31}& \epsilon^{2}y_{32}&y_{33}
+    \end{pmatrix},
+\end{equation}
+
+and for the Majorana mass term:
+
+\begin{equation} \label{General Majorana Mass}
+    M = M_0
+    \begin{pmatrix}
+    0&\epsilon^{3}m_{12}& 0\\
+    
+    \epsilon^{3} m_{12} & \epsilon^{4} m_{22}& \epsilon^{2} m_{23}\\
+    
+    0 & \epsilon^{2}m_{23}&m_{33} 
+    \end{pmatrix},
+\end{equation}
+
+
+\section{Conclusions}
+\section*{Acknowledgements}
+This work was partially supported by STFC HEP Consolidated grant
+ST/X000664/1. We thank the Cambridge Pheno Working Group for discussions. 
+
+\bibliographystyle{JHEP-2}
+\bibliography{article}
+
+\end{document}
