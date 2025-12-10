@@ -13,6 +13,7 @@
 \usepackage{booktabs}
 \usepackage{array}  
 \usepackage{cleveref}
+\usepackage{comment}
 
 \newcommand{\model}{${B_3-L_e-2L_\mu}$ model }
 \newcommand{\bsll}{$b \rightarrow s \ell^+ \ell^-$}
@@ -151,7 +152,7 @@ Upon spontaneous symmetry breaking, we can write the Higgs field as $H = (0, (v+
     \end{pmatrix},
 \end{equation}
 where $\bm{M}_\nu$ is a 6 by 6 complex symmetric matrix is
-\begin{equation}
+\begin{equation} \label{neutrino mass matrix}
     \bm{M}_\nu = \begin{pmatrix}
         0 & m_{\nu D} \\
         m_{\nu D}^T & M
@@ -160,7 +161,7 @@ where $\bm{M}_\nu$ is a 6 by 6 complex symmetric matrix is
 and $m_{\nu D} = v\bm{Y}_\nu/\sqrt{2}$. If, now, the Majorana mass terms are much greater than the electroweak scale $M \gg v$, we can expand and diagonalize the masses of the left handed and right-handed neutrinos separately, with the right-handed neutrinos having the mass matrix $m_{\nu R} \approx M$ and the left handed neutrinos having the mass matrix $m_{\nu L}\approx -m_{\nu D}^T M^{-1} m_{\nu D}$ \cite{gell-mann_complex_2013, minkowski_e_1977, glashow_future_1980}.
 
 However, the Yukawa matrix $\bm{Y}_\nu$ and $\bm{M}$  are diagonal by virtue of remaining invariant under the $U(1)_X$ charge assignment given in \cref{tab:lepton_charges}.
-\begin{equation}
+\begin{equation} \label{renormalizable Y and M}
     Y_{\nu}  =   
     \begin{pmatrix}
     \times & 0 & 0 \\
@@ -174,25 +175,28 @@ However, the Yukawa matrix $\bm{Y}_\nu$ and $\bm{M}$  are diagonal by virtue of 
     0 & 0 & \times 
     \end{pmatrix},
 \end{equation}
-implying a diagonal $m_{\nu L}$ mass matrix, and an identity mixing matrix. However, due to precision experiments on neutrino oscillations \cite{ParticleDataGroup:2024cfk}, we know this not to be the case, with \pcs{CONTINUE FROM HERE...}. 
+implying a diagonal $m_{\nu L}$ mass matrix, and an identity mixing matrix. However, due to precision experiments on neutrino oscillations \cite{ParticleDataGroup:2024cfk}, we know this not to be the case. Therefore, to explain the mass hierarchy and the PMNS matrix, one must go beyond the renormalisable Lagrangian and include symmetry-permitted higher-dimensional operators suppressed by the heavy scale $\Lambda_{FN}$ to generate the off-diagonal entries in \cref{renormalizable Y and M}. Their presence is natural from the point of view of UV completions of the model, and is the defining feature of any Froggatt–Nielsen models \cite{froggatt_hierarchy_1979}.
 
-\section{Neutrino masses}
-the Yukawa and Majorana matrices are diagonal by virtue of remaining invariant under the new gauge group charges,
-
-The neutrino mass matrix has the form
-\begin{equation} \label{Full neutrino mass matrix}
-    M_\nu = \begin{pmatrix}
-        0 & m_{\nu D} \\ m_{\nu D}^T & M_R 
-    \end{pmatrix},
-\end{equation} 
-where $m_{\nu D} = \frac{v}{\sqrt{2}} Y_\nu$ and $M_R$ is a complex, symmetric $3 \times 3$ matrix, whose eigenvalues $(M_1, M_2, M_3)$ are the three heavy neutrino masses.
-
-For the LH neutrino masses, we get: $m_\nu = m_{\nu D} M_R^{-1}m_{\nu D}^T = \frac{v^2}{2} Y_{\nu} M_R^{-1}Y_{\nu}^T$. For the charged lepton sector, we get $Y_e$ diagonal too, with the current bounds on $\mu \rightarrow e \gamma$ \cite{navas_review_2024} enforcing close to zero off-diagonal terms. This further implies that to go from the mass eigenbasis to the weak eigenbasis, one needs only the similarity transform matrix that diagonalizes the $m_\nu$ matrix, that is, $U_{PMNS} = V^\dagger_{\nu_L}$.
+\begin{comment}
+        \section{Neutrino masses}
+    the Yukawa and Majorana matrices are diagonal by virtue of remaining invariant under the new gauge group charges,
+    
+    The neutrino mass matrix has the form
+    \begin{equation} \label{Full neutrino mass matrix}
+        M_\nu = \begin{pmatrix}
+            0 & m_{\nu D} \\ m_{\nu D}^T & M_R 
+        \end{pmatrix},
+    \end{equation} 
+    where $m_{\nu D} = \frac{v}{\sqrt{2}} Y_\nu$ and $M_R$ is a complex, symmetric $3 \times 3$ matrix, whose eigenvalues $(M_1, M_2, M_3)$ are the three heavy neutrino masses.
+    
+    For the LH neutrino masses, we get: $m_\nu = m_{\nu D} M_R^{-1}m_{\nu D}^T = \frac{v^2}{2} Y_{\nu} M_R^{-1}Y_{\nu}^T$. For the charged lepton sector, we get $Y_e$ diagonal too, with the current bounds on $\mu \rightarrow e \gamma$ \cite{navas_review_2024} enforcing close to zero off-diagonal terms. This further implies that to go from the mass eigenbasis to the weak eigenbasis, one needs only the similarity transform matrix that diagonalizes the $m_\nu$ matrix, that is, $U_{PMNS} = V^\dagger_{\nu_L}$.
+\end{comment}
 
 \subsection{Off-Diagonal entries and the Froggatt-Nielsen Mechanism}
-According to \ref{Yukawa Lagrangian} and \ref{Full neutrino mass matrix}, the resulting $m_\nu$ matrix would also be diagonal. However, from neutrino oscillations, we know that the weak eigenstates and mass eigenstates of neutrinos are not the same. This implies that there are non-zero, however suppressed off-diagonal entries in both the Yukawa and Majorana matrices. The simplest known way to generate these suppressed entries is through the Froggatt-Nielsen (FN) mechanism \cite{froggatt_hierarchy_1979}. 
-
-In this approach, we assume that the complex scalar field, the flavon \footnote{In the model, the flavon upon spontaneous symmetry breaking, gives the $Z'$ its mass}, $\Theta$, is also charged under the $U(1)_X$ group with charge $-1$. This allows us to write down non-renormalizable terms, which remain fully gauge-invariant under the full gauge group,
+\begin{comment}
+    According to \cref{neutrino mass matrix} and \cref{renormalizable Y and M}, the resulting $m_\nu$ matrix would also be diagonal. However, from neutrino oscillations, we know that the weak eigenstates and mass eigenstates of neutrinos are not the same. This implies that there are non-zero, however suppressed off-diagonal entries in both the Yukawa and Majorana matrices. The simplest known way to generate these suppressed entries is through the Froggatt-Nielsen (FN) mechanism \cite{froggatt_hierarchy_1979}. 
+\end{comment}
+To generate the suppressed off-diagonals in \cref{renormalizable Y and M}, we utilise the complex scalar field, the flavon \footnote{In the model, the flavon upon spontaneous symmetry breaking, gives the $Z'$ its mass}, $\Theta$, which is also charged under the $U(1)_X$ group with charge $-1$. This provides us with a small expansion parameter $\frac{\langle \Theta \rangle}{\Lambda_{FN}} < 1$ which allows us to write down the non-renormalizable terms, which remain fully gauge-invariant under the full gauge group,
 \begin{equation} \label{Yukawa Lagrangian FN}
     \small
     -\mathcal{L}_Y  \supset  \Bar{\bm{L}}_{L i} y_{ ij} \Big( \frac{\langle\Theta\rangle}{\Lambda}\Big)^{|-X_i + X_j|} \Tilde{H} \bm{\nu}_{R j}  +  \frac{M_0}{2}  \Bar{\bm{\nu}}_R^c a_{ij}  \Big( \frac{\langle\Theta\rangle}{\Lambda}\Big)^{|X_i + X_j|} \bm{\nu}_R + H.c.,
@@ -219,6 +223,9 @@ Denoting $\frac{\langle\Theta\rangle}{\Lambda} = \epsilon$, we get the matrices 
 \end{equation}
 
 Here, we have extracted the dimensional mass term out front as $M_0$, which is of the order of the GUT scale of $10^{14} - 10^{16} \text{GeV}$. The remaining parameters $a_{ij}$ are $\mathcal{O}(1)$.
+
+\pcs{CONTINUE FROM HERE...}. 
+
 
 \subsection{Analytic expansion of masses and mixing angles}
 The inverse Majorana mass matrix takes the form of a complex symmetric matrix 
