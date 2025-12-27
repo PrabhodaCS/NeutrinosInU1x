@@ -115,7 +115,7 @@ to be three times third family baryon number minus electron number, minus
 twice muon number. In order for the model to be free of quantum field
 theoretic anomalies, one requires it to contain at least two further
 right-handed neutrino $\nu_{R_{1,2}}$ fields. A third, $\nu_{R_3}$, is added so that the
-three families of fermionic field are identical from the point of view of the SM symmetries. This $U(1)_X$ symmetry is broken by the complex scalar field dubbed the flavon, $\theta$, at the TeV scale ($\langle \theta \rangle \sim \mathcal{O}(\text{TeV})$).
+three families of fermionic fields are identical from the point of view of the SM symmetries. This $U(1)_X$ symmetry is broken by the complex scalar field dubbed the flavon, $\theta$, at the TeV scale ($\langle \theta \rangle \sim \mathcal{O}(\text{TeV})$).
 
 \begin{table}[ht]
 \centering
@@ -197,6 +197,8 @@ implying a diagonal $m_{\nu L}$ mass matrix, and an identity mixing matrix. Howe
     According to \cref{neutrino mass matrix} and \cref{renormalizable Y and M}, the resulting $m_\nu$ matrix would also be diagonal. However, from neutrino oscillations, we know that the weak eigenstates and mass eigenstates of neutrinos are not the same. This implies that there are non-zero, however suppressed off-diagonal entries in both the Yukawa and Majorana matrices. The simplest known way to generate these suppressed entries is through the Froggatt-Nielsen (FN) mechanism \cite{froggatt_hierarchy_1979}. 
 \end{comment}
 To generate the suppressed off-diagonals in \cref{renormalizable Y and M}, we utilise the complex scalar field, the flavon \footnote{In the model, the flavon upon spontaneous symmetry breaking, gives the $Z'$ its mass}, $\Theta$, which is also charged under the $U(1)_X$ group with charge $-1$. This provides us with a small expansion parameter $\frac{\langle \Theta \rangle}{\Lambda_{FN}} < 1$ which allows us to write down the non-renormalizable terms, which remain fully gauge-invariant under the full gauge group,
+
+
 \begin{equation} \label{Yukawa Lagrangian FN}
     \small
     -\mathcal{L}_Y  \supset  \Bar{\bm{L}}_{L i} y_{ ij} \Big( \frac{\langle\Theta\rangle}{\Lambda}\Big)^{|-X_i + X_j|} \Tilde{H} \bm{\nu}_{R j}  +  \frac{M_0}{2}  \Bar{\bm{\nu}}_R^c a_{ij}  \Big( \frac{\langle\Theta\rangle}{\Lambda}\Big)^{|X_i + X_j|} \bm{\nu}_R + H.c.,
@@ -224,7 +226,6 @@ Denoting $\frac{\langle\Theta\rangle}{\Lambda} = \epsilon$, we get the matrices 
 
 Here, we have extracted the dimensional mass term out front as $M_0$, which is of the order of the GUT scale of $10^{14} - 10^{16} \text{GeV}$. The remaining parameters $a_{ij}$ are $\mathcal{O}(1)$.
 
-\pcs{CONTINUE FROM HERE...}. 
 
 
 \subsection{Analytic expansion of masses and mixing angles}
@@ -241,7 +242,7 @@ The inverse Majorana mass matrix takes the form of a complex symmetric matrix
 
 The matrix $Y_\nu$ has 9 $\mathcal{O}(1)$ independent parameters, and $A/M$ has 6 independent real parameters. including $\epsilon$ and $M_0$, we get 17 independent parameters. 
 
-Given this, the left handed neutrino mass matrix is given by $m_\nu \sim \frac{v^2}{2} Y_{\nu L} M^{-1} Y_{\nu L}^T$,
+Given this, the left-handed neutrino mass matrix is given by $m_\nu \sim \frac{v^2}{2} Y_{\nu L} M^{-1} Y_{\nu L}^T$,
 \begin{equation}
     m_\nu = \frac{v^2}{2M_0} \begin{pmatrix}
         y_{11} &\epsilon y_{12} & \epsilon y_{13} \\
@@ -347,7 +348,7 @@ Provided M is not singular, we can extract the $\epsilon$ dependance from it, we
 
 To reduce the severity of the hierarchy, we will need to kill the terms with an $\epsilon^{-4}$ dependence. Looking at \ref{Lowest order - Unchanged} and \ref{mnu dets}, we can either demand $y_{22} = 0$ or $\alpha_{22}=0 \implies m_{11} = m_{13} =0$
 
-\subsection{CASE I: Setting $y_{22} = 0$} 
+\subsection{Normal Hierarchy} \label{Normal Hierarchy}
 \begin{equation} \label{Textured Yukawa Neutrino}
     Y_{\nu L} \approx
     \begin{pmatrix}
@@ -456,7 +457,7 @@ The diagnostics reads:
     \label{NO Table}
 \end{table}
 
-\subsection{CASE II : Setting $m_{11}=m_{13}=m_{31}=0$}
+\subsection{Inverted Hierarchy} \label{Inverted Hierarchy}
 
 Repeating the same calculations as the previous section, we get the eigenvalues of the form:
 
@@ -974,5 +975,41 @@ ST/X000664/1. We thank the Cambridge Pheno Working Group for discussions.
 
 \bibliographystyle{JHEP-2}
 \bibliography{article}
+\appendix
+\section{Single texture suppression mechanism}
+A possible mechanism to achieve the single Yukawa element suppression required in \cref{Normal Hierarchy} is the clockwork mechanism \cite{giudice_clockwork_2017, alonso_clockwork_2018}. In this slightly modified setup of the mechanism, we assume heavy ``gears'' or an N-node chain of vector-like fermions such that the kinetic terms can be neglected for our treatment, coupling to the standard SM fields as
+\begin{equation}
+    \mathcal{L} = -m\sum_{j = 0}^{N-1} (\overline \psi_{Lj}\psi_{Rj} - q\overline \psi_{Lj} \psi_{R,j+1}) - m\overline\psi_{LN}\psi_{RN} + y_R \overline L_2 \tilde{H} \psi_{R 0} +  y_L m \overline \psi_{L N} \nu_2 + \textrm{H.c.},
+\end{equation}
+\begin{equation}
+    \mathcal{L} = -m\sum_{j = 1}^{N} (\overline \psi_{Lj}\psi_{Rj} - q\overline \psi_{Lj} \psi_{R,j-1})+ y_R \overline L_2 \tilde{H} \psi_{R 0} +  y_L m \overline \psi_{L N} \nu_2 + \textrm{H.c.},
+\end{equation}
+The connecting chain consists of $N+1$ right-handed chiral fermions, $ (\nu_2,\psi_{R,1},\psi_{R,2},\ldots,\psi_{R,N})$ and $N$ left-handed chiral fermions, $ (\psi_{L,1},\psi_{L,2},\ldots,\psi_{L,N})$. 
+\begin{comment}
+    The mass term breaks the global chiral symmetry of the whole $2N+1$ fermion system, $U(1)_L \times U(1)_R$, leaving only one abelian factor intact in the right sector.
+\end{comment}
+The $N\times (N+1)$ mass matrix,
+\begin{equation}
+    M_\psi = m \begin{pmatrix}
+        -q & 1 & 0 & \ldots & 0 \\
+        0 & -q & 1 & \ldots & 0 \\
+        0 & 0 & -q & \ldots & 0 \\
+        \vdots & \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & 0 & \ldots -q & 1 
+    \end{pmatrix}
+\end{equation}
+is diagonalised by the unitary matrices $\text{Diag}(0.m_1,m_2,\ldots,m_N) = (V^L)^T M_\psi V^R$, which also gives the right handed zero mode such that $M_\psi \Psi_{R,0}' = 0$,
+\begin{equation}
+    \Psi_{R,0}' = \sum_{j=0}^{N} V_{j0}^R \psi_{R,j}
+\end{equation}
+where 
+\begin{equation}
+    V_{j0}^R = \frac{\mathcal{N}_0}{q^{N-j}} , \,\,\,\,\,\,\,\, \mathcal{N}_0 = \sqrt{\frac{q^2 - 1 }{q^2 - q^{2N}}}
+\end{equation}
+
+\begin{equation}
+\mathcal{L}_{\text{CW}} = -\sum_{j=0}^{N-1} \left( m \bar{\psi}_{Lj} \psi_{Rj} - mq \bar{\psi}_{Lj} \psi_{R,j+1} \right) - m \bar{\psi}_{LN} \psi_{RN} - y_R \bar{L}_2 \tilde{H} \psi_{R0} - y_L \bar{\psi}_{LN} \nu_2 \tilde{H} + \text{H.c.}
+\end{equation}
+
 
 \end{document}
