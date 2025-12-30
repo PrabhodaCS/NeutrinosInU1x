@@ -15,7 +15,7 @@
 \usepackage{cleveref}
 \usepackage{comment}
 
-\newcommand{\model}{${B_3-L_e-2L_\mu}$ model }
+\newcommand{\model}{${B_3-L_e-2L_\mu}$ model}
 \newcommand{\bsll}{$b \rightarrow s \ell^+ \ell^-$}
 \newcommand{\bsmm}{$b \rightarrow s \mu^+ \mu^-$}
 \newcommand{\bsee}{$b \rightarrow s e^+ e^-$}
@@ -136,6 +136,7 @@ $SU(3)\!\times\!SU(2)\!\times\!U(1)_Y\!\times\!U(1)_X$. $L_i$ are left-handed We
 \label{tab:lepton_charges}
 \end{table}
 
+\pcs{WRITE WHY NEUTRINOS IN THIS MODEL}
 Furnished with the $\nu_{R_i}$ fields, the model could potentially implement the Type I see-saw mechanism of neutrino masses via the dimension-4 Lagrangian density terms
 \begin{equation} \label{Neutrino Mass Lagrangian}
   {\mathcal L} = \ldots - {\overline L_i} (Y_\nu)_{ij} \tilde{H} \nu_{R_j} - \frac{1}{2}
@@ -196,17 +197,14 @@ implying a diagonal $m_{\nu L}$ mass matrix, and an identity mixing matrix. Howe
 \begin{comment}
     According to \cref{neutrino mass matrix} and \cref{renormalizable Y and M}, the resulting $m_\nu$ matrix would also be diagonal. However, from neutrino oscillations, we know that the weak eigenstates and mass eigenstates of neutrinos are not the same. This implies that there are non-zero, however suppressed off-diagonal entries in both the Yukawa and Majorana matrices. The simplest known way to generate these suppressed entries is through the Froggatt-Nielsen (FN) mechanism \cite{froggatt_hierarchy_1979}. 
 \end{comment}
-To generate the suppressed off-diagonals in \cref{renormalizable Y and M}, we utilise the complex scalar field, the flavon \footnote{In the model, the flavon upon spontaneous symmetry breaking, gives the $Z'$ its mass}, $\Theta$, which is also charged under the $U(1)_X$ group with charge $-1$. This provides us with a small expansion parameter $\frac{\langle \Theta \rangle}{\Lambda_{FN}} < 1$ which allows us to write down the non-renormalizable terms, which remain fully gauge-invariant under the full gauge group,
-
-
+To generate the suppressed off-diagonal entries in \cref{renormalizable Y and M}, we introduce the complex scalar field, (the flavon), $\Theta$, charged under the $U(1)_X$ group with charge $-1$. After spontaneous symmetry breaking, the flavon gives mass to the $Z'$ boson and produces a small expansion parameter $\frac{\langle \Theta \rangle}{\Lambda_{FN}} < 1$ which permits gauge-invariant, non-renormalizable operators we can add to the Lagrangian. These relevant terms fill in the off-diagonal entries of the Yukawa and Majorana matrices and can be written as,
 \begin{equation} \label{Yukawa Lagrangian FN}
     \small
     -\mathcal{L}_Y  \supset  \Bar{\bm{L}}_{L i} y_{ ij} \Big( \frac{\langle\Theta\rangle}{\Lambda}\Big)^{|-X_i + X_j|} \Tilde{H} \bm{\nu}_{R j}  +  \frac{M_0}{2}  \Bar{\bm{\nu}}_R^c a_{ij}  \Big( \frac{\langle\Theta\rangle}{\Lambda}\Big)^{|X_i + X_j|} \bm{\nu}_R + H.c.,
 \end{equation}
-where $y_{ij} \ \text{and} \ m_{ij}$ are of the order $\mathcal{O}(1)$, since we have shifted the hierarchical structure of the mass matrix onto the FN mechanism with entries being approximately equal.
+where \(y_{ij}\) and \(a_{ij}\) are assumed to be \(\mathcal{O}(1)\) coefficients and \(M_0\) sets the overall scale of the right-handed Majorana masses (we take \(M_0\sim 10^{14}\text{--}10^{16}\ \mathrm{GeV}\) in what follows).
 
-Denoting $\frac{\langle\Theta\rangle}{\Lambda} = \epsilon$, we get the matrices as:
-
+With the shorthand \(\epsilon=\langle\Theta\rangle/\Lambda_{\mathrm{FN}}\) the flavour-structured matrices take the form
 \begin{equation} \label{FN Y and M}
     Y_{\nu L} = 
     \begin{pmatrix}
@@ -223,50 +221,12 @@ Denoting $\frac{\langle\Theta\rangle}{\Lambda} = \epsilon$, we get the matrices 
     \epsilon a_{31} & \epsilon^{2}a_{32}&a_{33} 
     \end{pmatrix},
 \end{equation}
-
-Here, we have extracted the dimensional mass term out front as $M_0$, which is of the order of the GUT scale of $10^{14} - 10^{16} \text{GeV}$. The remaining parameters $a_{ij}$ are $\mathcal{O}(1)$.
-
-
-
+The above \cref{FN Y and M} gives us the texture of the Yukawa and Majorana matrices in the \model. We analyse whether this suffices to explain the neutrino mass hierarchies and mixing matrix in the following section.
 \subsection{Analytic expansion of masses and mixing angles}
-The inverse Majorana mass matrix takes the form of a complex symmetric matrix 
-
-\begin{equation}
-    A = \begin{pmatrix}
-        \alpha_{11}\epsilon^{-2} & \alpha_{12}\epsilon^{-3}  & \alpha_{13}\epsilon^{-1} \\
-        \alpha_{12}\epsilon^{-3} & \alpha_{22}\epsilon^{-4}  & \alpha_{23}\epsilon^{-2} \\
-        \alpha_{13}\epsilon^{-1} & \alpha_{23} \epsilon^{-2} & \alpha_{33} 
-    \end{pmatrix}, 
-\end{equation}
-
-
-The matrix $Y_\nu$ has 9 $\mathcal{O}(1)$ independent parameters, and $A/M$ has 6 independent real parameters. including $\epsilon$ and $M_0$, we get 17 independent parameters. 
-
-Given this, the left-handed neutrino mass matrix is given by $m_\nu \sim \frac{v^2}{2} Y_{\nu L} M^{-1} Y_{\nu L}^T$,
-\begin{equation}
-    m_\nu = \frac{v^2}{2M_0} \begin{pmatrix}
-        y_{11} &\epsilon y_{12} & \epsilon y_{13} \\
-        \epsilon y_{21}&y_{22}&\epsilon^{2}y_{23}\\
-        \epsilon y_{31}& \epsilon^{2}y_{32}&y_{33}
-    \end{pmatrix}
-    \begin{pmatrix}
-    \epsilon^{2}a_{11}&\epsilon^{3}a_{12}&\epsilon a_{13}\\
-    
-    \epsilon^{3} a_{21} & \epsilon^{4} a_{22}& \epsilon^{2} a_{23}\\
-    
-    \epsilon a_{31} & \epsilon^{2}a_{32}&a_{33} 
-    \end{pmatrix}^{-1}
-    \begin{pmatrix}
-        y_{11} & y_{21}& \epsilon y_{31} \\
-        \epsilon  y_{12}&y_{22}&\epsilon^{2}y_{32}\\
-        \epsilon y_{13}& \epsilon^{2}y_{23}&y_{33}
-    \end{pmatrix},
-\end{equation}
-
-Extracting the singular part of the $\epsilon$ factors, we can expand the matrix in a series in $\epsilon$ as follows:
-
+The light left-handed neutrino mass matrix is given at tree level by the seesaw formula $m_\nu \;=\; \frac{v^2}{2}\,Y_\nu\,M_R^{-1}\,Y_\nu^T.$
+Factoring the overall powers of \(\epsilon\) that dominate the inverse Majorana matrix (see discussion below), one may expand \(m_\nu\) as a series in \(\epsilon\):
 \begin{equation} 
-    m_\nu \approx \frac{v^2}{2M_0} \epsilon^{-4} (X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \cdots) 
+    m_\nu \approx \frac{v^2}{2M_0} \epsilon^{-4} (X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \ldots), 
 \end{equation}
 where:
 \begin{equation} \label{Lowest order - Unchanged}
@@ -274,30 +234,26 @@ where:
         0 &  0  & 0 \\
         0  & y_{22}^2 \alpha_{22} &  0  \\
         0  & 0  & 0
-    \end{pmatrix}
+    \end{pmatrix},
 \end{equation}
-
 \begin{equation}
     X^{(1)} = \begin{pmatrix}
         0 &  y_{22}y_{11}\alpha_{12} + y_{22}y_{21}\alpha_{22}  & 0 \\
         y_{22}y_{21}\alpha_{22} + y_{22}y_{11}\alpha_{12}   & 0 &  0  \\
         0  & 0  & 0
-    \end{pmatrix} 
+    \end{pmatrix}, 
 \end{equation}
-
 \begin{equation}
     \resizebox{1\textwidth}{!}{$
     X^{(2)} = \begin{pmatrix}
     y_{11}^2\alpha_{11} + y_{21}^2\alpha_{22} + 2y_{11}y_{21}\Re(\alpha_{12}) & 0 & 0 \\[6pt]
     0 & 2y_{12}y_{22}\Re(\alpha_{12}) & y_{22}y_{23}\alpha_{22} + y_{22}y_{33}\alpha_{23} + y_{13}y_{22}\alpha_{12} \\[6pt]
     0 & y_{13}y_{22}\alpha_{12} + y_{22}y_{23}\alpha_{22} + y_{22}y_{33}\alpha_{23} & 0
-    \end{pmatrix}$}
+    \end{pmatrix}$},
 \end{equation}
+here $\alpha_{ij}$ denotes the $\mathcal{O}(1)$ entries of $M_R^{-1}/M_0^{-1}$ after factoring their $epsilon$-dependence (i.e. $M_R^{-1}\sim M_0^{-1}\epsilon^{-n_{ij}}\alpha_{ij}$ with the integer exponents $n_{ij}$ determined by the $U(1)_X$ charges).
 
-where the inverse elements of the Majorana matrix are denoted by $M_{R ij}^{-1}=\epsilon^{-(X_i+X_j)}\alpha_{ij}$. Using second order perturbation theory, we get $(X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)}) (\psi^{(0)} + \epsilon \psi^{(1)} + \epsilon^2 \psi^{(2)})  = (\lambda^{(0)} + \epsilon \lambda^{(1)} + \epsilon^2 \lambda^{(2)}) (\psi^{(0)} + \epsilon \psi^{(1)} + \epsilon^2 \psi^{(2)})$. 
-
-Using this, we find that the three eigenvalues (masses) of the left-handed (LH) neutrinos are: 
-
+Using second-order perturbation theory, keeping the $\epsilon^2$ correction to the matrix, we find that the three eigenvalues (masses) of the left-handed (LH) neutrinos are: 
 \begin{equation}\label{NormalHierarchy}
 \begin{aligned}
     m_{\nu_3} &\approx \frac{v^2 \epsilon^{-4}}{2M_0}\Bigg[
@@ -316,39 +272,40 @@ Using this, we find that the three eigenvalues (masses) of the left-handed (LH) 
 \end{aligned}
 \end{equation}
 
-using this, we can approximate the order of magnitude of the FN suppression factor $\epsilon$,
+From the orders in \cref{NormalHierarchy} one obtains an estimate for \(\epsilon\) by matching the mass hierarchy:
+\begin{equation}\label{eq:epsilon-estimate}
+    \epsilon^{-2}\sim\frac{m_{\nu_3}}{m_{\nu_2}}
+    \approx\sqrt{\frac{\Delta m^2_{31}}{\Delta m^2_{21}}}
+    \quad\Rightarrow\quad
+    \epsilon \simeq \Big(\frac{8\times 10^{-5}}{2.5\times 10^{-3}}\Big)^{1/4} \simeq 0.42,
+\end{equation}
+which (with the numerical coefficients above) fixes the right-handed scale $M_0 \sim 10^{15}\ \mathrm{GeV}$ for the observed neutrino splittings.
 
-\begin{align}    
-    &\epsilon^{-2} \sim \frac{m_{\nu 3}}{m_{\nu 2}}   \\
-    &\epsilon^{-2} \sim \sqrt{\frac{\Delta m^2_{31}}{\Delta m^2_{21}}} \\
-    &\epsilon = \Big(\frac{8 \times 10^{-5}}{2.5 \times 10^{-3}} \Big)^{0.25} = 0.42,
-\end{align}
-this fixes the scale of the right-handed (RH) neutrinos $M_0 \approx 10^ {15} \text{GeV}$. The eigenvector matrix is 
-\begin{equation}
-    U_{\text{PMNS}} \approx 
+The PMNS matrix evaluated to a similar order in the $\epsilon$ expansion, up to phases and normalisations, is,
+\begin{equation}\label{eq:pmns-approx}
+    U_{\mathrm{PMNS}} \approx
     \begin{pmatrix}
-         \frac{\varepsilon  (\alpha_{12} y_{11} y_{22} + \alpha_{22} y_{21} y_{22})}{\alpha_{22} y_{22}^2} & 1 & 0 \\
-         1 & -\frac{\varepsilon  (\alpha_{12} y_{11}+\alpha_{22} y_{21})}{\alpha_{22} y_{22}} & 0 \\
-         0 & 0 & 1
-    \end{pmatrix}
+        \dfrac{\epsilon\big(\alpha_{12} y_{11} y_{22} + \alpha_{22} y_{21} y_{22}\big)}{\alpha_{22} y_{22}^2} & 1 & 0\\[8pt]
+        1 & -\dfrac{\epsilon\big(\alpha_{12} y_{11}+\alpha_{22} y_{21}\big)}{\alpha_{22} y_{22}} & 0\\[6pt]
+        0 & 0 & 1
+    \end{pmatrix},
 \end{equation}
+which exhibits the (approximate) alignment of the heaviest mass eigenstate with the $\nu_\tau$ flavour at lowest order.
 
-This can be made more accurate through numerical analysis, but this explicitly shows (\ref{Lowest order - Unchanged}) that the $\epsilon^{-4}$ enhancement from the Majorana mass matrix forces the third mass ($\nu_3$) eigenstate to be purely $\nu_\tau$.
-
-Analysing the matrix determinant, we get $\det(m_\nu) = \det[\text{diag}(m_1,m_2,m_3)]$. This implies: 
-\begin{equation}
-    \det(m) = m_1m_2m_3 = -\Big(\frac{v^2}{2}\Big)^3\frac{\det(Y_{\nu L})^2}{\det(M)}    
+Finally, inspecting the determinant (or product of eigenvalues) shows the parametric dependence on $\epsilon$:
+\begin{equation}\label{eq:det-mnu}
+    \det(m_\nu) \propto 
+    \epsilon^{-6} y_{11}y_{22}y_{33}
+    - \epsilon^{-4}\big(y_{13}y_{22}y_{31} + y_{12}y_{21}y_{33}\big)
+    + \epsilon^{-2}\big(y_{12}y_{23}y_{31}+ y_{13}y_{21}y_{32} - y_{11}y_{23}y_{32}\big),
 \end{equation}
-Provided M is not singular, we can extract the $\epsilon$ dependance from it, we can see that the eigenvalues depends on the square of
-\begin{align} \label{mnu dets}
-    m_1m_2m_3 &\propto 
-    \epsilon^{-6} y_{11} y_{22} y_{33}  - \epsilon^{-4} y_{13} y_{22} y_{31} - \epsilon^{-4}y_{12} y_{21} y_{33} +  \epsilon^{-2}y_{12} y_{23} y_{31} + \epsilon^{-2} y_{13} y_{21} y_{32} - 
-    \epsilon^{-2}y_{11} y_{23} y_{32} 
-\end{align}
+implying that, unless cancellations or texture zeros are imposed, the $\epsilon^{-4}$ terms dominate and produce a strong hierarchy.  To ameliorate this, we may either impose $y_{22}=0$ or $\alpha_{22}=0 \implies m_{11} = m_{13} = 0$, which eliminates the $\epsilon^{-4}$ contributions. We shall show how we can naturally impose the above texture zeroes and examine the phenomenological implications of the same in the following two sections.
 
-To reduce the severity of the hierarchy, we will need to kill the terms with an $\epsilon^{-4}$ dependence. Looking at \ref{Lowest order - Unchanged} and \ref{mnu dets}, we can either demand $y_{22} = 0$ or $\alpha_{22}=0 \implies m_{11} = m_{13} =0$
+\subsection{Normal Hierarchy} 
+We show below that imposing $y_{22} = 0$ leads to a normal hierarchy agreeing with those inferred from neutrino oscillations. 
 
-\subsection{Normal Hierarchy} \label{Normal Hierarchy}
+
+\label{Normal Hierarchy}
 \begin{equation} \label{Textured Yukawa Neutrino}
     Y_{\nu L} \approx
     \begin{pmatrix}
@@ -977,39 +934,20 @@ ST/X000664/1. We thank the Cambridge Pheno Working Group for discussions.
 \bibliography{article}
 \appendix
 \section{Single texture suppression mechanism}
-A possible mechanism to achieve the single Yukawa element suppression required in \cref{Normal Hierarchy} is the clockwork mechanism \cite{giudice_clockwork_2017, alonso_clockwork_2018}. In this slightly modified setup of the mechanism, we assume heavy ``gears'' or an N-node chain of vector-like fermions such that the kinetic terms can be neglected for our treatment, coupling to the standard SM fields as
-\begin{equation}
-    \mathcal{L} = -m\sum_{j = 0}^{N-1} (\overline \psi_{Lj}\psi_{Rj} - q\overline \psi_{Lj} \psi_{R,j+1}) - m\overline\psi_{LN}\psi_{RN} + y_R \overline L_2 \tilde{H} \psi_{R 0} +  y_L m \overline \psi_{L N} \nu_2 + \textrm{H.c.},
+A possible mechanism to achieve the single Yukawa element suppression required in \cref{Normal Hierarchy} is the clockwork mechanism \cite{giudice_clockwork_2017, alonso_clockwork_2018}. In this slightly modified setup of the mechanism, we assume heavy ``gears'' or an $N$-node chain of vector-like fermions such that the kinetic terms can be neglected for our treatment, coupling to the second generation of the SM fields only as
+\begin{equation} \label{Clockwork Chain}
+    \mathcal{L} = -m\sum_{j = 0}^{N-1} (\overline \psi_{L,j}\psi_{R,j} - q\overline \psi_{L,j} \psi_{R,j+1}) - m\overline\psi_{L,N}\psi_{R,N} + y_R \overline L_2 \tilde{H} \psi_{R, 0} +  y_L m \overline \psi_{L, N} \nu_2 + \textrm{H.c.},
 \end{equation}
+here, the connecting chain consists of $N+1$ right-handed and $N+1$ left-handed fermions and $q<1$, $m \sim \Lambda_{\text{FN}}$. For the sake of brevity, we can understand the behaviour by integrating out the chain using the tree-level EOM,
+\begin{align}
+    \frac{\partial \mathcal{L}}{\partial\overline \psi_{L,k}} = -m\psi_{R,k} + mq \psi_{R,k+1} + \delta_{N,k}y_L m \nu_2 &= 0, \\
+    \implies \psi_{R,k} = q^{-k} \psi_{R,0}, \,\,\,\,\, \psi_{R,N} = y_{L}\nu_2, \\
+    \frac{\partial \mathcal{L}}{\partial \psi_{R,k}} = -m\overline\psi_{L,k} + mq \overline\psi_{L,k-1} + \delta_{0,k}y_R \overline L_2 \tilde{H} &= 0, \\
+    \implies\overline\psi_{L,k} = q^{k} \overline\psi_{L,0}, \,\,\,\,\, \overline\psi_{L,0} = \frac{y_R}{m}\overline L_2 \tilde H, 
+\end{align}
+substituting this in the Lagrangian \cref{Clockwork Chain}, we get,
 \begin{equation}
-    \mathcal{L} = -m\sum_{j = 1}^{N} (\overline \psi_{Lj}\psi_{Rj} - q\overline \psi_{Lj} \psi_{R,j-1})+ y_R \overline L_2 \tilde{H} \psi_{R 0} +  y_L m \overline \psi_{L N} \nu_2 + \textrm{H.c.},
+    \mathcal{L}_{eff} = q^N y_Ry_L L_2\tilde H \nu_2 + \textrm{H.c.},
 \end{equation}
-The connecting chain consists of $N+1$ right-handed chiral fermions, $ (\nu_2,\psi_{R,1},\psi_{R,2},\ldots,\psi_{R,N})$ and $N$ left-handed chiral fermions, $ (\psi_{L,1},\psi_{L,2},\ldots,\psi_{L,N})$. 
-\begin{comment}
-    The mass term breaks the global chiral symmetry of the whole $2N+1$ fermion system, $U(1)_L \times U(1)_R$, leaving only one abelian factor intact in the right sector.
-\end{comment}
-The $N\times (N+1)$ mass matrix,
-\begin{equation}
-    M_\psi = m \begin{pmatrix}
-        -q & 1 & 0 & \ldots & 0 \\
-        0 & -q & 1 & \ldots & 0 \\
-        0 & 0 & -q & \ldots & 0 \\
-        \vdots & \vdots & \vdots & \ddots & \vdots \\
-        0 & 0 & 0 & \ldots -q & 1 
-    \end{pmatrix}
-\end{equation}
-is diagonalised by the unitary matrices $\text{Diag}(0.m_1,m_2,\ldots,m_N) = (V^L)^T M_\psi V^R$, which also gives the right handed zero mode such that $M_\psi \Psi_{R,0}' = 0$,
-\begin{equation}
-    \Psi_{R,0}' = \sum_{j=0}^{N} V_{j0}^R \psi_{R,j}
-\end{equation}
-where 
-\begin{equation}
-    V_{j0}^R = \frac{\mathcal{N}_0}{q^{N-j}} , \,\,\,\,\,\,\,\, \mathcal{N}_0 = \sqrt{\frac{q^2 - 1 }{q^2 - q^{2N}}}
-\end{equation}
-
-\begin{equation}
-\mathcal{L}_{\text{CW}} = -\sum_{j=0}^{N-1} \left( m \bar{\psi}_{Lj} \psi_{Rj} - mq \bar{\psi}_{Lj} \psi_{R,j+1} \right) - m \bar{\psi}_{LN} \psi_{RN} - y_R \bar{L}_2 \tilde{H} \psi_{R0} - y_L \bar{\psi}_{LN} \nu_2 \tilde{H} + \text{H.c.}
-\end{equation}
-
-
+where the effective Yukawa coupling is $y_{22} \approx q^N y_L y_R$. For $q<1, N\gg1$, we get an exponential suppression, as required by our model to sustain a normal hierarchy.
 \end{document}
