@@ -337,35 +337,35 @@ At first order, $\text{Diag}(m_{\nu 1},m_{\nu 2},m_{\nu 3}) \approx \frac{v^2 \e
 \begin{align}
     m_3 &= m (A_3 + \epsilon^2 B_3)\\
     m_2 &= m \epsilon^2 B_2\\
-    m_1 &= m \epsilon^2 B_1
+    m_1 &= m \epsilon^2 B_1 
 \end{align}
-we see that the eigenvalues follow normal ordering. From this, we can estimate the order of $\epsilon$ in this case,
+we see that the eigenvalues follow normal ordering. From this, we can estimate the order of $\epsilon$ in this case (neglecting $\mathcal{O}(1)$ factors),
 \begin{equation}\label{eq:epsilon-estimate, Normal Hierarchy}
     \epsilon^4 \frac{(B_3-B_2)^2}{A_1^2} \sim\frac{\Delta m_{{32}}^2}{\Delta m_{{12}}^2} \approx 0.03
     \quad\Rightarrow\quad
-    \epsilon \simeq \Big(\frac{8\times 10^{-5}}{2.5\times 10^{-3}}\Big)^{1/4} \simeq 0.42,
+    \epsilon \sim 0.42,
 \end{equation}
-
-The unnormalized PMNS matrix has the approximate form:
+The PMNS matrix, up to phase factors and normalisation, is of the form,
 \begin{equation}
     U\approx 
     \begin{pmatrix}
-    1 + \epsilon^2 u_{11}'' & \epsilon u_{12}' & \epsilon u_{13}' \\
-    \epsilon u_{21}' & u_{22} & u_{23} \\
-    \epsilon u_{31}' & u_{32} & u_{33}
+    1 + \epsilon^2 u_{11}^{(2)} & \epsilon u_{12}^{(1)} & \epsilon u_{13}^{(1)} \\
+    \epsilon u_{21}^{(1)} & u_{22}^{(0)} & u_{23}^{(0)} \\
+    \epsilon u_{31}^{(1)} & u_{32}^{(0)} & u_{33}^{(0)}.
     \end{pmatrix}
 \end{equation}
-Therefore, we get the mixing angles as
+the entries $u_{ij}^{(n)}$ are long algebraic functions of $y_{ij}$ and $a_{ij}$. Analytically, the parametric form of the matrix above is sufficient to understand the scaling of the angles, using which we get
 \begin{align} \label{NO matching}
-    \sin \theta_{13} &= {|U_{e3}|} \sim  \epsilon u_{13}' \approx 0.15,
+    \sin \theta_{13} &= {|U_{e3}|} \sim  \epsilon u_{13}^{(1)} \approx 0.15,
     \\
-    \tan \theta_{12} &= \frac{{|U_{e2}}|}{|U_{e1}|} \sim \frac{\epsilon u_{12}'}{ 1+\epsilon^2u_{11}''} \approx \epsilon u_{12}' \approx 0.66, \\
-    \tan \theta_{23} &= \frac{|{U_{\mu3}}|}{|{U_{\tau3}}|} \sim \frac{u_{23}}{u_{33}} \approx 1.15.
+    \tan \theta_{12} &= \frac{{|U_{e2}}|}{|U_{e1}|} \sim \frac{\epsilon u_{12}^{(1)}}{ 1+\epsilon^2u_{11}^{(2)}} \approx \epsilon u_{12}' \approx 0.66, \\
+    \tan \theta_{23} &= \frac{|{U_{\mu3}}|}{|{U_{\tau3}}|} \sim \frac{u_{23}^{(0)}}{u_{33}^{(0)}} \approx 1.15.
 \end{align}
-Given that the $u_{ij}$ are products and sums of many $y_{ij}$ and $a_{ij}$ which are $\mathcal{O}(1)$, we see that the conditions \ref{NO matching} are quite plausible, which is verified below in \ref{Posterior Dist for the three angles (Normal Ordering)} and \ref{Posterior Distribution for the mass squared differences (Normal Ordering)} by a Bayesian sampling over all $y_{ij},a_{ij}, \epsilon, M_0$ values.
+We validated the analytic scaling by performing a Bayesian parameter scan in which each $y_{ij}$ and $a_{ij}$ was drawn independently from Gaussian distributions centred at 1.
 
+e conditions \ref{NO matching} are quite plausible, which is verified below in \ref{Posterior Dist for the three angles (Normal Ordering)} and \ref{Posterior Distribution for the mass squared differences (Normal Ordering)} by a Bayesian sampling over all $y_{ij}, a_{ij}, \epsilon, M_0$ values.
 \begin{figure}[h!]
-    \includegraphics[width=1.2\textwidth]{angles_panel_modern.png}
+    \includegraphics[width=1.2\textwidth]{}
     \caption{Posterior Dist for the Mixing angles (Normal Ordering)}
     \label{Posterior Dist for the three angles (Normal Ordering)}
 \end{figure}
@@ -375,9 +375,6 @@ Given that the $u_{ij}$ are products and sums of many $y_{ij}$ and $a_{ij}$ whic
     \caption{Posterior Dist for the mass squared differences (Normal Ordering)}
     \label{Posterior Distribution for the mass squared differences (Normal Ordering)}
 \end{figure}
-
-The diagnostics reads: 
-
 \begin{table}[]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
@@ -403,7 +400,7 @@ The diagnostics reads:
     \hline
     \end{tabular}
     \caption{Posterior means and p-values for the normal hierarchy (NH) fit.
-    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 5.2 (2024) global fits \cite{navas_review_2024}. 
+    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 5.2 (2024) global fits \cite{ParticleDataGroup:2024cfk}. 
     The PPP entries represent the posterior predictive probabilities for the full observable set}
     \label{NO Table}
 \end{table}
