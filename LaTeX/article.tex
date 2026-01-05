@@ -15,7 +15,7 @@
 \usepackage{cleveref}
 \usepackage{comment}
 
-\newcommand{\model}{${B_3-L_e-2L_\mu}$ model }
+\newcommand{\model}{${B_3-L_1-2L_2}$}
 \newcommand{\bsll}{$b \rightarrow s \ell^+ \ell^-$}
 \newcommand{\bsmm}{$b \rightarrow s \mu^+ \mu^-$}
 \newcommand{\bsee}{$b \rightarrow s e^+ e^-$}
@@ -25,7 +25,7 @@
 
 \title{\centering
 % Uncomment closer to the time of publication
-Neutrino masses and mixing in the $3B_3-L_e-2L_\mu$ model}
+Neutrino masses and mixing angles in the \bm{\model}\ model}
 
 \author[a]{Ben Allanach}
 \affiliation[a]{DAMTP, University of Cambridge, Wilberforce Road, Cambridge, 
@@ -93,7 +93,7 @@ from an intermediate tree-level off-shell $Z^\prime$ boson. Current LHC bounds u
 direct searches for
 the $Z^\prime$ are rather modest: $M_{Z^\prime} > 1.2$~TeV~\cite{Allanach:2024jls}, in the parameter range compatible with perturbativity as well as the global fit. 
 
-The \model augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM. The charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus first family lepton number minus twice second family lepton number. In order to allow a renormalisable top quark Yukawa coupling, the Higgs $X$ charge is fixed to vanish. This is necessary because the top quark Yukawa coupling is the largest dimensionless parameter in the SM Lagrangian; as we shall see below, one can induce smaller Yukawa couplings by banning them at the renormalisable level with a symmetry but inducing them through spontaneous symmetry breaking. The additional $u(1)_x$ is spontaneously broken by a SM-singlet complex scalar field, the flavon $\theta$, which is assumed to acquire a TeV-scale vacuum expectation value (VEV) and leads to a TeV-scale $Z^\prime$ vector boson with family-dependent gauge couplings. At the renormalisable level, the  Yukawa couplings have the texture (where $\times$ indicates a non-zero entry)
+The \model\ model augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM. The charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus first family lepton number minus twice second family lepton number. In order to allow a renormalisable top quark Yukawa coupling, the Higgs $X$ charge is fixed to vanish. This is necessary because the top quark Yukawa coupling is the largest dimensionless parameter in the SM Lagrangian at the electroweak scale (its value is 1); as we shall see below, one can induce smaller Yukawa couplings by banning them at the renormalisable level with a symmetry but inducing them through spontaneous symmetry breaking. The additional $u(1)_X$ is spontaneously broken by a SM-singlet complex scalar field, the flavon $\theta$, which is assumed to acquire a TeV-scale vacuum expectation value (VEV) and leads to a TeV-scale $Z^\prime$ vector boson with family-dependent gauge couplings. At the renormalisable level, the  Yukawa couplings have the texture (where $\times$ indicates a non-zero entry)
 \begin{equation}
     Y_U , Y_D \sim \begin{pmatrix}
     \times & \times & 0 \\
@@ -106,9 +106,12 @@ The \model augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additi
         0 & 0 & \times
     \end{pmatrix}. \label{chferms}
 \end{equation}
-At the renormalisable level, charged lepton flavour violation is then banned. 
+At this renormalisable level, charged lepton flavour violation is then banned. 
 Charged lepton flavour violation (CFLV) is heavily constrained by negative searches for it, particularly in the $\mu \rightarrow e \gamma$ channel~\cite{MEGII:2023ltw}.
-(\ref{chferms}) predicts zero values for the magnitudes of CKM matrix elements $|V_{ub}|,|V_{cb}|,|V_{td}|$ and $|V_{ts}|$, whereas $|V_{us}|$ and $|V_{cd}|$ are predicted to be of order unity. The spontaneous breaking of $u(1)_x$ will generically predict that instead of zeroes, the CKM matrix elements are instead merely much smaller than unity, agreeing with measurements~\cite{PDG}. 
+(\ref{chferms}) predicts zero values for the magnitudes of CKM matrix elements $|V_{ub}|,|V_{cb}|,|V_{td}|$ and $|V_{ts}|$, whereas $|V_{us}|$ and $|V_{cd}|$ are generically predicted to be of order unity. The spontaneous breaking of $u(1)_X$ will generically predict that instead of zeroes, the CKM matrix elements are instead merely much smaller than unity, agreeing with measurements~\cite{PDG}. 
+
+The Froggatt-Nielsen mechanism~\cite{} is a suggestion as to where smaller Yukawa couplings could originate after $u(1)_X$ spontaneous symmetry breakdown. The idea that some fermionic fields which are in vector-like representations of the SM gauge symmetry
+
 \begin{comment}
 \bc{Describe Frogatt-Nielsen models}
 
@@ -123,6 +126,7 @@ it's ``interesting'' from that point of view.}
 
 \bc{In the rest of this paper, we ...}
 \end{comment}
+
 \section{Origin of neutrino masses and mixing}
 
 The \model augments the gauge symmetry of the SM by an additional $U(1)_X$
@@ -132,6 +136,8 @@ twice muon number. In order for the model to be free of quantum field
 theoretic anomalies, one requires it to contain at least two further
 right-handed neutrino $\nu_{R_{1,2}}$ fields. A third, $\nu_{R_3}$, is added so that the
 three families of fermionic fields are identical from the point of view of the SM symmetries. This $U(1)_X$ symmetry is broken by the complex scalar field dubbed the flavon, $\theta$, at the TeV scale ($\langle \theta \rangle \sim \mathcal{O}(\text{TeV})$).
+
+While the primary motivation for the \model was to resolve B-meson decay anomalies, given it's family-dependant charge structure, it also displays a great adaptive power in explaining the mass matrix structures of both the quark \cite{Allanach:2023uxz} and lepton sectors. 
 
 \begin{table}[ht]
 \centering
@@ -386,33 +392,29 @@ We validated the analytic scaling by performing a Bayesian parameter scan, allow
     \caption{Posterior Distribution of the mass scale, FN parameter and the mixing angles (Normal Ordering)}
     \label{(Normal Ordering) Corner plot}
 \end{figure}
-\begin{table}[]
+
+\begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
       \hline
         Observable & Theoretical Mean & Experimental Value & $\sigma$ & p-value \\
         \hline
         \hline
-        $\Delta m_{21}^2$ & $7.49 \times 10^{-5}$
-        & $7.50\times 10^{-5}$ & $1.80\times 10^{-6}$ & $0.977187972$ \\
-        $\Delta m_{31}^2$ & $0.002499481$
-        & $0.0025$ & $4.00 \times 10^{-5}$ & $0.989639549$ \\
-        $\theta_{12}$ & $0.587334844$
-        & $0.587252369$ & $0.013008147$ & $0.994941208$ \\
-        $\theta_{13}$ & $0.148192059$
-        & $0.148190018$ & $0.002396768$ & $0.999320427$ \\
-        $\theta_{23}$ & $0.822187699$
-        & $0.822432016$ & $0.020054986$ & $0.990280147$    \\
+        $\Delta m_{21}^2$ & $7.4115\times 10^{-5}$ & $7.4900\times 10^{-5}$ & $1.9000\times 10^{-6}$ & $0.679531$ \\
+        $\Delta m_{31}^2$ & $2.5145\times 10^{-3}$ & $2.5130\times 10^{-3}$ & $2.1000\times 10^{-5}$ & $0.941331$ \\
+        $\sin^2\theta_{12}$ & $0.3079$ & $0.3080$ & $1.2000\times 10^{-2}$ & $0.994025$ \\
+        $\sin^2\theta_{13}$ & $2.2145\times 10^{-2}$ & $2.2150\times 10^{-2}$ & $5.7000\times 10^{-4}$ & $0.993208$ \\
+        $\sin^2\theta_{23}$ & $0.4698$ & $0.4700$ & $1.5000\times 10^{-2}$ & $0.988053$ \\
         \hline
-        Combined \textbf{PPP} & &  & & $0.499817$ \\
+        Combined \textbf{PPP} & & & & $0.422450$ \\
         \hline
-        $\epsilon$ & $0.3785$ &  & $0.0922$ & \\
-        $\log M_0$ & $15.1088$ &  & $0.5346$ & \\        
-    \hline
+        $\epsilon$ & $0.3744$ &  & $0.0947$ &  \\
+        $\log M_0$ & $15.0413$ &  & $0.5638$ &  \\
+      \hline
     \end{tabular}
-    \caption{Posterior means and p-values for the normal hierarchy (NH) fit.
-    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 6.0 (2024) global fits \cite{esteban_nufit-60_2024, noauthor_nufit_nodate}. 
-    The PPP entries represent the posterior predictive probabilities for the full observable set}
+    \caption{Posterior means and p-values for the Normal Hierarchy (NO) fit.
+    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 6.0 (2024) global fits (with SK) \cite{esteban_nufit-60_2024, noauthor_nufit_nodate}.
+    The PPP entries represent the posterior predictive probabilities for the full observable set.}
     \label{NO Table}
 \end{table}
 \subsection{Inverted Hierarchy} \label{Inverted Hierarchy}
@@ -444,48 +446,36 @@ giving us the mixing angles,
 \end{align}
 confirming the plausibility of the model. Using the same priors as before, we can perform a scan, giving the posterior distributions depicted in \cref{Posterior Dist for the three angles (Inverted Hierarchy)} and \cref{IO table}. 
 \begin{figure}[h!]
-    \includegraphics[width=1.2\textwidth]{angles_panel_modern.png}
-    \caption{Posterior Dist for the Mixing angles (Inverted Hierarchy)}
+    \includegraphics[width=1\textwidth]{Python/Figures/Inverted/corner_plot_corner.png}
+    \caption{Posterior Distribution of the mass scale, FN parameter and the mixing angles (Inverted Hierarchy)}
     \label{Posterior Dist for the three angles (Inverted Hierarchy)}
 \end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=1.0\textwidth]{dm_splittings_with_exp.png}
-    \caption{Posterior Dist for the mass squared differences (Inverted Hierarchy)}
-    \label{Posterior Distribution for the mass squared differences (Inverted Hierarchy)}
-\end{figure}
-\begin{table}[h!]
+\begin{table}[h!] 
     \centering
     \begin{tabular}{|c|c|c|c|c|}
       \hline
         Observable & Theoretical Mean & Experimental Value & $\sigma$ & p-value \\
         \hline
         \hline
-        $\Delta m_{21}^2$ & $7.4979\times 10^{-5}$ 
-        & $7.50\times 10^{-5}$ & $1.80\times 10^{-6}$ & $0.990481$ \\
-        $\Delta m_{31}^2$ & $2.4992\times 10^{-3}$ 
-        & $2.50\times 10^{-3}$ & $4.00\times 10^{-5}$ & $0.983272$ \\
-        $\theta_{12}$ & $0.5871$
-        & $0.5873$ & $0.0131$ & $0.991675$ \\
-        $\theta_{13}$ & $0.1482$
-        & $0.1482$ & $0.0024$ & $0.998844$ \\
-        $\theta_{23}$ & $0.8241$
-        & $0.8224$ & $0.0201$ & $0.935521$ \\
+        $\Delta m_{21}^2$ & $7.4892\times 10^{-5}$ & $7.4900\times 10^{-5}$ & $1.9000\times 10^{-6}$ & $0.996432$ \\
+        $\Delta m_{31}^2$ & $2.4838\times 10^{-3}$ & $2.4840\times 10^{-3}$ & $2.0000\times 10^{-5}$ & $0.990620$ \\
+        $\sin^2\theta_{12}$ & $0.3082$ & $0.3080$ & $1.2000\times 10^{-2}$ & $0.986774$ \\
+        $\sin^2\theta_{13}$ & $2.2295\times 10^{-2}$ & $2.2310\times 10^{-2}$ & $5.6000\times 10^{-4}$ & $0.978213$ \\
+        $\sin^2\theta_{23}$ & $0.5496$ & $0.5500$ & $1.3500\times 10^{-2}$ & $0.976177$ \\
         \hline
-        Combined \textbf{PPP} & & & & $0.497842$ \\
+        Combined \textbf{PPP} & & & & $0.507500$ \\
         \hline
-        $\epsilon$ & $0.3908$ &  & $0.0809$ &  \\
-        $\log M_0$ & $15.2376$ &  & $0.5394$ &  \\
+        $\epsilon$ & $0.3445$ &  & $0.0953$ &  \\
+        $\log M_0$ & $15.0055$ &  & $0.5511$ &  \\
       \hline
     \end{tabular}
-    \caption{Posterior means and p-values for the inverted hierarchy (IO) fit.
-    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 5.2 (2024) global fits \cite{navas_review_2024}. 
+    \caption{Posterior means and p-values for the Inverted Hierarchy (IO) fit.
+    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 6.0 (2024) global fits (with SK) \cite{esteban_nufit-60_2024, noauthor_nufit_nodate}.
     The PPP entries represent the posterior predictive probabilities for the full observable set.}
-    \label{IO Table}
+    \label{IO table}
 \end{table}
-
-
 \section{Conclusions}
+
 \section*{Acknowledgements}
 This work was partially supported by STFC HEP Consolidated grant
 ST/X000664/1. We thank the Cambridge Pheno Working Group for discussions. 
