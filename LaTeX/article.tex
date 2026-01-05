@@ -20,7 +20,7 @@
 \newcommand{\bsmm}{$b \rightarrow s \mu^+ \mu^-$}
 \newcommand{\bsee}{$b \rightarrow s e^+ e^-$}
 
-\newcommand{\bc}[1]{\textcolor{blue}{BA: #1}}
+\newcommand{\bca}[1]{\textcolor{blue}{BCA: #1}}
 \newcommand{\pcs}[1]{\textcolor{red}{PCS: #1}}
 
 \title{\centering
@@ -35,21 +35,20 @@ Neutrino masses and mixing in the $3B_3-L_e-2L_\mu$ model}
 \author[a,1]{and Prabhoda Chandra Sarjapur\note{Corresponding author.}}
 \emailAdd{prabhodacs@gmail.com}
 
-\abstract{The $3B_3-L_e-2L_\mu$ model is based on adding an additional
+\abstract{The $3B_3-L_e-2L_\mu$ model is based on applying an additional
   spontaneously broken  $U(1)$
   gauge symmetry to the Standard Model (SM) with family dependent
   couplings that necessarily includes three right-handed neutrino fields in
-  order to be anomaly-free. It was proposed
-  to ameleriorate fits of the SM to observables 
-  involving the $b\rightarrow s l^+ l^-$ transition whilst simulataneously
+  order to be free of anomalies. It was proposed
+  to ameliorate fits of the SM to observables 
+  involving the $b\rightarrow s l^+ l^-$ transition whilst simultaneously
   explaining the relatively large mass of the third family of quarks, compared
   to the first two. 
-  We investigate its implications for neutrino masses and mixings.
+  We investigate its implications for neutrino masses and mixing angles.
   The model can naturally implement the Froggatt-Nielsen mechanism for neutrino
   mass and mixing hierarchies which leads to an
-  inverted hierarchy and a pattern of neutrino masses and mixing which agrees
-  with those inferred from neutrino oscillations. A normal hierarchy requires the currently
-  unexplained percent-level suppression of a single neutrino Yukawa coupling.}   
+  inverted hierarchy and a pattern which agrees
+  with those inferred from neutrino oscillations. A normal hierarchy requires an additional percent-level suppression of a single Yukawa coupling by, for example, the clockwork mechanism.}   
 
 \keywords{$B-$anomalies, beyond the Standard Model, flavour changing neutral
   currents, neutrino masses}
@@ -72,16 +71,16 @@ $BR(B_s \rightarrow \phi \mu^+ \mu^-)$ are up to $4\sigma$ smaller than the SM
 predictions~\cite{LHCb:2021zwz,CDF:2012qwd}.
 Some angular distributions in $B \rightarrow K^\ast \mu^+ \mu^-$
 decays have been measured by LHC
-experiments~\cite{LHCb:2013ghj,LHCb:2015svh,ATLAS:2018gqc,CMS:2017rzx,CMS:2015bcy,Bobeth:2017vxj}
+experiments~\cite{LHCb:2013ghj,ATLAS:2018gqc,CMS:2017rzx,CMS:2015bcy,Bobeth:2017vxj}
 to be several $\sigma$ short of state-of-the-art SM
 predictions and
 the same can be said of $BR(B \rightarrow K^\ast \mu^+
-\mu^-)$~\cite{Parrott:2022zte}. On the other hand, measurements agree with the
+\mu^-)$~\cite{Parrott:2022zte}. On the other hand, many measurements agree with the
 prediction of the SM (to
 within 1$\sigma$ or so) of lepton flavour universality in $b \rightarrow s
 l^+ l^-$ transitions\footnote{When we mention \bsll\ transitions, we
 implicitly include the $CP$ conjugate mode $\bar b \rightarrow \bar s l^+
-l^-$.}~\cite{LHCb:2022qnv} and of $B_s-{\overline{B_s}}$ mixing~\cite{}.
+l^-$.}~\cite{LHCb:2022qnv} and SM predictions of $B_s-{\overline{B_s}}$ mixing~\cite{PDG}.
 In Ref.~\cite{Allanach:2023uxz}, it was shown that the $3B_3-L_e-2L_\mu$ model can
 greatly ameliorate a global fit of the SM to flavour observables via the predicted
 family non-universal 
@@ -92,7 +91,25 @@ The best-fit point simultaneously
 satisfies constraints from LEP2 di-lepton production, which receives contributions
 from an intermediate tree-level off-shell $Z^\prime$ boson. Current LHC bounds upon
 direct searches for
-the $Z^\prime$ are rather modest: $M_{Z^\prime} > 1.2$~TeV~\cite{Allanach:2024jls}.  
+the $Z^\prime$ are rather modest: $M_{Z^\prime} > 1.2$~TeV~\cite{Allanach:2024jls}, in the parameter range compatible with perturbativity as well as the global fit. 
+
+The \model\ model augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM. The charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus first family lepton number minus twice second family lepton number. In order to allow a renormalisable top quark Yukawa coupling, the Higgs $X$ charge is fixed to vanish. This is necessary because the top quark Yukawa coupling is the largest dimensionless parameter in the SM Lagrangian; as we shall see below, one can induce smaller Yukawa couplings by banning them at the renormalisable level with a symmetry but inducing them through spontaneous symmetry breaking. The additional $u(1)_x$ is spontaneously broken by a SM-singlet complex scalar field, the flavon $\theta$, which is assumed to acquire a TeV-scale vacuum expectation value (VEV) and leads to a TeV-scale $Z^\prime$ vector boson with family-dependent gauge couplings. At the renormalisable level, the  Yukawa couplings have the texture (where $\times$ indicates a non-zero entry)
+\begin{equation}
+    Y_U , Y_D \sim \begin{pmatrix}
+    \times & \times & 0 \\
+        \times & \times & 0 \\      
+        0 & 0 & \times
+    \end{pmatrix}, \qquad
+    Y_E \sim \begin{pmatrix}
+    \times & 0 & 0 \\
+        0& \times & 0 \\      
+        0 & 0 & \times
+    \end{pmatrix}. \label{chferms}
+\end{equation}
+At the renormalisable level, charged lepton flavour violation is then banned. 
+Charged lepton flavour violation (CFLV) is heavily constrained by negative searches for it, particularly in the $\mu \rightarrow e \gamma$ channel~\cite{MEGII:2023ltw}.
+(\ref{chferms}) predicts zero values for the magnitudes of CKM matrix elements $|V_{ub}|,|V_{cb}|,|V_{td}|$ and $|V_{ts}|$, whereas $|V_{us}|$ and $|V_{cd}|$ are predicted to be of order unity. The spontaneous breaking of $u(1)_x$ will generically predict that instead of zeroes, the CKM matrix elements are instead merely much smaller than unity, agreeing with measurements~\cite{PDG}. 
+
 
 \bc{Describe Frogatt-Nielsen models}
 
@@ -302,7 +319,7 @@ Finally, inspecting the determinant (or product of eigenvalues) shows the parame
 implying that, unless cancellations or texture zeros are imposed, the $\epsilon^{-4}$ terms dominate and produce a strong hierarchy.  To ameliorate this, we may either impose $y_{22}=0$ or $\alpha_{22}=0 \implies m_{11} = m_{13} = 0$, which eliminates the $\epsilon^{-4}$ contributions. We will demonstrate how to naturally impose the above texture zeroes and examine the phenomenological implications of this in the following two sections.
 
 \subsection{Normal Hierarchy} \label{Normal Hierarchy}
-We show below that imposing $y_{22} = 0$ leads to a normal hierarchy agreeing with those inferred from neutrino oscillations. 
+We show below that imposing $y_{22} = 0$ (a possible mechanism to achieve this single texture zero is detailed in \cref{Clockwork}) leads to a normal hierarchy agreeing with those inferred from neutrino oscillations. 
 \begin{equation} \label{Textured Yukawa Neutrino}
     Y_{\nu L} \approx
     \begin{pmatrix}
@@ -312,6 +329,8 @@ We show below that imposing $y_{22} = 0$ leads to a normal hierarchy agreeing wi
     \end{pmatrix},
 \end{equation}
 \pcs{Move appendix here, maybe?}
+\bca{I  don't think so because it's a nice possible mechanism but there may be others; this point is a little peripheral to the rest of the paper: important to show that there's a possibility but we aren't nailing our colours to it.}
+
 \begin{equation}
     m_\nu \approx \frac{v^2}{2M_0} \epsilon^{-2} (X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \cdots) 
 \end{equation}
@@ -361,7 +380,7 @@ the entries $u_{ij}^{(n)}$ are long algebraic functions of $y_{ij}$ and $a_{ij}$
     \tan \theta_{12} &= \frac{{|U_{e2}}|}{|U_{e1}|} \sim \frac{\epsilon u_{12}^{(1)}}{ 1+\epsilon^2u_{11}^{(2)}} \approx \epsilon u_{12}' \approx 0.66, \\
     \tan \theta_{23} &= \frac{|{U_{\mu3}}|}{|{U_{\tau3}}|} \sim \frac{u_{23}^{(0)}}{u_{33}^{(0)}} \approx 1.15.
 \end{align}
-We validated the analytic scaling by performing a Bayesian parameter scan, allowing the coefficients to be anarchic by sampling $y_{ij}$ and $a_{ij}$ from Gaussians centred at zero with Half-Cauchy distributed variance, which allows the data to dictate the true variance. The final posterior provides the best-fit coefficients, which are of order one, as expected. The corner and pull plots showing the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{(Normal Ordering) Corner plot} and \cref{NO Table}.
+We validated the analytic scaling by performing a Bayesian parameter scan, allowing the coefficients to be anarchic by sampling $y_{ij}$ and $a_{ij}$ from Gaussians centred at zero with Half-Cauchy distributed variance, which allows the data to dictate the true variance \cite{gelman_prior_2006}. The final posterior provides the best-fit coefficients, which are of order one, as expected. The corner and pull plots showing the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{(Normal Ordering) Corner plot} and \cref{NO Table}.
 \begin{figure}[h!]
     \includegraphics[width=1.0\textwidth]{Python/Figures/Normal/corner_plot_corner_blue.png}
     \caption{Posterior Distribution of the mass scale, FN parameter and the mixing angles (Normal Ordering)}
@@ -392,7 +411,7 @@ We validated the analytic scaling by performing a Bayesian parameter scan, allow
     \hline
     \end{tabular}
     \caption{Posterior means and p-values for the normal hierarchy (NH) fit.
-    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 5.2 (2024) global fits \cite{esteban_nufit-60_2024, noauthor_nufit_nodate}. 
+    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 6.0 (2024) global fits \cite{esteban_nufit-60_2024, noauthor_nufit_nodate}. 
     The PPP entries represent the posterior predictive probabilities for the full observable set}
     \label{NO Table}
 \end{table}
@@ -474,7 +493,7 @@ ST/X000664/1. We thank the Cambridge Pheno Working Group for discussions.
 \bibliographystyle{JHEP-2}
 \bibliography{article}
 \appendix
-\section{Single texture suppression mechanism}
+\section{Single Yukawa coupling suppression mechanism} \label{Clockwork}
 A possible mechanism to achieve the single Yukawa element suppression required in \cref{Normal Hierarchy} is the clockwork mechanism \cite{giudice_clockwork_2017, alonso_clockwork_2018}. In this slightly modified setup of the mechanism, we assume heavy ``gears'' or an $N$-node chain of vector-like fermions such that the kinetic terms can be neglected for our treatment, coupling to the second generation of the SM fields only as
 \begin{equation} \label{Clockwork Chain}
     \mathcal{L} = -m\sum_{j = 0}^{N-1} (\overline \psi_{L,j}\psi_{R,j} - q\overline \psi_{L,j} \psi_{R,j+1}) - m\overline\psi_{L,N}\psi_{R,N} + y_R \overline L_2 \tilde{H} \psi_{R, 0} +  y_L m \overline \psi_{L, N} \nu_2 + \textrm{H.c.},
@@ -488,7 +507,7 @@ here, the connecting chain consists of $N+1$ right-handed and $N+1$ left-handed 
 \end{align}
 substituting this in the Lagrangian \cref{Clockwork Chain}, we get,
 \begin{equation}
-    \mathcal{L}_{eff} = q^N y_Ry_L L_2\tilde H \nu_2 + \textrm{H.c.},
+    \mathcal{L}_{eff} = q^N y_Ry_L \overline L_2\tilde H \nu_2 + \textrm{H.c.},
 \end{equation}
 where the effective Yukawa coupling is $y_{22} \approx q^N y_L y_R$. For $q<1, N\gg1$, we get an exponential suppression, as required by our model to sustain a normal hierarchy.
 \end{document}
