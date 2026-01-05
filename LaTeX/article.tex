@@ -93,7 +93,7 @@ from an intermediate tree-level off-shell $Z^\prime$ boson. Current LHC bounds u
 direct searches for
 the $Z^\prime$ are rather modest: $M_{Z^\prime} > 1.2$~TeV~\cite{Allanach:2024jls}, in the parameter range compatible with perturbativity as well as the global fit. 
 
-The \model\ model augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM. The charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus first family lepton number minus twice second family lepton number. In order to allow a renormalisable top quark Yukawa coupling, the Higgs $X$ charge is fixed to vanish. This is necessary because the top quark Yukawa coupling is the largest dimensionless parameter in the SM Lagrangian at the electroweak scale (its value is 1); as we shall see below, one can induce smaller Yukawa couplings by banning them at the renormalisable level with a symmetry but inducing them through spontaneous symmetry breaking. The additional $u(1)_X$ is spontaneously broken by a SM-singlet complex scalar field, the flavon $\theta$, which is assumed to acquire a TeV-scale vacuum expectation value (VEV) and leads to a TeV-scale $Z^\prime$ vector boson with family-dependent gauge couplings. At the renormalisable level, the  Yukawa couplings have the texture (where $\times$ indicates a non-zero entry)
+The \model\ model augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM. The charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus first family lepton number minus twice second family lepton number. In order to allow a renormalisable top quark Yukawa coupling, the Higgs $X$ charge is fixed to vanish. This is necessary because the top quark Yukawa coupling is the largest dimensionless parameter in the SM Lagrangian at the electroweak scale (its value is 1); as we shall see below, one can induce smaller Yukawa couplings by banning them at the renormalisable level with a symmetry but inducing them through spontaneous symmetry breaking. The additional $u(1)_X$ is spontaneously broken by a SM-singlet complex scalar field, the flavon $\theta$, which is assumed to have an $X$ charge of unity and acquire a TeV-scale vacuum expectation value (VEV), leading to a TeV-scale $Z^\prime$ vector boson with family-dependent gauge couplings. At the renormalisable level, the  Yukawa couplings have the texture (where $\times$ indicates a non-zero entry)
 \begin{equation}
     Y_U , Y_D \sim \begin{pmatrix}
     \times & \times & 0 \\
@@ -110,7 +110,16 @@ At this renormalisable level, charged lepton flavour violation is then banned.
 Charged lepton flavour violation (CFLV) is heavily constrained by negative searches for it, particularly in the $\mu \rightarrow e \gamma$ channel~\cite{MEGII:2023ltw}.
 (\ref{chferms}) predicts zero values for the magnitudes of CKM matrix elements $|V_{ub}|,|V_{cb}|,|V_{td}|$ and $|V_{ts}|$, whereas $|V_{us}|$ and $|V_{cd}|$ are generically predicted to be of order unity. The spontaneous breaking of $u(1)_X$ will generically predict that instead of zeroes, the CKM matrix elements are instead merely much smaller than unity, agreeing with measurements~\cite{PDG}. 
 
-The Froggatt-Nielsen mechanism~\cite{} is a suggestion as to where smaller Yukawa couplings could originate after $u(1)_X$ spontaneous symmetry breakdown. The idea that some fermionic fields which are in vector-like representations of the SM gauge symmetry
+The Froggatt-Nielsen mechanism~\cite{Froggatt:1978nt} is a suggestion as to where smaller Yukawa couplings could originate (following $u(1)_X$ spontaneous symmetry breakdown). The idea that there are some fermionic fields which are in vector-like representations of the SM gauge symmetry  with masses above the scale $\langle \theta \rangle$ of $u(1)_X$ breaking.
+Let us call this mass scale $M \gg \langle \theta \rangle$. For the Yukawa couplings constrained to be zero in (\ref{chferms}), after $u(1)_X$ symmetry breaking, the dominant contribution to the effective Yukawa coupling term of the Lagrangian density between SM Weyl fermion $\psi_i$ and SM Weyl fermion $\psi_j$ and the Higgs doublet field H is assumed to be 
+\begin{equation}
+    {\mathcal L}_{\overline{\psi_i} H \psi_j} = A \overline{\psi_i} H \psi_j  \left( \frac{\langle \theta \rangle}{M}\right)^{x_i-x_j},
+    \label{effop}
+\end{equation}
+where $x_i$ is the $x$ charge of Weyl fermionic field labelled by $i$ and $A$ is a product of order unity dimensionless couplings of some underlying ultra-violet theory, of which we shall hear more of below.  The number of powers of $\theta$ in the numerator fix the Lagrangian density operator to be $U(1)_X$ group invariant and, depending on $x_i-x_j$, provide varying levels of suppression of the effective Yukawa coupling. 
+The idea is that the operator in (\ref{effop}) would be generated by underlying renormalisable physics in the ultra-violet, for example by the ``spaghetti diagram" in Fig.~\ref{fig:spag}.
+\
+
 
 \begin{comment}
 \bc{Describe Frogatt-Nielsen models}
@@ -158,7 +167,7 @@ $SU(3)\!\times\!SU(2)\!\times\!U(1)_Y\!\times\!U(1)_X$. $L_i$ are left-handed We
 \label{tab:lepton_charges}
 \end{table}
 
-\pcs{WRITE WHY NEUTRINOS IN THIS MODEL}
+\pcs{WRITING HERE WHY NEUTRINOS IN THIS MODEL}
 Furnished with the $\nu_{R_i}$ fields, the model could potentially implement the Type I see-saw mechanism of neutrino masses via the dimension-4 Lagrangian density terms
 \begin{equation} \label{Neutrino Mass Lagrangian}
   {\mathcal L} = \ldots - {\overline L_i} (Y_\nu)_{ij} \tilde{H} \nu_{R_j} - \frac{1}{2}
@@ -400,16 +409,16 @@ We validated the analytic scaling by performing a Bayesian parameter scan, allow
         Observable & Theoretical Mean & Experimental Value & $\sigma$ & p-value \\
         \hline
         \hline
-        $\Delta m_{21}^2$ & $7.4115\times 10^{-5}$ & $7.4900\times 10^{-5}$ & $1.9000\times 10^{-6}$ & $0.679531$ \\
-        $\Delta m_{31}^2$ & $2.5145\times 10^{-3}$ & $2.5130\times 10^{-3}$ & $2.1000\times 10^{-5}$ & $0.941331$ \\
-        $\sin^2\theta_{12}$ & $0.3079$ & $0.3080$ & $1.2000\times 10^{-2}$ & $0.994025$ \\
-        $\sin^2\theta_{13}$ & $2.2145\times 10^{-2}$ & $2.2150\times 10^{-2}$ & $5.7000\times 10^{-4}$ & $0.993208$ \\
-        $\sin^2\theta_{23}$ & $0.4698$ & $0.4700$ & $1.5000\times 10^{-2}$ & $0.988053$ \\
+        $\Delta m_{21}^2$ & $7.4839\times 10^{-5}$ & $7.4900\times 10^{-5}$ & $1.9000\times 10^{-6}$ & $0.974579$ \\
+        $\Delta m_{31}^2$ & $2.5130\times 10^{-3}$ & $2.5130\times 10^{-3}$ & $2.0000\times 10^{-5}$ & $0.998578$ \\
+        $\sin^2\theta_{12}$ & $0.3079$ & $0.3080$ & $1.2000\times 10^{-2}$ & $0.994770$ \\
+        $\sin^2\theta_{13}$ & $2.2139\times 10^{-2}$ & $2.2150\times 10^{-2}$ & $5.7000\times 10^{-4}$ & $0.984452$ \\
+        $\sin^2\theta_{23}$ & $0.4698$ & $0.4700$ & $1.5000\times 10^{-2}$ & $0.988654$ \\
         \hline
-        Combined \textbf{PPP} & & & & $0.422450$ \\
+        Combined \textbf{PPP} & & & & $0.504125$ \\
         \hline
-        $\epsilon$ & $0.3744$ &  & $0.0947$ &  \\
-        $\log M_0$ & $15.0413$ &  & $0.5638$ &  \\
+        $\epsilon$ & $0.3753$ &  & $0.0933$ &  \\
+        $\log M_0$ & $15.0305$ &  & $0.5683$ &  \\
       \hline
     \end{tabular}
     \caption{Posterior means and p-values for the Normal Hierarchy (NO) fit.
