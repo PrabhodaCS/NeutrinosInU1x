@@ -265,12 +265,15 @@ implying a diagonal $m_{\nu L}$ mass matrix, and an identity mixing matrix. Howe
 Therefore, to explain the mass hierarchy and the Pontecorvo–Maki–Nakagawa–Sakata (PMNS) matrix, one must go beyond the renormalisable Lagrangian and include symmetry-permitted higher-dimensional operators suppressed by the heavy scale $\Lambda_{\text{FN}}$ to generate the off-diagonal entries in \cref{renormalizable Y and M}. Their presence is natural from the point of view of UV completions of the model, and is the defining feature of any Froggatt–Nielsen models \cite{froggatt_hierarchy_1979}.
 \begin{table}[ht]
 \centering
-\setlength{\tabcolsep}{10pt}     % horizontal padding
-\renewcommand{\arraystretch}{1.2}  % vertical padding
-\begin{tabular}{|c|c|c|}
-    \hline
-    Parameter  & Normal ordering (BFP$\pm1\sigma$) & Inverted ordering (BFP$\pm1\sigma$)\\
-    \hline
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{} l c c @{}}
+    \toprule
+    & \multicolumn{2}{c}{\textbf{Experimental Values (NuFIT 6.0)} \cite{esteban_nufit-60_2024}} \\
+    \cmidrule(l){2-3} 
+    \textbf{Parameter} & Normal Ordering & Inverted Ordering \\
+    & (Best Fit $\pm 1\sigma$) & (Best Fit $\pm 1\sigma$) \\
+    \midrule
     $\theta_{12}/^\circ$ & $33.68^{+0.73}_{-0.70}$ & $33.68^{+0.73}_{-0.70}$ \\
     $\theta_{23}/^\circ$ & $43.3^{+1.0}_{-0.8}$ & $47.9^{+0.7}_{-0.9}$ \\
     $\theta_{13}/^\circ$ & $8.56^{+0.11}_{-0.11}$ &  $8.59^{+0.11}_{-0.11}$  \\
@@ -278,10 +281,12 @@ Therefore, to explain the mass hierarchy and the Pontecorvo–Maki–Nakagawa–
     $\Delta m_{3l}^2/10^{-3}\text{eV}^2$ & $+2.513^{+0.021}_{-0.019}$ & $-2.484^{+0.020}_{-0.020}$\\
     \hline
 \end{tabular}
-\caption{Three-flavor neutrino oscillation data as of Sept 2024 (Including SK data) \cite{esteban_nufit-60_2024,noauthor_nufit_nodate, PDG}. First column assumes normal ordering ($\Delta m_{3l}^2=\Delta m_{31}^2>0$) and second column assumes inverted ordering ($\Delta m_{3l}^2 = \Delta m_{32}^2<0$)}. \bca{I suspect that we also want to put a column with the experimental estimates of these quantities in a column of this table, along with a citation. } \pcs{This table are expetrimental values taken entirely from \cite{esteban_nufit-60_2024}}
+\caption{Three-flavour neutrino oscillation data as of Sept 2024 (Including SK data) \cite{esteban_nufit-60_2024,noauthor_nufit_nodate, PDG}. First column assumes normal ordering ($\Delta m_{3l}^2=\Delta m_{31}^2>0$) and second column assumes inverted ordering ($\Delta m_{3l}^2 = \Delta m_{32}^2<0$)}. }
 \label{tab:neutrino_angles_masses}
 \end{table}
 \begin{comment}
+\bca{I suspect that we also want to put a column with the experimental estimates of these quantities in a column of this table, along with a citation. } \pcs{This table are expetrimental values taken entirely from \cite{esteban_nufit-60_2024}
+
 \bca{Detail values for neutrino mass squared differences and mixing angles extracted from the PDG that we are using for our fits in a table.}
 
         \section{Neutrino masses}
@@ -359,7 +364,7 @@ where:
 \end{equation}
 here $\alpha_{ij}$ denotes the $\mathcal{O}(1)$ entries of $M_R^{-1}/M_0^{-1}$ after factoring their $epsilon$-dependence (i.e. $M_R^{-1}\sim M_0^{-1}\epsilon^{-n_{ij}}\alpha_{ij}$ with the integer exponents $n_{ij}$ determined by the $U(1)_X$ charges).
 
-Using second-order perturbation theory, keeping \bca{up to} $\epsilon^2$ correction to the matrix, we find that the three eigenvalues (masses) of the left-handed (LH) neutrinos are: 
+Using second-order perturbation theory, keeping up to $\epsilon^2$ correction to the matrix, we find that the three eigenvalues (masses) of the left-handed (LH) neutrinos are: 
 \begin{equation}\label{NormalHierarchy}
 \begin{aligned}
     m_{\nu_3} &\approx \frac{v^2 \epsilon^{-4}}{2M_0}\Bigg[
@@ -405,7 +410,11 @@ Finally, inspecting the determinant (or product of eigenvalues) shows the parame
     - \epsilon^{-4}\big(y_{13}y_{22}y_{31} + y_{12}y_{21}y_{33}\big)
     + \epsilon^{-2}\big(y_{12}y_{23}y_{31}+ y_{13}y_{21}y_{32} - y_{11}y_{23}y_{32}\big),
 \end{equation}
-implying that, unless cancellations or texture zeros are imposed, the $\epsilon^{-4}$ terms dominate and produce a strong hierarchy.  To ameliorate this, we may either impose $y_{22}=0$ or $\alpha_{22}=0 \implies m_{11} = m_{13} =m_{31}= 0$, which eliminates the $\epsilon^{-4}$ contributions. The first condition leads to a normal ordering of the neutrino masses, while the second leads to an inverted ordering. We will demonstrate how to naturally impose the above texture zeroes with model building and examine the phenomenological implications of this in the following two sections. \bca{The inverted hierarchy case texture zeroes can easily be naturally provided in the context of the ultra-violet completion of the FN mechanism via omitting particular $\psi_{FN_i}$ fields that would otherwise generate the operator from a spaghetti diagram like the one in Fig.~\ref{fig:spag}.}
+implying that, unless cancellations or texture zeros are imposed, the $\epsilon^{-4}$ terms dominate and produce a strong hierarchy.  To ameliorate this, we may either impose $y_{22}=0$ or $\alpha_{22}=0 \implies m_{11} = m_{13} =m_{31}= 0$, which eliminates the $\epsilon^{-4}$ contributions. The first condition leads to a normal ordering of the neutrino masses, while the second leads to an inverted ordering. We will demonstrate how to naturally impose the above texture zeroes with model building and examine the phenomenological implications of this in the following two sections. The inverted hierarchy case texture zeroes can easily be naturally provided in the context of the ultra-violet completion of the FN mechanism via omitting particular $\psi_{FN_i}$ fields (or any relevant heavy mediators that are present in the UV completion) that would otherwise generate the operator from a spaghetti diagram like the one in Fig.~\ref{fig:spag}. The normal hierarchy, however, cannot be explained similarly, and therefore a clockwork-like mechanism as a possible explanation is outlined in \cref{Sec:Clockwork}.
+
+\begin{comment}
+    \bca{The inverted hierarchy case texture zeroes can easily be naturally provided in the context of the ultra-violet completion of the FN mechanism via omitting particular $\psi_{FN_i}$ fields that would otherwise generate the operator from a spaghetti diagram like the one in Fig.~\ref{fig:spag}.}
+\end{comment}
 
 \subsection{Normal Hierarchy} \label{sec:Normal Hierarchy}
 We show below that imposing $y_{22} = 0$ (a possible mechanism to achieve this single texture zero is detailed in \cref{Clockwork}) leads to a normal hierarchy agreeing with those inferred from neutrino oscillations. 
@@ -420,6 +429,7 @@ We show below that imposing $y_{22} = 0$ (a possible mechanism to achieve this s
 \begin{comment}
 \pcs{Move appendix here, maybe?}
 \bca{I  don't think so because it's a nice possible mechanism but there may be others; this point is a little peripheral to the rest of the paper: important to show that there's a possibility but we aren't nailing our colours to it.}
+Appendix \bca{I didn't see these - did I miss them?}
 \end{comment}
 \begin{equation}
     m_\nu \approx \frac{v^2}{2M_0} \epsilon^{-2} (X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \cdots) 
@@ -442,7 +452,7 @@ where the structure of the $X^{(i)}$ are:
     0& \times &\times 
     \end{pmatrix}
 \end{equation}
-At first order, $\text{Diag}(m_{\nu 1},m_{\nu 2},m_{\nu 3}) \approx \frac{v^2 \epsilon^{-2}}{2M_0}(\lambda_1^{(0)},0,0)$. First-order corrections are zero. We get that the eigenvalues are of the form (the detailed eigenvalues are given in the Appendix \bca{I didn't see these - did I miss them?})
+At first order, $\text{Diag}(m_{\nu 1},m_{\nu 2},m_{\nu 3}) \approx \frac{v^2 \epsilon^{-2}}{2M_0}(\lambda_1^{(0)},0,0)$. First-order corrections are zero. We get that the eigenvalues are of the form (the detailed eigenvalues are given in the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub} repository)
 \begin{align}
     m_3 &= m \left(A_3 + \epsilon^2 B_3+{\mathcal{O}}(\epsilon^3) \right))\\
     m_2 &= m \left(\epsilon^2 B_2+{\mathcal{O}}(\epsilon^3) \right)\\
@@ -474,91 +484,154 @@ the entries $u_{ij}^{(n)}$ are long algebraic functions of $y_{ij}$ and $a_{ij}$
     \bca{More detail needed. Need a table with domain of input parameters, description of what kind of scan. Enough information for someone to reproduce your results, if that were necessary. Detail any software packages you use, citing them if you can.}
     \bca{Give all prior PDFs. What about $M_0$ for instance? I presume flat in the log. Give formula for half-Cauchy. Are you aware that a Cauchy variable has an ill-defined variance (it is infinite)? I think that means that the distribution is strictly non-normalisable. Although one can always in principle find some upper bound - which might be very large - on the parameter.}
 \end{comment}
-We validated the analytic scaling by performing a Bayesian parameter scan using Hamiltonian Monte Carlo (No U-Turn Sampler (NUTS) \cite{hoffman_no-u-turn_2011}) implemented using NumPyro, allowing the coefficients to be anarchic by sampling $y_{ij}$ and $a_{ij}$ from Gaussians centred at zero with Half-Cauchy distributed variance, which allows the data to dictate the true variance \cite{gelman_prior_2006}. 
-\begin{align}
-    y_{ij} \sim \mathcal{N}(0,\sigma_y), \,\,\, \sigma_y \sim \text{Half-Cauchy}(0.5), \\
-    a_{ij} \sim \mathcal{N}(0,\sigma_a), \,\,\, \sigma_a \sim \text{Half-Cauchy}(0.8),
-\end{align}
-the Frogatt-Nielson parameter ($\epsilon$) and the Majorana (seesaw) mass scale ($\log_{10} M_0$) are given a uniform prior
-\begin{align}
-    \epsilon &\sim \mathcal{U}(0.1,0.5), \\
-    \log_{10} M_0 &\sim \mathcal{U}(14.0,16.0), 
-\end{align}
-the final posterior provides the best-fit coefficients, which are of order one, as expected. The posterior samples, diagnostics and the netCDF files required to reproduce these results are available publicly at the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub repository}.
-The corner and pull plots showing the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{(Normal Ordering) Corner plot} and \cref{NO Table}.
+We validated the analytic scaling by performing a Bayesian parameter scan using No U-Turn Sampler (NUTS) \cite{hoffman_no-u-turn_2011}, a Hamiltonian Monte Carlo algorithm implemented using \texttt{NumPyro} \cite{phan_composable_2019}. We implemented the anarchy hypothesis using a hierarchical Bayesian model. We sample $y_{ij}$ and $a_{ij}$ from normal distributions centred at zero, but their widths ($\sigma_y, \sigma_a$) are themselves treated as free hyperparameters sampled from Half-Cauchy distributions. The probability distribution for a Half-Cauchy distributed variable $x$ with scale $\beta$ is,
+\begin{equation} \label{eqn:Half-Cauchy}
+    p(x) = \frac{2}{\pi} \frac{\beta}{x^2+\beta^2},\quad x \geq 0,
+\end{equation}
+while this distribution formally has an infinite variance, the heavy tails make it an ideal weakly informative prior for scale parameters in a Bayesian hierarchical model \cite{gelman_prior_2006, polson_half-cauchy_2012}. This avoids hard-coding our belief of `$\mathcal{O}(1)$ parameters' and allows the data to determine the optimal variance of the coefficients. The Frogatt-Nielson parameter ($\epsilon$) and the Majorana (seesaw) mass scale ($\log_{10} M_0$) are given uniform priors over the ranges $[0.1,0.5]$ and $[14.0,16.0]$, as summarised in \cref{tab:priors}. 
+
+The final posterior provides the best-fit coefficients, which are of order one, as expected. The posterior means of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO} and \cref{tab:NO_Posteriors}. 
+The posterior samples, diagnostics and the netCDF files required to reproduce these results are available publicly at the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub} repository.
 \begin{table}[t]
 \centering
-\footnotesize
-\setlength{\tabcolsep}{6pt}
-\begin{tabular}{@{} l  l  l @{}}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{} l  l  l  l @{}}
 \toprule
-Parameter & Distribution & PDF (support) \\ 
+\textbf{Parameter} & \textbf{Symbol} & \textbf{Prior Distribution} & \textbf{Hyperparameters/Domain} \\ 
 \midrule
-Yukawa entry $y_{ij}$ & $\; \mathcal{N}(0,\sigma_Y^2)\;$ & 
-$\displaystyle p(y_{ij})=\frac{1}{\sqrt{2\pi}\,\sigma_Y}\exp\!\bigg(-\frac{y_{ij}^2}{2\sigma_Y^2}\bigg),\; y_{ij}\in\mathbb{R}$ \\[6pt]
+Yukawa entries & $y_{ij}$ & $\mathcal{N}(0,\sigma_Y^2)$ &  $y_{ij} \in \mathbb{R}$ \\[6pt]
 
-Majorana entry $a_{ij}$ & $\; \mathcal{N}(0,\sigma_A^2)\;$ &
-$\displaystyle p(a_{ij})=\frac{1}{\sqrt{2\pi}\,\sigma_A}\exp\!\bigg(-\frac{a_{ij}^2}{2\sigma_A^2}\bigg),\; a_{ij}\in\mathbb{R}$ \\[6pt]
+Majorana entries & $a_{ij}$ & $\mathcal{N}(0,\sigma_A^2)$ &  $a_{ij} \in \mathbb{R}$ \\[6pt]
 
-Yukawa scale $\sigma_Y$ & $\; \mathrm{Half\!-\!Cauchy}(\beta_Y)\;(\beta_Y=0.5)$ &
-$\displaystyle p(\sigma_Y)=\frac{2}{\pi}\frac{\beta_Y}{\sigma_Y^2+\beta_Y^2},\quad \sigma_Y\ge0$ \\[6pt]
+\hline
 
-Majorana scale $\sigma_A$ & $\; \mathrm{Half\!-\!Cauchy}(\beta_A)\;(\beta_A=0.8)$ &
-$\displaystyle p(\sigma_A)=\frac{2}{\pi}\frac{\beta_A}{\sigma_A^2+\beta_A^2},\quad \sigma_A\ge0$ \\[6pt]
+Yukawa scale & $\sigma_Y$ & $\text{Half-Cauchy}(\beta_Y)$ &  $\beta_Y = 0.5$ (See \cref{eqn:Half-Cauchy}) \\[6pt]
 
-FN parameter $\epsilon$ & $\; \mathcal{U}(\epsilon_{\min},\epsilon_{\max})\;(\;[0.1,0.5]\;)$ &
-$\displaystyle p(\epsilon)=\frac{1}{\epsilon_{\max}-\epsilon_{\min}},\quad \epsilon\in[\epsilon_{\min},\epsilon_{\max}]$ \\[6pt]
+Majorana scale & $\sigma_A$ & $\text{Half-Cauchy}(\beta_A)$ &  $\beta_A = 0.8$ (See \cref{eqn:Half-Cauchy}) \\[6pt]
 
-Seesaw scale (log) $\log_{10}M_0$ & $\; \mathcal{U}(14,16)\;$ &
-$\displaystyle p(\log_{10}M_0)=\frac{1}{16-14}=\tfrac{1}{2},\quad \log_{10}M_0\in[14,16]$ \\[6pt]
+\hline
 
-Implied prior on $M_0$ & (derived) & 
-$\displaystyle p(M_0)=\frac{1}{(16-14)\,M_0\ln 10}=\frac{1}{2\,M_0\ln 10},\quad M_0\in[10^{14},10^{16}]\,$\\
+FN parameter & $\epsilon$ & $\mathcal{U}(\epsilon_{\min},\epsilon_{\max})$ &
+$[0.1,0.5]$ \\[6pt]
+
+Seesaw scale & $\log_{10}M_0$ & $\mathcal{U}(14,16)$ &
+$[14,16]$ \\[6pt]
 \bottomrule
 \end{tabular}
 \caption{Priors used in the Bayesian scan.  Values of scale hyperparameters (in parentheses) match the code: $\beta_Y=0.5$, $\beta_A=0.8$, $\epsilon\in[0.1,0.5]$, $\log_{10}M_0\in[14,16]$.}
-\label{tab:priors_correct}
+\label{tab:priors}
 \end{table}
 
 \begin{figure}[h!]
     \includegraphics[width=1.0\textwidth]{Python/Data/Normal/corner_plot_corner_blue.png}
-    \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (Normal Ordering). \bca{Somewhere, it's worth showing the 1d distributions of delta m$^2$ parameters along with that of epsilon and of $M_0$. Also, please increase the font sizes on the graphics. You'll be showing this through a dodgy projector while giving a talk at some point and no one will be able to read them - a common, but entirely avoidable, mistake! Also, say what the vertical dashed lines mean. Also, you want to quote the mean value and standard deviations to the same number of decimal places.  } }
-    \label{(Normal Ordering) Corner plot}
+    \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (Normal Ordering).}
+    \label{fig:CornerPlot_NO}
 \end{figure}
 \begin{comment}
+    \bca{Somewhere, it's worth showing the 1d distributions of delta m$^2$ parameters along with that of epsilon and of $M_0$. Also, please increase the font sizes on the graphics. You'll be showing this through a dodgy projector while giving a talk at some point and no one will be able to read them - a common, but entirely avoidable, mistake! Also, say what the vertical dashed lines mean. Also, you want to quote the mean value and standard deviations to the same number of decimal places.  } 
+    
     \bca{Too many significant figures in the digits. They are distracting - superfluous information. Put uncertainties on the experimental and theoretical values. p-value should be $p-$value and the convention is to quote eg $.975$ rather than $0.975$ for $p-$values.}
 \end{comment}
 \begin{table}[h!]
     \centering
-    \begin{tabular}{|c|c|c|c|c|}
-      \hline
+    \begin{tabular}{@{} l c c c c @{}}
+      \toprule
         Observable & Theoretical (mean $\pm$ 1$\sigma$) & Experimental (mean $\pm$ 1$\sigma$) & $\sigma_{\rm comb}$ & $p-$value \\
+        \midrule
+        $\Delta m_{21}^2$ & $(7.48 \pm 0.19)\times 10^{-5}$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $2.7\times 10^{-6}$ & $.98$ \\
+        $\Delta m_{31}^2$ & $(2.51 \pm 0.02)\times 10^{-3}$ & $(2.51 \pm 0.02)\times 10^{-3}$ & $2.8\times 10^{-5}$ & $>.99$ \\
+        $\sin^2\theta_{12}$ & $0.308 \pm 0.012$ & $0.308 \pm 0.012$ & $0.017$ & $>.99$ \\
+        $\sin^2\theta_{13}$ & $0.0221 \pm 0.0006$ & $0.0221 \pm 0.0006$ & $0.0008$ & $.99$ \\
+        $\sin^2\theta_{23}$ & $0.470 \pm 0.015$ & $0.470 \pm 0.015$ & $0.021$ & $.99$ \\
         \hline
-        $\Delta m_{21}^2$ & $(7.48 \pm 0.19)\times 10^{-5}$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $2.7\times 10^{-6}$ & $.982$ \\
-        $\Delta m_{31}^2$ & $(2.51 \pm 0.02)\times 10^{-3}$ & $(2.51 \pm 0.02)\times 10^{-3}$ & $2.8\times 10^{-5}$ & $.999$ \\
-        $\sin^2\theta_{12}$ & $0.3079 \pm 0.0115$ & $0.3080 \pm 0.0120$ & $0.0166$ & $.996$ \\
-        $\sin^2\theta_{13}$ & $0.0221 \pm 0.0006$ & $0.0221 \pm 0.0006$ & $0.0008$ & $.989$ \\
-        $\sin^2\theta_{23}$ & $0.4698 \pm 0.0151$ & $0.4700 \pm 0.0150$ & $0.0213$ & $.992$ \\
-        \hline
-        $\epsilon$ & $0.3753 \pm 0.0933$ &  &  &  \\
-        $\log_{10} M_0$ & $15.031 \pm 0.568$ &  &  &  \\
+        $\epsilon$ & $0.38 \pm 0.093$ &  &  &  \\
+        $\log_{10} M_0$ & $15.03 \pm 0.57$ &  &  &  \\
       \hline
     \end{tabular}
    \caption{Posterior means and p-values for the Normal Ordering (NO) fit. 
-    The theoretical means are obtained from the Markov Chain Monte-Carlo (MCMC) posterior, and the experimental values and uncertainties are taken from NuFIT 6.0 (2024) global fits (with SK) \cite{esteban_nufit-60_2024, noauthor_nufit_nodate}. The PPP entries represent the posterior predictive probabilities for the full observable set.}
-    \label{NO Table}
+    The theoretical means are obtained from the Markov Chain Monte-Carlo (MCMC) posterior, and the experimental values and uncertainties are taken from NuFIT 6.0 (2024) global fits (with SK) \cite{esteban_nufit-60_2024, noauthor_nufit_nodate}.}
+    \label{tab:NO_Posteriors}
 \end{table}
 \subsection{Inverted Hierarchy} \label{sec:Inverted Hierarchy}
-Setting the Majorana matrix elements $a_{33} = a_{13} = 0$ (which can be justified by assuming the specific UV completion for this FN model does not have the heavy mediator fermions (see \cref{fig:spag}) \bca{Detail the field content of the UV model here.} for these specific entries, hence forbidding them), we get an inverted mass hierarchy. Repeating a similar analysis as in the previous \cref{sec:Normal Hierarchy}, we get  the parametric form of the eigenvalues (masses) \bca{I presume that we should do a field phase redefinition to change an overall minus in $m_2$ here - it'll make it much clearer.}
+Setting the Majorana matrix elements $a_{33} = a_{13} = 0$ (which can be justified by assuming the specific UV completion for this FN model does not have the heavy mediator particles), we get an inverted mass hierarchy. A simple UV completion that yields the Majorana mass entries in the FN expansion is to introduce heavy scalar mediators $S_{ij}$ with the effective Lagrangian,
+\begin{equation} \label{eqn:Majorana_UVcompletion}
+    -\mathcal{L}_{M} \supset \lambda S_{ij} \overline{\nu^c_{Rii}} \nu_{Rj} + M_{ij}^2 |S_{ij}|^2 + c_{ij} S_{ij} \theta^{X_i + X_j} + \text{H.c.},
+\end{equation}
+which after $\langle \theta \rangle \neq 0$, induces the suppressed entries in the Majorana mass matrix. In this construction, the fields $S_{ij}$ are SM singlets and carry FN charges $-X_i-X_j$. To obtain the inverted hierarchy, we assume the scalar mediators $S_{11}, S_{13}$ (as depicted in \cref{eqn:Majorana_UVcompletion} and \cref{fig:Majorana_UVcompletion}) do not exist in the UV completion.
+\begin{figure}[t]
+    \centering
+    \begin{tikzpicture}
+      \begin{feynman}
+        % --- Left Side Vertices ---
+        % Adjusted y-coordinates slightly for better aspect ratio
+        \vertex (nu_c) at (0, 3);
+        \vertex (nu)   at (0, -1);
+        \vertex (s_vertex) at (2, 1);
+
+        % --- Central Blob ---
+        \node[blob, minimum size=0.8cm] (blob_vertex) at (5, 1) {};
+
+        % --- Right Side Vertices
+        \vertex (theta_top) at (9, 3.5) {\(\langle \theta \rangle\)};
+        \vertex (theta_1) at (8.8, 2.25);
+        
+        \vertex (theta_mid) at (9.2, 1) {\(\langle \theta \rangle\)};
+
+        \vertex (theta_2) at (8.8, -0.25);
+        
+        \vertex (theta_bot) at (9, -1.5) {\(\langle \theta \rangle\)};
+
+        % --- Diagram Connections ---
+        \diagram*{
+          % Left side (unchanged)
+          (nu_c) --[anti fermion, edge label'={\(\overline{\nu^c_{Ri}}\)}] (s_vertex),
+          (nu)   --[fermion, edge label'={\(\nu_{Rj}\)}] (s_vertex),
+          (s_vertex) --[scalar, edge label={\(S_{ij}\)}] (blob_vertex),
+
+          % Right side: Connect blob to representative flavons
+          (blob_vertex) -- [scalar] (theta_top),
+          (blob_vertex) -- [scalar] (theta_mid),
+          (blob_vertex) -- [scalar] (theta_bot),
+
+            (blob_vertex) -- [scalar] (theta_1),
+          (blob_vertex) -- [scalar] (theta_2),
+
+        };
+      \end{feynman}
+
+      % --- Post-Diagram Annotations ---
+
+      % 1. Add floating visual dots BETWEEN the lines to suggest continuity.
+      % We use the 'calc' library syntax ($(A)!0.5!(B)$) to find midpoints.
+      \node at ($(blob_vertex)!0.6!(theta_top) + (1.5,-0.5)$) {$\vdots$};
+      \node at ($(blob_vertex)!0.6!(theta_bot) + (1.5, 0.5)$) {$\vdots$};
+
+      % 2. Add the Curly Brace Label
+      % This draws a brace from the top theta to the bottom theta on the right side.
+      \draw[decorate, decoration={brace, amplitude=10pt}, thick]
+           ($(theta_top.north east)+(0.1,0)$) -- ($(theta_bot.south east)+(0.1,0)$)
+           node [midway, right=15pt, align=center, font=\small] {\(X_i + X_j\) \\ insertions};
+
+    \end{tikzpicture}
+    \caption{The Feynman diagram showing the generation of the effective Majorana mass operator $A\left(\frac{\langle\theta \rangle}{\Lambda_{\text{FN}}} \right)^{X_i+X_j} \overline{\nu_{Ri}^c}  \nu_{Rj}$. The intermediate heavy scalar $S_{ij}$ couples to the flavon field $\theta$ through an effective vertex (represented by the blob), requiring $X_i+X_j$ insertions of the VEV to maintain gauge invariance, resulting in the suppression factor $(\langle\theta \rangle/\Lambda_{\text{FN}})^{X_i+X_j}$.}
+    \label{fig:Majorana_UVcompletion}
+\end{figure}
+Repeating a similar analysis as in the previous \cref{sec:Normal Hierarchy}, we get the parametric form of the eigenvalues (masses) \footnote{we fix the phases here such that all masses $m_{i} \geq 0$}
+\begin{comment}
+    \bca{I presume that we should do a field phase redefinition to change an overall minus in $m_2$ here - it'll make it much clearer.}
+    
+    see \cref{fig:spag}) \bca{Detail the field content of the UV model here.} for these specific entries, hence forbidding them
+    
+    \bca{Note that one uses $\sim$ usually for order of magnitude estimates or "goes like" arguments, or $\approx$ for an approximation. SHould these symbols change in the following?}
+\end{comment}
 \begin{align}
     m_1 &= m \left(A_1 + \epsilon B_1 + \epsilon^2 C_1+{\mathcal{O}}(\epsilon^3) \right)\\
-    m_2 &= m \left(-A_1 + \epsilon B_1 + \epsilon^2 C_2+{\mathcal{O}}(\epsilon^3) \right)\\
+    m_2 &= m \left(A_1 - \epsilon B_1 - \epsilon^2 C_2+{\mathcal{O}}(\epsilon^3) \right)\\
     m_3 &= m{\mathcal{O}}(\epsilon^3),
 \end{align}
 we see that the eigenvalues follow an inverted ordering ($m_3 \ll m_1 < m_2$)
-\bca{Note that one uses $\sim$ usually for order of magnitude estimates or "goes like" arguments, or $\approx$ for an approximation. SHould these symbols change in the following?}
 \begin{align} 
-    \frac{\Delta m_{32}^2}{\Delta m_{31}^2} &\sim \epsilon \sim \left( \frac{8 \times 10^{-5}}{ 2.5 \times 10^{-3}} \right) \\
+    \frac{\Delta m_{32}^2}{\Delta m_{31}^2} &\approx \left( \frac{8 \times 10^{-5}}{ 2.5 \times 10^{-3}} \right) \approx \epsilon\\
     \epsilon &\sim 0.32,
 \end{align}
 and the PMNS matrix has the (unnormalized) parametric form,
@@ -570,42 +643,46 @@ and the PMNS matrix has the (unnormalized) parametric form,
         -\epsilon u_{31}^{(1)} &  \epsilon^2 u_{32}^{(2)} & 1 + \epsilon^2 u_{33}^{(2)}
     \end{pmatrix},
 \end{equation}
-giving us the mixing angles, \bca{Should all be quoted like I've done the top equation. You can ask me why next time we speak.}
+giving us the mixing angles, 
 \begin{align}
     \sin \theta_{13} &= |U_{e3}| \approx  \epsilon u_{13}' +\epsilon^2 u_{13}'' = 0.15 \\
-    \tan \theta_{12} &= \frac{|{U_{e2}}|}{{|U_{e1}|}} \sim \frac{1 + \epsilon u_{12}' +\epsilon^2 u_{12}''}{-1 + \epsilon u_{11}' +\epsilon^2 u_{11}''}\approx 1 + \epsilon u_{12}' +\epsilon^2 (u_{12}'' - u_{11}')  \approx 0.66 \\
-    \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \sim \frac{ \epsilon u_{23}' +\epsilon^2 u_{23}''}{ 1 +\epsilon^2 u_{33}''} \approx 1.15
+    \tan \theta_{12} &= \frac{|{U_{e2}}|}{{|U_{e1}|}} \approx \frac{1 + \epsilon u_{12}' +\epsilon^2 u_{12}''}{-1 + \epsilon u_{11}' +\epsilon^2 u_{11}''}\approx 1 + \epsilon u_{12}' +\epsilon^2 (u_{12}'' - u_{11}')  = 0.66 \\
+    \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \approx \frac{ \epsilon u_{23}' +\epsilon^2 u_{23}''}{ 1 +\epsilon^2 u_{33}''} = 1.15
 \end{align}
-confirming the plausibility of the model. Using the same priors as before \bca{I don't see where you've put these. They need to be specified and referred to explicitly. (one may ask before what?)}, we can perform a scan, giving the posterior distributions depicted in \cref{Posterior Dist for the three angles (Inverted Hierarchy)} and \cref{IO Table}. 
+confirming the plausibility of the model. Using the same priors as before, summarised in \cref{tab:priors}, we can perform a scan, giving the posterior distributions depicted in \cref{fig:CornerPlot_IO} and \cref{tab:IO_Posteriors}.
+\begin{comment}
+    \bca{Should all be quoted like I've done the top equation. You can ask me why next time we speak.}
+
+    \bca{I don't see where you've put these. They need to be specified and referred to explicitly. (one may ask before what?)}
+\end{comment}
 \begin{figure}[h!]
     \includegraphics[width=1\textwidth]{Python/Data/Inverted/corner_plot_corner.png}
     \caption{Posterior probability distribution of the mass scale, FN parameter and the mixing angles (Inverted Hierarchy)}
-    \label{Posterior Dist for the three angles (Inverted Hierarchy)}
+    \label{fig:CornerPlot_IO}
 \end{figure}
 \begin{table}[h!]
     \centering
-    \begin{tabular}{|c|c|c|c|c|}
-      \hline
+    \begin{tabular}{@{} l c c c c @{}}
+      \toprule
         Observable & Theoretical (mean $\pm$ 1$\sigma$) & Experimental (mean $\pm$ 1$\sigma$) & $\sigma_{\rm comb}$ & $p-$value \\
+        \midrule
+        $\Delta m_{21}^2$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $2.7\times 10^{-6}$ & $.99$ \\
+        $\Delta m_{31}^2$ & $(2.48 \pm 0.02)\times 10^{-3}$ & $(2.48 \pm 0.02)\times 10^{-3}$ & $2.8\times 10^{-5}$ & $.99$ \\
+        $\sin^2\theta_{12}$ & $0.308 \pm 0.012$ & $0.308 \pm 0.012$ & $0.017$ & $.99$ \\
+        $\sin^2\theta_{13}$ & $0.0223 \pm 0.0006$ & $0.0223 \pm 0.0006$ & $0.0008$ & $.99$ \\
+        $\sin^2\theta_{23}$ & $0.550 \pm 0.014$ & $0.550 \pm 0.014$ & $0.019$ & $.99$ \\
         \hline
-        $\Delta m_{21}^2$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $2.7\times 10^{-6}$ & $.993$ \\
-        $\Delta m_{31}^2$ & $(2.48 \pm 0.02)\times 10^{-3}$ & $(2.48 \pm 0.02)\times 10^{-3}$ & $2.8\times 10^{-5}$ & $.994$ \\
-        $\sin^2\theta_{12}$ & $0.3077 \pm 0.0115$ & $0.3080 \pm 0.0120$ & $0.0166$ & $.986$ \\
-        $\sin^2\theta_{13}$ & $0.0223 \pm 0.0006$ & $0.0223 \pm 0.0006$ & $0.0008$ & $.990$ \\
-        $\sin^2\theta_{23}$ & $0.5497 \pm 0.0136$ & $0.5500 \pm 0.0135$ & $0.0191$ & $.987$ \\
-        \hline
-        $\epsilon$ & $0.3613 \pm 0.0990$ &  &  &  \\
-        $\log_10 M_0$ & $15.120 \pm 0.552$ &  &  &  \\
+        $\epsilon$ & $0.36 \pm 0.099$ &  &  &  \\
+        $\log_{10} M_0$ & $15.12 \pm 0.55$ &  &  &  \\
       \hline
     \end{tabular}
     \caption{Posterior means and p-values for the Inverted Hierarchy (IO) fit.
-    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 6.0 (2024) global fits (with SK)  \cite{esteban_nufit-60_2024, noauthor_nufit_nodate}.
-    The PPP entries represent the posterior predictive probabilities for the full observable set.}
-    \label{IO Table}
+    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from NuFIT 6.0 (2024) global fits (with SK)  \cite{esteban_nufit-60_2024, noauthor_nufit_nodate}.}
+    \label{tab:IO_Posteriors}
 \end{table}
 \section{Conclusions}\label{sec:conc}
 We have shown that the \model\ naturally explains small neutrino masses and sizeable leptonic mixing angles which agree with those inferred from measurements of neutrino oscillation phenomena. The most easily obtained natural spectrum
-(for the sub-eV neutrinos) is a so-called ``inverted'' one, where there are two quasi-degenerate states and one much lighter one. A spectrum which quantitatively agrees with current measurements is explained by order unity fundamental Yukawa couplings, as demonstrated in \S\ref{sec:Inverted Hierarchy}. At the level of the FN mechanism, three additional texture zeroes are required, but these are easily obtained in the ultra-violet completion of the model by simply omitting certain additional leptonic fields, as \S\ref{} demonstrates. A normal hierarchy requires a single texture zero but this one  \emph{cannot} be obtained in this way: we have suggested further adding a sector of clockwork fields to the model in order to explain it.
+(for the sub-eV neutrinos) is a so-called ``inverted'' one, where there are two quasi-degenerate states and one much lighter one. A spectrum which quantitatively agrees with current measurements is explained by order unity fundamental Yukawa couplings, as demonstrated in \S\ref{sec:Inverted Hierarchy}. At the level of the FN mechanism, three additional texture zeroes are required, but these are easily obtained in the ultra-violet completion of the model by simply omitting certain additional leptonic fields, as \S\ref{sec:Inverted Hierarchy} demonstrates. A normal hierarchy requires a single texture zero but this one  \emph{cannot} be obtained in this way: we have suggested further adding a sector of clockwork fields to the model in order to explain it.
 It is clear that the \model\ would need additional model building in order to further the FN proposal to fully explain all of the observed patterns in the charged fermionic fields' masses and mixing angles in detail. One requires an extra symmetry that will enforce an approximate $U(2)_q \times U(2)_u \times U(2)_R$ approximate global symmetry and make the upper left-hand block of $Y_{U,D}$ (\ref{chferms}) zero, at the level of the renormalisable terms in the Lagrangian density.
 We envisage this to follow the flavour deconstruction programme~\cite{Bordone:2017bld,Greljo:2024ovt}, where the details of the lighter charged fermion masses and mixing angles will be explained further in the ultra-violet than the multi-TeV scales headed herewith further family gauge symmetries. 
 Further model building would be required in order to fit a normal neutrino hierarchy, for example by using a mechanism close to the clockwork mechanism. 
@@ -621,7 +698,7 @@ This work was partially supported by STFC HEP Consolidated grant
 ST/X000664/1. We thank the Cambridge Pheno Working Group for discussions. 
 
 \appendix
-\section{Single Yukawa coupling suppression mechanism} \label{Clockwork}
+\section{Single Yukawa coupling suppression mechanism} \label{Sec:Clockwork}
 A possible mechanism to achieve the single Yukawa element suppression required in \cref{sec:Normal Hierarchy} is a clockwork-like mechanism \cite{giudice_clockwork_2017, alonso_clockwork_2018}. In this slightly modified setup of the mechanism, we assume heavy ``gears'' or an $N$-node chain of vector-like fermions such that the kinetic terms can be neglected for our treatment, coupling to the second generation of the SM fields as
 \begin{comment}
     \bca{Lots of other terms are not present that are allowed by gauge symmetry - why arent they there?}\pcs{no defence-$\psi$ fields will not mix with the other neutrinos unless a FN mediator connects them, however, the direct term is allowed unless i claim that all other elements of the matrix are to be connected through such Clockwork chains, and by geometry, this chain happens to be longer. The other ways in which $\psi's, L \ \text{and}\ \nu $ mix are not present purely due to a phenomenological need. 
