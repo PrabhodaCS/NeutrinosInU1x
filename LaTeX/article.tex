@@ -452,7 +452,7 @@ where the structure of the $X^{(i)}$ are:
     0& \times &\times 
     \end{pmatrix}
 \end{equation}
-At first order, $\text{Diag}(m_{\nu 1},m_{\nu 2},m_{\nu 3}) \approx \frac{v^2 \epsilon^{-2}}{2M_0}(\lambda_1^{(0)},0,0)$. First-order corrections are zero. We get that the eigenvalues are of the form (the detailed eigenvalues are given in the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub} repository)
+At first order, $\text{Diag}(m_{\nu 1},m_{\nu 2},m_{\nu 3}) \approx \frac{v^2 \epsilon^{-2}}{2M_0}(\lambda_1^{(0)},0,0)$. First-order corrections are zero. We get that the eigenvalues are of the parametric form (the detailed eigenvalues are given in the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub} repository)
 \begin{align}
     m_3 &= m \left(A_3 + \epsilon^2 B_3+{\mathcal{O}}(\epsilon^3) \right))\\
     m_2 &= m \left(\epsilon^2 B_2+{\mathcal{O}}(\epsilon^3) \right)\\
@@ -710,6 +710,8 @@ More UV model building required}
 \end{equation}
 here, the connecting chain consists of $N+1$ right-handed and $N+1$ left-handed fermions and $q<1$, $m \sim \Lambda_{\text{FN}}$. The structure of the Lagrangian in \cref{Clockwork Chain} is preserved by the approximate $[U(1)]^{N+1}$ symmetry, such that at each node, the fermions $\psi_j$ have charge $1$ under $U(1)_j$. In this framework, the mass parameter $m$ and the symmetry-breaking parameter $q$ are treated as background values of spurion fields, with $q_j$ having charge $(1,-1)$ under $U(1)_j\times U(1)_{j+1}$ (we can use a cyclic symmetry to keep the couplings approximately equal \cite{arkani-hamed_constructing_2001}). This thereby ensures that ``non-local'' couplings, connecting site-0 to site-N directly, are forbidden, and the Lagrangian remains local in theory space. The coupling connecting site-0 to site-N can only be generated, therefore, by an operator suppressed by a factor of $q^N$ as shall be shown below. This structure can be viewed as locality in a discretised extra dimension (the theory space).
 
+To ensure that the suppression of the Yukawa matrix is isolated only to the $Y_{22}$ element, we can label the nodes, $U(1)_I$, such that $L_1, L_2, L_3$ attach to $U(1)_A, U(1)_B, U(1)_C$ and $\nu_1,\nu_2, \nu_3$ to $U(1)_A', U(1)_B', U(1)_C'$ with the path/chain length between B and B' being $n(BB')=N+1$ and the rest having a length of one. That is, only $L_2$ and $\nu_2$ are significantly separated in theory space, while the other fields are neighbouring.
+
 For the sake of brevity, we can understand the behaviour by integrating out the chain using the tree-level EOM,
 \begin{align}
     \frac{\partial \mathcal{L}}{\partial\overline \psi_{L,k}} = -m\psi_{R,k} + mq \psi_{R,k+1} + \delta_{N,k}y_L m \nu_2 &= 0, \\
@@ -721,7 +723,7 @@ substituting this in the Lagrangian \cref{Clockwork Chain}, we get,
 \begin{equation}
     \mathcal{L}_{eff} = q^N y_Ry_L \overline L_2\tilde H \nu_2 + \textrm{H.c.},
 \end{equation}
-where the effective Yukawa coupling is $y_{22} \approx q^N y_L y_R$. For $q<1, N\gg1$, we get an exponential suppression, as required by our model to sustain a normal hierarchy. 
+where the effective Yukawa coupling is $y_{22} \approx q^N y_L y_R$. For $q<1, N\gg1$, we get an exponential suppression, as required by our model to sustain a normal hierarchy. With $q=0.5, N = 4$, we get a suppression of $0.06$, which is enough to match the $\epsilon^{-4}$ enhancement coming from the Frogatt-Nielson charge allocation and the seesaw model.
 
 
 \bibliographystyle{JHEP-2}
