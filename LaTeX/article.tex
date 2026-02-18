@@ -46,9 +46,7 @@ Neutrino masses and mixing angles in the \model}
   to the first two. 
   We investigate its implications for neutrino masses and mixing angles.
   The \model\ naturally implements the Froggatt-Nielsen mechanism for neutrino
-  mass and mixing hierarchies via a Type-I see-saw mechanism which leads to an
-  inverted hierarchy  pattern which agrees
-  with those inferred from neutrino oscillations. A normal hierarchy requires an additional percent-level suppression of a dimensionless coupling.}   
+  mass and mixing hierarchies via a Type-I see-saw mechanism. The  normal hierarchy requires an additional percent-level suppression of a single dimensionless coupling; this could be achieved by (for example) a clockwork mechanism. }   
 
 \keywords{$B-$anomalies, beyond the Standard Model, flavour changing neutral
   currents, neutrino masses}
@@ -528,7 +526,13 @@ We validated the analytic scaling by performing a Bayesian parameter scan using 
 \begin{equation} \label{eqn:Half-Cauchy}
     p(x) = \frac{2}{\pi} \frac{\beta}{x^2+\beta^2},\quad x \geq 0,
 \end{equation}
-while this distribution formally has an infinite variance, the heavy tails make it an ideal weakly informative prior for scale parameters in a Bayesian hierarchical model \cite{gelman_prior_2006, polson_half-cauchy_2012}. This avoids hard-coding our belief of `$\mathcal{O}(1)$ parameters' and allows the data to determine the optimal variance of the coefficients. The Frogatt-Nielson parameter ($\epsilon$) and the Majorana (seesaw) mass scale ($\log_{10} M_0$) are given uniform priors over the ranges $[0.1,0.5]$ and $[14.0,16.0]$, as summarised in \cref{tab:priors}. 
+while this distribution formally has an infinite variance, the heavy tails make it an ideal weakly informative prior for scale parameters in a Bayesian hierarchical model \cite{gelman_prior_2006, polson_half-cauchy_2012}. The Frogatt-Nielson parameter ($\epsilon$) and the Majorana (seesaw) mass scale ($\log_{10} M_0$) are given uniform priors over the ranges $[0.1,0.5]$ and $[14.0,16.0]$, as summarised in \cref{tab:priors}. With this, we can measure the spread of the final posterior samples of the elements of the Yukawa matrix. Plotted in \cref{}, we see that $58.6\%$ of the samples have the ratio of the largest Yukawa element to the smallest to be less than 30, i.e., $Y_{\text{max}}/Y_{\text{min}} < 30$.
+
+\begin{figure}[h!]
+    \includegraphics[width=1.0\textwidth]{Python/Data/Normal/}
+    \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (Normal Ordering).}
+    \label{fig:CornerPlot_NO_angles}
+\end{figure}
 
 The final posterior provides the best-fit coefficients, which are of order one, as expected. The posterior means of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO_angles}, \cref{fig:CornerPlot_NO_masses} and \cref{tab:NO_Posteriors}. 
 The posterior samples, diagnostics and the netCDF files required to reproduce these results are available publicly at the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub} repository.
@@ -750,9 +754,9 @@ confirming the plausibility of the model. Using the same priors as before, summa
 \end{comment}
 \section{Conclusions}\label{sec:conc}
 We have shown that the \model\ naturally explains small neutrino masses and sizeable leptonic mixing angles which agree with those inferred from measurements of neutrino oscillation phenomena. 
-The $U(1)_X$ gauge symmetry in the \model\ is then put to three uses: to explain measurements involving the $b \rightarrow s l^+ l^-$ transition, to explain neutrino masses and mixing angles and to suppress CLFV.
+The $U(1)_X$ gauge symmetry in the \model\ is then put to three uses: to explain measurements involving the $b \rightarrow s l^+ l^-$ transition, to explain neutrino masses and mixing angles and to suppress CLFV. \pcs{i need to edit}
 The most easily obtained natural spectrum
-(for the sub-eV neutrinos) is a so-called ``inverted'' one, where there are two quasi-degenerate states and one much lighter one. A spectrum which quantitatively agrees with current measurements is explained by order unity fundamental Yukawa couplings, as demonstrated in \S\ref{sec:Inverted Hierarchy}. At the level of the FN mechanism, three additional texture zeroes are required, but these are easily obtained in the ultra-violet completion of the model by simply omitting certain additional leptonic fields, as \S\ref{sec:Inverted Hierarchy} demonstrates. A normal hierarchy requires a single texture zero but this one  \emph{cannot} be obtained in this way: we have suggested further adding a sector of clockwork fields to the model in order to explain it.
+(for the sub-eV neutrinos) is a so-called ``inverted'' one, where there are two quasi-degenerate states and one much lighter one. A spectrum which quantitatively agrees with current measurements is explained by order unity fundamental Yukawa couplings, as demonstrated in \S\ref{sec:Inverted Hierarchy}. At the level of the FN mechanism, two additional texture zeroes are required, but these are easily obtained in the ultra-violet completion of the model by simply omitting certain additional leptonic fields, as \S\ref{sec:Inverted Hierarchy} demonstrates. A normal hierarchy requires a single texture zero but this one  \emph{cannot} be obtained in this way: we have suggested further adding a sector of clockwork fields to the model in order to explain it.
 It is clear that the \model\ would need additional model building in order to further the FN proposal to fully explain all of the observed patterns in the charged fermionic fields' masses and mixing angles in detail. One requires an extra symmetry that will enforce an approximate $U(2)_q \times U(2)_u \times U(2)_R$ approximate global symmetry and make the upper left-hand block of $Y_{U,D}$ (\ref{chferms}) zero, at the level of the renormalisable terms in the Lagrangian density.
 We envisage this to follow the flavour deconstruction programme~\cite{Bordone:2017bld,Greljo:2024ovt}, where the details of the lighter charged fermion masses and mixing angles will be explained further in the ultra-violet than the multi-TeV scales headed herewith further family gauge symmetries. 
 Further model building would be required in order to fit a normal neutrino hierarchy, for example by using a mechanism close to the clockwork mechanism. 
@@ -881,6 +885,11 @@ substituting this in the Lagrangian \cref{Clockwork Chain}, we get,
     \mathcal{L}_{eff} = q^N y_Ry_L \overline L_2\tilde H \nu_2 + \textrm{H.c.},
 \end{equation}
 where the effective Yukawa coupling is $y_{22} \approx q^N y_L y_R$. For $q<1, N\gg1$, we get an exponential suppression, as required by our model to sustain a normal hierarchy. With $q=0.5, N = 4$, we get a suppression of $0.06$, which is enough to match the $\epsilon^{-4}$ enhancement coming from the Frogatt-Nielson charge allocation and the seesaw model.
+
+For the inverted hierarchy case, we use a similar setup with the Lagrangian,
+\begin{equation} \label{Clockwork Chain}
+    \mathcal{L} = -m\sum_{j = 0}^{N-1} (\overline \psi_{L,j}\psi_{R,j} - q\overline \psi_{L,j} \psi_{R,j+1}) - m\overline\psi_{L,N}\psi_{R,N} + A_1 \overline {\nu_{R1}^c} \psi_{R, 0} + A_2  \overline \psi_{L, N} \nu_3 + \textrm{H.c.},
+\end{equation}
 
 
 \bibliographystyle{JHEP-2}
