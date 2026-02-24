@@ -299,7 +299,7 @@ To explain the mass hierarchy and the PMNS matrix, one must go beyond the renorm
     $\Delta m_{3l}^2/10^{-3}\text{eV}^2$ & $+2.513^{+0.021}_{-0.019}$ & $-2.484^{+0.020}_{-0.020}$\\
     \hline
 \end{tabular}
-\caption{Three-flavour neutrino oscillation data as of Sept 2024 (including SK data) \cite{esteban_nufit-60_2024}. Normal ordering corresponds to $\Delta m_{3l}^2=\Delta m_{31}^2>0$ and  inverted ordering to $\Delta m_{3l}^2 = \Delta m_{32}^2<0$. 
+\caption{Three-flavour neutrino oscillation data as of Sept 2024 (including data from the Super Kamiokande experiment) \cite{esteban_nufit-60_2024}. Normal ordering corresponds to $\Delta m_{3l}^2=\Delta m_{31}^2>0$ and  inverted ordering to $\Delta m_{3l}^2 = \Delta m_{32}^2<0$. 
 The leptonic mixing angles (parameterising
 the PMNS matrix) are defined in Eq.~14.33 of Ref.~\cite{PDG}.}
 \label{tab:neutrino_angles_masses}
@@ -342,7 +342,7 @@ where \(y_{ij}\) and \(a_{ij}\) are assumed to be products of \(\mathcal{O}(1)\)
     \bca{We may wish to widen this from $10^{11}-10^{19}$ GeV?}
 \end{comment}
 
-Defining \(\epsilon:=\langle\theta\rangle/\Lambda_{\text{FN}}\) the neutrino flavour matrices take the form
+Defining \(\epsilon:=\langle\theta\rangle/\Lambda_{\text{FN}}\) the neutrino flavour matrices take the form \bca{NB $M$ is a complex-symmetric matrix! I have enforced this in the following}
 \begin{equation} \label{FN Y and M}
     Y_{\nu L} = 
     \begin{pmatrix}
@@ -350,16 +350,16 @@ Defining \(\epsilon:=\langle\theta\rangle/\Lambda_{\text{FN}}\) the neutrino fla
         \epsilon y_{21}&y_{22}&\epsilon^{2}y_{23}\\
         \epsilon y_{31}& \epsilon^{2}y_{32}&y_{33}
     \end{pmatrix}, \,\ 
-    M_R = M_0
+    M = M_0
     \begin{pmatrix}
     \epsilon^{2}a_{11}&\epsilon^{3}a_{12}&\epsilon a_{13}\\
     
-    \epsilon^{3} a_{21} & \epsilon^{4} a_{22}& \epsilon^{2} a_{23}\\
+    \epsilon^{3} a_{12} & \epsilon^{4} a_{22}& \epsilon^{2} a_{23}\\
     
-    \epsilon a_{31} & \epsilon^{2}a_{32}&a_{33} 
+    \epsilon a_{13} & \epsilon^{2}a_{23}&a_{33} 
     \end{pmatrix}.
 \end{equation}
-\cref{FN Y and M} gives us the texture of the neutrino Yukawa and Majorana matrices in the \model. Experimental CFLV constraints imply that the diagonal texture in \cref{chferms} must be valid to a much better approximation than is the neutrino sector. This could easily be enforced in the effective field theory just above $\Lambda_{FN}$ by omitting vector-like representations (of the SM group) of charged leptons, thus possessing no tree-level spaghetti diagrams which contribute to $Y_E$. With this in mind, we shall henceforth neglect contributions from charged-lepton mixing in the gauge eigenbasis, therefore determining the PMNS matrix by use of the \cref{eqn:PMNSdefn2}. Because of the current lack of sizeable experimental constraints on CP violation in the leptonic sector, we neglect phases in $y_{ij}$ and $a_{ij}$. We are thus fitting to a scheme where all complex phases in the PMNS matrix in Eq.~14.33 of Ref.~\cite{PDG} are zero.
+\cref{FN Y and M} gives us the texture of the neutrino Yukawa and Majorana mass matrices in the \model. Experimental CFLV constraints imply that the diagonal texture in \cref{chferms} must be valid to a much better approximation than in the neutrino Yukawa matrix. This could easily be enforced in the field theory which is effective just above $\Lambda_{FN}$ by omitting vector-like (with respect to the SM gauge group) representations of charged leptons, thus possessing no tree-level spaghetti diagrams which contribute to $Y_E$. With this in mind, we shall henceforth neglect contributions from charged-lepton mixing in the gauge eigenbasis, therefore determining the PMNS matrix by use of  \cref{eqn:PMNSdefn2}. Because of the current lack of sizeable experimental constraints on CP violation in the leptonic sector, we neglect phases in $y_{ij}$ and $a_{ij}$. We are thus fitting to a scheme where all complex phases in the PMNS matrix in Eq.~14.33 of Ref.~\cite{PDG} are zero.
 Complex phases could be analysed at a later date once the experimental inference has sharpened.
 We explore whether \cref{FN Y and M} suffices to explain the values of the neutrino mass hierarchies and the values of the PMNS mixing angles in the following section.
 
@@ -393,14 +393,14 @@ where:
     0 & y_{13}y_{22}\alpha_{12} + y_{22}y_{23}\alpha_{22} + y_{22}y_{33}\alpha_{23} & 0
     \end{pmatrix}$}.
 \end{equation}
-Here $\alpha_{ij}$ denote the matrix elements of $M_R^{-1}/M_0^{-1}$  (i.e. $M_R^{-1}\sim M_0^{-1}\epsilon^{-\eta_{ij}}\alpha_{ij}$ with the integer exponents $n_{ij}$ determined by the $U(1)_X$ charges). If the original Majorana matrix elements $a_{ij}$ are $\mathcal{O}(1)$ parameters that obey a normal distribution ($a_{ij} \sim \mathcal{N}(0,1)$), then it can be shown that the inverse Majorana matrix elements $\alpha_{ij}$ are also $\mathcal{O}(1)$ parameters.
+Here $\alpha_{ij}$ denote the matrix entries of $(M/M_0)^{-1}$  (i.e.\ $M^{-1}_{ij}= M_0^{-1}\epsilon^{-\eta_{ij}}\alpha_{ij}$ with the integer exponents $n_{ij}$ determined by the $U(1)_X$ charges). If the original Majorana matrix elements $a_{ij}$ are $\mathcal{O}(1)$ parameters that obey a normal distribution ($a_{ij} \sim \mathcal{N}(0,1)$), then it can be shown that the inverse Majorana matrix elements $\alpha_{ij}$ are also $\mathcal{O}(1)$ parameters \bca{How have you shown this? Are there no possibilities for cancellation? Do they have Gaussian PDFs?}.
 \begin{comment}
     \bca{Surely this should be $M_R^{-1}/M_0$?}
     
 \bca{What are $\alpha_{ij}$ mathematically? Homogeneous rational functions of fundamental ${\mathcal O}(1)$ couplings? If so, we should say so, with a further comment saying that $\alpha_{ij}$ are then also expected to be ${\mathcal O}(1)$.}
 \end{comment}
 
-Using second-order perturbation theory, keeping up to $\epsilon^2$ corrections to the matrix, we find that the three eigenvalues (masses) of the three lighter approximately left-handed (LH) neutrinos are: 
+Using second-order perturbation theory, keeping up to $\epsilon^2$ corrections to the matrix, we find that the three eigenvalues (masses) of the three lightest approximately left-handed (LH) neutrinos are: 
 \begin{equation}
 \begin{aligned}
     m_{\nu_3} &\approx \frac{v^2 \epsilon^{-4}}{2M_0}\Bigg[
@@ -427,9 +427,9 @@ From the hierarchy in \cref{NormalHierarchy} one obtains an estimate for $\epsil
     \epsilon = \Big(\mathcal{O}(1) \times \frac{8\times 10^{-5}}{2.5\times 10^{-3}}\Big)^{1/4} = 0.42, \label{scale}
 \end{equation}
 where we have fixed the unknown $\mathcal{O}(1)$ factor to be unity in the final equality. 
-Using $\epsilon=0.42$ from \cref{scale}, $m_{\nu_3}$ in \cref{NormalHierarchy} fixes the right-handed scale $M_0 \sim \mathcal{O}(10^{15})\ \mathrm{GeV}$ for the observed neutrino nass squared splittings.
+Using $\epsilon=0.42$ from \cref{scale}, $m_{\nu_3}$ in \cref{NormalHierarchy} fixes the right-handed scale $M_0 \sim \mathcal{O}(10^{15})\ \mathrm{GeV}$ for the observed neutrino nass squared splittings. Such a prediction for $U$
 
-The PMNS matrix evaluated to a similar order in the $\epsilon$ expansion is
+The PMNS matrix evaluated to a similar \bca{is it similar or the same?} order in the $\epsilon$ expansion is
 \begin{equation}\label{eq:pmns-approx}
     U_{\mathrm{PMNS}} \approx
     \begin{pmatrix}
@@ -530,24 +530,22 @@ We validated the analytic scaling by performing a global Bayesian parameter scan
 
 The Frogatt-Nielson parameter ($\epsilon$) and the Majorana (seesaw) mass scale ($\log_{10} M_0$) are given uniform priors over the ranges $[0.1,0.5]$ and $[14.0,16.0]$. The Yukawa and Majorana matrix elements, $y_{ij}$ and $a_{ij}$ respectively, are expected to be $\mathcal{O}(1)$, and therefore given uniform priors over the range $[-3,3]$. 
 
-With this, we can measure the spread of the final posterior samples of the elements of the Yukawa matrix by plotting the cumulative distribution function (CDF) of the ratio of the largest Yukawa element to the smallest $Y_{\text{max}}/Y_{\text{min}}$. Two independent runs of 30,000 live points were deployed, and both converged on the result that $54\%$ of the samples have this ratio smaller than 30.
-
-This CDF is plotted in \cref{fig:Normal_spread}, we see that $58.6\%$ of the samples have the ratio of the largest Yukawa element to the smallest to be less than 30, i.e., $Y_{\text{max}}/Y_{\text{min}} < 30$.
+To quantify the `naturalness' of the model and the level of fine-tuning required in the Yukawa coefficients, we measure the spread of the final posterior samples. Specifically, we define the naturalness ratio, $r =Y_{\text{max}}/Y_{\text{min}}$, to be the ratio of the largest Yukawa element to the smallest. Across three independent nested sampling runs (each utilising 30,000 live points each, corresponding to $\sim 10^6$ samples), the Normal hierarchy model exhibits a highly robust and natural yield, with $67\%-75\%$ of the viable parameter space satisfying $r<30$. The combined cumulative distribution function of $r$ is given in \cref{fig:Normal_spread}.
 \begin{figure}[h!]
     \centering\includegraphics[width=0.7\textwidth]{Python/Data/Normal/Paper_Fig_Spread_Yield.png}
     \caption{Cumulative Distribution Function of the ratio $Y_{\text{max}}/Y_{\text{min}}$}
     \label{fig:Normal_spread}
 \end{figure}
-The final posterior provides the best-fit coefficients, which are of order one, as expected. The posterior means of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO_angles}, \cref{fig:CornerPlot_NO_masses} and \cref{tab:NO_Posteriors}. 
-The posterior samples, diagnostics and the netCDF files required to reproduce these results are available publicly at the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub} repository.
-
+The posterior means of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO_angles}, \cref{fig:CornerPlot_NO_masses} and \cref{tab:NO_Posteriors}. 
+The posterior samples and the diagnostics files required to reproduce these results are available publicly at the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub} repository.
 \begin{figure}[h!]
-    \includegraphics[width=1.0\textwidth]{Python/Data/Normal/corner_plot_corner_blue1.png}
+    \centering
+    \includegraphics[width=0.9\textwidth]{Python/Data/Normal/corner_plot_corner_blue1.png}
     \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (Normal Ordering).}
     \label{fig:CornerPlot_NO_angles}
 \end{figure}
 \begin{figure}[h!]
-\centering
+    \centering
     \includegraphics[width=0.9\textwidth]{Python/Data/Normal/mass corner plot.png}
     \caption{Posterior probability distributions of the mass scale, FN parameter and the mass squared differences (Normal Ordering). The solid contours correspond to the 68$\%$ and 95$\%$ Bayesian credibility intervals.}
     \label{fig:CornerPlot_NO_masses}
@@ -559,22 +557,24 @@ The posterior samples, diagnostics and the netCDF files required to reproduce th
 \end{comment}
 \begin{table}[h!]
     \centering
-    \begin{tabular}{@{} l c c c c @{}}
-      \toprule
-        Observable & Posterior (mean $\pm$ 1$\sigma$) & Experimental (mean $\pm$ 1$\sigma$) & $\sigma_{\rm comb}$ & $p-$value \\
-        \midrule
-        $\Delta m_{21}^2$ & $(7.48 \pm 0.19)\times 10^{-5}$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $2.7\times 10^{-6}$ & $.98$ \\
-        $\Delta m_{31}^2$ & $(2.51 \pm 0.02)\times 10^{-3}$ & $(2.51 \pm 0.02)\times 10^{-3}$ & $2.8\times 10^{-5}$ & $>.99$ \\
-        $\sin^2\theta_{12}$ & $0.308 \pm 0.012$ & $0.308 \pm 0.012$ & $0.017$ & $>.99$ \\
-        $\sin^2\theta_{13}$ & $0.0221 \pm 0.0006$ & $0.0221 \pm 0.0006$ & $0.0008$ & $.99$ \\
-        $\sin^2\theta_{23}$ & $0.470 \pm 0.015$ & $0.470 \pm 0.015$ & $0.021$ & $.99$ \\
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+        Observable & Theoretical (mean $\pm$ 1$\sigma$) & Experimental (mean $\pm$ 1$\sigma$) & $\sigma_{\rm comb}$ & p-value \\
         \hline
-        $\epsilon$ & $0.38 \pm 0.093$ &  &  &  \\
-        $\log_{10} M_0$ & $15.03 \pm 0.57$ &  &  &  \\
+        \hline
+        $\Delta m_{21}^2$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $2.7\times 10^{-6}$ & $.996$ \\
+        $\Delta m_{31}^2$ & $(2.51 \pm 0.03)\times 10^{-3}$ & $(2.51 \pm 0.02)\times 10^{-3}$ & $3.4\times 10^{-5}$ & $.987$ \\
+        $\sin^2\theta_{12}$ & $0.3079 \pm 0.0116$ & $0.3080 \pm 0.0120$ & $0.0167$ & $.995$ \\
+        $\sin^2\theta_{13}$ & $0.0220 \pm 0.0006$ & $0.0221 \pm 0.0006$ & $0.0008$ & $.848$ \\
+        $\sin^2\theta_{23}$ & $0.5376 \pm 0.0222$ & $0.4700 \pm 0.0150$ & $0.0268$ & $.012$ \\
+        \hline
+        \hline
+        $\epsilon$ & $0.43 \pm 0.06$ &  &  &  \\
+        $\log_{10} M_0$ & $15.4 \pm 0.4$ &  &  &  \\
       \hline
     \end{tabular}
-   \caption{Posterior means and p-values for the Normal Ordering (NO) fit. 
-    The theoretical means are obtained from the Markov Chain Monte-Carlo (MCMC) posterior, and the experimental values and uncertainties are taken from NuFIT 6.0 (2024) global fits (with SK)~\cite{esteban_nufit-60_2024}.}
+    \caption{Posterior means and 1$\sigma$ theoretical uncertainties, and p-values (using combined uncertainties) for the Normal Ordering (NO) fit under Nested Sampling.
+    The experimental values and uncertainties are taken from {\tt NuFIT 6.0} (2024) global fits (with SK)  \cite{esteban_nufit-60_2024}.}
     \label{tab:NO_Posteriors}
 \end{table}
 \subsection{Inverted Hierarchy} \label{sec:Inverted Hierarchy}
@@ -689,7 +689,9 @@ giving us the mixing angles,
     \tan \theta_{12} &= \frac{|{U_{e2}}|}{{|U_{e1}|}} \approx \frac{1 + \epsilon u_{12}' +\epsilon^2 u_{12}''}{-1 + \epsilon u_{11}' +\epsilon^2 u_{11}''}\approx 1 + \epsilon u_{12}' +\epsilon^2 (u_{12}'' - u_{11}')  = 0.66 \\
     \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \approx \frac{ \epsilon u_{23}' +\epsilon^2 u_{23}''}{ 1 +\epsilon^2 u_{33}''} = 1.15
 \end{align}
-confirming the plausibility of the model. Using the same priors as before, summarised in \cref{tab:priors}, we can perform a scan, giving the posterior distributions depicted in \cref{fig:CornerPlot_IO_angles}, \cref{fig:CornerPlot_IO_masses} and \cref{tab:IO_Posteriors}.
+confirming the plausibility of the model. 
+
+Using the same priors as before, summarised in \cref{tab:priors}, we can perform a scan, giving the posterior distributions depicted in \cref{fig:CornerPlot_IO_angles}, \cref{fig:CornerPlot_IO_masses} and \cref{tab:IO_Posteriors}.
 
 We again measure the spread of the final posterior samples of the elements of the Yukawa matrix, using the Python module \texttt{dynesty}. The corner plot generated with this data, \cref{fig:CornerPlot_IO_angles} and \cref{fig:CornerPlot_IO_masses}, shows that the posterior distribution of the parameters are 
 
@@ -717,19 +719,24 @@ Plotted in \cref{fig:Inverted_spread}, we see that $41.0\%$ of the samples have 
 \end{figure}
 \begin{table}[h!]
     \centering
-    \begin{tabular}{@{} l c c c c @{}}
-      \toprule
-        Observable & Posterior (mean $\pm$ 1$\sigma$) & Experimental (mean $\pm$ 1$\sigma$) & $\sigma_{\rm comb}$ & $p-$value \\
-        \midrule
-        $\Delta m_{21}^2$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $2.7\times 10^{-6}$ & $.99$ \\
-        $\Delta m_{31}^2$ & $(2.48 \pm 0.02)\times 10^{-3}$ & $(2.48 \pm 0.02)\times 10^{-3}$ & $2.8\times 10^{-5}$ & $.99$ \\
-        $\sin^2\theta_{12}$ & $0.308 \pm 0.012$ & $0.308 \pm 0.012$ & $0.017$ & $.99$ \\
-        $\sin^2\theta_{13}$ & $0.0223 \pm 0.0006$ & $0.0223 \pm 0.0006$ & $0.0008$ & $.99$ \\
-        $\sin^2\theta_{23}$ & $0.550 \pm 0.014$ & $0.550 \pm 0.014$ & $0.019$ & $.99$ \\
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+        Observable & Theoretical (mean $\pm$ 1$\sigma$) & Experimental (mean $\pm$ 1$\sigma$) & $\sigma_{\rm comb}$ & p-value \\
         \hline
+        \hline
+        $\Delta m_{21}^2$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $2.7\times 10^{-6}$ & $.996$ \\
+        $\Delta m_{31}^2$ & $(2.48 \pm 0.02)\times 10^{-3}$ & $(2.48 \pm 0.02)\times 10^{-3}$ & $2.8\times 10^{-5}$ & $.999$ \\
+        $\sin^2\theta_{12}$ & $0.3100 \pm 0.0112$ & $0.3080 \pm 0.0120$ & $0.0164$ & $.904$ \\
+        $\sin^2\theta_{13}$ & $0.0222 \pm 0.0006$ & $0.0223 \pm 0.0006$ & $0.0008$ & $.906$ \\
+        $\sin^2\theta_{23}$ & $0.5500 \pm 0.0144$ & $0.5500 \pm 0.0135$ & $0.0197$ & $.998$ \\
+        \hline
+        \hline
+        $\epsilon$ & $0.2921 \pm 0.1251$ &  &  &  \\
+        $\log_10 M_0$ & $16.154 \pm 0.330$ &  &  &  \\
+      \hline
     \end{tabular}
-    \caption{Posterior means and p-values for the Inverted Hierarchy (IO) fit.
-    The theoretical means are obtained from the MCMC posterior, and the experimental values and uncertainties are taken from {\tt NuFIT 6.0} (2024) global fits (with SK)  \cite{esteban_nufit-60_2024}.}
+    \caption{Posterior means and 1$\sigma$ theoretical uncertainties, and p-values (using combined uncertainties) for the Inverted Ordering (IO) fit under Nested Sampling.s
+    The experimental values and uncertainties are taken from {\tt NuFIT 6.0} (2024) global fits (with SK)  \cite{esteban_nufit-60_2024}.}
     \label{tab:IO_Posteriors}
 \end{table}
 \begin{comment}
