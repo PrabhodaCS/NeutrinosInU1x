@@ -46,7 +46,7 @@ Neutrino masses and mixing angles in the \model}
   to the first two. 
   We investigate its implications for neutrino masses and mixing angles.
   The \model\ naturally implements the Froggatt-Nielsen mechanism for neutrino
-  mass and mixing hierarchies via a Type-I see-saw mechanism. The  normal hierarchy requires an additional percent-level suppression of a single dimensionless coupling; this could be achieved by (for example) a clockwork mechanism. }   
+  mass and mixing hierarchies via a Type-I see-saw mechanism. A  normal neutrino mass hierarchy requires an additional percent-level suppression of a single dimensionless coupling; this could be achieved by (for example) a clockwork mechanism. }   
 
 \keywords{$B-$anomalies, beyond the Standard Model, flavour changing neutral
   currents, neutrino masses}
@@ -91,7 +91,11 @@ from an intermediate tree-level off-shell $Z^\prime$ boson. Current LHC bounds u
 direct searches for
 the $Z^\prime$ are rather modest: $M_{Z^\prime} > 1.2$~TeV~\cite{Allanach:2024jls} in the parameter range that is compatible with both perturbativity and the global fit. 
 
-The \model\ augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM. The charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus first family lepton number minus twice second family lepton number. In order to allow a renormalisable top quark Yukawa coupling, the Higgs $X$ charge is fixed to vanish. This is necessary because the top quark Yukawa coupling is the largest dimensionless parameter in the SM Lagrangian at the electroweak scale (its value is 1); as we shall see below, one can induce smaller Yukawa couplings by banning them at the renormalisable level with a symmetry but inducing them through spontaneous symmetry breaking. The additional $u(1)_X$ is spontaneously broken by a SM-singlet complex scalar field, the `flavon' $\theta$, which is assumed to have an $X$ charge of unity and acquire a TeV-scale vacuum expectation value (VEV), leading to a TeV-scale $Z^\prime$ vector boson with family-dependent gauge couplings. At the renormalisable level, the  Yukawa couplings have the texture (where $\times$ indicates a non-zero entry)
+The \model\ augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM. The charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus first family lepton number minus twice second family lepton number:
+\begin{equation}
+X = 3B_3-L_1-2L_2.    
+\end{equation}
+In order to allow a renormalisable top quark Yukawa coupling, the Higgs $X$ charge is fixed to vanish. This is necessary because the top quark Yukawa coupling is the largest dimensionless parameter in the SM Lagrangian at the electroweak scale (its value is 1); as we shall see below, one can induce smaller Yukawa couplings by banning them at the renormalisable level with a symmetry but inducing them through spontaneous symmetry breaking. The additional $u(1)_X$ is spontaneously broken by a SM-singlet complex scalar field, the `flavon' $\theta$, which is assumed to have an $X$ charge of unity and acquire a TeV-scale vacuum expectation value (VEV), leading to a TeV-scale $Z^\prime$ vector boson with family-dependent gauge couplings. At the renormalisable level, the  Yukawa couplings have the texture (where $\times$ indicates a non-zero entry)
 \begin{equation}
     Y_U , Y_D \sim \begin{pmatrix}
     \times & \times & 0 \\
@@ -239,7 +243,7 @@ $SU(3)\!\times\!SU(2)\!\times\!U(1)_Y\!\times\!U(1)_X$. $L_i$ are left-handed We
 \label{tab:lepton_charges}
 \end{table}
 
-While the primary motivation for the \model\  was to resolve $B$-meson decay anomalies, it naturally includes right-handed neutrinos, hence making the neutrino sector a natural sector to test both the model's flavour structure and its predictions for the mass matrices. As explained in \S\ref{sec:intro}, we wish to see that if the $U(1)_X$ symmetry can generate neutrino masses and mixing parameters which agree with those extracted from neutrino oscillation phenomena via the FN mechanism as well as suppressing CFLV.
+While the primary motivation for the \model\  was to resolve $B$-meson decay anomalies, the model necessarily includes right-handed neutrino fields, making the neutrino sector of interest for study. As explained in \S\ref{sec:intro}, we wish to see if the $U(1)_X$ symmetry is compatible with neutrino masses and mixing parameters which agree with those extracted from neutrino oscillation phenomena via the FN mechanism as well as suppressing CFLV.
 
 \begin{comment}
     the same texture induced by the \model\ which suppresses off-diagonal terms in \cref{chferms} for the charged-lepton sector could also be used to generate controlled, hierarchical entries in the neutral-lepton sector with the FN mechanism to test the model's predictions. \bca{I disagree with this sentence. It's not the charged fermion \emph{texture} that does it. Suggest to replace with: "As explained in \S\ref{sec:intro}, we wish to see that if the $U(1)_X$ symmetry can generate neutrino masses and mixing parameters which agree with those extracted from neutrino oscillation phenomena via the FN mechanism as well as suppressing CFLV."}
@@ -522,49 +526,21 @@ the entries $u_{ij}^{(n)}$ are long algebraic functions of $y_{ij}$ and $a_{ij}$
     \bca{More detail needed. Need a table with domain of input parameters, description of what kind of scan. Enough information for someone to reproduce your results, if that were necessary. Detail any software packages you use, citing them if you can.}
     \bca{Give all prior PDFs. What about $M_0$ for instance? I presume flat in the log. Give formula for half-Cauchy. Are you aware that a Cauchy variable has an ill-defined variance (it is infinite)? I think that means that the distribution is strictly non-normalisable. Although one can always in principle find some upper bound - which might be very large - on the parameter.}
 \end{comment}
-We validated the analytic scaling by performing a Bayesian parameter scan using No U-Turn Sampler (NUTS) \cite{hoffman_no-u-turn_2011}, a Hamiltonian Monte Carlo algorithm implemented using \texttt{NumPyro} \cite{phan_composable_2019}. We implemented the anarchy hypothesis using a hierarchical Bayesian model. We sample $y_{ij}$ and $a_{ij}$ from normal distributions centred at zero, but their widths ($\sigma_y, \sigma_a$) are themselves treated as free hyperparameters sampled from Half-Cauchy distributions. The probability distribution for a Half-Cauchy distributed variable $x$ with scale $\beta$ is,
-\begin{equation} \label{eqn:Half-Cauchy}
-    p(x) = \frac{2}{\pi} \frac{\beta}{x^2+\beta^2},\quad x \geq 0,
-\end{equation}
-while this distribution formally has an infinite variance, the heavy tails make it an ideal weakly informative prior for scale parameters in a Bayesian hierarchical model \cite{gelman_prior_2006, polson_half-cauchy_2012}. The Frogatt-Nielson parameter ($\epsilon$) and the Majorana (seesaw) mass scale ($\log_{10} M_0$) are given uniform priors over the ranges $[0.1,0.5]$ and $[14.0,16.0]$, as summarised in \cref{tab:priors}. With this, we can measure the spread of the final posterior samples of the elements of the Yukawa matrix. Plotted in \cref{}, we see that $58.6\%$ of the samples have the ratio of the largest Yukawa element to the smallest to be less than 30, i.e., $Y_{\text{max}}/Y_{\text{min}} < 30$.
+We validated the analytic scaling by performing a global Bayesian parameter scan using nested sampling, implemented with the package \texttt{dynesty} \cite{speagle_dynesty_2020}. This method proves more viable than traditional Markov Chain Monte Carlo methods (such as HMC or NUTS) due to the highly multi-modal and the disjointed parameter space nature of the model's posterior distribution.
 
+The Frogatt-Nielson parameter ($\epsilon$) and the Majorana (seesaw) mass scale ($\log_{10} M_0$) are given uniform priors over the ranges $[0.1,0.5]$ and $[14.0,16.0]$. The Yukawa and Majorana matrix elements, $y_{ij}$ and $a_{ij}$ respectively, are expected to be $\mathcal{O}(1)$, and therefore given uniform priors over the range $[-3,3]$. 
+
+With this, we can measure the spread of the final posterior samples of the elements of the Yukawa matrix by plotting the cumulative distribution function (CDF) of the ratio of the largest Yukawa element to the smallest $Y_{\text{max}}/Y_{\text{min}}$. Two independent runs of 30,000 live points were deployed, and both converged on the result that $54\%$ of the samples have this ratio smaller than 30.
+
+This CDF is plotted in \cref{fig:Normal_spread}, we see that $58.6\%$ of the samples have the ratio of the largest Yukawa element to the smallest to be less than 30, i.e., $Y_{\text{max}}/Y_{\text{min}} < 30$.
 \begin{figure}[h!]
-    \includegraphics[width=1.0\textwidth]{Python/Data/Normal/}
-    \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (Normal Ordering).}
-    \label{fig:CornerPlot_NO_angles}
+    \centering\includegraphics[width=0.7\textwidth]{Python/Data/Normal/Paper_Fig_Spread_Yield.png}
+    \caption{Cumulative Distribution Function of the ratio $Y_{\text{max}}/Y_{\text{min}}$}
+    \label{fig:Normal_spread}
 \end{figure}
-
 The final posterior provides the best-fit coefficients, which are of order one, as expected. The posterior means of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO_angles}, \cref{fig:CornerPlot_NO_masses} and \cref{tab:NO_Posteriors}. 
 The posterior samples, diagnostics and the netCDF files required to reproduce these results are available publicly at the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub} repository.
-\begin{table}[t]
-\centering
-\renewcommand{\arraystretch}{1.3}
-\begin{tabular}{@{} l  l  l  l @{}}
-\toprule
-\textbf{Parameter} & \textbf{Symbol} & \textbf{Prior Distribution} & \textbf{Hyperparameters/Domain} \\ 
-\midrule
-Yukawa entries & $y_{ij}$ & $\mathcal{N}(0,\sigma_Y^2)$ &  $y_{ij} \in \mathbb{R}$ \\[6pt]
 
-Majorana entries & $a_{ij}$ & $\mathcal{N}(0,\sigma_A^2)$ &  $a_{ij} \in \mathbb{R}$ \\[6pt]
-
-\hline
-
-Yukawa scale & $\sigma_Y$ & $\text{Half-Cauchy}(\beta_Y)$ &  $\beta_Y = 0.5$ (See \cref{eqn:Half-Cauchy}) \\[6pt]
-
-Majorana scale & $\sigma_A$ & $\text{Half-Cauchy}(\beta_A)$ &  $\beta_A = 0.8$ (See \cref{eqn:Half-Cauchy}) \\[6pt]
-
-\hline
-
-FN parameter & $\epsilon$ & $\mathcal{U}(\epsilon_{\min},\epsilon_{\max})$ &
-$\epsilon \in [0.1,0.5]$ \\[6pt]
-
-Seesaw scale & $\log_{10}M_0$ & $\mathcal{U}(\log_{10}M_0^{\min}, \log_{10}M_0^{\max})$ &
-$\log_{10} M_0 \in [14.0,16.0]$ \\[6pt]
-\bottomrule
-\end{tabular}
-\caption{Priors used in the Bayesian scan.  Values of scale hyperparameters (in parentheses) match the code: $\beta_Y=0.5$, $\beta_A=0.8$, $\epsilon\in[0.1,0.5]$, $\log_{10}M_0\in[14.0,16.0]$.}
-\label{tab:priors}
-\end{table}
 \begin{figure}[h!]
     \includegraphics[width=1.0\textwidth]{Python/Data/Normal/corner_plot_corner_blue1.png}
     \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (Normal Ordering).}
@@ -714,6 +690,15 @@ giving us the mixing angles,
     \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \approx \frac{ \epsilon u_{23}' +\epsilon^2 u_{23}''}{ 1 +\epsilon^2 u_{33}''} = 1.15
 \end{align}
 confirming the plausibility of the model. Using the same priors as before, summarised in \cref{tab:priors}, we can perform a scan, giving the posterior distributions depicted in \cref{fig:CornerPlot_IO_angles}, \cref{fig:CornerPlot_IO_masses} and \cref{tab:IO_Posteriors}.
+
+We again measure the spread of the final posterior samples of the elements of the Yukawa matrix, using the Python module \texttt{dynesty}. The corner plot generated with this data, \cref{fig:CornerPlot_IO_angles} and \cref{fig:CornerPlot_IO_masses}, shows that the posterior distribution of the parameters are 
+
+Plotted in \cref{fig:Inverted_spread}, we see that $41.0\%$ of the samples have the ratio of the largest Yukawa element to the smallest to be less than 30, i.e., $Y_{\text{max}}/Y_{\text{min}} < 30$.
+\begin{figure}[h!]
+    \centering\includegraphics[width=0.7\textwidth]{Python/Data/Inverted/Paper_Fig_Spread_Yield.png}
+    \caption{Cumulative Distribution Function of the ratio $Y_{\text{max}}/Y_{\text{min}}$}
+    \label{fig:Inverted_spread}
+\end{figure}
 \begin{comment}
     \bca{Should all be quoted like I've done the top equation. You can ask me why next time we speak.}
 
@@ -753,19 +738,20 @@ confirming the plausibility of the model. Using the same priors as before, summa
       \hline
 \end{comment}
 \section{Conclusions}\label{sec:conc}
-We have shown that the \model\ naturally explains small neutrino masses and sizeable leptonic mixing angles which agree with those inferred from measurements of neutrino oscillation phenomena. 
-The $U(1)_X$ gauge symmetry in the \model\ is then put to three uses: to explain measurements involving the $b \rightarrow s l^+ l^-$ transition, to explain neutrino masses and mixing angles and to suppress CLFV. \pcs{i need to edit}
-The most easily obtained natural spectrum
-(for the sub-eV neutrinos) is a so-called ``inverted'' one, where there are two quasi-degenerate states and one much lighter one. A spectrum which quantitatively agrees with current measurements is explained by order unity fundamental Yukawa couplings, as demonstrated in \S\ref{sec:Inverted Hierarchy}. At the level of the FN mechanism, two additional texture zeroes are required, but these are easily obtained in the ultra-violet completion of the model by simply omitting certain additional leptonic fields, as \S\ref{sec:Inverted Hierarchy} demonstrates. A normal hierarchy requires a single texture zero but this one  \emph{cannot} be obtained in this way: we have suggested further adding a sector of clockwork fields to the model in order to explain it.
+We have shown that the \model\ helps explain the small neutrino masses and sizeable leptonic mixing angles that agree with those inferred from measurements of neutrino oscillation phenomena. 
+The $U(1)_X$ gauge symmetry in the \model\ is then put to three uses: to explain measurements involving the $b \rightarrow s l^+ l^-$ transition, to explain some of the hierarchies in neutrino masses and mixing angles and to suppress CLFV. 
+A normal hierarchy in the sub-eV neutrino spectrum which agrees with oscillation measurements can be explained with all fundamental Yukawa couplings of order one except for a single coupling, which must be at the percent level. This percent-level suppression cannot be easily explained by our realisation of the FN mechanism but could be explained by other means, for example by adding a further sector of global $U(1)$ symmetries and clockwork fields, as exemplified in Appendix~\ref{sec:Clockwork}. 
+An inverted neutrino spectrum instead requires the further suppression of two fundamental Yukawa couplings beyond that implied by the FN mechanism and seems more difficult to realise within the current setting envisaged.
+
 It is clear that the \model\ would need additional model building in order to further the FN proposal to fully explain all of the observed patterns in the charged fermionic fields' masses and mixing angles in detail. One requires an extra symmetry that will enforce an approximate $U(2)_q \times U(2)_u \times U(2)_R$ approximate global symmetry and make the upper left-hand block of $Y_{U,D}$ (\ref{chferms}) zero, at the level of the renormalisable terms in the Lagrangian density.
-We envisage this to follow the flavour deconstruction programme~\cite{Bordone:2017bld,Greljo:2024ovt}, where the details of the lighter charged fermion masses and mixing angles will be explained further in the ultra-violet than the multi-TeV scales headed herewith further family gauge symmetries. 
-Further model building would be required in order to fit a normal neutrino hierarchy, for example by using a mechanism close to the clockwork mechanism. 
+We envisage this to follow the flavour deconstruction programme~\cite{Bordone:2017bld,Greljo:2024ovt}, where the details of the lighter charged fermion masses and mixing angles will be explained further into the ultra-violet r\'egime than the multi-TeV scales headed herewith further family gauge symmetries. 
+
 
 Flavour deconstruction has recently attracted attention as regards neutrino masses in other settings: since neutrino masses and mixing angles look somewhat anarchic compared to the charged fermions of the SM, it was not \emph{a priori} obvious that it would explain the patterns inferred from neutrino oscillation measurements. However, some generalities were considered in Ref.~\cite{Greljo:2024ovt}, where various models with flavour deconstructed $U(1)_R \times U(1)_{B-L}$ type symmetries at the heart of them were shown to given enough neutrino anarchy. More recently, it was shown how extending this to flavour deconstructed $SU(2)_L \times U(1)_R \times U(1)_{B-L}$ gauge symmetry yields flavour anarchy with a particularly low (but still TeV-scale) spontaneous symmetry breaking scale~\cite{Isidori:2025rci}. 
 These two works did not attempt a simultaneous fit to neutral current $B-$anomalies, unlike the \model. 
 However, it had already been pointed out in Ref.~\cite{Bonilla:2017lsq} that $U(1)_{B_3-L_2}$ gauge symmetry, which was proposed to explain earlier neutral current $B$-anomaly measurements, would yield a type-I seesaw mechanism, although no detailed study of the neutrino sector was performed. 
 
-The \model\ model  has the following to commend it: natural neutrino masses and mixing angles that quantitatively fit data well, a few features of the charged fermion mass spectrum are explained qualitatively and fits to measurements involving $B$ mesons are significantly better fit than the SM. The model otherwise passes known current experiment search constraints and tests. 
+The \model\ model  has the following to commend it: neutrino masses and mixing angles that quantitatively fit data well with only one suppressed fundamental Yukawa coupling, a few features of the charged fermion mass spectrum are explained qualitatively and fits to measurements involving $B$ mesons are significantly better fit than the SM. The model otherwise passes known current experiment search constraints and tests. 
 
 \section*{Acknowledgements}
 This work was partially supported by STFC HEP Consolidated grant
