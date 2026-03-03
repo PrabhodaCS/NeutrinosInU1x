@@ -1,0 +1,12 @@
+STABILITY AUDIT: DIRAC NATURALNESS (y_max / y_min)
+============================================================
+
+NORMAL HIERARCHY:
+Run: PlanB_Nested_Results (GRun 2) | Samples: 3311143 | Dirac Naturalness (<30): 70.53%
+TOTAL MERGED YIELD: 70.53%
+
+============================================================
+
+INVERTED HIERARCHY:
+Run: PlanB_Nested_Results (GRun 2) | Samples: 3472355 | Dirac Naturalness (<30): 75.30%
+TOTAL MERGED YIELD: 75.30%
