@@ -576,7 +576,7 @@ We validated the analytic scaling by performing a global Bayesian parameter scan
 
 The Frogatt-Nielson parameter ($\epsilon$) and the Majorana (seesaw) mass scale ($\log_{10} M_0$) are given uniform priors over the ranges $[0.1,0.5]$ and $[13.0,17.0]$. The Yukawa and Majorana matrix elements, $y_{ij}$ and $a_{ij}$ respectively, are expected to be $\mathcal{O}(1)$, and therefore given uniform priors over the range $[-3,3]$. 
 
-To quantify the `naturalness' of the model and the level of fine-tuning required in the Yukawa coefficients, we measure the spread of the final posterior samples. Specifically, we define the naturalness ratio, $r =Y_{\text{max}}/Y_{\text{min}}$, to be the ratio of the largest Yukawa element to the smallest. Across three independent nested sampling runs (each utilising $10^5$ live points, corresponding to $\sim 10^6$ samples), the Normal hierarchy model exhibits a highly robust and natural yield, with $70.49\%-71.87\%$ of the viable parameter space satisfying $r<30$. The cumulative distribution function of $r$ for a representative run is shown in \cref{fig:Normal_spread}. The three runs generate a broadly similar profile for the corner plots, indicating that the posterior space has been fully converged by the sampler.
+To quantify the `naturalness' of the model and the level of fine-tuning required in the Yukawa coefficients, we measure the spread of the final posterior samples. Specifically, we define the naturalness ratio, $r =Y_{\text{max}}/Y_{\text{min}}$, to be the ratio of the largest Yukawa element to the smallest. Across three independent nested sampling runs (each utilising $10^5$ live points, corresponding to $\sim 10^6$ samples), the Normal hierarchy model exhibits a highly robust and natural percentage. The cumulative distribution function of $r$ for a representative run is shown in \cref{fig:Normal_spread}. The three runs generate a broadly similar profile for the corner plots, indicating that the posterior space has been fully converged by the sampler.
 \begin{figure}[h!]
     \centering\includegraphics[width=0.7\textwidth]{Python/Data/Normal/Merged_CDF_NH_Yukawa.png}
     \caption{Cumulative Distribution Function of the ratio $Y_{\text{max}}/Y_{\text{min}}$}
@@ -602,19 +602,18 @@ The posterior samples and the diagnostics files required to reproduce these resu
     \bca{Too many significant figures in the digits. They are distracting - superfluous information. Put uncertainties on the experimental and theoretical values. p-value should be $p-$value and the convention is to quote eg $.975$ rather than $0.975$ for $p-$values.}
 \end{comment}
 
-
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
       \hline
-        Observable & Theoretical (mean $\pm$ 1$\sigma$) & Experimental (mean $\pm$ 1$\sigma$) & $\sigma_{\rm comb}$ & p-value \\
+        Observable & Posterior (mean $\pm$ 1$\sigma$) & Experimental (mean $\pm$ 1$\sigma$) & $\sigma_{\rm comb}$ & p-value \\
         \hline
         \hline
         $\Delta m_{21}^2$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $2.7\times 10^{-6}$ & $.993$ \\
         $\Delta m_{31}^2$ & $(2.51 \pm 0.03)\times 10^{-3}$ & $(2.51 \pm 0.02)\times 10^{-3}$ & $3.4\times 10^{-5}$ & $.985$ \\
-        $\sin^2\theta_{12}$ & $0.3078 \pm 0.0112$ & $0.3080 \pm 0.0120$ & $0.0164$ & $.989$ \\
-        $\sin^2\theta_{13}$ & $0.0220 \pm 0.0006$ & $0.0221 \pm 0.0006$ & $0.0008$ & $.848$ \\
-        $\sin^2\theta_{23}$ & $0.5372 \pm 0.0219$ & $0.4700 \pm 0.0150$ & $0.0266$ & $.011$ \\
+        $\sin^2\theta_{12}$ & $0.3077 \pm 0.0115$ & $0.3080 \pm 0.0120$ & $0.0166$ & $.985$ \\
+        $\sin^2\theta_{13}$ & $0.0220 \pm 0.0006$ & $0.0221 \pm 0.0006$ & $0.0008$ & $.846$ \\
+        $\sin^2\theta_{23}$ & $0.4693 \pm 0.0151$ & $0.4700 \pm 0.0150$ & $0.0213$ & $.973$ \\
         \hline
     \end{tabular}
     \caption{Posterior means and 1$\sigma$ theoretical uncertainties, and p-values (using combined uncertainties) for the Normal Ordering (NO) fit under Nested Sampling.
@@ -963,14 +962,16 @@ where we have used the spurion with charge $(-1_A,1_B)$. We can do the same with
     q^n a_{13} & a_{23}&a_{33} 
     \end{pmatrix}.
 \end{equation}
-here, the overall factor of $q$ that arises from the spurion couplings as given in \cref{eqn:IOCMdirect} and \cref{eqn:IOCMdiagonal} has been factored out of the matrix to multiply (absorb into) the mass scale $M_0$. The couplings $a_{11}$ and $a_{13}$ come with extra factors of $q$, where $n,m \geq 1$, arising from indirect (through the $\nu_2$ sector) couplings propagated between $\nu_1$ to $\nu_3$ and itself. For sufficiently small values of $q$, the couplings $a_{11}, a_{13}$ become negligible compared to the rest of the terms, giving us the desired matrix with the texture zeros as in \cref{eqn:IOtexture}. We see that to include the Froggatt-Nielson suppression factors, we can include the mediator chains as depicted in \cref{fig:spag} at the end of the clockwork chains before coupling them back to the RH neutrinos.
+here, the overall factor of $q$ that arises from the spurion couplings as given in \cref{eqn:IOCMdirect} and \cref{eqn:IOCMdiagonal} has been factored out of the matrix to multiply (absorb into) the mass scale $M_0$. The couplings $a_{11}$ and $a_{13}$ come with extra factors of $q$, where $n,m \geq 1$, arising from indirect (through the $\nu_2$ sector) couplings propagated between $\nu_1$ to $\nu_3$ and itself. For sufficiently small values of $q$, the couplings $a_{11}, a_{13}$ become negligible compared to the rest of the terms, giving us the desired matrix with the texture zeros as in \cref{eqn:IOtexture}. 
 
 \pcs{\begin{equation}
-    \mathcal{L}_{eff} = \frac{\langle \Phi_{ij}\rangle}{\Lambda} \overline{\nu_{i}^C} \nu_j  + \textrm{H.c.} ,
+    \mathcal{L}_{eff} = \langle \Phi_{ij}\rangle \overline{\nu_{i}^C} \nu_j  + \textrm{H.c.} ,
 \end{equation}
-where $\Phi_{ij}$ can have charges $(-1, 1, 0)$,  $(0, -1, 1)$,  $(0, -2, 0)$ or  $(0, 0, -2)$ in the $(U(1)_A, U(1)_B, U(1)_C)$ space, while the $\nu_i$ are each assigned to the distinct negative unit vectors. and $\langle\Phi\rangle \sim q$}
+where $\Phi_{ij}$ can have charges $(-1, 1, 0)$,  $(0, -1, 1)$,  $(0, -2, 0)$ or  $(0, 0, -2)$ in the $(U(1)_A, U(1)_B, U(1)_C)$ space, while the $\nu_i$ are each assigned to the distinct negative unit vectors. and $\langle\Phi\rangle \sim M_0$}
 
 \begin{comment}    
+We see that to include the Froggatt-Nielson suppression factors, we can include the mediator chains as depicted in \cref{fig:spag} at the end of the clockwork chains before coupling them back to the RH neutrinos.
+
 \begin{equation} \label{eqn:IOCMdirect}
     \mathcal{L} = a_{0} \overline {\psi _{L0}} \overline{\nu_{2}^C} + a_1 \overline{\psi_{L1}} \nu_2  - m(\overline{\psi_{L0}}\psi_{R0} + \overline{\psi_{L1}}\psi_{R1}) + mq  \overline{\psi_{R1}^C}\psi_{R0} + \textrm{H.c.} ,
 \end{equation}
