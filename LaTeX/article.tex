@@ -765,11 +765,17 @@ confirming the plausibility of the model.
 
 We once again perform a scan in the parameter space, using the Python module \texttt{dynesty}. We use the same priors as before, with uniform priors on all parameters with the following bounds, $\epsilon \sim \mathcal{U}[0.1,0.5], \,\ \log_{10}M_0 \sim \mathcal{U}[13.0,17.0], \,\ y_{ij} \sim \mathcal{U}[-3,3] \,\ \text{and} \,\ a_{ij} \sim \mathcal{U}[-3,3]$. While the algorithm identifies valid regions successfully, the global integration reveals a highly disjointed likelihood surface. 
 
-We again measure the spread of the final posterior samples of the elements of the Yukawa matrix using the ratio $r = |Y_{\text{max}}|/|Y_{\text{min}}|$. While the algorithm isolates certain regions of the parameter space that appear to be highly natural, with $75.3\%$ of the samples found in the sampling run (with $10^5$ live points and $\sim 10^6$ samples), which achieved the highest Bayesian evidence ($\log Z = -29.1$), to have $r<30$.
+We again measure the spread of the final posterior samples of the elements of the Yukawa matrix using the ratio $r = |Y_{\text{max}}|/|Y_{\text{min}}|$. The average percentage of samples found with $r < 30$ is $67.41\pm4.13\%$. The graphs of the CDF produced by the three runs and the combined CDF is presented in \cref{fig:Inverted_spread}. The physics observables, however, such as the three mixing angles and the mass squared differences, all converge to the experimental value within $1 \sigma$.
+ 
+\begin{comment}
+While the algorithm isolates certain regions of the parameter space that appear to be highly natural, with $75.3\%$ of the samples found in the sampling run (with $10^5$ live points and $\sim 10^6$ samples), which achieved the highest Bayesian evidence ($\log Z = -29.1$), to have $r<30$.
 
 Lower evidence runs exhibit signs of getting trapped in difficult geometry, with one having a bimodal posterior distribution in $\theta_{12}$ and a highly suppressed naturalness percentage ($\sim 65\%$). The optimal run, presented here, reveals that the true parameter volume is highly natural ($\sim 75\%$), though highly disjointed.
 
 The corner plot generated with this data, \cref{fig:CornerPlot_IO_angles} and \cref{fig:CornerPlot_IO_masses}, reflects this analysis, showing a fragmented parameter space in the $\epsilon$ versus $\log_{10}(M_0)$ plane. Instead of a continuous plot, the posterior resolves into discrete, isolated 'islands' of high probability.
+\end{comment}
+
+
 \begin{figure}[h!]
     \centering\includegraphics[width=0.7\textwidth]{Python/Data/Inverted/Merged_CDF_IH_Yukawa.png}
     \caption{Cumulative Distribution Function of the ratio $Y_{\text{max}}/Y_{\text{min}}$}
