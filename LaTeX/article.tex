@@ -400,8 +400,17 @@ This implies that the inverse of the Majorana mass matrix can also be factorised
 \end{equation}
 We denote the elements of $A^{-1}$ as $\alpha_{ij}$. 
 Each $\alpha_{ij}$ is the ratio of a real homogeneous quadratic of the $a_{ij}$ and a real homogeneous cubic of the $a_{ij}$ and if these are ${\mathcal O}(1)$, we might expect $\alpha_{ij}$ to also be of order 1. 
-We remark here that in such functions, ${\mathcal O}(1)$ requires a broader definition than one might naively think. A simple example which will be pertinent for later illustrates this point. Taking two independent variables $x$ and $y$, both with normal probability distributions of width unity and centred on zero, their ratio $r:=x/y$ exhibits a standard Cauchy probability distribution $p(r) = 1/[\pi(r^2+1)]$~\cite{cauchy}. This has much longer tails than the normal distribution: we start with variables whose probability of their magnitude being larger than 10 is $1.6\times 10^{-23}$, whereas the probability that their ratio is larger than 10 is $0.06$. In what follows, we shall be dealing with some tens of parameters. We may expect that, starting from ``order 1'' expectations, a few of the ratios of independently-distributed ``order 1'' parameters may differ by factors of a few tens. We shall return to this point below.
+We remark here that in such functions, ${\mathcal O}(1)$ requires a broader definition than one might naively think. A simple example which will be pertinent for later illustrates this point. Taking two independent variables $x$ and $y$, both with normal probability distributions of width unity and centred on zero, their ratio $r:=x/y$ exhibits a standard Cauchy probability distribution $p(r) = 1/[\pi(r^2+1)]$~\cite{cauchy}. This has much longer tails than the normal distribution: we start with variables whose probability of their magnitude being larger than 10 is $1.6\times 10^{-23}$, whereas the probability that the magnitude of their ratio is larger than 10 is $0.06$. In what follows, we shall be dealing with some tens of parameters. We may expect that, starting from ``order 1'' expectations, a few of the ratios of independently-distributed ``order 1'' parameters may differ by factors of a few tens. Such a distribution has no well-defined mean or variance; however, we can define a cumulative distribution function, 
+\begin{align}
+    F(r \leq R) &= \int_{-\infty}^R p(r) \text{d}r = \frac{\tan^{-1}(R)}{\pi} +
+    \frac{1}{2} , \\
+    \implies F(|r| < R) &= \frac{2 \tan^{-1}(R)}{\pi};
+\end{align}
+which will prove useful to analyse the 'naturalness' of the model. 
 \begin{comment}
+\equiv F(R)
+\implies F(|r| < R) &=  [F(R) - F(-R)],\\
+
 If the original Majorana matrix elements $a_{ij}$ are real $\mathcal{O}(1)$ parameters that obey a normal distribution ($a_{ij} \sim \mathcal{N}(0,1)$), then it can be shown that the inverse Majorana matrix elements $\alpha_{ij}$ are also real parameters that come from a distribution centred at zero.
 
 However, since $\alpha_{ij} = C_{ji}/\det(A)$, where $C_{ji}$ are the cofactor of the bare matrix $A$, the distribution has heavy tails due to the possibility of $\det(A)\rightarrow0$.
@@ -576,7 +585,27 @@ We validated the analytic scaling by performing a global Bayesian parameter scan
 
 The Frogatt-Nielson parameter ($\epsilon$) and the Majorana (seesaw) mass scale ($\log_{10} M_0$) are given uniform priors over the ranges $[0.1,0.5]$ and $[13.0,17.0]$. The Yukawa and Majorana matrix elements, $y_{ij}$ and $a_{ij}$ respectively, are expected to be $\mathcal{O}(1)$, and therefore given uniform priors over the range $[-3,3]$. 
 
-To quantify the `naturalness' of the model and the level of fine-tuning required in the Yukawa coefficients, we measure the spread of the final posterior samples. Specifically, we define the naturalness ratio, $r =Y_{\text{max}}/Y_{\text{min}}$, to be the ratio of the largest Yukawa element to the smallest. Across three independent nested sampling runs (each utilising $10^5$ live points, corresponding to $\sim 10^6$ samples), the Normal hierarchy model exhibits a highly robust and natural percentage. The cumulative distribution function of $r$ for a representative run is shown in \cref{fig:Normal_spread}. The three runs generate a broadly similar profile for the corner plots, indicating that the posterior space has been fully converged by the sampler.
+To quantify the `naturalness' of the model and the level of fine-tuning required in the Yukawa coefficients, we measure the spread of the final posterior samples. Specifically, we define the naturalness ratio, $r =|Y_{\text{max}}|/|Y_{\text{min}}|$, to be the ratio of the largest Yukawa element to the smallest. 
+\begin{comment}
+%(i.i.d.)
+If we have $n$ independent and identically distributed random variables $\{X_1, X_2,\dots, X_n\}$ drawn from a PDF $f_X(x)$ (and corresponding CDFs: $F_X(x)$), we can calculate the PDF of the minima (denoted $f_{X_{(1)}}(x)$) of this ensemble simply as \cite{casella_statistical_2002, coles_introduction_2001}
+\begin{equation}
+    f_{X_{(1)}}(x) = n f_X(x) [1-F_X(x)]^{n-1}
+\end{equation}
+whereas the PDF for the maxima (denoted $f_{X_{(n)}}(x)$) is given similarly by
+\begin{equation}
+    f_{X_{(n)}}(x) = n f_X(x) F_X(x)^{n-1}
+\end{equation}
+assuming that the posterior distributions of $Y_{ij}$ are following an approximately uniform distribution and taking $n=8$ as we have $y_{22} = 0$, we get for the PDFs of $|Y_{max}|$ and $|Y_{min}|$ ,
+\begin{align}
+    f_{Y_{(1)}}(y) &= \frac{8}{3} \Big(1-\frac{x}{3}\Big)^7,\\
+    f_{Y_{(n)}}(y) &= \frac{8}{3^8} x^7,
+\end{align}
+\end{comment}
+Across three independent nested sampling runs (each utilising $10^5$ live points, corresponding to $\sim 10^6$ samples), the Normal hierarchy model exhibits a highly robust and natural percentage. The cumulative distribution function of $r$ for a representative run is shown in \cref{fig:Normal_spread}. The three runs yield a broadly similar profile for the corner plots, indicating that the sampler has fully converged on the posterior space.
+\begin{comment}
+Using extreme value theory (EVT) and order statistics \cite{casella_statistical_2002, coles_introduction_2001},   
+\end{comment}
 \begin{figure}[h!]
     \centering\includegraphics[width=0.7\textwidth]{Python/Data/Normal/Merged_CDF_NH_Yukawa.png}
     \caption{Cumulative Distribution Function of the ratio $Y_{\text{max}}/Y_{\text{min}}$}
@@ -736,7 +765,7 @@ confirming the plausibility of the model.
 
 We once again perform a scan in the parameter space, using the Python module \texttt{dynesty}. We use the same priors as before, with uniform priors on all parameters with the following bounds, $\epsilon \sim \mathcal{U}[0.1,0.5], \,\ \log_{10}M_0 \sim \mathcal{U}[13.0,17.0], \,\ y_{ij} \sim \mathcal{U}[-3,3] \,\ \text{and} \,\ a_{ij} \sim \mathcal{U}[-3,3]$. While the algorithm identifies valid regions successfully, the global integration reveals a highly disjointed likelihood surface. 
 
-We again measure the spread of the final posterior samples of the elements of the Yukawa matrix using the ratio $r = Y_{\text{max}}/Y_{\text{min}}$. While the algorithm isolates certain regions of the parameter space that appear to be highly natural, with $75.3\%$ of the samples found in the sampling run (with $10^5$ live points and $\sim 10^6$ samples), which achieved the highest Bayesian evidence ($\log Z = -29.1$), to have $r<30$.
+We again measure the spread of the final posterior samples of the elements of the Yukawa matrix using the ratio $r = |Y_{\text{max}}|/|Y_{\text{min}}|$. While the algorithm isolates certain regions of the parameter space that appear to be highly natural, with $75.3\%$ of the samples found in the sampling run (with $10^5$ live points and $\sim 10^6$ samples), which achieved the highest Bayesian evidence ($\log Z = -29.1$), to have $r<30$.
 
 Lower evidence runs exhibit signs of getting trapped in difficult geometry, with one having a bimodal posterior distribution in $\theta_{12}$ and a highly suppressed naturalness percentage ($\sim 65\%$). The optimal run, presented here, reveals that the true parameter volume is highly natural ($\sim 75\%$), though highly disjointed.
 
@@ -938,18 +967,89 @@ A =     \begin{pmatrix}
         a_{13} & a_{23} & a_{33} 
     \end{pmatrix},
 \end{equation} 
-we can depict this as 
+we can depict this as shown in \cref{fig:IntCWinFN}. The inter-mediator particles $F_{i}$ have zero $U(1)_X$ charge, but possess the same global symmetries as the corresponding $\nu_i$.
+\begin{figure}[t] 
+    \centering
+    \begin{tikzpicture}
+        \begin{feynman}
+            % --- LEFT SIDE: \nu_i to F_i (First FN Chain) ---
+            \vertex (L) {$\overline{\nu_i^C}$};
+            \vertex [right=1.2cm of L] (F1);
+            \vertex [above=1.0cm of F1] (phi1) {$\theta$};
+            
+            % The variable theta insertions
+            \vertex [right=0.8cm of F1] (M1) {$\cdots$};
+            \vertex [below=0.6cm of M1] {\large $\Sigma$}; % Label for Sigma factor
+            
+            \vertex [right=0.8cm of M1] (F2);
+            \vertex [above=1.0cm of F2] (phi2) {$\theta$};
+            
+            % Connection to the clockwork gear
+            \vertex [right=1.5cm of F2] (Fi_node);
+            \vertex [below=0.1cm of Fi_node] {$F_i$};
+            
+            % Midpoint for the mass insertion cross
+            \path (F2) -- (Fi_node) coordinate[midway] (C1); 
+            
+            % --- MIDDLE: Clockwork Chain (F_i to F_j) ---
+            \vertex [right=2.5cm of Fi_node] (Fj_node);
+            \vertex [below=0.1cm of Fj_node] {$F_j$};
+            
+            % Label for Clockwork
+            \path (Fi_node) -- (Fj_node) node[midway, above=0.3cm] {$M_0 A_{ij}$}; 
+            
+            % --- RIGHT SIDE: F_j to \nu_j (Second FN Chain) ---
+            \vertex [right=1.5cm of Fj_node] (F3);
+            \vertex [above=1.0cm of F3] (phi3) {$\theta$};
+            
+            % Midpoint for the mass insertion cross
+            \path (Fj_node) -- (F3) coordinate[midway] (C2); 
+            
+            % The variable theta insertions
+            \vertex [right=0.8cm of F3] (M2) {$\cdots$};
+            \vertex [below=0.6cm of M2] {\large $\Sigma$}; % Label for Sigma factor
+            
+            \vertex [right=0.8cm of M2] (F4);
+            \vertex [above=1.0cm of F4] (phi4) {$\theta$};
+            
+            \vertex [right=1.2cm of F4] (R) {$\nu_j$};
 
+            % --- DRAWING THE FEYNMAN LINES ---
+            \diagram*{
+                (L) -- [fermion] (F1) -- [fermion] (M1) -- [fermion] (F2) --  (Fi_node),
+                (phi1) -- [scalar] (F1),
+                (phi2) -- [scalar] (F2),
+                
+                (Fj_node) -- (F3) -- [fermion] (M2) -- [fermion] (F4) -- [fermion] (R),
+                (phi3) -- [scalar] (F3),
+                (phi4) -- [scalar] (F4),
+            };
 
-We assume that the fields $\nu_1, \nu_2,\nu_3$ have a negative unit charge under global $U(1)_A, U(1)_B$  and $U(1)_C$ groups respectively. This forbids the Majorana mass matrix entirely. To reintroduce the required couplings, we add spurions as before to the UV spectrum, with charges $(-1_A,1_B)$, $(-1_B,1_C)$, $ (-2_B)$ and $(-2_C)$. With this, we can write down the Lagrangian for direct couplings ($a_{22}$),
+            % --- MANUAL DRAWINGS (Clockwork & Crosses) ---
+            
+            % 3 parallel lines for the Clockwork Mechanism
+            \draw[thick] (Fi_node) -- (Fj_node);
+            \draw[thick, transform canvas={yshift=2.5pt}] (Fi_node) -- (Fj_node);
+            \draw[thick, transform canvas={yshift=-2.5pt}] (Fi_node) -- (Fj_node);
+
+            % Crosses to show integrating out massive fermions
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (C1) {};
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (C2) {};
+
+        \end{feynman}
+    \end{tikzpicture}
+    \caption{Integrated Clockwork chain into the Froggatt-Nielson Mechanism.} \label{fig:IntCWinFN}
+\end{figure}
+
+We assume that the fields $\nu_1, \nu_2,\nu_3$ (correspondingly $F_1,F_2,F_3$), have a negative unit charge under global $U(1)_A, U(1)_B$  and $U(1)_C$ groups respectively. This forbids the Majorana mass matrix entirely. To reintroduce the required couplings, we add spurions as before to the UV spectrum, with charges $(-1_A,1_B)$, $(-1_B,1_C)$, $ (-2_B)$ and $(-2_C)$. With this, we can write down the Lagrangian for direct couplings ($a_{22}$),
 \begin{equation} \label{eqn:IOCMdirect}
-    \mathcal{L} = a_{0} \overline{\psi_{L0}} \nu_{2}^C + a_1 \overline{\psi_{R1}} \nu_2 - m(\overline{\psi_{L0}}\psi_{R0} + \overline{\psi_{L1}}\psi_{R1}) + mq \overline{\psi_{R1}^C} \psi_{R0} + \textrm{H.c.}
+    \mathcal{L} = a_{0} \overline{\psi_{L0}} F_{2}^C + a_1 \overline{\psi_{R1}} F_2 - m(\overline{\psi_{L0}}\psi_{R0} + \overline{\psi_{L1}}\psi_{R1}) + mq \overline{\psi_{R1}^C} \psi_{R0} + \textrm{H.c.}
 \end{equation}
 where we have used the spurion field with charge $-2_B$. One can now do the same for the term $a_{33}$, using the spurion with charge $-2_C$. 
 
 For the cross terms, we write,
 \begin{equation} \label{eqn:IOCMdiagonal}
-    \mathcal{L} = a_{0}' \overline{\nu_{1}^C} \chi_{R0} + a_1' \overline{\chi_{L1}} \nu_2  - m(\overline{\chi_{L0}}\chi_{R0} + \overline{\chi_{L1}}\chi_{R1}) + mq \overline{\chi_{L0}} \, \chi_{R1} + \textrm{H.c.} ,
+    \mathcal{L} = a_{0}' \overline{F_{1}^C} \chi_{R0} + a_1' \overline{\chi_{L1}} F_2  - m(\overline{\chi_{L0}}\chi_{R0} + \overline{\chi_{L1}}\chi_{R1}) + mq \overline{\chi_{L0}} \, \chi_{R1} + \textrm{H.c.} ,
 \end{equation}
 where we have used the spurion with charge $(-1_A,1_B)$. We can do the same with the coupling of $\nu_2$ to $\nu_3$, where we now use the spurion with charge $(-1_B, 1_C)$. Now, importantly, since there exists no spurion with charge $(-1_A,1_C)$ or $2_A$, there can be no direct coupling as written in the Lagrangians \cref{eqn:IOCMdirect} or \cref{eqn:IOCMdiagonal}. Consequently, the effective couplings $a_{11}$ and $a_{13}$ are generated only at higher orders in the spurion expansion (e.g. via mixing through the $\nu_2$ sector), resulting in the suppression factors $q^m$ and $q^n$, respectively. Using the EOM as before, we can write down an effective Majorana mass matrix of the form,
 \begin{equation}
