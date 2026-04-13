@@ -512,144 +512,7 @@ an easily be naturally provided in the context of the ultra-violet completion of
 
     \bca{The inverted hierarchy case texture zeroes can easily be naturally provided in the context of the ultra-violet completion of the FN mechanism via omitting particular $\psi_{FN_i}$ fields that would otherwise generate the operator from a spaghetti diagram like the one in Fig.~\ref{fig:spag}.}
 \end{comment}
-
-\subsection{Normal Hierarchy} \label{sec:Normal Hierarchy}
-We show below that imposing $y_{22} = 0$ (a possible mechanism to achieve this single texture zero is detailed in \cref{Sec:Clockwork}) leads to a normal hierarchy agreeing with those inferred from neutrino oscillations. 
-\begin{equation} \label{Textured Yukawa Neutrino}
-    Y_{\nu L} \approx
-    \begin{pmatrix}
-        y_{11} &\epsilon y_{12} & \epsilon y_{13} \\
-        \epsilon y_{21}&0&\epsilon^{2}y_{23}\\
-        \epsilon y_{31}& \epsilon^{2}y_{32}&y_{33}
-    \end{pmatrix},
-\end{equation}
-\begin{comment}
-\pcs{Move appendix here, maybe?}
-\bca{I  don't think so because it's a nice possible mechanism but there may be others; this point is a little peripheral to the rest of the paper: important to show that there's a possibility but we aren't nailing our colours to it.}
-Appendix \bca{I didn't see these - did I miss them?}
-\end{comment}
-\begin{equation}
-    m_\nu \approx \frac{v^2}{2M_0} \epsilon^{-2} (X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \cdots) 
-\end{equation}
-where the structure of the $X^{(i)}$ are:
-\begin{equation}
-    X^{(0)} = \begin{pmatrix}
-        \times &  0 & 0 \\
-        0  & 0  &  0  \\
-        0  & 0  & 0
-    \end{pmatrix}, \,\,\,\,  X^{(1)} = \begin{pmatrix}
-        0 & \times & 
-        \times \\
-        \times &  0 &0  \\
-        \times  & 0  & 0
-    \end{pmatrix}, \,\,\,\, 
-     X^{(2)} = \begin{pmatrix}
-    \times & 0 & 0 \\
-    0 & \times & \times  \\
-    0& \times &\times 
-    \end{pmatrix}
-\end{equation}
-At first order, $\text{Diag}(m_{\nu 1},m_{\nu 2},m_{\nu 3}) \approx \frac{v^2 \epsilon^{-2}}{2M_0}(\lambda_1^{(0)},0,0)$. First-order corrections are zero. Denoting $\frac{v^2\epsilon^{-2}}{2M_0} := m$, we get that the eigenvalues are of the parametric form (the detailed eigenvalues are given in the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub} repository)
-\begin{align}
-    m_3 &= m \left(A_3 + \epsilon^2 B_3+{\mathcal{O}}(\epsilon^3) \right))\\
-    m_2 &= m \left(\epsilon^2 B_2+{\mathcal{O}}(\epsilon^3) \right)\\
-    m_1 &= m \left(\epsilon^2 B_1 +{\mathcal{O}}(\epsilon^3) \right)
-\end{align}
-we see that the eigenvalues follow normal ordering ($m_1 < m_2 \ll m_3$). From this, we can estimate the order of $\epsilon$ in this case (neglecting $\mathcal{O}(1)$ factors),
-\begin{equation}\label{eq:epsilon-estimate, Normal Hierarchy}
-    \epsilon^4 \frac{(B_3-B_2)^2}{A_1^2} \sim \mathcal{O}(1) \times \frac{\Delta m_{{32}}^2}{\Delta m_{{12}}^2} \approx \mathcal{O}(1) \times 0.03
-    \quad\Rightarrow\quad
-    \epsilon \sim \mathcal{O}(1) \times0.42,
-\end{equation}
-The PMNS matrix, up to phase factors and normalisation, is of the form,
-\begin{equation}
-    U\approx 
-    \begin{pmatrix}
-    1 + \epsilon^2 u_{11}^{(2)} & \epsilon u_{12}^{(1)} & \epsilon u_{13}^{(1)} \\
-    \epsilon u_{21}^{(1)} & u_{22}^{(0)} & u_{23}^{(0)} \\
-    \epsilon u_{31}^{(1)} & u_{32}^{(0)} & u_{33}^{(0)}.
-    \end{pmatrix}
-\end{equation}
-the entries $u_{ij}^{(n)}$ are long algebraic functions of $y_{ij}$ and $a_{ij}$. Analytically, the parametric form of the matrix above is sufficient to understand the scaling of the angles, using which we get
-\begin{align} \label{NO matching}
-    \sin \theta_{13} &= {|U_{e3}|} \approx \epsilon u_{13}^{(1)} = 0.15,
-    \\
-    \tan \theta_{12} &= \frac{{|U_{e2}}|}{|U_{e1}|} \approx \frac{\epsilon u_{12}^{(1)}}{ 1+\epsilon^2u_{11}^{(2)}} \approx \epsilon u_{12}' = 0.66, \\
-    \tan \theta_{23} &= \frac{|{U_{\mu3}}|}{|{U_{\tau3}}|} \approx \frac{u_{23}^{(0)}}{u_{33}^{(0)}} = 1.15. 
-\end{align}
-\begin{comment}
-    \bca{More detail needed. Need a table with domain of input parameters, description of what kind of scan. Enough information for someone to reproduce your results, if that were necessary. Detail any software packages you use, citing them if you can.}
-    \bca{Give all prior PDFs. What about $M_0$ for instance? I presume flat in the log. Give formula for half-Cauchy. Are you aware that a Cauchy variable has an ill-defined variance (it is infinite)? I think that means that the distribution is strictly non-normalisable. Although one can always in principle find some upper bound - which might be very large - on the parameter.}
-\end{comment}
-We validated the analytic scaling by performing a global Bayesian parameter scan using nested sampling, implemented with the package \texttt{dynesty} \cite{speagle_dynesty_2020}. This method proves more viable than traditional Markov Chain Monte-Carlo methods (such as HMC or NUTS) due to the highly multi-modal and the disjointed parameter space nature of the model's posterior distribution.
-
-The Frogatt-Nielson parameter ($\epsilon$) and the Majorana (seesaw) mass scale ($\log_{10} M_0$) are given uniform priors over the ranges $[0.1,0.5]$ and $[13.0,17.0]$. The Yukawa and Majorana matrix elements, $y_{ij}$ and $a_{ij}$ respectively, are expected to be $\mathcal{O}(1)$, and therefore given uniform priors over the range $[-3,3]$. 
-
-To quantify the `naturalness' of the model and the level of fine-tuning required in the Yukawa coefficients, we measure the spread of the final posterior samples. Specifically, we define the naturalness ratio, $r =|Y_{\text{max}}|/|Y_{\text{min}}|$, to be the ratio of the largest Yukawa element to the smallest. 
-\begin{comment}
-%(i.i.d.)
-If we have $n$ independent and identically distributed random variables $\{X_1, X_2,\dots, X_n\}$ drawn from a PDF $f_X(x)$ (and corresponding CDFs: $F_X(x)$), we can calculate the PDF of the minima (denoted $f_{X_{(1)}}(x)$) of this ensemble simply as \cite{casella_statistical_2002, coles_introduction_2001}
-\begin{equation}
-    f_{X_{(1)}}(x) = n f_X(x) [1-F_X(x)]^{n-1}
-\end{equation}
-whereas the PDF for the maxima (denoted $f_{X_{(n)}}(x)$) is given similarly by
-\begin{equation}
-    f_{X_{(n)}}(x) = n f_X(x) F_X(x)^{n-1}
-\end{equation}
-assuming that the posterior distributions of $Y_{ij}$ are following an approximately uniform distribution and taking $n=8$ as we have $y_{22} = 0$, we get for the PDFs of $|Y_{max}|$ and $|Y_{min}|$ ,
-\begin{align}
-    f_{Y_{(1)}}(y) &= \frac{8}{3} \Big(1-\frac{x}{3}\Big)^7,\\
-    f_{Y_{(n)}}(y) &= \frac{8}{3^8} x^7,
-\end{align}
-\end{comment}
-Across three independent nested sampling runs (each utilising $10^5$ live points, corresponding to $\sim 10^6$ samples), the Normal hierarchy model exhibits a highly robust and natural percentage. The cumulative distribution function of $r$ for a representative run is shown in \cref{fig:Normal_spread}. The three runs yield a broadly similar profile for the corner plots, indicating that the sampler has fully converged on the posterior space.
-\begin{comment}
-Using extreme value theory (EVT) and order statistics \cite{casella_statistical_2002, coles_introduction_2001},   
-\end{comment}
-\begin{figure}[h!]
-    \centering\includegraphics[width=0.7\textwidth]{Python/Data/Normal/Merged_CDF_NH_Yukawa.png}
-    \caption{Cumulative Distribution Function of the ratio $Y_{\text{max}}/Y_{\text{min}}$}
-    \label{fig:Normal_spread}
-\end{figure}
-The posterior means of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO_angles}, \cref{fig:CornerPlot_NO_masses} and \cref{tab:NO_Posteriors}. 
-The posterior samples and the diagnostics files required to reproduce these results are available publicly at the \href{https://github.com/PrabhodaCS/NeutrinosInU1x}{GitHub} repository.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{Python/Data/Normal/Corner_NH_Angles.png}
-    \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (Normal Ordering).}
-    \label{fig:CornerPlot_NO_angles}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{Python/Data/Normal/Corner_NH_Masses.png}
-    \caption{Posterior probability distributions of the mass scale, FN parameter and the mass squared differences (Normal Ordering). The solid contours correspond to the 68$\%$ and 95$\%$ Bayesian credibility intervals.}
-    \label{fig:CornerPlot_NO_masses}
-\end{figure}
-\begin{comment}
-    \bca{Somewhere, it's worth showing the 1d distributions of delta m$^2$ parameters along with that of epsilon and of $M_0$. Also, please increase the font sizes on the graphics. You'll be showing this through a dodgy projector while giving a talk at some point and no one will be able to read them - a common, but entirely avoidable, mistake! Also, say what the vertical dashed lines mean. Also, you want to quote the mean value and standard deviations to the same number of decimal places.  } 
-    
-    \bca{Too many significant figures in the digits. They are distracting - superfluous information. Put uncertainties on the experimental and theoretical values. p-value should be $p-$value and the convention is to quote eg $.975$ rather than $0.975$ for $p-$values.}
-\end{comment}
-
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|}
-      \hline
-        Observable & Posterior (mean $\pm$ 1$\sigma$) & Experimental (mean $\pm$ 1$\sigma$) & $\sigma_{\rm comb}$ & p-value \\
-        \hline
-        \hline
-        $\Delta m_{21}^2$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $(7.49 \pm 0.19)\times 10^{-5}$ & $2.7\times 10^{-6}$ & $.993$ \\
-        $\Delta m_{31}^2$ & $(2.51 \pm 0.03)\times 10^{-3}$ & $(2.51 \pm 0.02)\times 10^{-3}$ & $3.4\times 10^{-5}$ & $.985$ \\
-        $\sin^2\theta_{12}$ & $0.3077 \pm 0.0115$ & $0.3080 \pm 0.0120$ & $0.0166$ & $.985$ \\
-        $\sin^2\theta_{13}$ & $0.0220 \pm 0.0006$ & $0.0221 \pm 0.0006$ & $0.0008$ & $.846$ \\
-        $\sin^2\theta_{23}$ & $0.4693 \pm 0.0151$ & $0.4700 \pm 0.0150$ & $0.0213$ & $.973$ \\
-        \hline
-    \end{tabular}
-    \caption{Posterior means and 1$\sigma$ theoretical uncertainties, and p-values (using combined uncertainties) for the Normal Ordering (NO) fit under Nested Sampling.
-    The experimental values and uncertainties are taken from {\tt NuFIT 6.0} (2024) global fits (with SK)  \cite{esteban_nufit-60_2024}.}
-    \label{tab:NO_Posteriors}
-\end{table}
-\subsection{Inverted Hierarchy} \label{sec:Inverted Hierarchy}
+c\subsection{Inverted Hierarchy} \label{sec:Inverted Hierarchy}
 Setting the Majorana matrix elements $a_{11} = a_{13} = 0$ we get an inverted mass hierarchy. This can be justified by considering the UV model for the FN mechanism. The effective operators are obtained by integrating out the heavy vector-like fermion mediators present in the UV theory, as depicted in \cref{fig:spag}.  We assume the UV spectrum is incomplete and therefore lacks the specific mediators required to generate these elements. We now show that this texture produces an inverted hierarchy with masses in line with \cref{tab:neutrino_angles_masses}. The 
 
 \begin{equation} \label{eqn:IOtexture}
@@ -763,7 +626,9 @@ giving us the mixing angles,
 \end{align}
 confirming the plausibility of the model. 
 
-We once again perform a scan in the parameter space, using the Python module \texttt{dynesty}. We use the same priors as before, with uniform priors on all parameters with the following bounds, $\epsilon \sim \mathcal{U}[0.1,0.5], \,\ \log_{10}M_0 \sim \mathcal{U}[13.0,17.0], \,\ y_{ij} \sim \mathcal{U}[-3,3] \,\ \text{and} \,\ a_{ij} \sim \mathcal{U}[-3,3]$. While the algorithm identifies valid regions successfully, the global integration reveals a highly disjointed likelihood surface. 
+We once again perform a scan in the parameter space, using the Python module \texttt{dynesty}. We use the same priors as before, with uniform priors on all parameters with the following bounds, $\epsilon \sim \mathcal{U}[0.1,0.5], \,\ \log_{10}M_0 \sim \mathcal{U}[13.0,17.0], \,\ y_{ij} \sim \mathcal{U}[-3,3] \,\ \text{and} \,\ a_{ij} \sim \mathcal{U}[-3,3]$.
+
+While the algorithm identifies valid regions successfully, the global integration reveals a highly disjointed likelihood surface. 
 
 We again measure the spread of the final posterior samples of the elements of the Yukawa matrix using the ratio $r = |Y_{\text{max}}|/|Y_{\text{min}}|$. The average percentage of samples found with $r < 30$ is $67.41\pm4.13\%$. The graphs of the CDF produced by the three runs and the combined CDF is presented in \cref{fig:Inverted_spread}. The physics observables, however, such as the three mixing angles and the mass squared differences, all converge to the experimental value within $1 \sigma$.
  
