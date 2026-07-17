@@ -807,17 +807,17 @@ However, such a small expansion parameter $\epsilon \sim 0.03$, would fail to re
 \begin{equation}
     U =
     \begin{pmatrix}
-        1+ \epsilon u_{11}^{(1)} +\epsilon^2 u_{11}^{(2)} & 1 + \epsilon u_{12}^{(1)} +\epsilon^2 u_{12}^{(2)} & \epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)} \\
-        1 + \epsilon u_{21}^{(1)} +\epsilon^2 u_{21}^{(2)} & -1 + \epsilon u_{22}^{(1)} +\epsilon^2 u_{22}^{(2)} &  \epsilon u_{23}^{(1)} +\epsilon^2 u_{23}^{(2)} \\
-        -\epsilon u_{31}^{(1)} &  \epsilon^2 u_{32}^{(2)} & 1 + \epsilon^2
-        u_{33}^{(2)}
+        -1+ \epsilon u_{11}^{(1)} +\epsilon^2 u_{11}^{(2)} & 1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)} & \epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)} \\
+        1 + \epsilon u_{11}^{(1)} -\epsilon^2 u_{11}^{(2)} & 1 - \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)} &  -\epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)} \\
+        2\epsilon u_{13}^{(1)} &  \epsilon^2 u_{32}^{(2)} & 1 - \epsilon^2
+        (u_{13}^{(1)})^2
     \end{pmatrix} + {\mathcal O}(\epsilon^3),
 \end{equation}
 giving us the mixing angles, 
 \begin{align}
     \sin \theta_{13} &= |U_{e3}| \approx  \epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)} \\
-    \tan \theta_{12} &= \frac{|{U_{e2}}|}{{|U_{e1}|}} \approx \frac{1 + \epsilon u_{12}^{(1)} +\epsilon^2 u_{12}^{(2)}}{1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{11}^{(2)}}\approx 1 + \epsilon (u_{12}^{(1)} - u_{11}^{(1)})+\epsilon^2 (u_{12}^{(2)} - u_{11}^{(1)}) \\
-    \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \approx \frac{ \epsilon u_{23}^{(1)} +\epsilon^2 u_{23}^{(2)}}{ 1 +\epsilon^2 u_{33}^{(2)}} \approx \epsilon u_{23}^{(1)} +\epsilon^2 u_{23}^{(2)}.
+    \tan \theta_{12} &= \frac{|{U_{e2}}|}{{|U_{e1}|}} \approx \left|\frac{1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)}}{-1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{11}^{(2)}}\right|\approx  1 + 2\epsilon  u_{11}^{(1)}-\epsilon^2 (u_{12}^{(2)} + u_{11}^{(2)}  + 2(u_{11}^{(1)})^2) \\
+    \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \approx \left| \frac{ -\epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)}}{ 1 -2\epsilon^2 (u_{13}^{(2)})^2} \right| \approx \epsilon u_{23}^{(1)} - \epsilon^2 (u_{13}^{(2)}+(u_{13}^{(1)})^2).
 \end{align}
 This is only a leading-order analytical estimate intended to demonstrate the inverted hierarchy model's viability. 
 
