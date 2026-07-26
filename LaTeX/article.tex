@@ -811,9 +811,9 @@ outside our stated (but arbitrary) upper bound of 30. Since $A$ and $B$ are
 homogeneous rational functions fo the $a_{ij}$ and $y_{ij}$, this is not as
 unlikely as one might imagine~\cite{Allanach:2026rkb}. We shall see below in
 Fig.~\ref{fig:Inverted_spread}, that 
-a spread of 50 has a survival probability of 20$\%$: hardly a tiny probability. \pcs{Ben, A and B are derived quantities, functions of the $y_{ij}$. The survival probability being quoted in figure 5 is of the base ratio $Y_{max}/Y_{min}$. Should we clarify the same here?}
+a spread of 50 has a survival probability of 20$\%$: hardly a tiny probability. 
 
-The nested sampler successfully identifies the regions of parameter space where this balance is achieved. The PMNS matrix has the (unnormalised) form, \pcs{I imagine the point being made, that this texture naturally gives us an inverted hierarchy, will be clearer if we do NOT include the PMNS matrix or the mixing angles}
+The nested sampler successfully identifies the regions of parameter space where this balance is achieved. The PMNS matrix has the (unnormalised) form, \pcs{I imagine the point being made, that this texture naturally gives us an inverted hierarchy, will be clearer if we do NOT include the PMNS matrix or the mixing angles. My main argument is that the structure of the eigenvalues and the leading order $X^{(0)}$ implies an inverted hierarchy, whose parameter space is then further explored by the numerical scans}
 \begin{equation}
     U =
     \begin{pmatrix}
@@ -858,8 +858,8 @@ The physics observables, however, such as the
 three mixing angles and the mass-squared differences, agree with the
 {\tt NuFit 6.0} \cite{Esteban:2024eli} best fit values within $1 \sigma$. This
 is presented in \cref{tab:IO_Posteriors} and in the corner plots \cref{fig:CornerPlot_IO_angles} and \cref{fig:CornerPlot_IO_masses}. Given the CDF percentage
-uncertainties, we can say that in the \model, both mass orderings (normal hierarchy or inverted ordering) are reasonably natural, with around two thirds
-of the posterior volume exhibiting our naturalness criterion of $r<30$. The final global evidence in this case is $\log Z_{IH} = -29.07 \pm 0.03$. The Bayes factor is then $\exp (\log Z_{NH} - \log Z_{IH}) = 2.83$ in favor of Normal Hierarchy, which is less than three and hence is anecdotal \cite{jeffreys_theory_1998, lee_bayesian_2014}. The two global evidences were calculated against seseparate, conditionally marginalised likelihood targets (the independent NO and IO parameter~\cref{tab:neutrino_angles_masses}). For the sake of completeness, it is noted here that there already exists an intrinsic preference for Normal Hierarchy with a Bayes factor $\Delta \chi^2 \approx 6.1$ as quantified by the NuFIT global analyses.
+uncertainties, we can say that in the \model, both mass orderings (normal hierarchy or inverted hierarchy) are reasonably natural, with around two thirds
+of the posterior volume exhibiting our naturalness criterion of $r<30$. The final global evidence in this case is $\log Z_{IH} = -29.07 \pm 0.03$. The Bayes factor is then $\exp (\log Z_{NH} - \log Z_{IH}) = 2.83$ in favor of normal hierarchy, which is less than three and hence is anecdotal \cite{jeffreys_theory_1998, lee_bayesian_2014}. The two global evidences were calculated against seseparate, conditionally marginalised likelihood targets (the independent normal and inverted hierarchy parameter~\cref{tab:neutrino_angles_masses}). For the sake of completeness, it is noted here that there already exists an intrinsic preference for normal hierarchy with a Bayes factor $\Delta \chi^2 \approx 6.1$ as quantified by the NuFIT global analyses.
 
 \begin{figure}[h!]
     \centering\includegraphics[width=0.7\textwidth]{../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png}
