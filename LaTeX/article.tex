@@ -326,13 +326,9 @@ dimensional operators is natural from the point of view of ultra-violet (UV) com
 \centering
 \setlength{\tabcolsep}{10pt}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{| l| c |c |}
-    \toprule
-    & \multicolumn{2}{c}{\textbf{Experimental Values ({\tt NuFIT 6.0})} \cite{Esteban:2024eli}} \\
-    \cmidrule(l){2-3} 
+\begin{tabular}{| l | c |c |} \hline
     \textbf{Parameter} & Normal Hierarchy & Inverted Hierarchy \\
-    & (Best Fit $\pm 1\sigma$) & (Best Fit $\pm 1\sigma$) \\
-    \midrule
+    & (Best Fit $\pm 1\sigma$) & (Best Fit $\pm 1\sigma$) \\ \hline
     $\theta_{12}/^\circ$ & $33.68^{+0.73}_{-0.70}$ & $33.68^{+0.73}_{-0.70}$ \\
     $\theta_{23}/^\circ$ & $43.3^{+1.0}_{-0.8}$ & $47.9^{+0.7}_{-0.9}$ \\
     $\theta_{13}/^\circ$ & $8.56^{+0.11}_{-0.11}$ &  $8.59^{+0.11}_{-0.11}$  \\
@@ -380,7 +376,12 @@ Defining $\epsilon:=\langle\theta\rangle/\Lambda_{\text{FN}}$, the neutrino flav
     \epsilon a_{13} & \epsilon^{2}a_{23}&a_{33} 
     \end{pmatrix}.
 \end{equation}
-\cref{FN Y and M} delivers the texture of the neutrino Yukawa and Majorana mass matrices in the \model. A renormalizable operator $\langle\theta\rangle \overline{\nu^c_{R1}}\nu_{R3}$ is also permissible, contributing $\langle\theta\rangle \sim \text{TeV}$ to $M_{13}$. However, given the mass scales, this is $\sim \mathcal{O}(10^{12})$ smaller than the entry $M_0 \epsilon a_{13}$. \pcs{is this argument airtight?}
+\cref{FN Y and M} delivers the texture of the neutrino Yukawa and Majorana
+mass matrices in the \model. A renormalizable operator $\langle\theta\rangle
+\overline{\nu^c_{R1}}\nu_{R3}$ is also permissible (as well as its hermitian
+conjugate), contributing $\langle\theta\rangle \sim \text{TeV}$ to
+$M_{13}$. However, given the mass scales, this is $\sim \mathcal{O}(10^{12})$
+smaller than the entry $M_0 \epsilon a_{13}$ and we neglect it.  
 Experimental CLFV constraints imply that the diagonal texture in
 \cref{chferms} must be valid to a much better approximation than in the
 neutrino Yukawa matrix. This could easily be enforced in the field theory
@@ -468,7 +469,7 @@ Ref.~\cite{Allanach:2026rkb} and quantify naturalness according to the spread $r
 ratio of the maximum fundamental coupling to the
 minimum fundamental coupling.
 We shall view $r$ less than a few tens then to be natural; to be definite,
-we take $r \leq 30$.
+we take $r \leq 30$ to be the defaulto.
 
 The light left-handed neutrino mass matrix is given at tree level by the seesaw formula \cref{mnu_eff}.
 Factoring some overall powers of $\epsilon$ in the inverse Majorana matrix (see discussion below), we expand $m_\nu:=-m_{\nu_L}$ (the unphysical minus sign can be absorbed into field definitions)
@@ -632,7 +633,7 @@ the entries $u_{ij}^{(n)}$ are lengthy algebraic functions of $y_{ij}$ and $a_{i
     \tan\theta_{12} &= \frac{|U_{e2}|}{|U_{e1}|} \approx \frac{u_{12}^{(1)}}{u_{11}^{(1)}}, \\
     \tan\theta_{23} &= \frac{|U_{\mu 3}|}{|U_{\tau 3}|} \approx \frac{u_{23}^{(1)}}{u_{33}^{(1)}}.
 \end{align}
-However, reproducing the small reactor angle $\sin\theta_{13} \approx 0.15$ imposes  $|1 - \epsilon^2 u_{13}^{(2)}| \approx 0.15$. This demands $u_{13}^{(2)} \in [4.8, 6.5]$. While this exceeds the naive $\mathcal{O}(1)$ expectation, $u_{13}^{(2)}$ is not a fundamental coupling but a rational algebraic function of the underlying $y_{ij}$ and $a_{ij}$ parameters. As discussed previously, ratios of independent $\mathcal{O}(1)$ distributions naturally exhibit heavy tails, therefore such cancellation routinely occurs without implying severe parametric fine-tuning. We defer the rigorous proof of this naturalness to the subsequent global Bayesian scan.
+However, reproducing the small reactor angle $\sin\theta_{13} \approx 0.15$ imposes  $|1 - \epsilon^2 u_{13}^{(2)}| \approx 0.15$. This demands $u_{13}^{(2)} \sim \mathcal{O}(10)$. While this exceeds the naive $\mathcal{O}(1)$ expectation, $u_{13}^{(2)}$ is not a fundamental coupling but a rational algebraic function of the underlying $y_{ij}$ and $a_{ij}$ parameters. As discussed previously, ratios of independent $\mathcal{O}(1)$ distributions naturally exhibit heavy tails, therefore such cancellation routinely occurs without implying severe parametric fine-tuning. We defer the rigorous proof of the naturalness of the parameter space to the subsequent global Bayesian scan.
 Having successfully established the model's analytical viability, we now proceed to numerically map the full parameter space.
 
 We perform a global Bayesian parameter inference to isolate regions of
@@ -803,21 +804,30 @@ an inverted hierarchy (i.e.\ $m_3 \ll m_1 < m_2$) where
     \frac{\Delta m_{21}^2}{|\Delta m_{32}^2|} &\approx \frac{4m_{IO}^2AB \epsilon}{m_{IO}^2 A^2} \Rightarrow
     0.03 \approx 4 \Big(\frac{B}{A}\Big)\epsilon ,\label{ep}
 \end{align}
-However, such a small expansion parameter $\epsilon \sim 0.03$, would fail to reproduce the mixing angles. Consequently, the coefficients $A/ B$ need to be larger. The nested sampler successfully identifies the regions of parameter space where this balance is achieved. The PMNS matrix has the (unnormalised) form,
+A small expansion parameter $\epsilon \sim 0.03$, would fail to reproduce the
+mixing angles. Consequently, the $A/ B$ would need to be large to fit the
+inverted ordering spectrum data, around 50,
+outside our stated (but arbitrary) upper bound of 30. Since $A$ and $B$ are
+homogeneous rational functions fo the $a_{ij}$ and $y_{ij}$, this is not as
+unlikely as one might imagine~\cite{Allanach:2026rkb}. We shall see below in
+Fig.~\ref{fig:Inverted_spread}, that 
+a spread of 50 has a survival probability of 20$\%$: hardly a tiny probability. 
+
+The nested sampler successfully identifies the regions of parameter space where this balance is achieved. The PMNS matrix has the (unnormalised) form, \pcs{I imagine the point being made, that this texture naturally gives us an inverted hierarchy, will be clearer if we do NOT include the PMNS matrix or the mixing angles. My main argument is that the structure of the eigenvalues and the leading order $X^{(0)}$ implies an inverted hierarchy, whose parameter space is then further explored by the numerical scans}
 \begin{equation}
     U =
     \begin{pmatrix}
         -1+ \epsilon u_{11}^{(1)} +\epsilon^2 u_{11}^{(2)} & 1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)} & \epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)} \\
         1 + \epsilon u_{11}^{(1)} -\epsilon^2 u_{11}^{(2)} & 1 - \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)} &  -\epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)} \\
-        2\epsilon u_{13}^{(1)} &  \epsilon^2 u_{32}^{(2)} & 1 - \epsilon^2
+        2\epsilon u_{13}^{(1)} &  \epsilon^2 u_{32}^{(2)} & 1 -2 \epsilon^2
         (u_{13}^{(1)})^2
     \end{pmatrix} + {\mathcal O}(\epsilon^3),
 \end{equation}
 giving us the mixing angles, 
 \begin{align}
     \sin \theta_{13} &= |U_{e3}| \approx  \epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)} \\
-    \tan \theta_{12} &= \frac{|{U_{e2}}|}{{|U_{e1}|}} \approx \left|\frac{1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)}}{-1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{11}^{(2)}}\right|\approx  1 + 2\epsilon  u_{11}^{(1)}-\epsilon^2 (u_{12}^{(2)} + u_{11}^{(2)}  + 2(u_{11}^{(1)})^2) \\
-    \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \approx \left| \frac{ -\epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)}}{ 1 -2\epsilon^2 (u_{13}^{(2)})^2} \right| \approx \epsilon u_{23}^{(1)} - \epsilon^2 (u_{13}^{(2)}+(u_{13}^{(1)})^2).
+    \tan \theta_{12} &= \frac{|{U_{e2}}|}{{|U_{e1}|}} \approx \left|\frac{1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)}}{-1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{11}^{(2)}}\right|\approx  1 + 2\epsilon  u_{11}^{(1)}+\epsilon^2 (u_{12}^{(2)} + u_{11}^{(2)}  + 2(u_{11}^{(1)})^2) \\
+    \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \approx \left| \frac{ -\epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)}}{ 1 -2\epsilon^2 (u_{13}^{(2)})^2} \right| \approx \epsilon u_{13}^{(1)} - \epsilon^2 u_{13}^{(2)}.
 \end{align}
 This is only a leading-order analytical estimate intended to demonstrate the inverted hierarchy model's viability. 
 
@@ -848,8 +858,8 @@ The physics observables, however, such as the
 three mixing angles and the mass-squared differences, agree with the
 {\tt NuFit 6.0} \cite{Esteban:2024eli} best fit values within $1 \sigma$. This
 is presented in \cref{tab:IO_Posteriors} and in the corner plots \cref{fig:CornerPlot_IO_angles} and \cref{fig:CornerPlot_IO_masses}. Given the CDF percentage
-uncertainties, we can say that in the \model, both mass orderings (normal hierarchy or inverted ordering) are reasonably natural, with around two thirds
-of the posterior volume exhibiting our naturalness criterion of $r<30$. The final global evidence in this case is $\log Z_{IH} = -29.07 \pm 0.03$. The Bayes factor is then $\exp (\log Z_{NH} - \log Z_{IH}) = 2.83$ in favor of Normal Hierarchy, which is less than three and hence is anecdotal.
+uncertainties, we can say that in the \model, both mass orderings (normal hierarchy or inverted hierarchy) are reasonably natural, with around two thirds
+of the posterior volume exhibiting our naturalness criterion of $r<30$. The final global evidence in this case is $\log Z_{IH} = -29.07 \pm 0.03$. The Bayes factor is then $\exp (\log Z_{NH} - \log Z_{IH}) = 2.83$ in favor of normal hierarchy, which is less than three and hence is anecdotal \cite{jeffreys_theory_1998, lee_bayesian_2014}. The two global evidences were calculated against seseparate, conditionally marginalised likelihood targets (the independent normal and inverted hierarchy parameter~\cref{tab:neutrino_angles_masses}). For the sake of completeness, it is noted here that there already exists an intrinsic preference for normal hierarchy with a Bayes factor $\Delta \chi^2 \approx 6.1$ as quantified by the NuFIT global analyses.
 
 \begin{figure}[h!]
     \centering\includegraphics[width=0.7\textwidth]{../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png}
@@ -882,10 +892,7 @@ of the posterior volume exhibiting our naturalness criterion of $r<30$. The fina
         $\sin^2\theta_{12}$ & $0.3081 \pm 0.0114$ & $0.3080 \pm 0.0115$ \\
         $\sin^2\theta_{13}$ & $0.0222 \pm 0.0006$ & $0.0223 \pm 0.0006$ \\
         $\sin^2\theta_{23}$ & $0.5497 \pm 0.0134$ & $0.5500 \pm 0.0135$ \\
-        \hline
-%        $\epsilon$ & $0.36 \pm 0.099$ &  &    \\
-%        $\log_{10} M_0$ & $15.12 \pm 0.55$ &   &  \\
-%      \hline
+      \hline
     \end{tabular}
     \caption{Posterior means and 1$\sigma$ theoretical uncertainties for the Inverted Ordering (IO)
       fit under Nested Sampling. The experimental values and uncertainties are
@@ -910,7 +917,7 @@ couplings of order one except for a single coupling, which must be at the
 percent level. This percent-level suppression cannot be easily explained by
 our realisation of the FN mechanism but could be explained by other means, for
 example by chance, or by adding a further sector of global $U(1)$ symmetries and clockwork fields, as exemplified in Appendix~\ref{Sec:Clockwork}. 
-An inverted neutrino spectrum instead requires the further suppression of two
+An inverted neutrino spectrum instead require the further suppression of two
 fundamental dimensionless couplings beyond that implied by the FN mechanism, which
 could also be accommodated in an extended clockwork mechanism model.
 
@@ -919,7 +926,8 @@ masses can result fairly naturally from our set-up.
 Assuming that the lightest neutrino has a mass much smaller than that of the
 next two lightest neutrinos, inverted ordering gives the sum of the three
 approximately left-handed light neutrinos is around 0.10~eV, in tension with the more aggressive DESI+CMB
-combinations of cosmological fit~\cite{collaboration_desi_2025,allali_neutrino_2024}.\pcs{is this second reference required?}
+combinations of cosmological
+fit~\cite{collaboration_desi_2025}.
 The light neutrino mass matrix then predicts the mass parameter relevant for
 neutrinoless double beta decay
 $m_{\beta\beta}=18-48$~meV -- within reach of the experiments
@@ -929,7 +937,7 @@ tested in the not-too-distant future.
 One limitation of our analysis is the
 restriction to real parameters only: it would be interesting to complexify and
 to make leptogenesis potentially workable. In the inverted ordering case, the
-heavy neutrino mass spectrum (approximately $M_0,\ \epsilon^2 M_0,\ \epsilon^3
+heavy neutrino mass spectrum (approximately $\epsilon^{-3}M_0,\ \epsilon^{-3}M_0,\
 M_0$) is of interest.  
 
 It is clear that the \model\ would need additional model building in order to extend the FN mechanism to fully explain all of the observed patterns in the charged fermionic fields' masses and mixing angles in detail. One requires an extra symmetry that will enforce an approximate $U(2)_q \times U(2)_u \times U(2)_d$ global symmetry and make the upper left-hand block of $Y_{U,D}$ (\ref{chferms}) zero, at the level of the renormalisable terms in the Lagrangian density.
@@ -1190,6 +1198,30 @@ $F_1,F_2,F_3$), have a negative unit charge $(-1,0,0), (0,-1,0),$ and $(0,0,-1)$
 entirely. To reintroduce the required couplings, we add spurions as before to
 the UV spectrum, with the charges $(1,\ 1,\ 0), (0,\ 1,\ 1),$ $(0,\ 2,\ 0),$ and $(0,\ 0,\ 2)$. 
 With this, we can write down the Lagrangian for direct couplings ($a_{22}$),
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{@{} l c c c @{}}
+    \toprule
+    \textbf{Field} & \textbf{Lorentz Type} & \textbf{Charge: $U(1)_A \times U(1)_B \times U(1)_C$} & $U(1)_X$ \\
+    \midrule
+    $\nu_1$ & RH Fermion & $(-1, 0, 0)$ & $-1$ \\
+    $\nu_2$ & RH Fermion & $(0, -1, 0)$ & $-2$\\
+    $\nu_3$ & RH Fermion & $(0, 0, -1)$ & $0$\\
+    \midrule
+    $F_1$ & LH/RH Fermion & $(-1, 0, 0)$ & $0$\\
+    $F_2,\ \psi, \ \chi$ & LH/RH Fermion & $(0, -1, 0)$& $0$ \\
+    $F_3$ & LH/RH Fermion & $(0, 0, -1)$ & $0$\\
+    \midrule
+    $\Phi_{22}$ (for $a_{22}$) & Scalar Spurion & $(0, 2, 0)$ & $0$\\
+    $\Phi_{33}$ (for $a_{33}$) & Scalar Spurion & $(0, 0, 2)$ & $0$\\
+    $\Phi_{12}$ (for $a_{12}$) & Scalar Spurion & $(1, 1, 0)$ & $0$\\
+    $\Phi_{23}$ (for $a_{23}$) & Scalar Spurion & $(0, 1, 1)$ & $0$\\
+    \bottomrule
+    \end{tabular}
+    \caption{Field content and flavour charge assignments for the clockwork texture zero mechanism. The absence of spurions with charges $(2,0,0)$ and $(1,0,1)$ guarantees the required zeros at $a_{11}$ and $a_{13}$.}
+    \label{tab:clockwork_charges}
+\end{table}
 \begin{equation} \label{eqn:IOCMdirect}
     \mathcal{L} = a_{0} \psi_{R0} \langle\Phi_{22}\rangle \overline{F_{2}^C} + a_1 \mu \overline{\psi_{L1}} F_2 - \mu(\overline{\psi_{L0}}\psi_{R0} + \overline{\psi_{L1}}\psi_{R1}) + \mu q \overline{\psi_{L0}} \psi_{R1} + \textrm{H.c.}
 \end{equation}
@@ -1228,27 +1260,6 @@ negligible
 relative to the dominant terms, thereby 
 yielding the
 requisite matrix structure characterised by the texture zeros delineated in \cref{eqn:IOtexture}. 
-
-\begin{table}[h]
-    \centering
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabular}{@{} l c c @{}}
-    \toprule
-    \textbf{Field} & \textbf{Lorentz Type} & \textbf{Charge: $U(1)_A \times U(1)_B \times U(1)_C$} \\
-    \midrule
-    $\nu_1, F_1$ & LH Fermion & $(-1, 0, 0)$ \\
-    $\nu_2, F_2, \psi, \chi$ & LH/RH Fermion & $(0, -1, 0)$ \\
-    $\nu_3, F_3$ & LH Fermion & $(0, 0, -1)$ \\
-    \midrule
-    $\Phi_{22}$ (for $a_{22}$) & Scalar Spurion & $(0, 2, 0)$ \\
-    $\Phi_{33}$ (for $a_{33}$) & Scalar Spurion & $(0, 0, 2)$ \\
-    $\Phi_{12}$ (for $a_{12}$) & Scalar Spurion & $(1, 1, 0)$ \\
-    $\Phi_{23}$ (for $a_{23}$) & Scalar Spurion & $(0, 1, 1)$ \\
-    \bottomrule
-    \end{tabular}
-    \caption{Field content and flavour charge assignments for the clockwork texture zero mechanism. The absence of spurions with charges $(2,0,0)$ and $(1,0,1)$ guarantees the required zeros at $a_{11}$ and $a_{13}$.}
-    \label{tab:clockwork_charges}
-\end{table}
 
 We note that in Ref.~\cite{Alonso:2018bcg}, the clockwork mechanism was
 applied directly to the flavour puzzle and it was shown that TeV-scale `gears'
