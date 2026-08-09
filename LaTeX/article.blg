@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: article.aux
+The style file: JHEP-2.bst
+Database file #1: article.bib
+Warning--empty author in CDF:2012qwd
+Warning--empty author in LHCb:2022qnv
+You've used 50 entries,
+            2125 wiz_defined-function locations,
+            852 strings with 11864 characters,
+and the built_in function-call counts, 15085 in all, are:
+= -- 1568
+> -- 392
+< -- 0
++ -- 164
+- -- 114
+* -- 1130
+:= -- 2099
+add.period$ -- 58
+call.type$ -- 50
+change.case$ -- 48
+chr.to.int$ -- 0
+cite$ -- 52
+duplicate$ -- 859
+empty$ -- 1489
+format.name$ -- 114
+if$ -- 3923
+int.to.chr$ -- 0
+int.to.str$ -- 50
+missing$ -- 180
+newline$ -- 158
+num.names$ -- 48
+pop$ -- 179
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 654
+stack$ -- 0
+substring$ -- 648
+swap$ -- 397
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 113
+width$ -- 52
+write$ -- 543
+(There were 2 warnings)
