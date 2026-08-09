@@ -441,7 +441,7 @@ where we are assuming $M_{33} = M_0 a_{33} = \Lambda_{\text{FN}} a_{33}$.The pro
 \begin{equation}
     m_{\nu L} = -\frac{v^2}{2} Y_\nu M^{-1} Y_\nu^T \sim \frac{v^2}{\Lambda_{\text{FN}}} \sim 10 \,\text{GeV}.
 \end{equation}
-To match the current cosmological bounds $m_\nu \lesssim 0.1\text{eV}$, we require the Yukawa matrix in~\cref{FN Y and M} to be universally suppressed by a factor of $10^{-6}$ or that the Majorana mass scale, $M_0 = \Lambda_{\text{FN}}$, is enhanced by the square of the same factor. A natural mechanism to achieve this suppression, without fine-tuning, is through the clockwork mechanism detailed below~\cite{Giudice:2016yja, Alonso:2018bcg}. \pcs{Need to clarify that this is different clockwork mechanism from appendix}
+To match the current cosmological bounds $m_\nu \lesssim 0.1\text{eV}$, we require the Yukawa matrix in~\cref{FN Y and M} to be universally suppressed by a factor of $10^{-6}$ or that the Majorana mass scale, $M_0 = \Lambda_{\text{FN}}$, is enhanced by the square of the same factor. A natural mechanism to achieve this suppression, without fine-tuning, is through the clockwork mechanism detailed below~\cite{Kaplan:2015fuy,Giudice:2016yja,Choi:2015fiu}. 
 
 We supplement each bare RH neutrino $N_{R j}^0$, where $j = 1,2,3$, is the generation index, by an $K-$node chain of vector-like fermions with the same quantum numbers. Let $N_{Rj}^k \, (k=0,\dots,K)$ and $N_{Li}^k \, (k=1,\dots,K)$ be the singlet-Weyl fermions constituting this chain. The SM Higgs is then localised at the $k=0$ site, such that the Frogatt-Nielson Dirac interaction with the left-handed lepton doublets, $\overline{\bm{L}_{L i}}$, occurs exclusively with $N_{R j}^0$. 
 \begin{equation}
@@ -587,7 +587,7 @@ Factoring some overall powers of $\epsilon$ in the inverse Majorana matrix
 (see discussion below), we expand $m_\nu:=-m_{\nu_L}$ (the minus sign can be
 absorbed into field definitions)
 as a series in $\epsilon$:
-\begin{equation} 
+\begin{equation}  \label{eqn:mnu_expansion}
     m_\nu = \frac{v^2}{2M_0} \epsilon^{-4} \left[X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \mathcal{O}(\epsilon^3)\right], 
 \end{equation}
 where:
@@ -804,30 +804,30 @@ $P(r<30)=0.76$. We deduce that the fit is therefore of comparable naturalness to
 (but slightly less than that of) the untouched prior. 
 
 \begin{figure}[h!]
-    \centering\includegraphics[width=0.7\textwidth]{../Python/Data/Normal/Merged_CDF_NH_Yukawa.png}
+    \centering\includegraphics[width=0.7\textwidth]{../Python/Data/Normal/CDF_naturalness.png}
     \caption{CDF of the spread $r$ for normal
       ordering. \pcs{Needs updating after code execution}}
     \label{fig:Normal_spread}
 \end{figure}
 The posterior distributions of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO_angles} and \cref{fig:CornerPlot_NO_masses}, which were generated using the Python module \texttt{corner}(v2.2.3)\cite{corner} and \texttt{MatPlotLib}(v3.10.0). 
 The posterior shown in the $(\epsilon, \log_{10} M_0)$ plane is predominantly
-connected, and concentrated near $\epsilon \sim 0.43$, as expected from our
-qualitative estimates in \cref{eq:epsilon-estimate_Normal Hierarchy}. The posterior means of the
+connected, and concentrated near $\epsilon \sim 0.42$, as expected from our
+qualitative estimates in \cref{eq:epsilon-estimate}. The posterior means of the
 three mixing angles and the two mass squared differences are given in
 \cref{tab:NO_Posteriors}, and all five observables agree with the
 best fit values from \cref{tab:neutrino_angles_masses} to within
-$1\sigma$. The final global evidence is $\log Z_{NH} = -28.03 \pm 0.02$.
+$1\sigma$. The final global evidence is $\log Z_{NH} = -28.03 \pm 0.02$. \pcs{needs update}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{../Python/Data/Normal/Corner_NH_Angles.png}
+    \includegraphics[width=0.9\textwidth]{../Python/Data/Normal/Corner_Angles_Run00.png}
     \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (Normal Hierarchy). \pcs{Needs updating after code execution}}
     \label{fig:CornerPlot_NO_angles}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{../Python/Data/Normal/Corner_NH_Masses.png}
-    \caption{Posterior probability distributions of the mass scale, FN parameter and the mass squared differences (Normal Hierarchy). The solid contours correspond to the 68$\%$ and 95$\%$ Bayesian credibility intervals.}\pcs{Needs updating after code execution}
+    \includegraphics[width=0.9\textwidth]{../Python/Data/Normal/Corner_Masses_Run00.png}
+    \caption{Posterior probability distributions of the mass scale, FN parameter and the mass squared differences (Normal Hierarchy). The solid contours correspond to the 68$\%$ and 95$\%$ Bayesian credibility intervals. \pcs{Needs updating after code execution}}
     \label{fig:CornerPlot_NO_masses}
 \end{figure}
 \begin{table}[h!]
@@ -857,13 +857,11 @@ the experimental inputs. This is no surprise since our system is
 underconstrained; it has more parameters than there are measured experimental
 observables.
 \subsection{Inverted Hierarchy} \label{sec:Inverted Hierarchy}
-Setting the Majorana matrix elements $a_{11} = a_{13} =0$,
-we shall show below that we get an inverted
-mass hierarchy. This is due to 
+As established in~\cref{sec:anal}, the leading-order mass matrix $X^{(0)}$ is diagonal with a single non-zero entry, $y_{22}^2 \alpha_{22}$, at $\mathcal{O}(\epsilon^0)$. In the language of non-degenerate Rayleigh-Schr\"odinger perturbation theory, $\alpha_{22}$ acts as the unperturbed energy gap ($\Delta$) separating the heaviest state from the massless subspace. The mixings induced by $X^{(1)}$ and $X^{(2)}$ act as small off-diagonal perturbations ($V$). When the gap is parametrically larger than the perturbations ($|\Delta| \gg |V|$), non-degenerate perturbation theory applies. This yields the widely split, hierarchical spectrum characteristic of the Normal Hierarchy. However, inverted hierarchy requires the three eigenvalues to be degenerate at leading order $m_{\nu_3} \ll m_{\nu_1} \approx m_{\nu_2} $. To transition to the IH, one must force the unperturbed energy gap to close ($|\Delta| \lesssim |V|$), thereby intentionally breaking the non-degenerate expansion and driving a level-crossing. Physically, this is achieved by imposing $\alpha_{22} \ll 1$, which shifts the system strictly into the domain of degenerate perturbation theory.
+
+A parametric suppression of the entry $\alpha_{22} \sim \mathcal{O}(\epsilon^2)$, so that $a_{11} \sim \mathcal{O}(\epsilon^2)$ and $a_{13} \sim \mathcal{O}(\epsilon)$, is also sufficient to generate the suppression required to move between the regimes and is dynamically realised using the clockwork mechanism in~\cref{Sec:Clockwork}. Such a suppression is not statistically unnatural, with a suppression of $\epsilon^2 \sim 0.16$ corresponding to a modest spread of atleast 6, easy to obtain from the six majorana coefficients $a_{ij}$ with a probability of $0.6$. We shall work with the exact texture zeros for clarity.
 (Ref.~\cite{Frampton:2002yf} found seven neutrino mass textures with
-two independent zeroes that were acceptable with the dataset up until 2002). 
-A possible way to generate this suppression is detailed in
-Appendix~\ref{Sec:Clockwork}. 
+two independent zeroes that were acceptable with the dataset up until 2002).  
 %% The effective operators are obtained by integrating out the heavy
 %% vector-like fermion mediators present in the UV theory, as depicted in
 %% \cref{fig:spag}.  We assume the UV spectrum is incomplete and therefore lacks
@@ -879,12 +877,12 @@ Appendix~\ref{Sec:Clockwork}.
     \end{pmatrix}.
 \end{equation}
 
-We once again expand the matrix $m_\nu$ as a series in $\epsilon$ after factoring out the common factors, 
+We once again expand the matrix $m_\nu$ as a series in $\epsilon$, similar to~\cref{eqn:mnu_expansion}, after factoring out the common factors, 
 \begin{equation}
     m_\nu = \frac{v^2}{2M_0} \epsilon^{-3} (\tilde X^{(0)} + \epsilon \tilde
     X^{(1)} + \epsilon^2 \tilde X^{(2)} + \cdots) 
 \end{equation}
-where 
+where the matrices $\tilde X^{(i)}$ have the form
 \begin{equation}
     \tilde X^{(0)} = \begin{pmatrix}
         0 &  \times & 0 \\
@@ -901,15 +899,17 @@ where
     \times& 0&0 
     \end{pmatrix}
 \end{equation}
-We once again collect the overall coefficient setting the mass scale $m_{IO} := \frac{v^2}{2M_0}\epsilon^{-3}$ as in \cref{sec:Normal Hierarchy}. We obtain
+We once again collect the overall coefficient setting the mass scale $m_{IH} := \frac{v^2}{2M_0}\epsilon^{-3}$ as in \cref{sec:anal}. We obtain
 mass eigenvalues\footnote{We fix the neutrino fields' phases here such that all masses $m_{i} \geq 0$.} (masses) 
 
 \begin{align}
-    m_1 &= m_{IO} \left(A + \epsilon B+ \epsilon^2 C+{\mathcal{O}}(\epsilon^3) \right)\\
-    m_2 &= m_{IO} \left(A - \epsilon B+  \epsilon^2 C+{\mathcal{O}}(\epsilon^3) \right)\\
-    m_3 &= m_{IO} {\mathcal{O}}(\epsilon^3),
+    m_{\nu_1} &= m_{IH} \left(A + \epsilon B+ \epsilon^2 C+{\mathcal{O}}(\epsilon^3) \right)\\
+    m_{\nu_2} &= m_{IH} \left(A - \epsilon B+  \epsilon^2 C+{\mathcal{O}}(\epsilon^3) \right)\\
+    m_{\nu_3} &= m_{IH} {\mathcal{O}}(\epsilon^3),
 \end{align}
-an inverted hierarchy (i.e.\ $m_3 \ll m_1 < m_2$) where
+which is an inverted hierarchy i.e.,\ $m_{\nu_3} \ll m_{\nu_1} \approx m_{\nu_2}$, as expected. 
+\begin{comment}
+    where
 \begin{align}   
     \frac{\Delta m_{21}^2}{|\Delta m_{32}^2|} &\approx \frac{4m_{IO}^2AB \epsilon}{m_{IO}^2 A^2} \Rightarrow
     0.03 \approx 4 \Big(\frac{B}{A}\Big)\epsilon ,\label{ep}
@@ -939,7 +939,8 @@ giving us the mixing angles,
     \tan \theta_{12} &= \frac{|{U_{e2}}|}{{|U_{e1}|}} \approx \left|\frac{1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)}}{-1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{11}^{(2)}}\right|\approx  1 + 2\epsilon  u_{11}^{(1)}+\epsilon^2 (u_{12}^{(2)} + u_{11}^{(2)}  + 2(u_{11}^{(1)})^2) \\
     \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \approx \left| \frac{ -\epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)}}{ 1 -2\epsilon^2 (u_{13}^{(2)})^2} \right| \approx \epsilon u_{13}^{(1)} - \epsilon^2 u_{13}^{(2)}.
 \end{align}
-This is only a leading-order analytical estimate intended to demonstrate the inverted hierarchy model's viability. 
+This is only a leading-order analytical estimate intended to demonstrate the inverted hierarchy model's viability.
+\end{comment}
 
 We once again perform a global Bayesian parameter inference to map the parameter space that reproduces the observed mixing angles as in \cref{tab:neutrino_angles_masses}, using the same Python
 modules and configurations (\texttt{UltraNest}, $N_{\mathrm{live}} = 50\ 000$, $\Delta \log Z = 0.2$ and an effective sample size of $20\ 000$). 
@@ -1023,13 +1024,10 @@ The $U(1)_X$ gauge symmetry in the \model\ is then successfully and
 simultaneously put to three uses: to explain measurements involving the \bsll\ transition, to explain some of the hierarchies in neutrino masses and mixing angles and to suppress CLFV. 
 A normal hierarchy in the sub-eV neutrino spectrum which agrees with
 oscillation measurements can be explained with all fundamental Yukawa
-couplings of order one except for a single coupling, which must be at the
-percent level. This percent-level suppression cannot be easily explained by
-our realisation of the FN mechanism but could be explained by other means, for
-example by chance, or by adding a further sector of global $U(1)$ symmetries and clockwork fields, as exemplified in Appendix~\ref{Sec:Clockwork}. 
+couplings of order one.  
 An inverted neutrino spectrum instead require the further suppression of two
 fundamental dimensionless couplings beyond that implied by the FN mechanism, which
-could also be accommodated in an extended clockwork mechanism model.
+could also be accommodated in an extended clockwork mechanism model as exemplified in Appendix~\ref{Sec:Clockwork}.
 
 Our analysis shows that both normal hierarchy and inverted ordered neutrino
 masses can result fairly naturally from our set-up. 
@@ -1074,145 +1072,10 @@ ST/X000664/1. We thank the Cambridge Pheno Working Group for discussions.
 
 \appendix
 \section{A clockwork mechanism for Yukawa entry suppression} \label{Sec:Clockwork}
-A possible way to achieve the single Yukawa element suppression required in
-\cref{sec:Normal Hierarchy} is via a clockwork-like mechanism
-\cite{Kaplan:2015fuy,Giudice:2016yja,Choi:2015fiu}.
-In our slightly
-modified setup of the clockwork mechanism, we assume heavy ``gears'' or an $N+1$-node
-chain of vector-like fermions (whose heavy mass eigenstates we integrate out such that the kinetic terms can be neglected for our treatment)
-coupling to the second generation of the SM fields as 
-\begin{equation} \label{Clockwork Chain}
-    \mathcal{L} = -\mu\sum_{j = 0}^{N-1} (\overline \psi_{L,j}\psi_{R,j} - q\overline \psi_{L,j} \psi_{R,j+1}) - \mu \overline\psi_{L,N}\psi_{R,N} + y_R \overline L_2 \tilde{H} \psi_{R, 0} +  y_L \mu \overline \psi_{L, N} \nu_2 + \textrm{H.c.},
-\end{equation}
-\begin{figure}[h!]
-    \centering
-    \begin{tikzpicture}[
-        node distance=1.5cm and 2cm,
-        site/.style={circle, draw, very thick, minimum size=1.0cm, inner sep=0pt, font=\large},
-        field/.style={font=\large},
-        coupling/.style={blue!80!black, dashed, thick},
-        label/.style={fill=white, inner sep=1pt, text=blue!80!black, font=\small}
-    ]
-
-    % --- 1. Draw the Theory Space Nodes (Top Row) ---
-    \node[site] (n0) {0};
-    \node[site, right=of n0] (n1) {1};
-    \node[site, right=of n1] (n2) {2};
-    
-    % Dots for the chain break
-    \node[right=1.0cm of n2, font=\Huge] (dots) {$\dots$};
-    
-    \node[site, right=1.0cm of dots] (nN) {$N$};
-
-    
-    \node[field, below=0.1cm of n0] (f0) {$U(1)_{B}$};
-    
-    \node[field, below=0.1cm of nN] (fN) {$U(1)_{B'}$};
-
-    % Connect the nodes (Theory Space Chain)
-    \draw[very thick] (n0) -- (n1);
-    \draw[very thick] (n1) -- (n2);
-    \draw[very thick] (n2) -- (dots);
-    \draw[very thick] (dots) -- (nN);
-
-    % --- 2. Place the Fields (Below Nodes) ---
-    % Site 0
-    \node[field, below=0.8cm of n0] (r0) {$\psi_{R,0}$};
-    \node[field, below=1.0cm of r0] (l0) {$\psi_{L,0}$};
-
-    % Site 1
-    \node[field, below=0.8cm of n1] (r1) {$\psi_{R,1}$};
-    \node[field, below=1.0cm of r1] (l1) {$\psi_{L,1}$};
-
-    % Site 2
-    \node[field, below=0.8cm of n2] (r2) {$\psi_{R,2}$};
-    \node[field, below=1.0cm of r2] (l2) {$\psi_{L,2}$};
-
-    %site 2.5
-    \node[field, right=0.5cm of r2] (r3){};
-    \node[field, below=0.5cm of r3] (m3){$\quad \quad \dots \,\,\, \dots$};
-    \node[field, right=0.5cm of l2] (l3){};
-
-    % Site N
-    \node[field, below=0.8cm of nN] (rN) {$\psi_{R,N}$};
-    \node[field, below=1.0cm of rN] (lN) {$\psi_{L,N}$};
-
-        %site 3.5
-    \node[field, left=0.5cm of rN] (r4){};
-    \node[field, below=0.5cm of r4] (m4){$\dots$};
-    \node[field, left=0.5cm of lN] (l4){};
-    % --- 3. Draw Couplings (The "Sawtooth" Pattern) ---
-    
-    % Vertical Mass Terms (-m L_j R_j)
-    \draw[coupling] (r0) -- node[label] {$\mu$} (l0);
-    \draw[coupling] (r1) -- node[label] {$\mu$} (l1);
-    \draw[coupling] (r2) -- node[label] {$\mu$} (l2);
-    \draw[coupling] (rN) -- node[label] {$\mu$} (lN);
-
-    % Diagonal Mixing Terms (-q m_{CW} L_j R_{j+1})
-    \draw[coupling] (l0) -- node[label] {$q\mu$} (r1);
-    \draw[coupling] (l1) -- node[label] {$q\mu$} (r2);
-    
-    % For the dots section
-    \draw[coupling, shorten >=0.5cm] (l2) -- node[label, near start] {$q\mu$} (r3);
-    \draw[coupling, shorten <=0.5cm] (l4) -- node[label, near end] {$q\mu$} (rN);
-
-    % --- 4. External Fields (Input/Output) ---
-    
-    % SM Lepton Doublet coupling to R_0
-    \node[left=0.6cm of r0, font=\large] (L2) {$y_R \overline{L}_2 \tilde{H}$};
-    \draw[coupling, thick] (L2) -- (r0);
-
-    % SM Neutrino coupling to L_N
-    \node[right=0.6cm of lN, font=\large] (nu2) {$y_L \nu_2$};
-    \draw[coupling, thick] (nu2) -- (lN);
-
-    \end{tikzpicture}
-    \caption{Schematic representation of the Clockwork chain. The nodes $0 \dots N$ represent sites in theory space. The dashed blue lines represent the mass mixing. The vertical lines correspond to the site-local mass $\mu$, while the diagonal lines represent the nearest-neighbour mixing $q\mu$. The overlap of the zero-mode with the boundary fields generates the suppression $y_{22} \sim q^N$.}
-    \label{fig:clockwork_diagram}
-\end{figure}
-here, the connecting chain consists of $N+1$ right-handed and $N+1$
-left-handed fermions and $q<1$, $\mu \sim \Lambda_{\text{FN}}$. The structure of
-the Lagrangian in \cref{Clockwork Chain} is preserved by the approximate
-$[U(1)]^{N+1}$ symmetry, such that at each node, the fermions $\psi_j$ have
-charge $1$ under $U(1)_j$. In this framework, the mass parameter $\mu$ and the
-symmetry-breaking parameter $q$ are treated as background values of spurion
-fields having charge $(1,-1)$ under adjacent site groups $U(1)_j\times U(1)_{j+1}$ (we
-can use a cyclic symmetry to keep the couplings equal
-\cite{Arkani-Hamed:2001kyx}). This thereby ensures that
-``non-local'' couplings, connecting site$-0$ to site$-N$ directly, are
-forbidden, and the Lagrangian remains local in theory space (see
-\cref{fig:clockwork_diagram}). The coupling connecting site$-0$ to site$-N$
-can only be generated, therefore, by an operator suppressed by a factor of
-$q^N$ as shall be shown below. This structure can be viewed as locality in a
-discretised extra dimension (the theory space). The argument works even if the masses and couplings are not equal. 
-
-To ensure that the suppression of the Yukawa matrix is isolated only to the
-$Y_{22}$ element, we can label the nodes, $U(1)_I$, such that $L_1, L_2, L_3$
-attach to $U(1)_A, U(1)_B, U(1)_C$ and $\nu_1,\nu_2, \nu_3$ to $U(1)_{A'},
-U(1)_{B'}, U(1)_{C'}$.
-We define the chain length between positions $B$ and $B'$ in the chain to be
-$n(BB')=N+1$. $L_2$ and $\nu_2$ are significantly separated in theory space.
-
-For the sake of brevity, we can understand the behaviour by integrating out
-the chain using the tree-level equations of motion (EOM), 
-\begin{align}
-    \frac{\partial \mathcal{L}}{\partial\overline \psi_{L,k}} = -\mu \psi_{R,k} + \mu q \psi_{R,k+1} + \delta_{N,k}y_L \mu \nu_2 &= 0, \\
-    \implies \psi_{R,k} = q^{-k} \psi_{R,0}, \,\,\,\,\,\,\, \psi_{R,N} = y_{L}\nu_2, \\
-    \frac{\partial \mathcal{L}}{\partial \psi_{R,k}} = -\mu \overline\psi_{L,k} + \mu q \overline\psi_{L,k-1} + \delta_{0,k}y_R \overline L_2 \tilde{H} &= 0, \\
-    \implies\overline\psi_{L,k} = q^{k} \overline\psi_{L,0}, \,\,\,\,\,\,\, \overline\psi_{L,0} = \frac{y_R}{\mu}\overline L_2 \tilde H, 
-\end{align}
-substituting this into the Lagrangian \cref{Clockwork Chain}, 
-\begin{equation}
-    \mathcal{L}_\text{eff} = q^N y_Ry_L \overline L_2\tilde H \nu_2 + \textrm{H.c.},
-\end{equation}
-where the effective Yukawa coupling is $y_{22} \approx q^N y_L y_R$. For $q<1,
-N\gg1$, we get a large suppression, as required by our model to sustain a
-normal hierarchy. Even with $q=0.5, N = 3$, we get a suppression of $0.13$, which
-is smaller than the second-order $\epsilon^{2} \sim 0.16$ subleading correction to the neutrino masses \cref{NormalHierarchy} predicted by the Plan B
-FN charge allocation and the seesaw model. 
-
-A similar setup can be used to explain the texture zeros required to accommodate the inverted neutrino mass hierarchy. The focus, primarily, will be on the bare Majorana matrix $A$ given in \cref{eqn:MajoranaMatrixFact}. This can be extended easily to the case with the mediators to create the FN suppression. 
+A possible way to achieve the majorana mass elements $a_{11} \sim a_{13} \ll 1$ suppression required in
+\cref{sec:Inverted Hierarchy} is via a clockwork-like mechanism
+\cite{Kaplan:2015fuy,Giudice:2016yja,Choi:2015fiu}. This is different from the setup employed in~\cref{sec:anal} with flavour dependant groups being introduced here.
+The focus, primarily, will be on the bare Majorana matrix $A$ given in \cref{eqn:MajoranaMatrixFact}. This can be extended easily to the case with the mediators to create the FN suppression. 
 
 First, looking at the factorisation property of $M$,
 \begin{equation}
@@ -1333,35 +1196,35 @@ With this, we can write down the Lagrangian for direct couplings ($a_{22}$),
     \label{tab:clockwork_charges}
 \end{table}
 \begin{equation} \label{eqn:IOCMdirect}
-    \mathcal{L} = a_{0} \psi_{R0} \langle\Phi_{22}\rangle \overline{F_{2}^C} + a_1 \mu \overline{\psi_{L1}} F_2 - \mu(\overline{\psi_{L0}}\psi_{R0} + \overline{\psi_{L1}}\psi_{R1}) + \mu q \overline{\psi_{L0}} \psi_{R1} + \textrm{H.c.}
+    \mathcal{L} = a_{0} \psi_{R0} \langle\Phi_{22}\rangle \overline{F_{2}^C} + a_1 \mu \overline{\psi_{L1}} F_2 -  \mu' q \overline{\psi_{L1}} \psi_{R0} + \textrm{H.c.}
 \end{equation}
 where we have used the spurion field with charge $(0,2,0)$. One can now do the
 same for the term $a_{33}$, using the spurion with charge $(0,\ 0,\ 2)$. 
 
 For the cross terms, we write,
 \begin{equation} \label{eqn:IOCMdiagonal}
-    \mathcal{L} = a_{0}' \overline{F_{1}^C} \langle \Phi_{12}\rangle \chi_{R0} + a_1' \mu \overline{\chi_{L1}} F_2  - \mu (\overline{\chi_{L0}}\chi_{R0} + \overline{\chi_{L1}}\chi_{R1}) + \mu q \overline{\chi_{L0}} \, \chi_{R1} + \textrm{H.c.} ,
+    \mathcal{L} = a_{0}'  \chi_{R0}\langle \Phi_{12}\rangle \overline{F_{1}^C} + a_1' \mu \overline{\chi_{L1}} F_2  - \mu' q \overline{\chi_{L1}} \, \chi_{R0} + \textrm{H.c.} ,
 \end{equation}
 where we have used the spurion with charge $(1,1,0)$. We can do the same
 with the coupling of $\nu_2$ to $\nu_3$, where we now use the spurion with
 charge $(0,\ 1, 1)$. Now, importantly, since there exists no spurion with
 charge $(1,\ 0,\ 1)$ or $(2,\ 0,\ 0)$, there can be no direct coupling as written in
 the Lagrangians \cref{eqn:IOCMdirect} or
-\cref{eqn:IOCMdiagonal}. Consequently, the effective couplings $a_{11}$ and $a_{13}$ are generated only at higher orders in the spurion expansion (e.g. via mixing through the $\nu_2$ sector), resulting in the suppression factors $q^m$ and $q^n$, respectively. Using the EOM as before, we can write down an effective Majorana mass matrix of the form,
+\cref{eqn:IOCMdiagonal}. Consequently, the effective couplings $a_{11}$ and $a_{13}$ are generated only at higher orders in the spurion expansion (e.g. via mixing through the $\nu_2$ sector), resulting in the suppression factors $q^{-m}$ and $q^{-n}$, respectively. Using the EOM as before, we can write down an effective Majorana mass matrix of the form,
 \begin{equation}
-    M_0 A = (M_0 q)
+    M_0 A = (M_0 q^{-1})
     \begin{pmatrix}
-    q^m a_{11}&a_{12}&q^n a_{13}\\
+    q^{-m} a_{11}&a_{12}&q^{-n} a_{13}\\
     
     a_{12} &  a_{22}&  a_{23}\\
     
-    q^n a_{13} & a_{23}&a_{33} 
+    q^{-n} a_{13} & a_{23}&a_{33} 
     \end{pmatrix}.
 \end{equation}
-Here, the overall factor of $q$ that arises from the spurion couplings as
+Here, the overall factor of $q^{-1}$ that arises from the spurion couplings as
 given in \cref{eqn:IOCMdirect} and \cref{eqn:IOCMdiagonal} has been factored
 out of the matrix to multiply the mass scale $M_0$. The couplings $a_{11}$ and
-$a_{13}$ come with extra factors of $q$, where $n,m \geq 1$, arising from
+$a_{13}$ come with extra factors of $q^{-1}$, where $n,m \geq 1$, arising from
 indirect (through the $\nu_2$ sector) couplings between $\nu_1$ to $\nu_3$ and
 $\nu_1$ to $\nu_1$. For sufficiently small values of $q$, the couplings
 proportional to $a_{11}, a_{13}$
