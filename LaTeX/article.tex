@@ -301,10 +301,9 @@ expect to be of order unity. In order to present this analysis, we first
 display the neutrino mass spectrum at the renormalisable level (in terms of
 the SM plus right-handed neutrinos) in \cref{sec:origin}. Then we display
 neutrino mass matrices in \cref{sec:offdiag}, analytically studying them
-using perturbation theory in \cref{sec:anal}. We then present the normal
-hierarchy case in \cref{sec:Normal Hierarchy} and the inverted hierarchy case
-in \cref{sec:Inverted Hierarchy}. Because the normal hierarchy case requires
-a further suppression of a coupling beyond the FN mechanism, we detail a
+using perturbation theory in \cref{sec:anal} and looking at how the \model\ accommodates normal hierarchy (NH). We then present the inverted hierarchy (IH) case
+in \cref{sec:Inverted Hierarchy}. Because the IH case requires
+a further suppression of two coupling beyond the FN mechanism, we detail a
 potential clockwork-like mechanism to implement it in
 Appendix~\ref{Sec:Clockwork}. We summarise and conclude in \cref{sec:conc}.
 
@@ -446,7 +445,7 @@ We supplement each bare RH neutrino $N_{R j}^0$, where $j = 1,2,3$, is the gener
 \begin{equation}
     -\mathcal{L}_{\text{INT}} = {y}_{ij} \overline{\bm{L}_{L i}} \bigg(\frac{\langle \theta\rangle}{\Lambda_{\text{FN}}} \bigg) \tilde{H} N_{R j}^{0} +H.c,  \label{eqn:CWInt}
 \end{equation}
-By introducing $K+1$ RH fermions and $K$ LH fermions per generation in the chain, we get the chiral symmetry group $U(1)_R^{K+1}\times U(1)_L^K$ is preserved. To break all but one chiral symmetry group, we add $K$ mass terms, $\mu$, on each of the nodes, and a series of nearest neighbour mass terms, $q_Y\mu$ (where $q_Y>1$), between the nodes,
+By introducing $K+1$ RH fermions and $K$ LH fermions per generation in the chain, we get the chiral symmetry group $U(1)_R^{K+1}\times U(1)_L^K$ is preserved. To break all but one chiral symmetry group, we add $K$ mass terms, $\mu \gtrsim \Lambda_{\text{FN}}$, on each of the nodes, and a series of nearest neighbour mass terms, $q_Y\mu$ (where $q_Y>1$), between the nodes,
 \begin{equation}
     \mathcal{L} = \mathcal{L}_{\text{KIN}} - \mu \sum_{k=0}^{K-1} (\overline N_{Lj}^{k}  N_{Rj}^{k} - q_Y \overline N_{L j}^{k}  N_{Rj}^{k-1}) + H.c.,
 \end{equation}
@@ -470,7 +469,7 @@ giving us the exponential suppression as promised. Therefore~\cref{eqn:CWInt} be
 \end{equation}
 For $q_Y = 10, K=6$, we get the suppression we need. The physical active neutrino mass matrix is given by the Type-I seesaw formula:
 \begin{equation} \label{eqn:mnu_effective}
-    m_{\nu L} = -q_Y^{-2K}\frac{v^2}{2}\frac{1}{ \Lambda_{\text{FN}}} Y_\nu A'^{-1} Y_\nu^T.
+    m_{\nu L} = -q_Y^{-2K}\frac{v^2}{2} Y_\nu M^{-1} Y_\nu^T.
 \end{equation} 
 \begin{comment}
     To simplify the downstream phenomonological analysis, it is mathematically convenient to absorb this clockwork suppression into one parameter as the effective right-handed Majorana scale $M_0^{\text{eff}} = q_Y^{2K} \Lambda_{\text{FN}} \sim \mathcal{O}(10^{15}\ \text{GeV})$. It is important to emphasize that this effective scale is purely a bookkeeping device for the active neutrino mass matrix meant to reduce the number of parameters a numerical scan needs to fit; the physical mass of the right-handed neutrinos remains strictly at $\Lambda_{\text{FN}} \sim \mathcal{O}(\text{TeV})$. Therefore, we take,
@@ -631,7 +630,8 @@ Using second-order perturbation theory, keeping up to $\epsilon^2$ corrections t
 \end{aligned}
 \end{equation}
 %
-It is apparent therefore, that the eigenvalues follow the normal hierarchy, $m_{\nu_1} < m_{\nu_2} \ll m_{\nu_3}$. 
+It is apparent therefore, that the eigenvalues follow the normal hierarchy, $m_{\nu_1} < m_{\nu_2} \ll m_{\nu_3}$. Given the structure of the matrices, $X^{(i)}$, in~\cref{Lowest order - Unchanged}, the leading order estimate for the atmospheric mixing angle is $\theta_{23} \approx 0$ in contradiction with the data~\cref{tab:neutrino_angles_masses}. However, the subleading terms in the expansion of the angle contain ratios of independently distributed $\mathcal{O}(1)$ coefficients and, as per our argument above, will have heavy tails, offsetting the $\epsilon$ suppression. The underlying $y_{ij}$ and $a_{ij}$ need not necessarily be large to achieve this. This proof that a majority of the valid parameter space is natural is deferred to the numerical scan.
+
 To obtain an inverted hierarchy of eigenvalues of the neutrino mass matrix, we shall show in the next section that the condition, $\alpha_{22} = 0 \implies a_{13} = a_{11} = 0$, is sufficient. From the hierarchy in \cref{NormalHierarchy} one obtains an estimate for $\epsilon$ by matching the mass hierarchy and fixing homogeneous rational polynomials of $\mathcal{O}(1)$ numbers to also be $\mathcal{O}(1)$:
 \begin{equation}\label{eq:epsilon-estimate}
     \epsilon^{-2}=\mathcal{O}(1) \times \frac{m_{\nu_3}}{m_{\nu_2}}
@@ -776,14 +776,13 @@ implemented with the Python package
 Guided by our analytical arguments \cref{eq:epsilon-estimate}, we obtain an estimate of $\epsilon < 0.5$, naturally
 guiding us to choose a uniform prior $[0.1,0.5]$. The lower limit of 0.1 comes
 from not wanting to have too large a spread between the flavon VEV. $\langle\theta\rangle$, and the
-mass scale suppressing the FN diagrams, $\Lambda_{\text{FN}}$, because of naturalness. The ratio of the Majorana mass scale to the square of the clockwork suppression factor, $M_0 = q_Y^{2K}\Lambda_{FN}$, acts as a scale parameter of the probability distribution of the prior and
-posterior $m_\nu= \frac{1}{M_0}\frac{v^2}{2}Y \Sigma^{-1}A^{-1}\Sigma^{-1}Y^T = -\frac{1}{q_Y^{2K}\Lambda_{\text{FN}}}\frac{v^2}{2}Y \Sigma^{-1}A^{-1}\Sigma^{-1}Y^T$. The argument that such a dimensional scale parameter should have a
+mass scale suppressing the FN diagrams, $\Lambda_{\text{FN}}$, because of naturalness. The Majorana mass scale, $\Lambda_{\text{FN}}$, acts as a scale parameter of the probability distribution of the prior and
+posterior $m_\nu= -\frac{v^2}{2q_Y^{2K}\Lambda_{\text{FN}}}Y \Sigma^{-1}A^{-1}\Sigma^{-1}Y^T$. The argument that such a dimensional scale parameter should have a
 prior that is invariant under scale transformations and is non-informative
-implies that we should use the Jeffreys prior $p(M_0) \propto 1/M_0$
+implies that we should use the Jeffreys prior $p(\Lambda_{\text{FN}}) \propto 1/\Lambda_{\text{FN}}$
 \cite{jeffreys_invariant_1946}. This translates to assigning a uniform
-distribution to the logarithm of this scale, as $\log_{10}(\Lambda_{\text{FN}}/\text{GeV})\sim \mathcal{U}[1,5] \implies \log_{10}(M_0/\text{GeV}) \sim
-\mathcal{U}[13, 17]$, which is what is done to fix the prior in the nested
-sampling implementation. To ensure perturbative control, we fix $|y_{ij}|<3$
+distribution to the logarithm of this scale, as $\log_{10}(\Lambda_{\text{FN}}/\text{GeV})\sim \mathcal{U}[1,5]$, which is what is done to fix the prior in the nested
+sampling implementation\footnote{In the numerical nested sampling implementation, the clockwork suppression factor $q^{2K}$ is absorbed into an effective heavy scale $M_0 = q^{2K}\Lambda_{\text{FN}}$ and given the prior: $\log M_0 \sim \mathcal{U}[13,17]$. Because $q^{2K}$ is a constant, this is a translation in log-space and is identical to applying the prior to $\log \Lambda_{\text{FN}} \sim \mathcal{U}[1,5]$}. To ensure perturbative control, we fix $|y_{ij}|<3$
 with the priors $y_{ij} \sim \mathcal{U}[-3,3]$ and $a_{ij} \sim
 \mathcal{U}[-3,3]$.
 
@@ -807,9 +806,9 @@ $P(r<30)=0.76$. We deduce that the fit is therefore of comparable naturalness to
       ordering. \pcs{Needs updating after code execution}}
     \label{fig:Normal_spread}
 \end{figure}
-The posterior distributions of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO_angles} and \cref{fig:CornerPlot_NO_masses}, which were generated using the Python module \texttt{corner}(v2.2.3)\cite{corner} and \texttt{MatPlotLib}(v3.10.0). For the plotting, we once again isolate $\Lambda_{\text{FN}}$ by multiplying the numerically scanned parameter $M_0$ with the square of the clockwork suppression factor $\Lambda_{\text{FN}}=q_Y^{-2K}M_0$.
+The posterior distributions of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO_angles} and \cref{fig:CornerPlot_NO_masses}, which were generated using the Python module \texttt{corner}(v2.2.3)\cite{corner} and \texttt{MatPlotLib}(v3.10.0). 
 The posterior shown in the $(\epsilon, \log_{10} (\Lambda_{\text{FN}}/\text{GeV)})$ plane is predominantly
-connected, and concentrated near $\epsilon \sim 0.42$, as expected from our
+connected, and concentrated near $\epsilon \sim 0.42$ and $\Lambda_{\text{FN}} \sim \mathcal{O}(10 \ \text{TeV})$, as expected from our
 qualitative estimates in \cref{eq:epsilon-estimate}. The posterior means of the
 three mixing angles and the two mass squared differences are given in
 \cref{tab:NO_Posteriors}, and all five observables agree with the
@@ -855,7 +854,7 @@ the experimental inputs. This is no surprise since our system is
 underconstrained; it has more parameters than there are measured experimental
 observables.
 \subsection{Inverted Hierarchy} \label{sec:Inverted Hierarchy}
-As established in~\cref{sec:anal}, the leading-order mass matrix $X^{(0)}$ is diagonal with a single non-zero entry, $y_{22}^2 \alpha_{22}$, at $\mathcal{O}(\epsilon^0)$. In the language of non-degenerate Rayleigh-Schr\"odinger perturbation theory, $\alpha_{22}$ acts as the unperturbed energy gap ($\Delta$) separating the heaviest state from the massless subspace. The mixings induced by $X^{(1)}$ and $X^{(2)}$ act as small off-diagonal perturbations ($V$). When the gap is parametrically larger than the perturbations ($|\Delta| \gg |V|$), non-degenerate perturbation theory applies. This yields the widely split, hierarchical spectrum characteristic of the Normal Hierarchy. However, inverted hierarchy requires the three eigenvalues to be degenerate at leading order $m_{\nu_3} \ll m_{\nu_1} \approx m_{\nu_2} $. To transition to the IH, one must force the unperturbed energy gap to close ($|\Delta| \lesssim |V|$), thereby intentionally breaking the non-degenerate expansion and driving a level-crossing. Physically, this is achieved by imposing $\alpha_{22} \ll 1$, which shifts the system strictly into the domain of degenerate perturbation theory.
+As established in~\cref{sec:anal}, the leading-order mass matrix $X^{(0)}$ is diagonal with a single non-zero entry, $y_{22}^2 \alpha_{22}$, at $\mathcal{O}(\epsilon^0)$. In the language of non-degenerate Rayleigh-Schr\"odinger perturbation theory, $\alpha_{22}$ acts as the unperturbed energy gap ($\Delta$) separating the heaviest state from the massless subspace. The mixings induced by $X^{(1)}$ and $X^{(2)}$ act as small off-diagonal perturbations ($V$). When the gap is parametrically larger than the perturbations ($|\Delta| \gg |V|$), non-degenerate perturbation theory applies. This yields the widely split, hierarchical spectrum characteristic of the Normal Hierarchy. However, inverted hierarchy requires the two heaviest eigenvalues to be degenerate at leading order $m_{\nu_3} \ll m_{\nu_1} \approx m_{\nu_2} $. To transition to the IH, one must force the unperturbed energy gap to close ($|\Delta| \lesssim |V|$), thereby intentionally breaking the non-degenerate expansion and driving a level-crossing. Physically, this is achieved by imposing $\alpha_{22} \ll 1$, which shifts the system strictly into the domain of degenerate perturbation theory.
 
 A parametric suppression of the entry $\alpha_{22} \sim \mathcal{O}(\epsilon^2)$, so that $a_{11} \sim \mathcal{O}(\epsilon^2)$ and $a_{13} \sim \mathcal{O}(\epsilon)$, is also sufficient to generate the suppression required to move between the regimes and is dynamically realised using the clockwork mechanism in~\cref{Sec:Clockwork}. Such a suppression is not statistically unnatural, with a suppression of $\epsilon^2 \sim 0.16$ corresponding to a modest spread of atleast 6, easy to obtain from the six majorana coefficients $a_{ij}$ with a probability of $0.6$. We shall work with the exact texture zeros for clarity.
 (Ref.~\cite{Frampton:2002yf} found seven neutrino mass textures with
@@ -877,7 +876,7 @@ two independent zeroes that were acceptable with the dataset up until 2002).
 
 We once again expand the matrix $m_\nu$ as a series in $\epsilon$, similar to~\cref{eqn:mnu_expansion}, after factoring out the common factors, 
 \begin{equation}
-    m_\nu = \frac{v^2 q_Y^{-2K}}{2M_0} \epsilon^{-3} (\tilde X^{(0)} + \epsilon \tilde
+    m_\nu = \frac{v^2 q_Y^{-2K}}{2\Lambda_{\text{FN}}} \epsilon^{-3} (\tilde X^{(0)} + \epsilon \tilde
     X^{(1)} + \epsilon^2 \tilde X^{(2)} + \cdots) 
 \end{equation}
 where the matrices $\tilde X^{(i)}$ have the form
@@ -897,7 +896,7 @@ where the matrices $\tilde X^{(i)}$ have the form
     \times& 0&0 
     \end{pmatrix}
 \end{equation}
-We once again collect the overall coefficient setting the mass scale $m_{IH} := \frac{v^2 q_Y^{-2K}}{2M_0}\epsilon^{-3}$ as in \cref{sec:anal}. We obtain
+We once again collect the overall coefficient setting the mass scale $m_{IH} := \frac{v^2 q_Y^{-2K}}{2\Lambda_{\text{FN}}}\epsilon^{-3}$ as in \cref{sec:anal}. We obtain
 mass eigenvalues\footnote{We fix the neutrino fields' phases here such that all masses $m_{i} \geq 0$.} (masses) 
 
 \begin{align}
@@ -905,7 +904,7 @@ mass eigenvalues\footnote{We fix the neutrino fields' phases here such that all 
     m_{\nu_2} &= m_{IH} \left(A - \epsilon B+  \epsilon^2 C+{\mathcal{O}}(\epsilon^3) \right)\\
     m_{\nu_3} &= m_{IH} {\mathcal{O}}(\epsilon^3),
 \end{align}
-which is an inverted hierarchy i.e.,\ $m_{\nu_3} \ll m_{\nu_1} \approx m_{\nu_2}$, as expected. 
+which is an inverted hierarchy i.e.,\ $m_{\nu_3} \ll m_{\nu_1} \approx m_{\nu_2}$, as expected. Therefore, we shall implement the numerical nested sampler to fit the parameters, $y_{ij},a_{ij},\Lambda_{\text{FN}}$ and $\epsilon$, with a likelihood function calibrated against the IH angles and mass squared differences~\cref{tab:neutrino_angles_masses}.
 \begin{comment}
     where
 \begin{align}   
@@ -947,7 +946,7 @@ ${\mathcal U}$ on all parameters. For the FN expansion parameter $\epsilon$,
 we assign a uniform prior $\epsilon \sim \mathcal{U}[0.1,0.5]$,
 based on our analytical arguments. The Majorana mass scale is
 again assigned a Jeffreys' prior, such that the prior distribution of its
-logarithm is uniform, $\log_{10} M_0 \sim \mathcal{U}[13,17]$. The rest of the
+logarithm is uniform, $\log_{10} (\Lambda_{\text{FN}}/\text{GeV}) \sim \mathcal{U}[1,5]$. The rest of the
 Yukawa and Majorana elements are also assigned uniform priors, $\mathcal{U}[-3,3]$.
 
 We again measure the spread of the final posterior samples of the elements of the Yukawa matrix using the ratio $r = |Y_{\text{max}}|/|Y_{\text{min}}|$, this time comparing the absolute values of all nine elements. This gives,
@@ -1078,7 +1077,7 @@ The focus, primarily, will be on the bare Majorana matrix $A$ given in \cref{eqn
 First, looking at the factorisation property of $M$,
 \begin{equation}
     \label{eqn:MajoranaMatrixFact2}
-M = M_0 \Sigma A \Sigma, \qquad 
+M = \Lambda_{\text{FN}}\Sigma A \Sigma, \qquad 
     \Sigma = \begin{pmatrix}
     \epsilon^{1} & 0 & 0 \\
      0 & \epsilon^2 & 0 \\
@@ -1095,80 +1094,77 @@ we can depict this as shown in \cref{fig:IntCWinFN}. The inter-mediator particle
     \centering
     \begin{tikzpicture}
         \begin{feynman}
-            % --- LEFT SIDE: \nu_i to F_i (First FN Chain) ---
-            \vertex (L) {$\overline{\nu_i^C}$};
-            \vertex [right=1.2cm of L] (F1);
-            \vertex [above=1.0cm of F1] (phi1) {$\theta$};
+            % --- LEFT SIDE: FN Chain for \nu_i ---
+            \vertex (nuL) {$\overline{(\nu_{Ri})^C}$};
             
-            % The variable theta insertions
-            \vertex [right=0.8cm of F1] (M1) {$\cdots$};
-            \vertex [below=0.6cm of M1] {\large $\Sigma$}; % Label for Sigma factor
+            \vertex [right=1.2cm of nuL] (v1);
+            \vertex [above=1.0cm of v1] (th1) {$\langle \theta \rangle$};
             
-            \vertex [right=0.8cm of M1] (F2);
-            \vertex [above=1.0cm of F2] (phi2) {$\theta$};
+            \vertex [right=1.0cm of v1] (dotsL) {$\cdots$};
             
-            % Connection to the clockwork gear
-            \vertex [right=1.5cm of F2] (Fi_node);
-            \vertex [below=0.1cm of Fi_node] {$F_i$};
-            
-            % Midpoint for the mass insertion cross
-            \path (F2) -- (Fi_node) coordinate[midway] (C1); 
-            
-            % --- MIDDLE: Clockwork Chain (F_i to F_j) ---
-            \vertex [right=2.5cm of Fi_node] (Fj_node);
-            \vertex [below=0.1cm of Fj_node] {$F_j$};
-            
-            % Label for Clockwork
-            \path (Fi_node) -- (Fj_node) node[midway, above=0.3cm] {$M_0 A_{ij}$}; 
-            
-            % --- RIGHT SIDE: F_j to \nu_j (Second FN Chain) ---
-            \vertex [right=1.5cm of Fj_node] (F3);
-            \vertex [above=1.0cm of F3] (phi3) {$\theta$};
-            
-            % Midpoint for the mass insertion cross
-            \path (Fj_node) -- (F3) coordinate[midway] (C2); 
-            
-            % The variable theta insertions
-            \vertex [right=0.8cm of F3] (M2) {$\cdots$};
-            \vertex [below=0.6cm of M2] {\large $\Sigma$}; % Label for Sigma factor
-            
-            \vertex [right=0.8cm of M2] (F4);
-            \vertex [above=1.0cm of F4] (phi4) {$\theta$};
-            
-            \vertex [right=1.2cm of F4] (R) {$\nu_j$};
+            \vertex [right=1.0cm of dotsL] (v2);
+            \vertex [above=1.0cm of v2] (th2) {$\langle \theta \rangle$};
 
+            \vertex[right=1.0cm of v2] (F1);
+            \vertex[below=0.1cm of F1] (F1label) {$\overline{(F_{Ri})^C}$};
+            
+            % --- CENTER: Integrated Clockwork Blob ---
+            \vertex [blob, right=1.0cm of F1] (CW) {};
+
+            \vertex[right=1.0cm of CW] (F2);
+            \vertex[below=0.1cm of F2] (F2label) {$F_{Rj}$};
+            % --- RIGHT SIDE: FN Chain for \nu_j ---
+            \vertex [right=1.0cm of F2] (v3);
+            \vertex [above=1.0cm of v3] (th3) {$\langle \theta \rangle$};
+            
+            \vertex [right=1.0cm of v3] (dotsR) {$\cdots$};
+            
+            \vertex [right=1.0cm of dotsR] (v4);
+            \vertex [above=1.0cm of v4] (th4) {$\langle \theta \rangle$};
+            
+            \vertex [right=1.2cm of v4] (nuR) {$\nu_{Rj}$};
+            
             % --- DRAWING THE FEYNMAN LINES ---
             \diagram*{
-                (L) -- [fermion] (F1) -- [fermion] (M1) -- [fermion] (F2) --  (Fi_node),
-                (phi1) -- [scalar] (F1),
-                (phi2) -- [scalar] (F2),
+                % Left incoming fermion flow
+                (nuL) -- [fermion] (v1) -- [fermion] (dotsL) -- [fermion] (v2) --  (CW),
+                (th1) -- [scalar] (v1),
+                (th2) -- [scalar] (v2),
                 
-                (Fj_node) -- (F3) -- [fermion] (M2) -- [fermion] (F4) -- [fermion] (R),
-                (phi3) -- [scalar] (F3),
-                (phi4) -- [scalar] (F4),
+                % Right incoming fermion flow (CLASHING ARROWS for Majorana)
+                (nuR) -- [fermion] (v4) -- [fermion] (dotsR) -- [fermion] (v3) -- (CW),
+                (th3) -- [scalar] (v3),
+                (th4) -- [scalar] (v4),
             };
 
-            % --- MANUAL DRAWINGS (Clockwork & Crosses) ---
-            
-            % 3 parallel lines for the Clockwork Mechanism
-            \draw[thick] (Fi_node) -- (Fj_node);
-            \draw[thick, transform canvas={yshift=2.5pt}] (Fi_node) -- (Fj_node);
-            \draw[thick, transform canvas={yshift=-2.5pt}] (Fi_node) -- (Fj_node);
-
-            % Crosses to show integrating out massive fermions
-            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (C1) {};
-            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (C2) {};
-
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (F1) {};
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (F2) {};
         \end{feynman}
+        
+        % --- EXPLICITLY SHIFTED UNDERBRACES ---
+        % Drawn left-to-right with 'mirror' to guarantee they point DOWN.
+        % yshift drops them safely below the fermion arrows.
+        \draw [decorate, decoration={brace, amplitude=8pt, mirror}, thick] 
+            ([xshift=0.3cm, yshift=-0.4cm]nuL.center) -- ([yshift=-0.4cm]v2.center) 
+            node [midway, below=12pt] {\large $\epsilon^{-X_i}$};
+            
+        \draw [decorate, decoration={brace, amplitude=8pt, mirror}, thick] 
+            ([yshift=-0.4cm]v3.center) -- ([xshift=-0.3cm, yshift=-0.4cm]nuR.center) 
+            node [midway, below=12pt] {\large $\epsilon^{-X_j}$};
+            
+        % --- CENTRAL BLOB LABEL ---
+        % Explicitly placed so it doesn't warp the Feynman bounding box
+        \node at ([yshift=0.8cm]CW) {\large $\Lambda_{\text{FN}} A_{ij}$};
+                
     \end{tikzpicture}
-    \caption{Integrated clockwork chain into the FN Mechanism.} \label{fig:IntCWinFN}
+    \caption{Feynman diagram illustrating integrated FN and clockwork mechanisms generating the effective Majorana operator $\Lambda_{\text{FN}} \epsilon^{-X_i-X_j} \overline{(\nu_{Ri})^C} \nu_{Rj}$ ($-X_i>0$ here for the \model\ charges). The external RH neutrinos acquire FN suppression factors $\epsilon^{-X_{i}}$ and $\epsilon^{-X_j}$ via successive insertions of the flavon field $\langle\theta\rangle$. The central blob represents the heavy Majorana mass operator $\Lambda_{FN}\overline{(F_{Ri})^C}F_{Rj}$, generated by integrating out the $U(1)_X$-neutral clockwork mediators represented by the blob.}
+    \label{fig:IntCWinFN}
 \end{figure}
-
 We assume that the fields $\nu_1, \nu_2,\nu_3$ (correspondingly
 $F_1,F_2,F_3$), have a negative unit charge $(-1,0,0), (0,-1,0),$ and $(0,0,-1)$ under global symmetry group $U(1)_A \times U(1)_B \times U(1)_C$. This forbids the Majorana mass matrix
 entirely. To reintroduce the required couplings, we add spurions as before to
 the UV spectrum, with the charges $(1,\ 1,\ 0), (0,\ 1,\ 1),$ $(0,\ 2,\ 0),$ and $(0,\ 0,\ 2)$. 
-With this, we can write down the Lagrangian for direct couplings ($a_{22}$),
+With this, we can write down the Lagrangian for direct couplings ($a_{22}$) with heavy gears on a mass scale of $\mu' \sim \Lambda_{\text{FN}}$ and $q>1$,
 \begin{table}[h]
     \centering
     \renewcommand{\arraystretch}{1.3}
@@ -1176,13 +1172,15 @@ With this, we can write down the Lagrangian for direct couplings ($a_{22}$),
     \toprule
     \textbf{Field} & \textbf{Lorentz Type} & \textbf{Charge: $U(1)_A \times U(1)_B \times U(1)_C$} & $U(1)_X$ \\
     \midrule
-    $\nu_1$ & RH Fermion & $(-1, 0, 0)$ & $-1$ \\
-    $\nu_2$ & RH Fermion & $(0, -1, 0)$ & $-2$\\
-    $\nu_3$ & RH Fermion & $(0, 0, -1)$ & $0$\\
+    $\nu_{R1}$ & RH Fermion & $(-1, 0, 0)$ & $-1$ \\
+    $\nu_{R2}$ & RH Fermion & $(0, -1, 0)$ & $-2$\\
+    $\nu_{R3}$ & RH Fermion & $(0, 0, -1)$ & $0$\\
     \midrule
-    $F_1$ & LH/RH Fermion & $(-1, 0, 0)$ & $0$\\
-    $F_2,\ \psi, \ \chi$ & LH/RH Fermion & $(0, -1, 0)$& $0$ \\
-    $F_3$ & LH/RH Fermion & $(0, 0, -1)$ & $0$\\
+    $F_{R1}$ & RH fermions & $(-1, 0, 0)$ & $0$\\
+    $F_{R2}$ & RH Fermions & $(0, -1, 0)$& $0$ \\
+    $F_{R3}$ & RH Fermions & $(0, 0, -1)$ & $0$\\
+    \midrule
+    $\psi_i,\ \chi_i$ & Vector-like Fermions & $(0, 1, 0)$ & $0$\\
     \midrule
     $\Phi_{22}$ (for $a_{22}$) & Scalar Spurion & $(0, 2, 0)$ & $0$\\
     $\Phi_{33}$ (for $a_{33}$) & Scalar Spurion & $(0, 0, 2)$ & $0$\\
@@ -1194,14 +1192,14 @@ With this, we can write down the Lagrangian for direct couplings ($a_{22}$),
     \label{tab:clockwork_charges}
 \end{table}
 \begin{equation} \label{eqn:IOCMdirect}
-    \mathcal{L} = a_{0} \psi_{R0} \langle\Phi_{22}\rangle \overline{F_{2}^C} + a_1 \mu \overline{\psi_{L1}} F_2 -  \mu' q \overline{\psi_{L1}} \psi_{R0} + \textrm{H.c.}
+    \mathcal{L} = a_{0} \overline{(F_{2R})^C} \langle\Phi_{22}\rangle \psi_{R0} + a_1 \mu' \overline{\psi_{L1}} F_2 - \mu' q(\overline{\psi_{L0}}\psi_{R0} + \overline{\psi_{L1}}\psi_{R1}) + \mu'  \overline{\psi_{L0}} \psi_{R1} + \textrm{H.c.}
 \end{equation}
 where we have used the spurion field with charge $(0,2,0)$. One can now do the
 same for the term $a_{33}$, using the spurion with charge $(0,\ 0,\ 2)$. 
 
 For the cross terms, we write,
 \begin{equation} \label{eqn:IOCMdiagonal}
-    \mathcal{L} = a_{0}'  \chi_{R0}\langle \Phi_{12}\rangle \overline{F_{1}^C} + a_1' \mu \overline{\chi_{L1}} F_2  - \mu' q \overline{\chi_{L1}} \, \chi_{R0} + \textrm{H.c.} ,
+    \mathcal{L} = a_{0}' \overline{(F_{1R})^C} \langle \Phi_{12}\rangle \chi_{R0} + a_1' \mu '\overline{\chi_{L1}} F_2  - \mu' q(\overline{\chi_{L0}}\chi_{R0} + \overline{\chi_{L1}}\chi_{R1}) + \mu'  \overline{\chi_{L0}} \, \chi_{R1} + \textrm{H.c.} ,
 \end{equation}
 where we have used the spurion with charge $(1,1,0)$. We can do the same
 with the coupling of $\nu_2$ to $\nu_3$, where we now use the spurion with
@@ -1210,7 +1208,7 @@ charge $(1,\ 0,\ 1)$ or $(2,\ 0,\ 0)$, there can be no direct coupling as writte
 the Lagrangians \cref{eqn:IOCMdirect} or
 \cref{eqn:IOCMdiagonal}. Consequently, the effective couplings $a_{11}$ and $a_{13}$ are generated only at higher orders in the spurion expansion (e.g. via mixing through the $\nu_2$ sector), resulting in the suppression factors $q^{-m}$ and $q^{-n}$, respectively. Using the EOM as before, we can write down an effective Majorana mass matrix of the form,
 \begin{equation}
-    M_0 A = (M_0 q^{-1})
+    \Lambda_{\text{FN}}A = (\Lambda_{\text{FN}} q^{-1})
     \begin{pmatrix}
     q^{-m} a_{11}&a_{12}&q^{-n} a_{13}\\
     
@@ -1221,10 +1219,10 @@ the Lagrangians \cref{eqn:IOCMdirect} or
 \end{equation}
 Here, the overall factor of $q^{-1}$ that arises from the spurion couplings as
 given in \cref{eqn:IOCMdirect} and \cref{eqn:IOCMdiagonal} has been factored
-out of the matrix to multiply the mass scale $M_0$. The couplings $a_{11}$ and
+out of the matrix to multiply the mass scale $\Lambda_{\text{FN}}$. The couplings $a_{11}$ and
 $a_{13}$ come with extra factors of $q^{-1}$, where $n,m \geq 1$, arising from
 indirect (through the $\nu_2$ sector) couplings between $\nu_1$ to $\nu_3$ and
-$\nu_1$ to $\nu_1$. For sufficiently small values of $q$, the couplings
+$\nu_1$ to $\nu_1$. For sufficiently large values of $q$, the couplings
 proportional to $a_{11}, a_{13}$
 render themselves 
 negligible
