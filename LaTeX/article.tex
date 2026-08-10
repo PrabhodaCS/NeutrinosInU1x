@@ -408,18 +408,17 @@ uncertainties are all assumed to be Gaussian in the Likelihood function.
 In the context of the Lagrangian terms leading to the neutrino mass matrix, the relevant FN terms are 
 \begin{equation} \label{Yukawa Lagrangian FN}
     \small
-    -\mathcal{L}_Y  \supset  \overline{\bm{L}_{L i}}  y_{ ij} \Big( \frac{\langle\theta\rangle}{\Lambda_{\text{FN}}}\Big)^{|X_i - X_j|} \tilde{H} \bm{N}^0_{R j}  +  \frac{M_0}{2}  \overline{(\bm{\nu}_{Ri})^c} a_{ij}  \Big( \frac{\langle\theta\rangle}{\Lambda_{\text{FN}}}\Big)^{|X_i + X_j|} \bm{\nu}_{Rj} + H.c.,
+    -\mathcal{L}_Y  \supset  \overline{\bm{L}_{L i}}  y_{ ij} \Big( \frac{\langle\theta\rangle}{\Lambda_{\text{FN}}}\Big)^{|X_i - X_j|} \tilde{H} \bm{N}^0_{R j}  +  \frac{\Lambda_{\text{FN}}}{2}  \overline{(\bm{\nu}_{Ri})^c} a_{ij}  \Big( \frac{\langle\theta\rangle}{\Lambda_{\text{FN}}}\Big)^{|X_i + X_j|} \bm{\nu}_{Rj} + H.c.,
 \end{equation}
     where $ y_{ij}$ and $a_{ij}$ are assumed to be products of
-$\mathcal{O}(1)$ coefficients and $M_0$ sets the overall scale of the
-right-handed Majorana masses ($M_0$ is usually taken to be the energy scale $\Lambda_{\text{FN}}$)
+$\mathcal{O}(1)$ coefficients and $\Lambda_{\text{FN}}$ sets the overall scale of the
+right-handed Majorana masses.
 \begin{comment} (we shall take $M_0\sim
 10^{13}\text{--}10^{17}\ \mathrm{GeV}$ in what follows). An important point to note here is that the mass scale $M_0$ is taken to be independant of the Frogatt-Nielson energy scale $\Lambda_{\text{FN}}$. 
 \end{comment}
 Note that if
 $X_i-X_j<0$, then we have $\theta^\dag$ insertions rather than insertions of
 $\theta$ fields. 
-
 Defining $\epsilon:=\langle\theta\rangle/\Lambda_{\text{FN}}$, the neutrino flavour matrices take the form 
 \begin{equation} \label{FN Y and M}
      Y_{\nu} = 
@@ -428,7 +427,7 @@ Defining $\epsilon:=\langle\theta\rangle/\Lambda_{\text{FN}}$, the neutrino flav
         \epsilon  y_{21}& y_{22}&\epsilon^{2} y_{23}\\
         \epsilon  y_{31}& \epsilon^{2} y_{32}& y_{33}
     \end{pmatrix}, \,\ 
-    M =M_0 A' = \Lambda_{\text{FN}}
+    M =\Lambda_{\text{FN}}
     \begin{pmatrix}
     \epsilon^{2}a_{11}&\epsilon^{3}a_{12}&\epsilon a_{13}\\
     
@@ -437,11 +436,11 @@ Defining $\epsilon:=\langle\theta\rangle/\Lambda_{\text{FN}}$, the neutrino flav
     \epsilon a_{13} & \epsilon^{2}a_{23}&a_{33} 
     \end{pmatrix},
 \end{equation}
-where we are assuming $M_{33} = M_0 a_{33} = \Lambda_{\text{FN}} a_{33}$.The problem with $M\sim M_0=\Lambda_{\text{FN}}$, however, is that since in our model $\Lambda_{\text{FN}}\sim \mathcal{O}(\text{TeV})$, we get the neutrino mass to be on the order of 
+where we are assuming $M_{33} =\Lambda_{\text{FN}} a_{33}$. The problem with $M\sim \Lambda_{\text{FN}}$, however, is that since in our model $\Lambda_{\text{FN}}\sim \mathcal{O}(\text{TeV})$, we get the neutrino mass to be on the order of 
 \begin{equation}
     m_{\nu L} = -\frac{v^2}{2} Y_\nu M^{-1} Y_\nu^T \sim \frac{v^2}{\Lambda_{\text{FN}}} \sim 10 \,\text{GeV}.
 \end{equation}
-To match the current cosmological bounds $m_\nu \lesssim 0.1\text{eV}$, we require the Yukawa matrix in~\cref{FN Y and M} to be universally suppressed by a factor of $10^{-6}$ or that the Majorana mass scale, $M_0 = \Lambda_{\text{FN}}$, is enhanced by the square of the same factor. A natural mechanism to achieve this suppression, without fine-tuning, is through the clockwork mechanism detailed below~\cite{Kaplan:2015fuy,Giudice:2016yja,Choi:2015fiu}. 
+To match the current cosmological bounds $m_\nu \lesssim 0.1\text{eV}$, we require the Yukawa matrix in~\cref{FN Y and M} to be universally suppressed by a factor of $10^{-6}$. A natural mechanism to achieve this suppression, without fine-tuning, is through the clockwork mechanism detailed below~\cite{Kaplan:2015fuy,Giudice:2016yja,Choi:2015fiu}. 
 
 We supplement each bare RH neutrino $N_{R j}^0$, where $j = 1,2,3$, is the generation index, by an $K-$node chain of vector-like fermions with the same quantum numbers. Let $N_{Rj}^k \, (k=0,\dots,K)$ and $N_{Li}^k \, (k=1,\dots,K)$ be the singlet-Weyl fermions constituting this chain. The SM Higgs is then localised at the $k=0$ site, such that the Frogatt-Nielson Dirac interaction with the left-handed lepton doublets, $\overline{\bm{L}_{L i}}$, occurs exclusively with $N_{R j}^0$. 
 \begin{equation}
@@ -451,7 +450,7 @@ By introducing $K+1$ RH fermions and $K$ LH fermions per generation in the chain
 \begin{equation}
     \mathcal{L} = \mathcal{L}_{\text{KIN}} - \mu \sum_{k=0}^{K-1} (\overline N_{Lj}^{k}  N_{Rj}^{k} - q_Y \overline N_{L j}^{k}  N_{Rj}^{k-1}) + H.c.,
 \end{equation}
-The chain only couples to $\overline{\bm{L}_{L_i}} \tilde H N_{R j }^0$, because the vector-like partners $N^k_{Rj/L j}$ are by construction only charged under the chain symmetry and uncharged. The unbroken symmetry group now guarantees the existence of a massless zero mode. The $K\times(K+1)$ mass matrix is,
+The chain only couples to $\overline{\bm{L}_{L_i}} \tilde H N_{R j }^0$, because the vector-like partners $N^k_{Rj/L j}$ are by construction only charged under the chain symmetry. The unbroken symmetry group now guarantees the existence of a massless zero mode. The $K\times(K+1)$ mass matrix is,
 \begin{equation}
     \mathcal{M}_N = \mu 
     \begin{pmatrix}
@@ -470,10 +469,11 @@ giving us the exponential suppression as promised. Therefore~\cref{eqn:CWInt} be
     -\mathcal{L}_{\text{EFT}} = q_Y^{-K}  y_{ij} \overline{\bm{L}_{L i}} \bigg(\frac{\langle \theta\rangle}{\Lambda_{\text{FN}}} \bigg) \tilde{H} \nu_{R j} +H.c,
 \end{equation}
 For $q_Y = 10, K=6$, we get the suppression we need. The physical active neutrino mass matrix is given by the Type-I seesaw formula:
-\begin{equation}
-    m_{\nu L} = -\frac{v^2}{2}\frac{1}{q_Y^{2K} \Lambda_{\text{FN}}} Y_\nu A'^{-1} Y_\nu^T.
-\end{equation}
-To simplify the downstream phenomonological analysis, it is mathematically convenient to absorb this clockwork suppression into one parameter as the effective right-handed Majorana scale $M_0^{\text{eff}} = q_Y^{2K} \Lambda_{\text{FN}} \sim \mathcal{O}(10^{15}\ \text{GeV})$. It is important to emphasize that this effective scale is purely a bookkeeping device for the active neutrino mass matrix meant to reduce the number of parameters a numerical scan needs to fit; the physical mass of the right-handed neutrinos remains strictly at $\Lambda_{\text{FN}} \sim \mathcal{O}(\text{TeV})$. Therefore, we take,
+\begin{equation} \label{eqn:mnu_effective}
+    m_{\nu L} = -q_Y^{-2K}\frac{v^2}{2}\frac{1}{ \Lambda_{\text{FN}}} Y_\nu A'^{-1} Y_\nu^T.
+\end{equation} 
+\begin{comment}
+    To simplify the downstream phenomonological analysis, it is mathematically convenient to absorb this clockwork suppression into one parameter as the effective right-handed Majorana scale $M_0^{\text{eff}} = q_Y^{2K} \Lambda_{\text{FN}} \sim \mathcal{O}(10^{15}\ \text{GeV})$. It is important to emphasize that this effective scale is purely a bookkeeping device for the active neutrino mass matrix meant to reduce the number of parameters a numerical scan needs to fit; the physical mass of the right-handed neutrinos remains strictly at $\Lambda_{\text{FN}} \sim \mathcal{O}(\text{TeV})$. Therefore, we take,
 \begin{equation} \label{FN Y and M unhatted}
      Y_{\nu} = 
     \begin{pmatrix}
@@ -490,7 +490,9 @@ To simplify the downstream phenomonological analysis, it is mathematically conve
     \epsilon a_{13} & \epsilon^{2}a_{23}&a_{33} 
     \end{pmatrix}.
 \end{equation}
-to be the starting point of our analysis (we shall drop the ``eff'' superscript and subscript in the variable $M_0^{\text{eff}}$ and refer to it as $M_0 \sim \mathcal{O}(10^{15} \, \text{GeV})$ in what follows for notational brevity). \cref{FN Y and M unhatted} delivers the texture of the neutrino Yukawa and Majorana
+to be the starting point of our analysis (we shall drop the ``eff'' superscript and subscript in the variable $M_0^{\text{eff}}$ and refer to it as $M_0 \sim \mathcal{O}(10^{15} \, \text{GeV})$ in what follows for notational brevity)
+\end{comment}
+\cref{FN Y and M} along with \cref{eqn:mnu_effective} delivers the texture of the neutrino Yukawa and Majorana
 mass matrices in the \model.
 
 Experimental CLFV constraints imply that the diagonal texture in
@@ -511,7 +513,7 @@ We explore whether \cref{FN Y and M} suffices to explain the values of the neutr
 \cref{neutrino mass matrix} makes it clear that we shall need to calculate $M^{-1}$ in order to calculate $m_{\nu_L}$, which we need to work out the neutrino phenomenology.
 For this, we find it useful to further factorise $M$ from \cref{FN Y and M}:
 \begin{equation} \label{eqn:MajoranaMatrixFact}
-M = M_0 \Sigma A \Sigma, \qquad 
+M = \Lambda_{FN} \Sigma A \Sigma, \qquad 
     \Sigma = \begin{pmatrix}
     \epsilon^{1} & 0 & 0 \\
      0 & \epsilon^2 & 0 \\
@@ -525,7 +527,7 @@ A =     \begin{pmatrix}
 \end{equation}
 This implies that the inverse of the Majorana mass matrix can also be factorised:
 \begin{equation}
-     M^{-1} =\frac{\Sigma^{-1} A^{-1} \Sigma^{-1}}{M_0} = \frac{1}{M_0 }\begin{pmatrix}
+     M^{-1} =\frac{\Sigma^{-1} A^{-1} \Sigma^{-1}}{\Lambda_{FN}} = \frac{1}{\Lambda_{\text{FN}} }\begin{pmatrix}
      \epsilon ^{-1} & 0 & 0 \\ 
      0 & \epsilon ^{-2} & 0 \\ 
      0 & 0 & 1 
@@ -588,7 +590,7 @@ Factoring some overall powers of $\epsilon$ in the inverse Majorana matrix
 absorbed into field definitions)
 as a series in $\epsilon$:
 \begin{equation}  \label{eqn:mnu_expansion}
-    m_\nu = \frac{v^2}{2M_0} \epsilon^{-4} \left[X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \mathcal{O}(\epsilon^3)\right], 
+    m_\nu = q_Y^{-2K}\frac{v^2}{2\Lambda_{\text{FN}}} \epsilon^{-4} \left[X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \mathcal{O}(\epsilon^3)\right], 
 \end{equation}
 where:
 \begin{equation} \label{Lowest order - Unchanged}
@@ -614,7 +616,7 @@ where:
     \end{pmatrix}$}.
 \end{equation}
 
-Using second-order perturbation theory, keeping up to $\epsilon^2$ corrections to the matrix and denoting the prefactor as $m_{NH}=\frac{v^2}{2M_0}\epsilon^{-4}$, we find that the three eigenvalues (masses) of the three lightest approximately left-handed (LH) neutrinos are 
+Using second-order perturbation theory, keeping up to $\epsilon^2$ corrections to the matrix and denoting the prefactor as $m_{NH}=\frac{v^2q_Y^{-2K}\epsilon^{-4}}{2\Lambda_{\text{FN}}}$, we find that the three eigenvalues (masses) of the three lightest approximately left-handed (LH) neutrinos are 
 \begin{equation} 
 \begin{aligned}
     m_{\nu_3} &= m_{NH}\Bigg[
@@ -639,7 +641,7 @@ To obtain an inverted hierarchy of eigenvalues of the neutrino mass matrix, we s
 \end{equation}
 where we have  replaced $\Delta m_{31}^2$ and $\Delta m_{21}^2$ by their experimental central values from \cref{tab:neutrino_angles_masses} and fixed the unknown $\mathcal{O}(1)$ factor to be unity in the final equality. 
 Using $\epsilon=0.42$ from \cref{eq:epsilon-estimate}, $m_{\nu_3}$ and
-$m_{\nu_2}$ from \cref{NormalHierarchy}, we obtain $M_0 \sim \mathcal{O}(10^{16})\ \mathrm{GeV}$ for the inferred value of $\Delta m_{31}^2$ from Table~\ref{tab:neutrino_angles_masses}. 
+$m_{\nu_2}$ from \cref{NormalHierarchy}, we obtain $\Lambda_{\text{FN}} \sim \mathcal{O}(10 \ \mathrm{TeV})$ for the inferred value of $\Delta m_{31}^2$ from Table~\ref{tab:neutrino_angles_masses}. 
 \begin{comment}
     The PMNS matrix evaluated to the same order in the $\epsilon$ expansion is
 \begin{equation}\label{eq:pmns-approx}
@@ -773,17 +775,13 @@ implemented with the Python package
 
 Guided by our analytical arguments \cref{eq:epsilon-estimate}, we obtain an estimate of $\epsilon < 0.5$, naturally
 guiding us to choose a uniform prior $[0.1,0.5]$. The lower limit of 0.1 comes
-from not wanting to have too large a spread between the flavon VEV and the
-mass scale suppressing the FN diagrams because of naturalness.
-The Majorana mass scale $M_0$ that divides the overall light-neutrino mass matrix
-as
-$m_\nu = -\frac{v^2}{2M_0}Y \Sigma^{-1}A^{-1}\Sigma^{-1}Y^T$,
-acts as a scale parameter of the probability distribution of the prior and
-posterior. The argument that such a dimensional scale parameter should have a
+from not wanting to have too large a spread between the flavon VEV. $\langle\theta\rangle$, and the
+mass scale suppressing the FN diagrams, $\Lambda_{\text{FN}}$, because of naturalness. The ratio of the Majorana mass scale to the square of the clockwork suppression factor, $M_0 = q_Y^{2K}\Lambda_{FN}$, acts as a scale parameter of the probability distribution of the prior and
+posterior $m_\nu= \frac{1}{M_0}\frac{v^2}{2}Y \Sigma^{-1}A^{-1}\Sigma^{-1}Y^T = -\frac{1}{q_Y^{2K}\Lambda_{\text{FN}}}\frac{v^2}{2}Y \Sigma^{-1}A^{-1}\Sigma^{-1}Y^T$. The argument that such a dimensional scale parameter should have a
 prior that is invariant under scale transformations and is non-informative
 implies that we should use the Jeffreys prior $p(M_0) \propto 1/M_0$
 \cite{jeffreys_invariant_1946}. This translates to assigning a uniform
-distribution to the logarithm of this scale, as $\log_{10}M_0 \sim
+distribution to the logarithm of this scale, as $\log_{10}(\Lambda_{\text{FN}}/\text{GeV})\sim \mathcal{U}[1,5] \implies \log_{10}(M_0/\text{GeV}) \sim
 \mathcal{U}[13, 17]$, which is what is done to fix the prior in the nested
 sampling implementation. To ensure perturbative control, we fix $|y_{ij}|<3$
 with the priors $y_{ij} \sim \mathcal{U}[-3,3]$ and $a_{ij} \sim
@@ -801,7 +799,7 @@ $r$ across all three runs is shown in \cref{fig:Normal_spread}, with the three
 profiles showing close agreement. 
 We note here that under the $\mathcal{U}[-3,3]$ prior alone for 9 couplings,
 $P(r<30)=0.76$. We deduce that the fit is therefore of comparable naturalness to
-(but slightly less than that of) the untouched prior. 
+(within uncertainties) the untouched prior. 
 
 \begin{figure}[h!]
     \centering\includegraphics[width=0.7\textwidth]{../Python/Data/Normal/CDF_naturalness.png}
@@ -809,8 +807,8 @@ $P(r<30)=0.76$. We deduce that the fit is therefore of comparable naturalness to
       ordering. \pcs{Needs updating after code execution}}
     \label{fig:Normal_spread}
 \end{figure}
-The posterior distributions of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO_angles} and \cref{fig:CornerPlot_NO_masses}, which were generated using the Python module \texttt{corner}(v2.2.3)\cite{corner} and \texttt{MatPlotLib}(v3.10.0). 
-The posterior shown in the $(\epsilon, \log_{10} M_0)$ plane is predominantly
+The posterior distributions of the predicted angles, heavy neutrino mass scale and the mass-squared differences are presented in \cref{fig:CornerPlot_NO_angles} and \cref{fig:CornerPlot_NO_masses}, which were generated using the Python module \texttt{corner}(v2.2.3)\cite{corner} and \texttt{MatPlotLib}(v3.10.0). For the plotting, we once again isolate $\Lambda_{\text{FN}}$ by multiplying the numerically scanned parameter $M_0$ with the square of the clockwork suppression factor $\Lambda_{\text{FN}}=q_Y^{-2K}M_0$.
+The posterior shown in the $(\epsilon, \log_{10} (\Lambda_{\text{FN}}/\text{GeV)})$ plane is predominantly
 connected, and concentrated near $\epsilon \sim 0.42$, as expected from our
 qualitative estimates in \cref{eq:epsilon-estimate}. The posterior means of the
 three mixing angles and the two mass squared differences are given in
@@ -867,7 +865,7 @@ two independent zeroes that were acceptable with the dataset up until 2002).
 %% \cref{fig:spag}.  We assume the UV spectrum is incomplete and therefore lacks
 %%the specific mediators required to generate these elements.
 \begin{equation} \label{eqn:IOtexture}
-    M = M_0
+    M = \Lambda_{\text{FN}}
     \begin{pmatrix}
     0&\epsilon^{3}a_{12}&0\\
     
@@ -879,7 +877,7 @@ two independent zeroes that were acceptable with the dataset up until 2002).
 
 We once again expand the matrix $m_\nu$ as a series in $\epsilon$, similar to~\cref{eqn:mnu_expansion}, after factoring out the common factors, 
 \begin{equation}
-    m_\nu = \frac{v^2}{2M_0} \epsilon^{-3} (\tilde X^{(0)} + \epsilon \tilde
+    m_\nu = \frac{v^2 q_Y^{-2K}}{2M_0} \epsilon^{-3} (\tilde X^{(0)} + \epsilon \tilde
     X^{(1)} + \epsilon^2 \tilde X^{(2)} + \cdots) 
 \end{equation}
 where the matrices $\tilde X^{(i)}$ have the form
@@ -899,7 +897,7 @@ where the matrices $\tilde X^{(i)}$ have the form
     \times& 0&0 
     \end{pmatrix}
 \end{equation}
-We once again collect the overall coefficient setting the mass scale $m_{IH} := \frac{v^2}{2M_0}\epsilon^{-3}$ as in \cref{sec:anal}. We obtain
+We once again collect the overall coefficient setting the mass scale $m_{IH} := \frac{v^2 q_Y^{-2K}}{2M_0}\epsilon^{-3}$ as in \cref{sec:anal}. We obtain
 mass eigenvalues\footnote{We fix the neutrino fields' phases here such that all masses $m_{i} \geq 0$.} (masses) 
 
 \begin{align}
@@ -947,7 +945,7 @@ modules and configurations (\texttt{UltraNest}, $N_{\mathrm{live}} = 50\ 000$, $
 We use the same priors as in the normal hierarchy case, i.e.\ uniform priors
 ${\mathcal U}$ on all parameters. For the FN expansion parameter $\epsilon$,
 we assign a uniform prior $\epsilon \sim \mathcal{U}[0.1,0.5]$,
-based on our analytical arguments, and given that too small an expansion parameter would not give the correct mixing angles. The Majorana mass scale is
+based on our analytical arguments. The Majorana mass scale is
 again assigned a Jeffreys' prior, such that the prior distribution of its
 logarithm is uniform, $\log_{10} M_0 \sim \mathcal{U}[13,17]$. The rest of the
 Yukawa and Majorana elements are also assigned uniform priors, $\mathcal{U}[-3,3]$.
@@ -1005,7 +1003,7 @@ of the posterior volume exhibiting our naturalness criterion of $r<30$. The fina
         $\sin^2\theta_{23}$ & $0.5497 \pm 0.0134$ & $0.5500 \pm 0.0135$ \\
       \hline
     \end{tabular}
-    \caption{Posterior means and 1$\sigma$ theoretical uncertainties for the Inverted Ordering (IO)
+    \caption{Posterior means and 1$\sigma$ theoretical uncertainties for the Inverted Hierarchy (IH)
       fit under Nested Sampling. The experimental values and uncertainties are
       taken from {\tt NuFIT 6.0} (2024) global fits (with SK data) \cite{Esteban:2024eli}.}
     \label{tab:IO_Posteriors}
