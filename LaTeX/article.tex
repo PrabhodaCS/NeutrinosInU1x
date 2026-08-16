@@ -46,13 +46,9 @@ Neutrino masses and mixing angles in the \model}
   fermion charges. Right-handed neutrino fields are present and cancel gauge
   anomalies.
   We investigate its implications for neutrino masses and mixing angles.
-  The \model\ naturally implements the Froggatt-Nielsen (FN) mechanism for neutrino
-  masses and mixing hierarchies via a Type-I seesaw mechanism. 
-  One or two Yukawa couplings should be suppressed a little beyond
-  the suppression implied by the FN model in order to fit neutrino
-  oscillation data well: 
-  we give examples of how this might be 
-  achieved via a clockwork extension of the model in an appendix. 
+  The \model\ naturally implements a Froggatt-Nielsen (FN) mechanism for neutrino
+  masses and mixing hierarchies. We find that an implementation of this works when additional suppression is present from a clockwork mechanism. 
+  We show how current neutrino oscillation data are fit with $\matchal{O}(1)$ fundamental dimensionless couplings. 
 }   
 
 \keywords{$B$-anomalies, beyond the Standard Model, flavour changing neutral
@@ -439,7 +435,7 @@ where we are assuming $M_{33} =\Lambda_{\text{FN}} a_{33}$. The problem with $M\
 \begin{equation}
     m_{\nu L} = -\frac{v^2}{2} Y_\nu M^{-1} Y_\nu^T \sim \frac{v^2}{\Lambda_{\text{FN}}} \sim 10 \,\text{GeV}.
 \end{equation}
-To match the current cosmological bounds $m_\nu \lesssim 0.1\text{eV}$, we require the Yukawa matrix in~\cref{FN Y and M} to be universally suppressed by a factor of $10^{-6}$. A natural mechanism to achieve this suppression, without fine-tuning, is through the clockwork mechanism detailed below~\cite{Kaplan:2015fuy,Giudice:2016yja,Choi:2015fiu}. 
+To match the current cosmological bounds $m_\nu \lesssim 0.1\text{eV}$, we require the Yukawa matrix in~\cref{FN Y and M} to be universally suppressed by a factor of $10^{-6}$. A natural mechanism to achieve this suppression, without fine-tuning, is through the clockwork mechanism detailed below~\cite{Kaplan:2015fuy,Giudice:2016yja,Choi:2015fiu, park_clockwork_2018}.\pcs{The last reference 29 is clockwork seesaw}
 
 We supplement each bare RH neutrino $N_{R j}^0$, where $j = 1,2,3$, is the generation index, by an $K-$node chain of vector-like fermions with the same quantum numbers. Let $N_{Rj}^k \, (k=0,\dots,K)$ and $N_{Li}^k \, (k=1,\dots,K)$ be the singlet-Weyl fermions constituting this chain. The SM Higgs is then localised at the $k=0$ site, such that the Frogatt-Nielson Dirac interaction with the left-handed lepton doublets, $\overline{\bm{L}_{L i}}$, occurs exclusively with $N_{R j}^0$. 
 \begin{equation}
@@ -642,117 +638,6 @@ To obtain an inverted hierarchy of eigenvalues of the neutrino mass matrix, we s
 where we have  replaced $\Delta m_{31}^2$ and $\Delta m_{21}^2$ by their experimental central values from \cref{tab:neutrino_angles_masses} and fixed the unknown $\mathcal{O}(1)$ factor to be unity in the final equality. 
 Using $\epsilon=0.42$ from \cref{eq:epsilon-estimate}, $m_{\nu_3}$ and
 $m_{\nu_2}$ from \cref{NormalHierarchy}, we obtain $\Lambda_{\text{FN}} \sim \mathcal{O}(10 \ \mathrm{TeV})$ for the inferred value of $\Delta m_{31}^2$ from Table~\ref{tab:neutrino_angles_masses}. 
-\begin{comment}
-    The PMNS matrix evaluated to the same order in the $\epsilon$ expansion is
-\begin{equation}\label{eq:pmns-approx}
-    U_{\mathrm{PMNS}} \approx
-    \begin{pmatrix}
-        \epsilon\dfrac{\big(\alpha_{12} y_{11}  + \alpha_{22} y_{12} \big)}{\alpha_{22} y_{22}} & 1 -  \epsilon^2\dfrac{(\alpha_{12}y_{11}+\alpha_{22}y_{12})^2 }{2 \alpha_{22}^2y_{22}^2}  & \epsilon^2 \dfrac{\alpha_{12}y_{31}+\alpha_{22}y_{32}+\alpha_{23}y_{33}}{\alpha_{22}y_{22}}  \\[8pt]
-        1 & -\epsilon\dfrac{\big(\alpha_{12} y_{11}+\alpha_{22} y_{12}\big)}{\alpha_{22} y_{22}} & 0\\[6pt]
-        0 & -\epsilon^2 \dfrac{\alpha_{12}y_{31}+\alpha_{22}y_{32}+\alpha_{23}y_{33}}{\alpha_{22}y_{22}} & 1
-    \end{pmatrix},
-\end{equation}
-up to an overall normalising factor.
-\cref{eq:pmns-approx} exhibits the (approximate) alignment of the heaviest
-mass eigenstate with the $\mu/\nu_\mu$ flavour.
-Such a prediction for $U_{PMNS}$ is at odds with the measurements, which can
-be seen from Table~\ref{tab:neutrino_angles_masses}: one expects a sizeable
-23 mixing; the mixing between second and third family leptons is inferred to
-be large from neutrino oscillation measurements. 
-%
-To ameliorate this, we
-need to suppress $X^{(0)}$ in \cref{Lowest order - Unchanged}. Thus, we 
-may either impose $y_{22}={\mathcal O}(\epsilon^2)$
-and/or
-$a_{11}=\mathcal{O}(\epsilon^2), \ a_{13}=\mathcal{O}(\epsilon)$ --  which yields
-$\alpha_{22}\propto a_{11}a_{33}-a_{13}^2=\mathcal{O}(\epsilon^2)$ --  eliminating the $\epsilon^{-4}$ contributions. We shall show below that the first condition
-leads to a normal hierarchy of the neutrino masses, while the second leads to
-an inverted ordering.
-As mentioned above and explained in Ref.~\cite{Allanach:2026rkb}, such suppressions are not particularly unlikely in a set of ${\mathcal O}(1)$ fundamental dimensionless couplings. 
-In the normal hierarchy case, a suppression of $\epsilon^2 \sim 0.16$
-corresponds to a modest spread of at least 6, easy to obtain from the nine $y_{ij}$ with a probability of $0.9$. It is a similar case for the inverted hierarchy case. 
-At this stage, it is not obvious
-at the level of effective theory that we are considering
-how to set either $y_{22} \ll 1$ or
-$\alpha_{22} \ll 1$ in a natural way.
-We shall give an example of how this might be achieved in \cref{Sec:Clockwork}
-by extending the model with clockwork mechanisms that can implement these
-texture zeroes. 
-
-\subsection{Normal Hierarchy} \label{sec:Normal Hierarchy}
-We first show below that imposing $y_{22} = 0$ (a possible mechanism to achieve this
-single texture zero is detailed in \cref{Sec:Clockwork}) yields analytical parametric relations consistent with the normal mass hierarchy inferred from neutrino oscillation data. Following this demonstration, we shall perform a global Bayesian parameter inference (using nested sampling) to map the allowed parameter space.
-Imposing
-$y_{22}=0$, we have
-\begin{equation} \label{Textured Yukawa Neutrino}
-    Y_{\nu } \approx
-    \begin{pmatrix}
-        y_{11} &\epsilon y_{12} & \epsilon y_{13} \\
-        \epsilon y_{21}&0&\epsilon^{2}y_{23}\\
-        \epsilon y_{31}& \epsilon^{2}y_{32}&y_{33}
-    \end{pmatrix},
-\end{equation}
-\begin{equation}
-    m_\nu = \frac{v^2}{2M_0} \epsilon^{-2} (X^{(0)} + \epsilon X^{(1)} + \epsilon^2 X^{(2)} + \cdots) 
-\end{equation}
-where 
-\begin{equation}
-    X^{(0)} = \begin{pmatrix}
-        \times &  0 & 0 \\
-        0  & 0  &  0  \\
-        0  & 0  & 0
-    \end{pmatrix}, \,\,\,\,  X^{(1)} = \begin{pmatrix}
-        0 & \times & 
-        \times \\
-        \times &  0 &0  \\
-        \times  & 0  & 0
-    \end{pmatrix}, \,\,\,\, 
-     X^{(2)} = \begin{pmatrix}
-    \times & 0 & 0 \\
-    0 & \times & \times  \\
-    0& \times &\times 
-    \end{pmatrix}
-\end{equation}
-At zeroth order, $(m_{\nu 1},m_{\nu 2},m_{\nu 3}) = \frac{v^2
-  \epsilon^{-2}}{2M_0}(0,0,X^{(0)}_{11})$. 
-Denoting the pre-factor as $m_{NH}:=\frac{v^2\epsilon^{-2}}{2M_0}     $, the eigenvalues are
-of the parametric form (the detailed forms of the eigenvalues are given in a
-\href{https://github.com/PrabhodaCS/NeutrinosInU1x/releases/tag/v1.0.0}{GitHub} repository)~\cite{github} 
-\begin{align}
-    m_3 &= m_{NH} \left(A_3 + \epsilon^2 B_3+{\mathcal{O}}(\epsilon^3) \right),\\
-    m_2 &= m_{NH} \left(\epsilon^2 B_2+{\mathcal{O}}(\epsilon^3) \right),\\
-    m_1 &= m_{NH} \left(\epsilon^2 B_1 +{\mathcal{O}}(\epsilon^3) \right).
-\end{align}
-Here, $A_i$ and $B_i$ are ratios of homogeneous polynomials of ${\mathcal
-  O}(1)$ parameters. 
-It is apparent that the eigenvalues follow normal hierarchy ($m_1 < m_2 \ll m_3$).
-%
-%From this, we can estimate the order of $\epsilon$ in this case (neglecting $\mathcal{O}(1)$ factors),
-% We already got epsilon before
-\begin{equation}\label{eq:epsilon-estimate_Normal Hierarchy}
-    \epsilon^4 \frac{B_2^2-B_1^2}{A_3^2} \sim \mathcal{O}(1) \times \frac{\Delta m_{{21}}^2}{\Delta m_{{31}}^2}
-    \quad\Rightarrow\quad
-    \epsilon \sim \mathcal{O}(1) \times0.42,
-\end{equation}
-The PMNS matrix, up to phase factors and normalisation, is of the form,
-\begin{equation}
-    U \approx
-    \begin{pmatrix}
-    \epsilon\, u_{11}^{(1)} & \epsilon\, u_{12}^{(1)} & 1-\epsilon^2 u_{13}^{(2)} \\
-    u_{21}^{(0)} & u_{22}^{(0)} & \epsilon\, u_{23}^{(1)} \\
-    u_{31}^{(0)} & u_{32}^{(0)} & \epsilon\, u_{33}^{(1)}
-    \end{pmatrix} + {\mathcal O}(\epsilon^3),
-\end{equation}
-the entries $u_{ij}^{(n)}$ are lengthy algebraic functions of $y_{ij}$ and $a_{ij}$. Analytically, 
-\begin{align} \label{NO matching}
-        \sin\theta_{13} &= |U_{e3}| \approx \left|1-\epsilon^2 u_{13}^{(2)}\right|, \\
-    \tan\theta_{12} &= \frac{|U_{e2}|}{|U_{e1}|} \approx \frac{u_{12}^{(1)}}{u_{11}^{(1)}}, \\
-    \tan\theta_{23} &= \frac{|U_{\mu 3}|}{|U_{\tau 3}|} \approx \frac{u_{23}^{(1)}}{u_{33}^{(1)}}.
-\end{align}
-However, reproducing the small reactor angle $\sin\theta_{13} \approx 0.15$ imposes  $|1 - \epsilon^2 u_{13}^{(2)}| \approx 0.15$. This demands $u_{13}^{(2)} \sim \mathcal{O}(10)$. While this exceeds the naive $\mathcal{O}(1)$ expectation, $u_{13}^{(2)}$ is not a fundamental coupling but a rational algebraic function of the underlying $y_{ij}$ and $a_{ij}$ parameters. As discussed previously, ratios of independent $\mathcal{O}(1)$ distributions naturally exhibit heavy tails, therefore such cancellation routinely occurs without implying severe parametric fine-tuning. We defer the rigorous proof of the naturalness of the parameter space to the subsequent global Bayesian scan.
-Having successfully established the model's analytical viability, we now proceed to numerically map the full parameter space.
-
-\end{comment}
 
 To map the full parameter space and isolate regions that reproduce the observed neutrino oscillation data in~\cref{tab:neutrino_angles_masses}, we perform a global Bayesian parameter inference. Some of the uncertainties in the table are
 mildly asymmetric. In our numerical work, we replace these by a symmetric
@@ -817,13 +702,13 @@ $1\sigma$. The final global evidence is $\log Z_{NH} = -28.03 \pm 0.02$. \pcs{ne
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{../Python/Data/Normal/Corner_Angles_Run00.png}
+    \includegraphics[width=0.9\textwidth]{../Python/Data/Normal/Corner_Angles_Combined.png}
     \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (Normal Hierarchy). \pcs{Needs updating after code execution}}
     \label{fig:CornerPlot_NO_angles}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{../Python/Data/Normal/Corner_Masses_Run00.png}
+    \includegraphics[width=0.9\textwidth]{../Python/Data/Normal/Corner_Masses_Combined.png}
     \caption{Posterior probability distributions of the mass scale, FN parameter and the mass squared differences (Normal Hierarchy). The solid contours correspond to the 68$\%$ and 95$\%$ Bayesian credibility intervals. \pcs{Needs updating after code execution}}
     \label{fig:CornerPlot_NO_masses}
 \end{figure}
