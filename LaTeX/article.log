@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.7)  3 AUG 2026 12:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.7)  17 AUG 2026 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**article
+**article.tex
 (./article.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -23,12 +23,24 @@ File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks18
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
@@ -56,7 +68,7 @@ Package: amstext 2021/08/26 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
+\@emptytoks=\toks19
 \ex@=\dimen143
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -96,21 +108,21 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \dotsspace@=\muskip16
 \c@parentequation=\count271
 \dspbrk@lvl=\count272
-\tag@help=\toks19
+\tag@help=\toks20
 \row@=\count273
 \column@=\count274
 \maxfields@=\count275
-\andhelp@=\toks20
+\andhelp@=\toks21
 \eqnshift@=\dimen146
 \alignsep@=\dimen147
 \tagshift@=\dimen148
 \tagwidth@=\dimen149
 \totwidth@=\dimen150
 \lineht@=\dimen151
-\@envbody=\toks21
+\@envbody=\toks22
 \multlinegap=\skip54
 \multlinetaggap=\skip55
-\mathdisplay@stack=\toks22
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
@@ -191,7 +203,7 @@ Package axo Warning: File `article.ax2' not found. on input line 187.
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks23
+\pgfutil@everybye=\toks24
 \pgfutil@tempdima=\dimen164
 \pgfutil@tempdimb=\dimen165
 )
@@ -210,12 +222,12 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks24
-\pgfkeys@temptoks=\toks25
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
 .code.tex
-\pgfkeys@tmptoks=\toks26
+\pgfkeys@tmptoks=\toks27
 ))
 \pgf@x=\dimen166
 \pgf@y=\dimen167
@@ -233,9 +245,9 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \c@pgf@countb=\count285
 \c@pgf@countc=\count286
 \c@pgf@countd=\count287
-\t@pgf@toka=\toks27
-\t@pgf@tokb=\toks28
-\t@pgf@tokc=\toks29
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
 \pgf@sys@id@count=\count288
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
@@ -286,9 +298,9 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@dimen=\dimen176
 \pgfmath@count=\count291
 \pgfmath@box=\box57
-\pgfmath@toks=\toks30
-\pgfmath@stack@operand=\toks31
-\pgfmath@stack@operation=\toks32
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -431,8 +443,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen259
 \pgffor@skip=\dimen260
-\pgffor@stack=\toks33
-\pgffor@toks=\toks34
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
@@ -480,8 +492,8 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks35
-\pgfopts@list@add@b@toks=\toks36
+\pgfopts@list@add@a@toks=\toks36
+\pgfopts@list@add@b@toks=\toks37
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tikz-feynman/tikzlibraryfeynman.code.t
 ex
@@ -553,7 +565,7 @@ File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/latex/tikz-feynman/tikzfeynman.keys.code.tex
 ))) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amscd.sty
 Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
-\athelp@=\toks37
+\athelp@=\toks38
 \minaw@=\dimen281
 \bigaw@=\dimen282
 \minCDarrowwidth=\dimen283
@@ -566,25 +578,16 @@ Package: gensymb 2022/10/17 v1.0.2 (KJH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2023/07/08 v1.2f Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup4
-\symboldletters=\mathgroup5
-\symboldsymbols=\mathgroup6
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
 Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 ) (./jheppub.sty
 Package: jheppub 2012/06/08 r448
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup7
-\symAMSb=\mathgroup8
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
 \epsfxsize=\dimen284
@@ -738,9 +741,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip62
 )
-\auth@toks=\toks38
-\affil@toks=\toks39
-\email@toks=\toks40
+\auth@toks=\toks39
+\affil@toks=\toks40
+\email@toks=\toks41
 \c@email@counter=\count321
 \affiliationsSep=\skip63
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1
@@ -774,7 +777,7 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen303
 \ar@mcellbox=\box68
 \extrarowheight=\dimen304
-\NC@list=\toks41
+\NC@list=\toks42
 \extratabsurround=\skip64
 \backup@length=\skip65
 \ar@cellbox=\box69
@@ -817,24 +820,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 (./article.aux)
 \openout1 = `article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -843,12 +846,12 @@ LaTeX Font Info:    ... okay on input line 61.
 \scratchbox=\box71
 \nofMPsegments=\count328
 \nofMParguments=\count329
-\everyMPshowfont=\toks42
+\everyMPshowfont=\toks43
 \MPscratchCnt=\count330
 \MPscratchDim=\dimen306
 \MPnumerator=\count331
 \makeMPintoPDFobject=\count332
-\everyMPtoPDFconversion=\toks43
+\everyMPtoPDFconversion=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -864,43 +867,43 @@ e
 
 Package tikz-feynman Warning: LuaTeX is required if you wish to have vertices a
 utomatically placed. You can disable this warning by setting /tikzfeynman/warn 
-luatex=false on input line 61.
+luatex=false on input line 59.
 
 
 Package tikz-feynman Warning: Consider loading TikZ-Feynman with \usepackage[co
 mpat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on
- input line 61.
+ input line 59.
 
-LaTeX Info: Redefining \celsius on input line 61.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 61.
+LaTeX Info: Redefining \celsius on input line 59.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 59.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 61.
-Package gensymb Info: Using \Omega for \ohm on input line 61.
+LaTeX Info: Redefining \ohm on input line 59.
+Package gensymb Info: Using \Omega for \ohm on input line 59.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring ON on input line 61.
+Package hyperref Info: Link coloring ON on input line 59.
 (./article.out) (./article.out)
 \@outlinefile=\write6
 \openout6 = `article.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-Package hyperref Warning: Ignoring empty anchor on input line 63.
+Package hyperref Warning: Ignoring empty anchor on input line 60.
 
 [0
 
@@ -912,224 +915,235 @@ Package hyperref Warning: Ignoring empty anchor on input line 63.
 [2]
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 165.
+tance' requires LuaTeX. It will be ignored. on input line 162.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 165.
+stance' requires LuaTeX. It will be ignored. on input line 162.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 165.
+distance' requires LuaTeX. It will be ignored. on input line 162.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 186.
+tance' requires LuaTeX. It will be ignored. on input line 183.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 186.
+stance' requires LuaTeX. It will be ignored. on input line 183.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 186.
+distance' requires LuaTeX. It will be ignored. on input line 183.
 
-[3] [4]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 410.
+Underfull \vbox (badness 2717) has occurred while \output is active []
+
+ [3]
+[4]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 408.
 
 [5]
-LaTeX Font Info:    Calculating math sizes for size <> on input line 412.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 410.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 412.
+(Font)              size <5> substituted on input line 410.
 
-[6] [7]
-Overfull \hbox (3.05809pt too wide) detected at line 565
+Excluding 'comment' comment.
+
+Package natbib Warning: Citation `park_clockwork_2018' on page 6 undefined on i
+nput line 441.
+
+[6] Excluding 'comment' comment. [7] [8]
+Overfull \hbox (3.05809pt too wide) detected at line 625
 [][][][]\OML/cmm/m/it/10.95 :
  []
 
-[8] [9] [10]
-<../Python/Data/Normal/Merged_CDF_NH_Yukawa.png, id=266, 710.77545pt x 493.9654
-5pt>
-File: ../Python/Data/Normal/Merged_CDF_NH_Yukawa.png Graphic file (type png)
-<use ../Python/Data/Normal/Merged_CDF_NH_Yukawa.png>
-Package pdftex.def Info: ../Python/Data/Normal/Merged_CDF_NH_Yukawa.png  used o
-n input line 760.
+[9] [10]
+<../Python/Data/Normal/CDF_naturalness.png, id=262, 710.77545pt x 493.96545pt>
+File: ../Python/Data/Normal/CDF_naturalness.png Graphic file (type png)
+<use ../Python/Data/Normal/CDF_naturalness.png>
+Package pdftex.def Info: ../Python/Data/Normal/CDF_naturalness.png  used on inp
+ut line 702.
 (pdftex.def)             Requested size: 309.60384pt x 215.16719pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11]
-<../Python/Data/Normal/Corner_NH_Angles.png, id=289, 824.6007pt x 861.81975pt>
-File: ../Python/Data/Normal/Corner_NH_Angles.png Graphic file (type png)
-<use ../Python/Data/Normal/Corner_NH_Angles.png>
-Package pdftex.def Info: ../Python/Data/Normal/Corner_NH_Angles.png  used on in
-put line 776.
+<../Python/Data/Normal/Corner_Angles_Combined.png, id=270, 824.6007pt x 861.819
+75pt>
+File: ../Python/Data/Normal/Corner_Angles_Combined.png Graphic file (type png)
+<use ../Python/Data/Normal/Corner_Angles_Combined.png>
+Package pdftex.def Info: ../Python/Data/Normal/Corner_Angles_Combined.png  used
+ on input line 718.
 (pdftex.def)             Requested size: 398.06111pt x 416.02269pt.
+ [11 <../Python/Data/Normal/CDF_naturalness.png>]
+<../Python/Data/Normal/Corner_Masses_Combined.png, id=284, 680.42204pt x 710.05
+275pt>
+File: ../Python/Data/Normal/Corner_Masses_Combined.png Graphic file (type png)
+<use ../Python/Data/Normal/Corner_Masses_Combined.png>
+Package pdftex.def Info: ../Python/Data/Normal/Corner_Masses_Combined.png  used
+ on input line 724.
+(pdftex.def)             Requested size: 398.06111pt x 415.39545pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../Python/Data/Normal/Corner_NH_Masses.png, id=290, 688.7331pt x 710.05275pt>
-File: ../Python/Data/Normal/Corner_NH_Masses.png Graphic file (type png)
-<use ../Python/Data/Normal/Corner_NH_Masses.png>
-Package pdftex.def Info: ../Python/Data/Normal/Corner_NH_Masses.png  used on in
-put line 782.
-(pdftex.def)             Requested size: 398.06111pt x 410.3899pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <../Python/Data/Normal/Merged_CDF_NH_Yukawa.png>] [13 <../Python/Data/Norma
-l/Corner_NH_Angles.png>] [14 <../Python/Data/Normal/Corner_NH_Masses.png>]
-[15]
-<../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png, id=344, 710.77545pt x 493.96
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <../Python/Data/Normal/Corner_Angles_Combined.png>] [13 <../Python/Data/No
+rmal/Corner_Masses_Combined.png>] [14] Excluding 'comment' comment.
+<../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png, id=324, 710.77545pt x 493.96
 545pt>
 File: ../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png Graphic file (type png)
 <use ../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png>
 Package pdftex.def Info: ../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png  used
- on input line 928.
+ on input line 872.
 (pdftex.def)             Requested size: 309.60384pt x 215.16719pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../Python/Data/Inverted/Corner_IH_Angles.png, id=345, 824.6007pt x 861.81975pt
+<../Python/Data/Inverted/Corner_IH_Angles.png, id=325, 824.6007pt x 861.81975pt
 >
 File: ../Python/Data/Inverted/Corner_IH_Angles.png Graphic file (type png)
 <use ../Python/Data/Inverted/Corner_IH_Angles.png>
 Package pdftex.def Info: ../Python/Data/Inverted/Corner_IH_Angles.png  used on 
-input line 934.
+input line 878.
 (pdftex.def)             Requested size: 398.06111pt x 416.02269pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../Python/Data/Inverted/Corner_IH_Masses.png, id=346, 688.7331pt x 710.05275pt
+<../Python/Data/Inverted/Corner_IH_Masses.png, id=326, 688.7331pt x 710.05275pt
 >
 File: ../Python/Data/Inverted/Corner_IH_Masses.png Graphic file (type png)
 <use ../Python/Data/Inverted/Corner_IH_Masses.png>
 Package pdftex.def Info: ../Python/Data/Inverted/Corner_IH_Masses.png  used on 
-input line 940.
+input line 884.
 (pdftex.def)             Requested size: 398.06111pt x 410.3899pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16] [17 <../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png>] [18 <../Python/Dat
-a/Inverted/Corner_IH_Angles.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19 <../Python/Data/Inverted/Corner_IH_Masses.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20] [21]
+[15] [16 <../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png>] [17 <../Python/Dat
+a/Inverted/Corner_IH_Angles.png>]
+Underfull \vbox (badness 1308) has occurred while \output is active []
+
+ [18 <../Python/Data/Inverted/Corner_IH_Masses.png>]
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 1191.
+tance' requires LuaTeX. It will be ignored. on input line 998.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 1191.
+stance' requires LuaTeX. It will be ignored. on input line 998.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 1191.
+distance' requires LuaTeX. It will be ignored. on input line 998.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 1233.
+tance' requires LuaTeX. It will be ignored. on input line 1028.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 1233.
+stance' requires LuaTeX. It will be ignored. on input line 1028.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 1233.
+distance' requires LuaTeX. It will be ignored. on input line 1028.
 
+[19]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22] (./article.bbl [23{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.
-enc}] [24]
+[20] (./article.bbl [21{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.
+enc}] [22]
 Underfull \vbox (badness 1028) has occurred while \output is active []
 
- [25])
+ [23])
 
 Package axodraw2 Warning: Run `axohelp article' and then rerun pdflatex. on inp
-ut line 1336.
+ut line 1142.
 
-[26] (./article.aux)
+
+Package natbib Warning: There were undefined citations.
+
+[24] (./article.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1140,16 +1154,16 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
 
 Package rerunfilecheck Info: File `article.out' has not changed.
-(rerunfilecheck)             Checksum: F75DAAF7D473D07C4D34A811255B1C4D;1739.
+(rerunfilecheck)             Checksum: 27E6B830AB8E80D2027F0D2316E72E66;1713.
  ) 
 Here is how much of TeX's memory you used:
- 28060 strings out of 474222
- 553393 string characters out of 5748733
- 1957975 words of memory out of 5000000
- 49654 multiletter control sequences out of 15000+600000
- 588617 words of font info for 148 fonts, out of 8000000 for 9000
+ 27894 strings out of 474222
+ 551061 string characters out of 5748733
+ 1955975 words of memory out of 5000000
+ 49507 multiletter control sequences out of 15000+600000
+ 581518 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,13n,93p,880b,1828s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,93p,1201b,1827s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
@@ -1175,12 +1189,13 @@ y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/ty
-pe1/public/cm-super/sfti1000.pfb>
-Output written on article.pdf (27 pages, 1812479 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfti1000.pfb>
+Output written on article.pdf (25 pages, 1758544 bytes).
 PDF statistics:
- 661 PDF objects out of 1000 (max. 8388607)
- 551 compressed objects within 6 object streams
- 164 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 631 PDF objects out of 1000 (max. 8388607)
+ 520 compressed objects within 6 object streams
+ 145 named destinations out of 1000 (max. 500000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
