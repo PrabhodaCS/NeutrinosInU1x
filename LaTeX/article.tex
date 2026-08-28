@@ -9,7 +9,7 @@
 \usepackage{slashed}
 \usepackage{gensymb}
 \usepackage{bm}
-\usepackage{jheppub} % for details on the use of the package, please
+\usepackage{jheppub} 
 \usepackage{booktabs}
 \usepackage{array}  
 \usepackage[capitalise]{cleveref}
@@ -21,8 +21,8 @@
 \newcommand{\bsmm}{$b \rightarrow s \mu^+ \mu^-$}
 \newcommand{\bsee}{$b \rightarrow s e^+ e^-$}
 
-\newcommand{\bca}[1]{\textcolor{blue}{BCA: #1}}
-\newcommand{\pcs}[1]{\textcolor{red}{PCS: #1}}
+%\newcommand{\bca}[1]{\textcolor{blue}{BCA: #1}}
+%\newcommand{\pcs}[1]{\textcolor{red}{PCS: #1}}
 
 \title{\centering
 % Uncomment closer to the time of publication
@@ -33,7 +33,7 @@ Neutrino masses and mixing angles in the \model}
   CB3 0WA, United Kingdom}
 \emailAdd{ben.allanach.work@gmail.com}
 
-\author[a]{and Prabhoda Chandra Sarjapur\note{Corresponding author.}}
+\author{and Prabhoda Chandra Sarjapur\note{Corresponding author.}}
 \emailAdd{prabhodacs@gmail.com}
 
 \abstract{The Plan B Model was proposed
@@ -41,16 +41,17 @@ Neutrino masses and mixing angles in the \model}
   involving the $b\rightarrow s \ell^+ \ell^-$ transition whilst simultaneously providing a qualitative 
   explanation for the small magnitudes of some off-diagonal quark mixing matrix entries. The model
   is based on applying an additional
-  spontaneously broken  $U(1)_{3B_3-L_1-2L_2}$
+  spontaneously broken  $U(1)_{3B_3-L_e-2L_\mu}$
   gauge symmetry to the SM                  with family-dependent
   fermion charges. Right-handed neutrino fields are present and cancel gauge
   anomalies.
-  We investigate its implications for neutrino masses and mixing angles.
-  The \model\ naturally implements a Froggatt-Nielsen (FN) mechanism for neutrino
-  masses and mixing hierarchies. We find that an implementation of this works
+  We investigate the implications of the Plan B Model for neutrino masses and
+  mixing angles. 
+  The model naturally implies a Froggatt-Nielsen (FN) mechanism for neutrino
+  masses and mixing hierarchies. We find that an implementation of the FN mechanism works
   when additional suppression is present from a clockwork mechanism. 
-  We show how current neutrino oscillation data can be fit with 
-  fundamental dimensionless couplings being of order unity.
+  We show how current neutrino oscillation data can be fit with order unity
+  fundamental dimensionless couplings.
 }   
 
 \keywords{$B$-anomalies, beyond the Standard Model, flavour changing neutral
@@ -97,15 +98,14 @@ family non-universal
 interactions of the model's TeV-scale $Z^\prime$ vector boson; the total $\chi^2$ (of
 hundreds of observables) improved by 34 units in the model, which has only two
 effective fit parameters. 
-The best-fit point (BFP) simultaneously
+The best-fit point simultaneously
 satisfies experimental constraints from di-lepton production at LEP2, which receives contributions
 from an intermediate tree-level off-shell $Z^\prime$ boson. Current LHC bounds upon
-direct searches for
-the $Z^\prime$ are rather modest: $M_{Z^\prime} > 1.2$~TeV~\cite{Allanach:2024jls} in the parameter range that is compatible with both perturbativity and the global fit. 
+direct searches for the $Z^\prime$ are rather modest: $M_{Z^\prime} > 1.2$~TeV~\cite{Allanach:2024jls} in the parameter range that is compatible with both perturbativity and the global fit. 
 
-The \model\ augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM. The $X$ charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus first family lepton number minus twice second family lepton number:
+The \model\ augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM. The $X$ charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus electron number minus twice muon number:
 \begin{equation}
-X = 3B_3-L_1-2L_2.    
+X = 3B_3-L_e-2L_\mu.    
 \end{equation}
 This is a vector-like charge assignment, i.e.\ a left-handed chiral fermionic field has the same charge as its right-handed chiral counterpart. 
 In order to allow a renormalisable top quark Yukawa coupling, the Higgs $X$
@@ -114,7 +114,8 @@ coupling is the largest dimensionless parameter in the SM Lagrangian at the
 electroweak scale (its value is around unity); as we shall see below, one can induce
 smaller Yukawa couplings by banning them at the renormalisable level with a
 symmetry but inducing them through spontaneous symmetry breaking. The
-additional $u(1)_X$ is spontaneously broken by a SM-singlet complex scalar
+additional $U(1)_X$ gauge group factor is spontaneously broken by a SM-singlet
+complex scalar 
 field, the `flavon' $\theta$, which is assumed to have an $X$ charge of unity
 and acquire a TeV-scale vacuum expectation value (VEV), leading to a TeV-scale
 $Z^\prime$ vector boson with family-dependent gauge couplings. At the
@@ -137,21 +138,21 @@ Charged lepton flavour violation (CLFV) is heavily constrained by searches for i
 \cref{chferms} predicts zero values for the magnitudes of
 Cabibbo-Kobayashi-Maskawa (CKM) matrix elements $|V_{ub}|,|V_{cb}|,|V_{td}|$
 and $|V_{ts}|$, whereas $|V_{us}|$ and $|V_{cd}|$ are generically predicted to
-be of order unity. The spontaneous breaking of $u(1)_X$  generically
+be of order unity. The spontaneous breaking of $U(1)_X$  generically
 predicts that
 the CKM matrix elements are not strictly zero but merely much smaller than unity, a feature which agrees with measurements~\cite{PDG}. 
 
 The Froggatt-Nielsen (FN) mechanism~\cite{Froggatt:1978nt} constitutes a
 suggestion as to where smaller Yukawa couplings could originate (following
-$u(1)_X$ spontaneous symmetry breakdown). The idea is that there are some fermionic fields which are in vector-like representations of the SM gauge symmetry with masses above the scale $\langle \theta \rangle$ of $u(1)_X$ breaking.
-Let us call this mass scale $\Lambda_{\text{FN}} \gg \langle \theta \rangle$. For the Yukawa couplings constrained to be zero at the renormalisable level, after $u(1)_X$ symmetry breaking, the dominant contribution to the effective Yukawa coupling term of the Lagrangian density between SM Weyl fermion $\psi_i$ and SM Weyl fermion $\psi_j$ and the Higgs doublet field $H$ is assumed to be 
+$U(1)_X$ spontaneous symmetry breakdown). The idea is that there are some fermionic fields which are in vector-like representations of the SM gauge symmetry with masses above the scale $\langle \theta \rangle$ of $U(1)_X$ breaking.
+Let us call this mass scale $\Lambda_{\text{FN}} \gg \langle \theta \rangle$. For the Yukawa couplings constrained to be zero at the renormalisable level, after $U(1)_X$ symmetry breaking, the dominant contribution to the effective Yukawa coupling term of the Lagrangian density between SM Weyl fermion $\psi_i$ and SM Weyl fermion $\psi_j$ and the Higgs doublet field $H$ is assumed to be 
 \begin{equation}
-    {\mathcal L}_{\overline{\psi_i} H \psi_j} = A \overline{\psi_i} H \psi_j
+    {\mathcal L}_{\overline{\psi_j} H \psi_i} = A \overline{\psi_j} H \psi_i
     \left| \frac{\langle \theta
-      \rangle}{\Lambda_{\text{FN}}}\right|^{|X_i-X_j|} + H.c.,
+      \rangle}{\Lambda_{\text{FN}}}\right|^{|X_j-X_i|} + H.c.,
     \label{effop}
 \end{equation}
-where $X_i$ is the $X$ charge of the Weyl fermionic field labelled by $i$ and $A$ is a product of (presumably) order unity dimensionless couplings of some underlying ultra-violet theory, of which we shall hear more below.  The number of powers of $\theta$ in the numerator fixes the Lagrangian density operator to be $U(1)_X$ group invariant and, depending on $X_i-X_j$, provides varying levels of suppression of the effective Yukawa coupling. 
+where $X_i$ is the $X$ charge of the Weyl fermionic field labelled by $i$ and $A$ is a product of (presumably) order unity dimensionless couplings of some underlying ultra-violet theory, of which we shall hear more below.  The number of powers of $\theta$ in the numerator fixes the Lagrangian density operator to be $U(1)_X$ invariant and, depending on $|X_i-X_j|$, provides varying levels of suppression of the effective Yukawa coupling. 
 The idea is that the operator in (\ref{effop}) would be generated by underlying renormalisable physics in the ultra-violet, for example by the ``spaghetti diagram" in Fig.~\ref{fig:spag}.
 
 
@@ -159,7 +160,7 @@ The idea is that the operator in (\ref{effop}) would be generated by underlying 
     \centering
     \begin{tikzpicture}
         \begin{feynman}
-            \vertex (L) {$\psi_i$};
+            \vertex (L) {$\psi_j$};
             \vertex [right=1.2cm of L] (F1);
             \vertex [right=0.9cm of F1] (G1);
             
@@ -174,23 +175,23 @@ The idea is that the operator in (\ref{effop}) would be generated by underlying 
 
             \vertex [below=0.1cm of GN] (FN3) {$\psi_{{FN}_N}$};       
             
-            \vertex [right=0.9cm of FN] (R) {$\psi_j$};
+            \vertex [right=0.9cm of FN] (R) {$\psi_i$};
 
             \vertex [above=1.2cm of F1] (phi1) {$H$};
             \vertex [above=1.2cm of F2] (phi2) {$\langle \theta \rangle$};
             \vertex [above=1.2cm of FN] (phiN) {$\langle \theta \rangle$};
 
             \diagram*{
-            (L) -- [fermion] (F1),
+            (F1) -- [fermion] (L),
                 
             (F1)-- [fermion] (G1),
-            (G1)-- [fermion] (F2),   
+            (F2)-- [fermion] (G1),   
             
             (F2)-- [fermion] (G2),
-            (G2)--[fermion] (dots),
+            (dots)--[fermion] (G2),
             
             (dots)-- [fermion] (GN),
-            (GN)-- [fermion] (FN),
+            (FN)-- [fermion] (GN),
                 
             (FN)-- [fermion] (R),
 
@@ -225,11 +226,11 @@ heavy neutrino mass scale in order to explain why neutrinos have such small
 masses compared to the other observed SM fermionic fields via the
 renormalisable Lagrangian density terms 
 \begin{equation} \label{Neutrino Mass Lagrangian}
-  {\mathcal L} = \ldots - {\overline L_i} (Y_\nu)_{ij} \tilde H^\dag \nu_{R_j} 
+  {\mathcal L} = \ldots - {\overline L_i} (Y_\nu)_{ij} \tilde H \nu_{R_j} 
   - \frac{1}{2}
   {\overline{(\nu_{R_i})^c}} M_{ij} \nu_{R_j} + H.c., 
   \end{equation}
-where\footnote{We denote the second Pauli matrix as $\sigma_2$.} $\tilde H=i \sigma^2 H^\ast$,
+where\footnote{We denote the second Pauli matrix as $\sigma_2$.} $\tilde H=i \sigma_2 H^\ast$,
 $i,j \in \{1,2,3\}$ are family indices (with an implied Einstein
 summation convention on repeated indices), $SU(2)_L$ gauge indices have been
 suppressed and ${}^c$ denotes charge conjugation. $(Y_\nu)_{ij}$ is a matrix
@@ -288,7 +289,7 @@ neutrino mass eigenstates.
 
 In the \model, we already have right-handed neutrinos as well as a $U(1)_X$
 symmetry that potentially implements the FN mechanism. It is natural then to
-see if the FN mechanism can be made to work in a simple way that agrees with
+investigate if the FN mechanism can be made to work in a simple way that agrees with
 measurements of neutrino oscillations and constraints upon neutrino mass in
 detail utilising the Type I seesaw
 mechanism~\cite{Minkowski:1977sc,Yanagida:1980xy,Glashow:1979nm,Mohapatra:1979ia,Schechter:1979bn}. \emph{This
@@ -306,7 +307,7 @@ We achieve this with the
 implementation of a clockwork mechanism
 for the dimensionless neutrino Dirac Yukawa couplings, after which the  
 mass spectrum can be obtained quite naturally. The IH case requires an additional 
-suppression of two entries in the neutrino masses matrix. 
+suppression of two entries in the right-handed neutrino mass matrix. 
 We summarise and conclude in \cref{sec:conc}.
 
 \section{Origin of neutrino masses and lepton mixing} \label{sec:origin}
@@ -346,10 +347,11 @@ In the model, the right-handed neutrinos are given
 $X$ charges  $-1$, $-2$ and $0$, respectively, in order to cancel gauge
 anomalies\footnote{Strictly speaking, the right-handed neutrino with $0$
 $X$-charge is not required for gauge anomaly cancellation; it is added for
-aesthetic reasons.}. As explained in \cref{sec:intro}, we wish to see if the
+aesthetic reasons.}. As explained in \cref{sec:intro}, we wish to see if,  as
+well as suppressing CLFV, the
 $U(1)_X$ symmetry is compatible with neutrino masses and mixing parameters
 which agree with those extracted from neutrino oscillation phenomena via the
-FN mechanism as well as suppressing CLFV. 
+FN mechanism. 
 
 At the renormalisable level, ${Y}_\nu$ and ${M}$  are diagonal by virtue of them remaining invariant under the $U(1)_X$ charge assignment given in \cref{tab:lepton_charges}.
 \begin{equation} \label{renormalizable Y and M}
@@ -366,7 +368,7 @@ At the renormalisable level, ${Y}_\nu$ and ${M}$  are diagonal by virtue of them
     0 & 0 & \times 
     \end{pmatrix},
 \end{equation}
-which would imply no neutrino mixing and two massless right-handed neutrinos. These predictions are incompatible with experimental inference (given in \cref{tab:neutrino_angles_masses}) from neutrino oscillation phenomena~\cite{ParticleDataGroup:2024cfk}. In the basis where the charged lepton matrix is diagonal, which is natural for the \model, the Pontecorvo–Maki–Nakagawa–Sakata (PMNS) matrix arises solely due to the misalignment of the neutrino sector between the gauge and mass eigenbasis, i.e.
+which would imply no neutrino mixing and two massless right-handed neutrinos. These predictions are incompatible with experimental inference (given in \cref{tab:neutrino_angles_masses}) from neutrino oscillation phenomena~\cite{PDG}. In the basis where the charged lepton matrix is diagonal, which is natural for the \model, the Pontecorvo–Maki–Nakagawa–Sakata (PMNS) matrix arises solely due to the misalignment of the neutrino sector between the gauge and mass eigenbasis, i.e.
 \begin{equation} \label{eqn:PMNSdefn1}
     \begin{pmatrix}
         \nu_{eL} \\ \nu_{\mu L} \\ \nu_{\tau L} 
@@ -440,14 +442,14 @@ where we are assuming $M_{33} =\Lambda_{\text{FN}} a_{33}$. The problem with $M\
 \begin{equation}
     m_{\nu L} = -\frac{v^2}{2} Y_\nu M^{-1} Y_\nu^T \sim \frac{v^2}{\Lambda_{\text{FN}}} \sim 10 \,\text{GeV}.
 \end{equation}
-To match the current cosmological bounds $m_\nu \lesssim 0.1\text{eV}$, we
-require the Yukawa matrix in~\cref{FN Y and M} to be universally suppressed by
-a factor of $10^{-6}$. A natural mechanism to achieve this suppression,
+To match the current cosmological bounds $m_\nu \lesssim 0.1\text{~eV}$, we
+require the Yukawa matrix in~\cref{FN Y and M} to be suppressed by
+a universal factor of order $10^{-6}$. A natural mechanism to achieve this suppression,
 without fine-tuning, is through the clockwork mechanism detailed
 below~\cite{Kaplan:2015fuy,Giudice:2016yja,Choi:2015fiu,
-  park_clockwork_2018}. 
+  Park:2017yrn}. 
 
-In this setup, we promote each fundamental RH neutrino $\nu_{Rj}$, where $j=1,2,3$ is the generation index, into a $K-$node chain of vector-like SM-singlet fermions. Let
+In this setup, we promote each fundamental RH neutrino $\nu_{Rj}$, where $j=1,2,3$ is the generation index, into a $K$-node chain of vector-like SM-singlet fermions. Let
 $N_{Rj}^k \, (k=0,\dots,K)$ and $N_{Lj}^k \, (k=1,\dots,K)$ be the
 singlet-Weyl fermions constituting this chain, all carrying the same $U(1)_X$ charge as the corresponding generation RH neutrino $\nu_{Rj}$ ($X_j = -1,-2,0$). The SM Higgs is then localised
 at the $k=0$ site, such that the Froggatt-Nielsen Dirac interaction with the
@@ -457,13 +459,13 @@ with $N_{R j}^0$. To ensure that the Majorana mass matrix remains at the energy 
     \small
     -\mathcal{L}_{\text{INT}}  \supset  \overline{\bm{L}_{L i}} y_{ ij} \Big( \frac{\langle\theta\rangle}{\Lambda_{\text{FN}}}\Big)^{|X_i - X_j|} \tilde{H} \bm{N}^0_{R j}  +  \frac{\Lambda_{\text{FN}}}{2}  \overline{(\bm{N}_{Ri}^K)^c} a_{ij}  \Big( \frac{\langle\theta\rangle}{\Lambda_{\text{FN}}}\Big)^{|X_i + X_j|} \bm{N}_{Rj}^K + H.c.,
 \end{equation}
-\begin{figure} 
+\begin{figure}[h!] 
     \centering
     \begin{tikzpicture}
         \begin{feynman}
             \vertex (L) {$\overline{\bm{L}_{L i}}$};
             
-            % (V) IS VERTEX, (I) IS INSERTION
+            % (V) IS VERTEX, (I) IS INSERTION (FN SECTOR)
             \vertex[right=1.0cm of L] (V1);
             \vertex[right=0.8cm of V1] (I1);
 
@@ -475,54 +477,110 @@ with $N_{R j}^0$. To ensure that the Majorana mass matrix remains at the energy 
             \vertex[right=0.8cm of dots1] (IN);
             \vertex[right=0.8cm of IN] (VN);
 
-            \vertex[right=1.0cm of VN] (N0) {$N_{Rj}^0$};
-
-            \vertex[right=1.0cm of N0] (NR1) {$N_{Rj}^1$};
-            \vertex[above=1.5cm of NR1] (NL1) {$N_{Lj}^1$};
-
+            % CLOCKWORK SECTOR NODES
+            \vertex[right=1.0cm of VN] (N0);
+            \vertex[below=0.1cm of N0] (N0n){$N_{Rj}^0$};
             
-            \vertex[right=1.0cm of NR1] (NR2) {$N_{Rj}^2$};
-            \vertex[right=1.0cm of NL1] (NL2) {{$N_{Lj}^2$}};
-
+            \vertex[right=1.0cm of N0] (NR1);
+            \vertex[below=0.1cm of NR1] (NR1n){$N_{Rj}^1$};
+            
+            \vertex[above=1.5cm of NR1] (NL1);
+            \vertex[above=0.1cm of NL1] (NL1n){$N_{Lj}^1$};
+            
+            \vertex[right=1.0cm of NR1] (NR2);
+            \vertex[below=0.1cm of NR2] (NR2n){$N_{Rj}^2$};
+            
+            \vertex[right=1.0cm of NL1] (NL2);
+            \vertex[above=0.1cm of NL2] (NL2n){$N_{Lj}^2$};
+            
             \vertex[right=0.6cm of NR2] (NRm);
-            %{$\quad \quad \quad \quad \quad \dots \,\, \dots \,\, \dots$}
-            \vertex[above=0.7cm of NR2] (M2){$\quad \quad \quad \quad \quad \,\, \quad \quad \dots \,\, \dots \,\, \dots$};
+            \vertex[above=0.7cm of NR2] (M2){$\quad  \quad \quad \quad \,\, \quad \quad \dots \,\, \dots$};
             \vertex[right=0.6cm of NL2] (NLm);
-
             
-            \vertex[right=1.8cm of NLm] (NLK) {$N_{Lj}^K$};
-            \vertex[below=1.5cm of NLK] (NRK) {{$N_{Rj}^K$}};
+            \vertex[right=1.8cm of NLm] (NLK);
+            \vertex[above=0.1cm of NLK] (NLKn){$N_{Lj}^K$};
+            
+            \vertex[below=1.5cm of NLK] (NRK);
+            \vertex[below=0.1cm of NRK] (NRKn){$N_{Rj}^K$};
+            
             \vertex[above=0.3cm of NRK] (MK);
 
             \vertex[left=0.6cm of NRK] (NRKm);
             \vertex[right=1.8cm of M2] (MKm);
             \vertex[left=1.0cm of NLK] (NLKm);
 
-            %NAMES
+            % FN NAMES & INSERTIONS
             \vertex[below=0.1cm of I1] (psi1) {$\psi_{FN_1}$};
             \vertex[below=0.1cm of I2] (psi2) {$\psi_{FN_2}$};
             \vertex[below=0.1cm of IN] (psiN) {$\psi_{FN_N}$};
-            %THeta and H insertions
             \vertex[above=1.0cm of V1] (phi1) {$\tilde{H}$};
             \vertex[above=1.0cm of V2] (phi2) {$\langle \theta \rangle$};
             \vertex[above=1.0cm of VN] (phiN) {$\langle \theta \rangle$};
+
+            % MIDPOINTS FOR CLOCKWORK MASS INSERTIONS
+            \path (N0) -- (NL1) coordinate[midway] (C1);
+            \path (NL1) -- (NR1) coordinate[midway] (C2);
+            \path (NR1) -- (NL2) coordinate[midway] (C3);
+            \path (NL2) -- (NR2) coordinate[midway] (C4);
+            \path (NR2) -- (NLm) coordinate[midway] (C5);
+            \path (NRKm) -- (NLK) coordinate[midway] (CK1);
+            \path (NLK) -- (NRK) coordinate[midway] (CK2);
             
             \diagram*{
-            (L)--[fermion] (V1)--[fermion] (I1) --[fermion] (V2) --[fermion] (I2)--[fermion] (dots1) --[fermion] (IN) --[fermion] (VN) -- [fermion] (N0);
+            % FN SECTOR (Clashing Arrows)
+            (V1)--[fermion] (L);
+            (V1)--[fermion] (I1);
+            %(L)--[fermion] (V1)--[fermion] (I1);
+            (V2)-- [fermion] (I1);
+            (V2) --[fermion] (I2);
+            (dots1)--[fermion] (I2);
+            (dots1) --[fermion] (IN);
+            (VN) -- [fermion] (IN);
+            (VN) -- [fermion] (N0);
 
-            (N0) --[scalar] (NL1) -- [scalar] (NR1) -- [scalar] (NL2) -- [scalar] (NR2) -- [scalar] (NLm);
-            (NRKm) -- [scalar] (NLK) -- [scalar] (NRK);
+            % CLOCKWORK SECTOR (Clashing Arrows toward midpoints)
+            (N0) --[fermion] (C1);
+            (NL1) --[fermion] (C1);
+            
+            (NL1) --[fermion] (C2);
+            (NR1) --[fermion] (C2);
+            
+            (NR1) --[fermion] (C3);
+            (NL2) --[fermion] (C3);
+            
+            (NL2) --[fermion] (C4);
+            (NR2) --[fermion] (C4);
+            
+            (NR2) --[fermion] (C5);
+            (NLm) --[fermion] (C5);
+            
+            (NRKm) --[fermion] (CK1);
+            (NLK) --[fermion] (CK1);
+            
+            (NLK) --[fermion] (CK2);
+            (NRK) --[fermion] (CK2);
 
+            % SCALARS
             (V1) -- [scalar] (phi1);
             (V2) -- [scalar] (phi2);
             (VN) -- [scalar] (phiN);
-            
             };
 
-            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (I1);
-            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (I2);
-            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (IN);
+            % FN CROSSES
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (I1) {};
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (I2) {};
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (IN) {};
+            
+            % CLOCKWORK CROSSES
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (C1) {};
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (C2) {};
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (C3) {};
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (C4) {};
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (C5) {};
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (CK1) {};
+            \node [cross out, draw=black, thick, minimum size=5pt, inner sep=0pt] at (CK2) {};
 
+            % BRACE
             \draw [decorate, decoration={brace, amplitude=8pt, mirror}, thick] 
             ([xshift=0.1cm, yshift=-0.7cm]V2.center) -- ([yshift=-0.7cm]VN.center) 
             node [midway, below=10pt] {\large $|X_i-X_j|$};
@@ -530,13 +588,12 @@ with $N_{R j}^0$. To ensure that the Majorana mass matrix remains at the energy 
     \end{tikzpicture}
     \caption{A clockworked FN mechanism. The FN part of the mechanism is on
       the left-hand side of the diagram and the clockwork part on the
-      right-hand side. \bca{Why have you used dashed lines on the right? These
-    should be fermionic lines!}}
+      right-hand side.}
     \label{fig:CW with FN}
 \end{figure}
-By introducing $K+1$ RH fermions and $K$ LH fermions per generation in the chain, we get that the chiral symmetry group $U(1)_R^{K+1}\times U(1)_L^K$ is preserved. To break all but one chiral symmetry group, we add $K$ mass terms, $\mu \gtrsim \Lambda_{\text{FN}}$, on each of the nodes, and a series of nearest neighbour mass terms, $q_Y\mu$ (where $q_Y>1$), between the nodes,
+By introducing $K+1$ RH fermions and $K$ LH fermions per generation in the chain, the chiral symmetry group $U(1)_R^{K+1}\times U(1)_L^K$ is preserved. To break all but one chiral symmetry group, we add $K$ mass terms, $\mu \gtrsim \Lambda_{\text{FN}}$, on each of the nodes, and a series of nearest neighbour mass terms, $q_Y\mu$ (where $q_Y>1$), between the nodes,
 \begin{equation}
-    \mathcal{L}_{\text{CW}} = \mathcal{L}_{\text{KIN}} - \mu \sum_{k=1}^{K} (\overline N_{Lj}^{k}  N_{Rj}^{k} - q_Y \overline N_{L j}^{k}  N_{Rj}^{k-1}) + H.c.,
+    \mathcal{L}_{\text{CW}} = \mathcal{L}_{\text{KIN}} - \mu \sum_{k=1}^{K} (\overline N_{Lj}^{k}  N_{Rj}^{k} - q_Y \overline N_{L j}^{k}  N_{Rj}^{k-1}) + H.c.
 \end{equation}
 The chain only couples to $\overline{\bm{L}_{L_i}} \tilde H N_{R j }^0$,
 because the Higgs doublet and FN mediators are restricted to site 0 --- like
@@ -559,13 +616,13 @@ and is diagonalised by unitary rotations, $\text{diag}(0,M_1,\dots,M_K) = (V^L)^
 \end{equation}
 where the last approximation is in the regime $q_Y\gg 1,\ K \geq 1$. This gives us the exponential suppression as promised. Therefore~\cref{eqn:CWInt} becomes,
 \begin{equation} \label{eqn:eft Yukawa and Majorana}
-    -\mathcal{L}_{\text{EFT}} = q_Y^{-K}  y_{ij} \overline{\bm{L}_{L i}} \bigg(\frac{\langle \theta\rangle}{\Lambda_{\text{FN}}} \bigg)^{|X_i-X_j|} \tilde{H} \nu_{R j} +\frac{\Lambda_{\text{FN}}}{2}  \overline{(\bm{\nu}_{Ri})^c} a_{ij}  \Big( \frac{\langle\theta\rangle}{\Lambda_{\text{FN}}}\Big)^{|X_i + X_j|} \bm{\nu}_{Rj} +H.c.,
+    -\mathcal{L}_{\text{EFT}} = q_Y^{-K}  y_{ij} \overline{\bm{L}_{L i}} \bigg(\frac{\langle \theta\rangle}{\Lambda_{\text{FN}}} \bigg)^{|X_i-X_j|} \tilde{H} \nu_{R j} +\frac{\Lambda_{\text{FN}}}{2}  \overline{(\bm{\nu}_{Ri})^c} a_{ij}  \Big( \frac{\langle\theta\rangle}{\Lambda_{\text{FN}}}\Big)^{|X_i + X_j|} \bm{\nu}_{Rj} +H.c.
 \end{equation}
-We require the same value of $q_Y$ and $K$ for all three chains. 
+We require the same values of $q_Y$ and $K$ for all three chains. 
 For $q_Y = 10, K=6$, we get the suppression we need (or, for example, one
 could use $q_Y=3, K=13$ to achieve the same suppression factor if one worries
 that $q_Y=10$ is itself a fundamental dimensionless coupling of order 10). The physical
-active neutrino mass matrix is given by the Type-I seesaw formula: 
+active neutrino mass matrix is given by the Type I seesaw formula: 
 \begin{equation} \label{eqn:mnu_effective}
     m_{\nu L} = -q_Y^{-2K}\frac{v^2}{2} Y_\nu M^{-1} Y_\nu^T.
 \end{equation} 
@@ -658,7 +715,7 @@ Here, we shall follow
 Ref.~\cite{Allanach:2026rkb} and quantify naturalness according to the spread $r:=|Y_{max}|/|Y_{min}|$, i.e.\ the
 ratio of the maximum fundamental coupling to the
 minimum fundamental coupling.
-We shall view $r$ less than a few tens then to be natural; to be definite,
+We shall then view $r$ less than a few tens as natural; to be definite,
 we take $r \leq 30$ to be the default.
 
 The light approximately-left-handed neutrino mass matrix is given at tree level by the seesaw formula \cref{mnu_eff}.
@@ -708,7 +765,7 @@ Using second-order perturbation theory, keeping up to $\epsilon^2$ corrections t
 \end{aligned}
 \end{equation}
 %
-It is apparent therefore, that the eigenvalues follow the NH,
+It is apparent, therefore, that the eigenvalues follow the NH,
 $m_{\nu_1} < m_{\nu_2} \ll m_{\nu_3}$. Given the structure of the matrices,
 $X^{(i)}$, in~\cref{Lowest order - Unchanged}, the leading order estimate for
 the atmospheric mixing angle is $\theta_{23} \approx 0$ in contradiction with
@@ -747,7 +804,8 @@ uncertainty which is the average of the two asymmetric ones, for each quantity.
 Initially, gradient-based Markov Chain
 Monte Carlo (MCMC) methods such as Hamiltonian Monte Carlo (HMC) were
 considered, but they exhibited poor mixing across the 17-dimensional parameter
-space for the NH scan (and, below, across the 15-dimensional IH scan parameter space). Specifically, the independent MCMC chains
+space for the NH scan (and, below, across the 15-dimensional IH scan parameter
+space). Specifically, the independent MCMC chains 
 found posterior distributions for the parameters that were too different. 
 
 Consequently, we 
@@ -760,17 +818,27 @@ implemented with the Python package
      {\tt UltraNest} gives us a sampling where the density of points is
      proportional to the posterior PDFs.
 
-Our analytical arguments \cref{eq:epsilon-estimate}, obtained an estimate of
-$\epsilon = 0.42$; here we 
-choose a uniform prior $[0.1,0.5]$. The lower limit of 0.1 comes
-from not wanting to have too large a spread between the flavon VEV. $\langle\theta\rangle$, and the
-mass scale suppressing the FN diagrams, $\Lambda_{\text{FN}}$, because of naturalness. The Majorana mass scale, $\Lambda_{\text{FN}}$, acts as a scale parameter of the probability distribution of the prior and
+Our analytic arguments \cref{eq:epsilon-estimate} yielded the estimate
+$\epsilon = 0.42$; we 
+choose a uniform prior in $[0.1,0.5]$. The lower limit of $0.1$ comes
+from requiring not to have too large a hierarchy between the flavon VEV
+$\langle\theta\rangle$ and the mass scale suppressing the FN diagrams, $\Lambda_{\text{FN}}$.
+The upper bound of $0.5$ comes from requiring the FN mechanism to have a range
+of validity.
+The Majorana mass scale
+$\Lambda_{\text{FN}}\sim 10\text{~TeV}$ acts as a scale parameter of the
+probability distribution of the prior and 
 posterior $m_\nu= -\frac{v^2}{2q_Y^{2K}\Lambda_{\text{FN}}}Y \Sigma^{-1}A^{-1}\Sigma^{-1}Y^T$. The argument that such a dimensional scale parameter should have a
 prior that is invariant under scale transformations and is non-informative
 implies that we should use the Jeffreys prior $p(\Lambda_{\text{FN}}) \propto 1/\Lambda_{\text{FN}}$
-\cite{jeffreys_invariant_1946}. This translates to assigning a uniform
-distribution to the logarithm of this scale, as $\log_{10}(\Lambda_{\text{FN}}/\text{GeV})\sim \mathcal{U}[1,5]$, which is what is done to fix the prior in the nested
-sampling implementation. To ensure perturbative control, we fix $|y_{ij}|<3$
+\cite{jeffreys_invariant_1946}. This is equivalent to assigning a uniform
+distribution to the logarithm of this scale. Here, we choose a prior
+$\log_{10}(\Lambda_{\text{FN}}/\text{GeV})\sim \mathcal{U}[1,5]$.
+We note that the lower limit of this domain would imply $\langle \theta
+\rangle$ below the TeV scale, at odds with the TeV-scale $Z^\prime$ premise;
+however, the posterior is concentrated in the
+$\log_{10}(\Lambda_{\text{FN}}/\text{GeV})>3.2$ region, restoring consistency.
+To ensure perturbative control, we fix $|y_{ij}|<3$
 with the priors $y_{ij} \sim \mathcal{U}[-3,3]$ and $a_{ij} \sim
 \mathcal{U}[-3,3]$.
 
@@ -838,7 +906,7 @@ $1\sigma$. The final global evidence is $\log Z_{NH} = -26.52 \pm 0.02$.
 It is apparent from \cref{tab:NO_Posteriors} that the sampled posterior means of
 neutrino mass squared differences and mixing angles are all very similar to
 the experimental inputs. This is no surprise since our system is
-under constrained; it has more parameters than there are measured experimental
+under-constrained; it has more parameters than there are measured experimental
 observables.
 
 \subsection{Analytic approximation for IH} \label{sec:IH}
@@ -869,8 +937,8 @@ two independent zeroes that were acceptable with the dataset up until 2002).
 
 We expand the matrix $m_\nu$ as a series in $\epsilon$, similar to~\cref{eqn:mnu_expansion}, after factoring out some common factors, 
 \begin{equation}
-    m_\nu = \frac{v^2 q_Y^{-2K}}{2\Lambda_{\text{FN}}} \epsilon^{-3} (\tilde X^{(0)} + \epsilon \tilde
-    X^{(1)} + \epsilon^2 \tilde X^{(2)} + \cdots) 
+    m_\nu = \frac{v^2 q_Y^{-2K}}{2\Lambda_{\text{FN}}} \epsilon^{-3} \left[\tilde X^{(0)} + \epsilon \tilde
+    X^{(1)} + \epsilon^2 \tilde X^{(2)} + \mathcal{O}(\epsilon^3)\right] 
 \end{equation}
 where the matrices $\tilde X^{(i)}$ have the form
 \begin{equation}
@@ -892,71 +960,44 @@ where the matrices $\tilde X^{(i)}$ have the form
 We once again collect the overall coefficient setting the mass scale $m_{IH} := \frac{v^2 q_Y^{-2K}}{2\Lambda_{\text{FN}}}\epsilon^{-3}$ as in \cref{sec:anal}. We obtain
 mass eigenvalues\footnote{We fix the neutrino fields' phases here such that all masses $m_{i} \geq 0$.} (masses) 
 
-\begin{align}
-    m_{\nu_1} &= m_{IH} \left(A + \epsilon B+ \epsilon^2 C+{\mathcal{O}}(\epsilon^3) \right)\\
-    m_{\nu_2} &= m_{IH} \left(A - \epsilon B+  \epsilon^2 C+{\mathcal{O}}(\epsilon^3) \right)\\
-    m_{\nu_3} &= m_{IH} {\mathcal{O}}(\epsilon^3),
+\begin{align} 
+    m_{\nu_1} &= m_{IH} \left(A + \epsilon B+ \epsilon^2
+    C+{\mathcal{O}}(\epsilon^3) \right) \nonumber \\
+    m_{\nu_2} &= m_{IH} \left(A - \epsilon B+  \epsilon^2
+    C+{\mathcal{O}}(\epsilon^3) \right)\label{eqn:IHmasses} \\
+    m_{\nu_3} &= m_{IH} {\mathcal{O}}(\epsilon^3), \nonumber 
 \end{align}
-which is an IH i.e.,\ $m_{\nu_3} \ll m_{\nu_1} \approx m_{\nu_2}$, as
-expected. Therefore, we shall implement the numerical nested sampler to fit
+where $A$ and $B$ are
+homogeneous rational functions of the $a_{ij}$ and $y_{ij}$.
+\cref{eqn:IHmasses} corresponds to an IH i.e.,\ $m_{\nu_3} \ll m_{\nu_1}
+\approx m_{\nu_2}$, as
+expected. 
+\cref{eqn:IHmasses} implies
+$\Delta m_{21}^2 / |\Delta m_{32}^2| \approx 4 (B/A) \epsilon$; for $B/A=1$,
+matching the measured value of $0.0030$
+(from central values in \cref{tab:neutrino_angles_masses}) would require
+$\epsilon \approx 0.0075$, which is too small
+to reproduce the experimentally inferred
+mixing angles. Consequently, the ratio $A/B$ would need to be large to fit the
+IH spectrum. This is not as
+unlikely as one might imagine due to heavy tails in
+ratios of order unity dimensionless couplings~\cite{Allanach:2026rkb}. We
+shall implement the numerical nested sampler to fit 
 the parameters, $y_{ij},a_{ij},\Lambda_{\text{FN}}$ and $\epsilon$, with a
 likelihood function calibrated against the IH angles and mass squared
-differences~\cref{tab:neutrino_angles_masses}.
-\bca{Prabhoda, I think that there is still a problem in IH. The mass splitting
-wants small $\epsilon$ but that doesnt work for the angles. Then, in your
-numerical scan, you put epsilon between 0.1 and 0.5 again. Why is it that this
-comes out different to what the masses say? If it is the case that inverted
-doesnt work, thats alright because NH works. But I want to understand this
-point first.}
-\begin{comment}
-    where
-\begin{align}   
-    \frac{\Delta m_{21}^2}{|\Delta m_{32}^2|} &\approx \frac{4m_{IO}^2AB \epsilon}{m_{IO}^2 A^2} \Rightarrow
-    0.03 \approx 4 \Big(\frac{B}{A}\Big)\epsilon ,\label{ep}
-\end{align}
-A small expansion parameter $\epsilon \sim 0.03$, would fail to reproduce the
-mixing angles. Consequently, the $A/ B$ would need to be large to fit the
-IH spectrum data, around 50,
-outside our stated (but arbitrary) upper bound of 30. Since $A$ and $B$ are
-homogeneous rational functions of the $a_{ij}$ and $y_{ij}$, this is not as
-unlikely as one might imagine~\cite{Allanach:2026rkb}. We shall see below in
-Fig.~\ref{fig:Inverted_spread}, that 
-a spread of 50 has a survival probability of 20$\%$: hardly a tiny
-probability. We demonstrate this with a full numerical diagonalisation and
-scan of the IH parameter space.
-
-
-
-The nested sampler successfully identifies the regions of parameter space where this balance is achieved. The PMNS matrix has the (unnormalised) form, \pcs{I wonder whether the point being made, that this texture naturally gives us an IH, will be clearer if we do nḥot include the PMNS matrix or the mixing angles. The main argument is that the structure of the eigenvalues and the leading order $X^{(0)}$ implies an IH, whose parameter space is then further explored by the numerical scans}
-\begin{equation}
-    U =
-    \begin{pmatrix}
-        -1+ \epsilon u_{11}^{(1)} +\epsilon^2 u_{11}^{(2)} & 1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)} & \epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)} \\
-        1 + \epsilon u_{11}^{(1)} -\epsilon^2 u_{11}^{(2)} & 1 - \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)} &  -\epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)} \\
-        2\epsilon u_{13}^{(1)} &  \epsilon^2 u_{32}^{(2)} & 1 -2 \epsilon^2
-        (u_{13}^{(1)})^2
-    \end{pmatrix} + {\mathcal O}(\epsilon^3),
-\end{equation}
-giving us the mixing angles, 
-\begin{align}
-    \sin \theta_{13} &= |U_{e3}| \approx  \epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)} \\
-    \tan \theta_{12} &= \frac{|{U_{e2}}|}{{|U_{e1}|}} \approx \left|\frac{1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{12}^{(2)}}{-1 + \epsilon u_{11}^{(1)} +\epsilon^2 u_{11}^{(2)}}\right|\approx  1 + 2\epsilon  u_{11}^{(1)}+\epsilon^2 (u_{12}^{(2)} + u_{11}^{(2)}  + 2(u_{11}^{(1)})^2) \\
-    \tan \theta_{23} &= \frac{{|U_{\mu3}|}}{|{U_{\tau3}}|} \approx \left| \frac{ -\epsilon u_{13}^{(1)} +\epsilon^2 u_{13}^{(2)}}{ 1 -2\epsilon^2 (u_{13}^{(2)})^2} \right| \approx \epsilon u_{13}^{(1)} - \epsilon^2 u_{13}^{(2)}.
-\end{align}
-This is only a leading-order analytical estimate intended to demonstrate the IH model's viability.
-\end{comment}
+differences from \cref{tab:neutrino_angles_masses}.
 
 \subsection{Numerical scan for IH}
 
 We once again perform a global Bayesian parameter inference to map the parameter space that reproduces the observed mixing angles as in \cref{tab:neutrino_angles_masses}, using the same Python
 modules and configurations (\texttt{UltraNest}, $N_{\mathrm{live}} = 50\ 000$, $\Delta \log Z = 0.2$ and an effective sample size of $20\ 000$). 
-We use the same priors as in the NH case, i.e.\ uniform priors
-${\mathcal U}$ on all parameters. For the FN expansion parameter $\epsilon$,
-we assign a uniform prior $\epsilon \sim \mathcal{U}[0.1,0.5]$,
-based on our analytical arguments. The Majorana mass scale is
-again assigned a Jeffreys' prior, such that the prior distribution of its
-logarithm is uniform, $\log_{10} (\Lambda_{\text{FN}}/\text{GeV}) \sim \mathcal{U}[1,5]$. The rest of the
-Yukawa and Majorana elements are also assigned uniform priors, $\mathcal{U}[-3,3]$.
+We use the same priors as in the NH case, except that we fix $a_{11}=a_{13}=0$.
+%% For the FN expansion parameter $\epsilon$,
+%% we assign a uniform prior $\epsilon \sim \mathcal{U}[0.1,0.5]$,
+%% based on our analytical arguments. The Majorana mass scale is
+%% again assigned a Jeffreys' prior, such that the prior distribution of its
+%% logarithm is uniform, $\log_{10} (\Lambda_{\text{FN}}/\text{GeV}) \sim \mathcal{U}[1,5]$. The rest of the
+%% Yukawa and Majorana elements are also assigned uniform priors, $\mathcal{U}[-3,3]$.
 
 We again measure the spread of the final posterior samples of the elements of the Yukawa matrix using the ratio $r = |Y_{\text{max}}|/|Y_{\text{min}}|$, this time comparing the absolute values of all nine elements. This gives,
 \begin{equation} \label{IO:CDFPercent}
@@ -981,15 +1022,15 @@ final global evidence in this case is $\log Z_{IH} = -29.07 \pm 0.03$. The
 Bayes factor is then $\exp (\log Z_{NH} - \log Z_{IH}) = 12.81$ in favour of
 NH, which is strong evidence in support of NH over
 IH~\cite{jeffreys_theory_1998, lee_bayesian_2014}.
-Each evidence uses the corresponding NuFIT column of Table~\cref{tab:neutrino_angles_masses}, so the
-ratio omits the data´s own ordering preference:
+Each evidence uses the corresponding NuFIT column of~\cref{tab:neutrino_angles_masses}, so the
+ratio omits the data's own ordering preference:
 there already exists a
 preference for NH in the NuFIT global analyses, since it has a $\chi^2$ value
 which is 6.1 units lower than that of the IH. 
 
 \begin{figure}[h!]
     \centering\includegraphics[width=0.7\textwidth]{../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png}
-    \caption{CDF of the spread $r$ IH.}
+    \caption{CDF of the spread $r$ for IH.}
     \label{fig:Inverted_spread}
 \end{figure}
 \begin{figure}[h!]
@@ -1020,7 +1061,7 @@ which is 6.1 units lower than that of the IH.
         $\sin^2\theta_{23}$ & $0.5497 \pm 0.0134$ & $0.5500 \pm 0.0135$ \\
       \hline
     \end{tabular}
-    \caption{Posterior means and 1$\sigma$ theoretical uncertainties for the IH 
+    \caption{Posterior means and 1$\sigma$ standard deviations for the IH 
       fit under Nested Sampling. The experimental values and uncertainties are
       taken from {\tt NuFIT 6.0} (2024) global fits (with SK data) \cite{Esteban:2024eli}.}
     \label{tab:IO_Posteriors}
@@ -1031,7 +1072,7 @@ shown how the models reproduce the neutrino mass spectrum. However, some mild
 factors are required between the dimensionless couplings in order to acquire
 mixing that agrees with that inferred from neutrino oscillation data. These
 mild factors are quantified in the spread $r$, whose distributions are
-displayed in Figs.~\ref{fig:Normal_spread},\ref{fig:Inverted_spread}, respectively.
+displayed in Figs.~\ref{fig:Normal_spread} and~\ref{fig:Inverted_spread}, respectively.
 
 \section{Conclusions}\label{sec:conc}
 We have shown that the \model\ helps explain the small neutrino masses and
@@ -1043,15 +1084,17 @@ simultaneously put to three uses: to explain measurements involving the \bsll\ t
 A NH in the sub-eV neutrino spectrum which agrees with
 oscillation measurements can be explained with all fundamental Yukawa
 couplings of order one.  
-An inverted neutrino spectrum instead require the further suppression of two
+An inverted neutrino spectrum instead requires the further suppression of two
 fundamental dimensionless couplings beyond that implied by the FN mechanism, which
 could also be accommodated in an extended clockwork mechanism model as exemplified in Appendix~\ref{Sec:Clockwork}.
 
 Our analysis shows that successful neutrino mass patterns require an
 additional suppression mechanism such as clockwork for both NH and IH cases. 
 Assuming that the lightest neutrino has a mass much smaller than that of the
-next two lightest neutrinos, IH gives the sum of the three
-approximately left-handed light neutrinos is around 0.10~eV, in tension with the more aggressive DESI+CMB
+next two lightest neutrinos,
+in the IH case the sum of the three
+approximately left-handed light neutrino masses is around 0.10~eV, in tension
+with the more aggressive DESI+CMB 
 combinations of cosmological
 fit~\cite{collaboration_desi_2025}.
 The light neutrino mass matrix then predicts the mass parameter relevant for
@@ -1064,14 +1107,17 @@ imply
 neutrinoless double beta decay will not be seen in the next round of
 experiments. 
 
-The approximately RH neutrinos have a mass $\Lambda_{FN}\sim 10$~TeV, meaning
+The approximately RH neutrinos have masses ranging from $\epsilon^3
+\Lambda_{\text{FN}}$ up to $\Lambda_{\text{FN}}\sim 10$~TeV, meaning
 that they could participate in $Z^\prime$ phenomenology. If the $Z^\prime$ is
-massive enough, $Z^\prime \rightarrow \nu_R \overline{\nu_R}$ decays would
-modigy the $Z^\prime$ width and branching ratios. This could in principle
+massive enough, $Z^\prime \rightarrow \nu_{R_i} \nu_{R_j}$ decays would
+modify the $Z^\prime$ width and branching ratios. This could in principle
 change the quoted bound $M_{Z^\prime}>1.2$~TeV~\cite{Allanach:2024jls} from
-colliders. The total $Z^\prime$ width would increase by a factor 1.18, were
-$\nu_R$ to be massless and so this places an upper bound on how much the
-branching ratio into di-muon pairs could \emph{decrease}: by 1/1.18=0.84. Current
+colliders.
+The total $Z^\prime$ width would increase by a factor 1.18, were the
+$\nu_{R_{i,j}}$ to be massless, and so this places an upper bound on how much the
+branching ratio into di-muon pairs could \emph{decrease}: by a factor
+$1/1.18=0.84$. Current 
 LHC bounds on the $Z^\prime$ are dominated by
 searches for resonant di-muon pairs and are sensitive to the cross-section
 times branching ratio. Fig.~3a of Ref.~\cite{Allanach:2024jls} shows that such
@@ -1092,7 +1138,10 @@ by augmenting with further family gauge symmetries.
 
 Flavour deconstruction has recently attracted attention as regards neutrino masses in other settings: since neutrino masses and mixing angles look somewhat anarchic compared to the charged fermions of the SM~\cite{Hall:1999sn,deGouvea:2012ac}, it was not \emph{a priori} obvious that it would explain the patterns inferred from neutrino oscillation measurements. However, some generalities were considered in Ref.~\cite{Greljo:2024ovt}, where various models with flavour deconstructed $U(1)_R \times U(1)_{B-L}$ type symmetries at the heart of them were shown to yield enough neutrino anarchy. More recently, it was shown how extending this to flavour deconstructed $SU(2)_L \times U(1)_R \times U(1)_{B-L}$ gauge symmetry yields flavour anarchy with a particularly low (but still TeV-scale) spontaneous symmetry breaking scale~\cite{Isidori:2025rci}. 
 These two works did not attempt a simultaneous fit to neutral current $B$-anomalies, unlike the \model. 
-However, it had already been pointed out in Ref.~\cite{Bonilla:2017lsq} that $U(1)_{B_3-L_\mu}$ gauge symmetry, which was proposed to explain earlier neutral current $B$-anomaly measurements, would yield a type-I seesaw mechanism, although no detailed study of the neutrino sector was performed. 
+However, it had already been pointed out in Ref.~\cite{Bonilla:2017lsq} that
+$U(1)_{B_3-L_\mu}$ (in our normalisation) gauge symmetry, which was proposed
+to explain earlier 
+neutral current $B$-anomaly measurements, would yield a Type I seesaw mechanism, although no detailed study of the neutrino sector was performed. 
 
 The \model\ has the following to commend it within its preferred parameter space: neutrino masses and mixing angles
 that quantitatively fit data well (with a NH) with order unity
@@ -1107,11 +1156,12 @@ This work was partially supported by STFC HEP Consolidated grant
 ST/X000664/1. We thank the Cambridge Pheno Working Group for discussions. 
 
 \appendix
-\section{An additional clockwork mechanism for IH Yukawa entry suppression} \label{Sec:Clockwork}
-A possible way to achieve the majorana mass elements $a_{11} \sim a_{13} \ll
-1$ suppression required in the IH case of
+\section{An additional clockwork mechanism for IH Majorana mass matrix entry suppression} \label{Sec:Clockwork}
+A possible way to achieve the Majorana mass elements $a_{11},a_{13} \ll 1$
+suppression required in the IH case of 
 \cref{sec:IH} is via an additional clockwork mechanism
-\cite{Kaplan:2015fuy,Giudice:2016yja,Choi:2015fiu}. This is different from the setup employed in~\cref{sec:anal} with flavour dependent groups being introduced here.
+\cite{Kaplan:2015fuy,Giudice:2016yja,Choi:2015fiu}. This is different from the
+setup employed in~\cref{sec:anal} in that flavour-dependent groups are introduced here.
 The focus, primarily, will be on the bare Majorana matrix $A$ given in \cref{eqn:MajoranaMatrixFact}. This can be extended easily to the case with the mediators to create the FN suppression. 
 
 First, looking at the factorisation property of $M$,
@@ -1246,7 +1296,11 @@ with the coupling of $\nu_2$ to $\nu_3$, where we now use the spurion with
 charge $(0,\ 1, 1)$. Now, importantly, since there exists no spurion with
 charge $(1,\ 0,\ 1)$ or $(2,\ 0,\ 0)$, there can be no direct coupling as written in
 the Lagrangians \cref{eqn:IOCMdirect} or
-\cref{eqn:IOCMdiagonal}. Consequently, the effective couplings $a_{11}$ and $a_{13}$ are generated only at higher orders in the spurion expansion (e.g. via mixing through the $\nu_2$ sector), resulting in the suppression factors $q^{-m}$ and $q^{-n}$, respectively. Using the EOM as before, we can write down an effective Majorana mass matrix of the form,
+\cref{eqn:IOCMdiagonal}. Consequently, the effective couplings $a_{11}$ and
+$a_{13}$ are generated only at higher orders in the spurion expansion
+(e.g. via mixing through the $\nu_2$ sector), resulting in the suppression
+factors $q^{-m}$ and $q^{-n}$, respectively. Using the equations of motion, we
+can write down an effective Majorana mass matrix of the form
 \begin{equation}
     \Lambda_{\text{FN}}A = (\Lambda_{\text{FN}} q^{-1})
     \begin{pmatrix}
