@@ -24,9 +24,7 @@
 %\newcommand{\bca}[1]{\textcolor{blue}{BCA: #1}}
 %\newcommand{\pcs}[1]{\textcolor{red}{PCS: #1}}
 
-\title{\centering
-% Uncomment closer to the time of publication
-Neutrino masses and mixing angles in the \model}
+\title{Neutrino masses and mixing angles in the \model}
 
 \author[a]{Ben Allanach}
 \affiliation[a]{DAMTP, University of Cambridge, Wilberforce Road, Cambridge, 
@@ -103,7 +101,7 @@ satisfies experimental constraints from di-lepton production at LEP2, which rece
 from an intermediate tree-level off-shell $Z^\prime$ boson. Current LHC bounds upon
 direct searches for the $Z^\prime$ are rather modest: $M_{Z^\prime} > 1.2$~TeV~\cite{Allanach:2024jls} in the parameter range that is compatible with both perturbativity and the global fit. 
 
-The \model\ augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM. The $X$ charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus electron number minus twice muon number:
+The \model\ augments the gauge Lie algebra of the SM by a $u(1)_X$ summand additional to that of $u(1)$ hypercharge in the SM\@. The $X$ charges of the SM Weyl fermionic quantum fields are assigned to be equal to thrice third family baryon number minus electron number minus twice muon number:
 \begin{equation}
 X = 3B_3-L_e-2L_\mu.    
 \end{equation}
@@ -289,7 +287,7 @@ neutrino mass eigenstates.
 
 In the \model, we already have right-handed neutrinos as well as a $U(1)_X$
 symmetry that potentially implements the FN mechanism. It is natural then to
-investigate if the FN mechanism can be made to work in a simple way that agrees with
+see if the FN mechanism can be made to work in a simple way that agrees with
 measurements of neutrino oscillations and constraints upon neutrino mass in
 detail utilising the Type I seesaw
 mechanism~\cite{Minkowski:1977sc,Yanagida:1980xy,Glashow:1979nm,Mohapatra:1979ia,Schechter:1979bn}. \emph{This
@@ -761,7 +759,7 @@ Using second-order perturbation theory, keeping up to $\epsilon^2$ corrections t
     m_{\nu_2} &= \epsilon^2 m_{NH} \Bigg[
     \frac{(-\alpha_{12}^2 + \alpha_{11}\alpha_{22})y_{11}^2}{\alpha_{22}}
     \Bigg],\\[4pt]
-    m_{\nu_1} &= 0 .\label{NormalHierarchy}
+    m_{\nu_1} &= 0. \label{NormalHierarchy}
 \end{aligned}
 \end{equation}
 %
@@ -857,7 +855,7 @@ $P(r<30)=0.76$. We deduce that the fit is therefore of comparable naturalness to
 (within uncertainties) the untouched prior. 
 
 \begin{figure}[h!]
-    \centering\includegraphics[width=0.7\textwidth]{../Python/Data/Normal/CDF_naturalness.png}
+    \centering\includegraphics[width=0.7\textwidth]{CDF_naturalness.png}
     \caption{CDF of the spread $r$ for NH.}
     \label{fig:Normal_spread}
 \end{figure}
@@ -872,13 +870,13 @@ $1\sigma$. The final global evidence is $\log Z_{NH} = -26.52 \pm 0.02$.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{../Python/Data/Normal/Corner_Angles_Combined.png}
+    \includegraphics[width=0.9\textwidth]{Corner_Angles_Combined.png}
     \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (NH).}
     \label{fig:CornerPlot_NO_angles}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{../Python/Data/Normal/Corner_Masses_Combined.png}
+    \includegraphics[width=0.9\textwidth]{Corner_Masses_Combined.png}
     \caption{Posterior probability distributions of the mass scale, FN parameter and the mass squared differences (NH). The solid contours correspond to the 68$\%$ and 95$\%$ Bayesian credibility intervals.}
     \label{fig:CornerPlot_NO_masses}
 \end{figure}
@@ -910,7 +908,7 @@ under-constrained; it has more parameters than there are measured experimental
 observables.
 
 \subsection{Analytic approximation for IH} \label{sec:IH}
-As established in~\cref{sec:anal}, the leading-order mass matrix $X^{(0)}$ is diagonal with a single non-zero entry, $y_{22}^2 \alpha_{22}$, at $\mathcal{O}(\epsilon^0)$. In the language of non-degenerate Rayleigh-Schr\"odinger perturbation theory, $\alpha_{22}$ acts as the unperturbed energy gap ($\Delta$) separating the heaviest state from the massless subspace. The mixings induced by $X^{(1)}$ and $X^{(2)}$ act as small off-diagonal perturbations ($V$). When the gap is parametrically larger than the perturbations ($|\Delta| \gg |V|$), non-degenerate perturbation theory applies. This yields the widely split, hierarchical spectrum characteristic of the NH. However, IH requires the two heaviest eigenvalues to be degenerate at leading order $m_{\nu_3} \ll m_{\nu_1} \approx m_{\nu_2} $. To transition to the IH, one must force the unperturbed energy gap to close ($|\Delta| \lesssim |V|$), thereby intentionally breaking the non-degenerate expansion and driving a level-crossing. Physically, this is achieved by imposing $\alpha_{22} \ll 1$, which shifts the system strictly into the domain of degenerate perturbation theory.
+As established in~\cref{sec:anal}, the leading-order mass matrix $X^{(0)}$ is diagonal with a single non-zero entry, $y_{22}^2 \alpha_{22}$, at $\mathcal{O}(\epsilon^0)$. In the language of non-degenerate Rayleigh-Schr\"odinger perturbation theory, $\alpha_{22}$ acts as the unperturbed energy gap ($\Delta$) separating the heaviest state from the massless subspace. The mixings induced by $X^{(1)}$ and $X^{(2)}$ act as small off-diagonal perturbations ($V$). When the gap is parametrically larger than the perturbations ($|\Delta| \gg |V|$), non-degenerate perturbation theory applies. This yields the widely split, hierarchical spectrum characteristic of the NH\@. However, IH requires the two heaviest eigenvalues to be degenerate at leading order $m_{\nu_3} \ll m_{\nu_1} \approx m_{\nu_2} $. To transition to the IH, one must force the unperturbed energy gap to close ($|\Delta| \lesssim |V|$), thereby intentionally breaking the non-degenerate expansion and driving a level-crossing. Physically, this is achieved by imposing $\alpha_{22} \ll 1$, which shifts the system strictly into the domain of degenerate perturbation theory.
 
 A parametric suppression of the entry $\alpha_{22} \sim
 \mathcal{O}(\epsilon^2)$, so that $a_{11} \sim \mathcal{O}(\epsilon^2)$ and
@@ -1029,19 +1027,19 @@ preference for NH in the NuFIT global analyses, since it has a $\chi^2$ value
 which is 6.1 units lower than that of the IH. 
 
 \begin{figure}[h!]
-    \centering\includegraphics[width=0.7\textwidth]{../Python/Data/Inverted/Merged_CDF_IH_Yukawa.png}
+    \centering\includegraphics[width=0.7\textwidth]{Merged_CDF_IH_Yukawa.png}
     \caption{CDF of the spread $r$ for IH.}
     \label{fig:Inverted_spread}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{../Python/Data/Inverted/Corner_IH_Angles.png}
+    \includegraphics[width=0.9\textwidth]{Corner_IH_Angles.png}
     \caption{Posterior probability distributions of the mass scale, FN parameter and the mixing angles (IH).}
     \label{fig:CornerPlot_IO_angles}
 \end{figure}
 \begin{figure}[h!]
 \centering
-    \includegraphics[width=0.9\textwidth]{../Python/Data/Inverted/Corner_IH_Masses.png}
+    \includegraphics[width=0.9\textwidth]{Corner_IH_Masses.png}
     \caption{Posterior probability distributions of the mass scale, FN
       parameter and the mass squared differences (IH).}
     \label{fig:CornerPlot_IO_masses}
@@ -1080,7 +1078,7 @@ sizeable leptonic mixing angles that agree with those inferred from
 measurements of neutrino oscillation phenomena with the help of a clockwork
 mechanism to suppress all neutrino Dirac Yukawa couplings.
 The $U(1)_X$ gauge symmetry in the \model\ is then successfully and
-simultaneously put to three uses: to explain measurements involving the \bsll\ transition, to explain some of the hierarchies in neutrino masses and mixing angles and to suppress CLFV. 
+simultaneously put to three uses: to explain measurements involving the \bsll\ transition, to explain some of the hierarchies in neutrino masses and mixing angles and to suppress CLFV\@. 
 A NH in the sub-eV neutrino spectrum which agrees with
 oscillation measurements can be explained with all fundamental Yukawa
 couplings of order one.  
@@ -1298,7 +1296,7 @@ charge $(1,\ 0,\ 1)$ or $(2,\ 0,\ 0)$, there can be no direct coupling as writte
 the Lagrangians \cref{eqn:IOCMdirect} or
 \cref{eqn:IOCMdiagonal}. Consequently, the effective couplings $a_{11}$ and
 $a_{13}$ are generated only at higher orders in the spurion expansion
-(e.g. via mixing through the $\nu_2$ sector), resulting in the suppression
+(e.g.\ via mixing through the $\nu_2$ sector), resulting in the suppression
 factors $q^{-m}$ and $q^{-n}$, respectively. Using the equations of motion, we
 can write down an effective Majorana mass matrix of the form
 \begin{equation}

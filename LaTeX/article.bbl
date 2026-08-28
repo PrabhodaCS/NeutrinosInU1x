@@ -3,14 +3,14 @@
 \bibitem{LHCb:2021zwz}
 {\bf LHCb} Collaboration, R.~Aaij {\em et.~al.}, {\it {Branching Fraction
   Measurements of the Rare $B^0_s\rightarrow\phi\mu^+\mu^-$ and
-  $B^0_s\rightarrow f_2^\prime(1525)\mu^+\mu^-$- Decays}},  {\em Phys. Rev.
+  $B^0_s\rightarrow f_2^\prime(1525)\mu^+\mu^-$ Decays}},  {\em Phys. Rev.
   Lett.} {\bf 127} (2021), no.~15 151801
   [\href{http://arXiv.org/abs/2105.14007}{{\tt 2105.14007}}].
 
 \bibitem{CDF:2012qwd}
-{\bf CDF} Collaboration, {\it {Precise Measurements of Exclusive b
-  \textrightarrow{} s\textmu{}+\textmu{} \ensuremath{-} Decay Amplitudes Using
-  the Full CDF Data Set}}, .
+{\bf CDF} Collaboration, T.~Aaltonen {\em et.~al.}, {\it {Precise Measurements
+  of Exclusive $b \rightarrow s \mu^+ \mu^-$ Decay Amplitudes Using the Full
+  CDF Data Set}}, .
 
 \bibitem{LHCb:2013ghj}
 {\bf LHCb} Collaboration, R.~Aaij {\em et.~al.}, {\it {Measurement of
@@ -51,13 +51,10 @@ C.~Bobeth, M.~Chrzaszcz, D.~van Dyk and J.~Virto, {\it {Long-distance effects
 
 \bibitem{Parrott:2022zte}
 {\bf HPQCD} Collaboration, W.~G. Parrott, C.~Bouchard and C.~T.~H. Davies, {\it
-  {Standard Model predictions for
-  B\textrightarrow{}K\ensuremath{\ell}+\ensuremath{\ell}-,
-  B\textrightarrow{}K\ensuremath{\ell}1-\ensuremath{\ell}2+ and
-  B\textrightarrow{}K\ensuremath{\nu}\ensuremath{\nu}\textasciimacron{} using
-  form factors from Nf=2+1+1 lattice QCD}},  {\em Phys. Rev. D} {\bf 107}
-  (2023), no.~1 014511 [\href{http://arXiv.org/abs/2207.13371}{{\tt
-  2207.13371}}].
+  {Standard Model predictions for $B \rightarrow K \ell^+ \ell^-,\ B
+  \rightarrow K \ell_1^- \ell_2^+$ and $B \rightarrow K \nu\bar\nu$ using form
+  factors from $N_f=2+1+1$ lattice QCD}},  {\em Phys. Rev. D} {\bf 107} (2023),
+  no.~1 014511 [\href{http://arXiv.org/abs/2207.13371}{{\tt 2207.13371}}].
 
 \bibitem{Ciuchini:2021smi}
 M.~Ciuchini, M.~Fedele, E.~Franco, A.~Paul, L.~Silvestrini and M.~Valli, {\it
@@ -66,19 +63,19 @@ M.~Ciuchini, M.~Fedele, E.~Franco, A.~Paul, L.~Silvestrini and M.~Valli, {\it
   [\href{http://arXiv.org/abs/2110.10126}{{\tt 2110.10126}}].
 
 \bibitem{LHCb:2022qnv}
-{\bf LHCb} Collaboration, {\it {Test of lepton universality in $b \rightarrow s
-  \ell^+ \ell^-$ decays}},  \href{http://arXiv.org/abs/2212.09152}{{\tt
-  2212.09152}}.
+{\bf LHCb} Collaboration, R.~Aaij {\em et.~al.}, {\it {Test of lepton
+  universality in $b \rightarrow s \ell^+ \ell^-$ decays}},  {\em Phys. Rev.
+  Lett.} {\bf 131} (2023), no.~5 051803
+  [\href{http://arXiv.org/abs/2212.09152}{{\tt 2212.09152}}].
 
 \bibitem{PDG}
 {\bf Particle Data Group} Collaboration, S.~Navas {\em et.~al.}, {\it {Review
   of particle physics}},  {\em Phys. Rev. D} {\bf 110} (2024), no.~3 030001.
 
 \bibitem{Allanach:2023uxz}
-B.~Allanach and A.~Mullin, {\it {Plan B: new Z' models for b {\textrightarrow}
-  s{\ensuremath{\ell}}$^{+}${\ensuremath{\ell}}$^{-}$ anomalies}},  {\em JHEP}
-  {\bf 09} (2023) 173 [\href{http://arXiv.org/abs/2306.08669}{{\tt
-  2306.08669}}].
+B.~Allanach and A.~Mullin, {\it {Plan B: new $Z^\prime$ models for $b
+  \rightarrow s\ell^+\ell^-$ anomalies}},  {\em JHEP} {\bf 09} (2023) 173
+  [\href{http://arXiv.org/abs/2306.08669}{{\tt 2306.08669}}].
 
 \bibitem{Allanach:2024jls}
 B.~Allanach, {\it {LHC di-lepton searches for Z' bosons which explain
@@ -97,18 +94,13 @@ B.~Allanach, {\it {LHC di-lepton searches for Z' bosons which explain
 C.~D. Froggatt and H.~B. Nielsen, {\it {Hierarchy of Quark Masses, Cabibbo
   Angles and CP Violation}},  {\em Nucl. Phys. B} {\bf 147} (1979) 277--298.
 
-\bibitem{Yanagida:1980xy}
-T.~Yanagida, {\it {Horizontal Symmetry and Masses of Neutrinos}},  {\em Prog.
-  Theor. Phys.} {\bf 64} (1980) 1103.
-
-\bibitem{Gell-Mann:1979vob}
-M.~Gell-Mann, P.~Ramond and R.~Slansky, {\it {Complex Spinors and Unified
-  Theories}},  {\em Conf. Proc. C} {\bf 790927} (1979) 315--321
-  [\href{http://arXiv.org/abs/1306.4669}{{\tt 1306.4669}}].
-
 \bibitem{Minkowski:1977sc}
 P.~Minkowski, {\it {$\mu \to e\gamma$ at a Rate of One Out of $10^{9}$ Muon
   Decays?}},  {\em Phys. Lett. B} {\bf 67} (1977) 421--428.
+
+\bibitem{Yanagida:1980xy}
+T.~Yanagida, {\it {Horizontal Symmetry and Masses of Neutrinos}},  {\em Prog.
+  Theor. Phys.} {\bf 64} (1980) 1103.
 
 \bibitem{Glashow:1979nm}
 S.~L. Glashow, {\it {The Future of Elementary Particle Physics}},  {\em NATO
@@ -122,9 +114,10 @@ R.~N. Mohapatra and G.~Senjanovic, {\it {Neutrino Mass and Spontaneous Parity
 J.~Schechter and J.~W.~F. Valle, {\it {Comment on the Lepton Mixing Matrix}},
   {\em Phys. Rev. D} {\bf 21} (1980) 309.
 
-\bibitem{ParticleDataGroup:2024cfk}
-{\bf Particle Data Group} Collaboration, S.~Navas {\em et.~al.}, {\it {Review
-  of particle physics}},  {\em Phys. Rev. D} {\bf 110} (2024), no.~3 030001.
+\bibitem{Gell-Mann:1979vob}
+M.~Gell-Mann, P.~Ramond and R.~Slansky, {\it {Complex Spinors and Unified
+  Theories}},  {\em Conf. Proc. C} {\bf 790927} (1979) 315--321
+  [\href{http://arXiv.org/abs/1306.4669}{{\tt 1306.4669}}].
 
 \bibitem{Esteban:2024eli}
 I.~Esteban, M.~C. Gonzalez-Garcia, M.~Maltoni, I.~Martinez-Soler, J.~P.
@@ -138,15 +131,30 @@ F.~Capozzi, W.~Giar{\`e}, E.~Lisi, A.~Marrone, A.~Melchiorri and A.~Palazzo,
    {\em Phys. Rev. D} {\bf 111} (2025), no.~9 093006
   [\href{http://arXiv.org/abs/2503.07752}{{\tt 2503.07752}}].
 
+\bibitem{Kaplan:2015fuy}
+D.~E. Kaplan and R.~Rattazzi, {\it {Large field excursions and approximate
+  discrete symmetries from a clockwork axion}},  {\em Phys. Rev. D} {\bf 93}
+  (2016), no.~8 085007 [\href{http://arXiv.org/abs/1511.01827}{{\tt
+  1511.01827}}].
+
+\bibitem{Giudice:2016yja}
+G.~F. Giudice and M.~McCullough, {\it {A Clockwork Theory}},  {\em JHEP} {\bf
+  02} (2017) 036 [\href{http://arXiv.org/abs/1610.07962}{{\tt 1610.07962}}].
+
+\bibitem{Choi:2015fiu}
+K.~Choi and S.~H. Im, {\it {Realizing the relaxion from multiple axions and its
+  UV completion with high scale supersymmetry}},  {\em JHEP} {\bf 01} (2016)
+  149 [\href{http://arXiv.org/abs/1511.00132}{{\tt 1511.00132}}].
+
+\bibitem{Park:2017yrn}
+S.~C. Park and C.~S. Shin, {\it {Clockwork seesaw mechanisms}},  {\em Phys.
+  Lett. B} {\bf 776} (2018) 222--226
+  [\href{http://arXiv.org/abs/1707.07364}{{\tt 1707.07364}}].
+
 \bibitem{Allanach:2026rkb}
 B.~Allanach, {\it {The Fundaments of Unity: ${\mathcal O}(1)$ Couplings in
   Quantum Field Theories}},  \href{http://arXiv.org/abs/2606.12393}{{\tt
   2606.12393}}.
-
-\bibitem{github}
-B.~Allanach and P.~Sarjapur, ``{\tt NeutrinosInU1x}.''
-\newblock GitHub repository {\tt
-  https://github.com/PrabhodaCS/NeutrinosInU1x/releases/tag/v1.0.0}.
 
 \bibitem{Buchner:2014qmx}
 J.~Buchner, {\it {A statistical test for Nested Sampling algorithms}},  {\em
@@ -155,8 +163,8 @@ J.~Buchner, {\it {A statistical test for Nested Sampling algorithms}},  {\em
 
 \bibitem{Buchner_2019}
 J.~Buchner, {\it Collaborative nested sampling: Big data versus complex
-  physical models},  {\em Publications of the Astronomical Society of the
-  Pacific} {\bf 131} (Aug., 2019) 108005.
+  physical models},  {\em Publ.\ Astron.\ Soc\. Pac.} {\bf 131} (Aug., 2019)
+  108005.
 
 \bibitem{buchner2021ultranestrobustgeneral}
 J.~Buchner, {\it Ultranest -- a robust, general purpose bayesian inference
@@ -189,14 +197,14 @@ M.~Lee and E.~Wagenmakers, {\em Bayesian {Cognitive} {Modeling}: {A}
 \bibitem{collaboration_desi_2025}
 {\bf DESI} Collaboration, A.~G. Adame {\em et.~al.}, {\it {{DESI} 2024 {VI}:
   {Cosmological} {Constraints} from the {Measurements} of {Baryon} {Acoustic}
-  {Oscillations}}},  {\em Journal of Cosmology and Astroparticle Physics} {\bf
-  2025} (2025), no.~02 021. arXiv:2404.03002 [astro-ph.CO].
+  {Oscillations}}},  {\em JCAP} {\bf 2025} (2025), no.~02 021. arXiv:2404.03002
+  [astro-ph.CO].
 
 \bibitem{collaboration_search_2023}
 {\bf KamLAND-Zen} Collaboration, S.~Abe {\em et.~al.}, {\it Search for the
   {Majorana} {Nature} of {Neutrinos} in the {Inverted} {Mass} {Ordering}
-  {Region} with {KamLAND}-{Zen}},  {\em Physical Review Letters} {\bf 130}
-  (Jan., 2023) 051801. arXiv:2203.02139 [hep-ex].
+  {Region} with {KamLAND}-{Zen}},  {\em Phys.\ Rev.\ Lett.} {\bf 130} (Jan.,
+  2023) 051801. arXiv:2203.02139 [hep-ex].
 
 \bibitem{collaboration_legend-1000_2021}
 {\bf LEGEND-1000} Collaboration, N.~Abgrall {\em et.~al.}, {\it {LEGEND}-1000
@@ -206,8 +214,8 @@ M.~Lee and E.~Wagenmakers, {\em Bayesian {Cognitive} {Modeling}: {A}
 \bibitem{collaboration_nexo_2022}
 {\bf {NEXO}} Collaboration, G.~Adhikari {\em et.~al.}, {\it {NEXO}:
   {Neutrinoless} double beta decay search beyond $10^{28}$ year half-life
-  sensitivity},  {\em Journal of Physics G: Nuclear and Particle Physics} {\bf
-  49} (Jan., 2022) 015104. arXiv:2106.16243 [nucl-ex].
+  sensitivity},  {\em J.\ Phys. G} {\bf 49} (Jan., 2022) 015104.
+  arXiv:2106.16243 [nucl-ex].
 
 \bibitem{Bordone:2017bld}
 M.~Bordone, C.~Cornella, J.~Fuentes-Martin and G.~Isidori, {\it {A three-site
@@ -240,26 +248,6 @@ C.~Bonilla, T.~Modak, R.~Srivastava and J.~W.~F. Valle, {\it
   {$U(1)_{B_3-3L_\mu}$ gauge symmetry as a simple description of $b\to s$
   anomalies}},  {\em Phys. Rev. D} {\bf 98} (2018), no.~9 095002
   [\href{http://arXiv.org/abs/1705.00915}{{\tt 1705.00915}}].
-
-\bibitem{Kaplan:2015fuy}
-D.~E. Kaplan and R.~Rattazzi, {\it {Large field excursions and approximate
-  discrete symmetries from a clockwork axion}},  {\em Phys. Rev. D} {\bf 93}
-  (2016), no.~8 085007 [\href{http://arXiv.org/abs/1511.01827}{{\tt
-  1511.01827}}].
-
-\bibitem{Giudice:2016yja}
-G.~F. Giudice and M.~McCullough, {\it {A Clockwork Theory}},  {\em JHEP} {\bf
-  02} (2017) 036 [\href{http://arXiv.org/abs/1610.07962}{{\tt 1610.07962}}].
-
-\bibitem{Choi:2015fiu}
-K.~Choi and S.~H. Im, {\it {Realizing the relaxion from multiple axions and its
-  UV completion with high scale supersymmetry}},  {\em JHEP} {\bf 01} (2016)
-  149 [\href{http://arXiv.org/abs/1511.00132}{{\tt 1511.00132}}].
-
-\bibitem{Arkani-Hamed:2001kyx}
-N.~Arkani-Hamed, A.~G. Cohen and H.~Georgi, {\it {(De)constructing
-  dimensions}},  {\em Phys. Rev. Lett.} {\bf 86} (2001) 4757--4761
-  [\href{http://arXiv.org/abs/hep-th/0104005}{{\tt hep-th/0104005}}].
 
 \bibitem{Alonso:2018bcg}
 R.~Alonso, A.~Carmona, B.~M. Dillon, J.~F. Kamenik, J.~Martin~Camalich and

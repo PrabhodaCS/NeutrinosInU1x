@@ -1,8 +1,0 @@
-Dear Prabhoda
-
-I've been editing the draft today.
-
-There are some more things I need from you.
-Can you pin a release for the github repo? Then we shall refer to this version number, and can reference any mistake fixes with a further release, etc. 
-For reproducibility, in the draft, state the UltraNest random seeds/convergence criteria, and list package versions in one place (you already do this for UltraNest and corner — add numpy/scipy/python).
-
