@@ -34,13 +34,17 @@ warnings.filterwarnings('ignore')
 # CONFIG — edit here only
 # =============================================================================
 BASE   = os.path.dirname(os.path.abspath(__file__))
-OUTDIR = os.path.join(BASE, "NH_UltraNest")
-N_RUNS = 3
+OUTDIR = os.path.join(BASE, "NH_UltraNest1")
+# For local fast testing: run a single short run with relaxed convergence
+# and far fewer live points so it completes quickly on a laptop.
 
-MIN_LIVE     = 50_000   # live points — matches IH for methodological consistency
-CLUSTER_LIVE = 300      # min live pts per detected cluster
-DLOGZ        = 0.2      # convergence criterion
-NSTEPS       = 50       # slice sampler steps per new live point
+# These are much smaller than production settings and trade accuracy for speed.
+MIN_LIVE     = 50000
+CLUSTER_LIVE = 300
+DLOGZ        = 0.2
+NSTEPS       = 50            # same choice as your IH script, for comparability
+N_RUNS       = 3              # repeat, exactly like IH, to get run-to-run SD(logZ)
+# in sampler.run():
 
 # =============================================================================
 # PHYSICS — NuFIT 6.0 NH with SK atmospheric data
@@ -56,14 +60,16 @@ DATA_NH = {
     "s23":  (0.470,     0.015),      # lower octant NH best fit
 }
 
-NDIM = 16
+# NDIM must match the number of parameters in PARAM_NAMES
+
 PARAM_NAMES = [
     'log10_M0', 'epsilon',
     'y11', 'y12', 'y13',
-    'y21', 'y23', 'y31', 'y32', 'y33',   # y22=0 excluded
+    'y21', 'y22', 'y23', 
+    'y31', 'y32', 'y33',   # y22=0 unexcluded
     'a11', 'a12', 'a13', 'a22', 'a23', 'a33',
 ]
-
+NDIM = len(PARAM_NAMES)
 
 def loglike(x):
     """
@@ -92,12 +98,12 @@ def loglike(x):
     """
     M0 = 10**x[0]
     e  = x[1]
-    y11, y12, y13, y21, y23, y31, y32, y33 = x[2:10]
-    a11, a12, a13, a22, a23, a33 = x[10:16]
+    y11, y12, y13, y21,y22, y23, y31, y32, y33 = x[2:11]
+    a11, a12, a13, a22, a23, a33 = x[11:17]
 
     Y = np.array([
         [y11,    e*y12,     e*y13    ],
-        [e*y21,  0.0,       e**2*y23 ],
+        [e*y21,  y22,       e**2*y23 ],
         [e*y31,  e**2*y32,  y33      ],
     ], dtype=complex)
 
@@ -150,15 +156,33 @@ def loglike(x):
 
 def ptform(u):
     """
-    Maps u ~ Uniform[0,1]^16 to physical parameter space.
-    All parameters uniform — no restrictions.
+    Maps u ~ Uniform[0,1]^NDIM to physical parameter space.
+    Supports both 1-D (shape (NDIM,)) and 2-D (shape (n, NDIM)) inputs.
     """
-    u = np.clip(u, 0.0, 1.0)   # defensive clip against slice sampler overstepping
-    x       = np.empty(NDIM)
-    x[0]    = 13.0 + 4.0 * u[0]    # log10_M0 in [13, 17]
-    x[1]    = 0.1  + 0.4 * u[1]    # epsilon   in [0.1, 0.5]
-    x[2:16] = -3.0 + 6.0 * u[2:16] # y_ij, a_kl in [-3, 3]
-    return x
+    u = np.asarray(u)
+    if u.ndim == 1:
+        u = np.clip(u, 0.0, 1.0)
+        x = np.empty(NDIM)
+        x[0] = 13.0 + 4.0 * u[0]
+        x[1] = 0.1 + 0.4 * u[1]
+        # Yukawa (now includes y22) -> indices 2..10 (9 values)
+        x[2:11] = -3.0 + 6.0 * u[2:11]
+        # Majorana a_kl -> indices 11..16 (6 values)
+        x[11:17] = -3.0 + 6.0 * u[11:17]
+        return x
+    elif u.ndim == 2:
+        u = np.clip(u, 0.0, 1.0)
+        n = u.shape[0]
+        if u.shape[1] != NDIM:
+            raise AssertionError(f"Expected input with second dim {NDIM}, got {u.shape[1]}")
+        x = np.empty((n, NDIM))
+        x[:, 0] = 13.0 + 4.0 * u[:, 0]
+        x[:, 1] = 0.1 + 0.4 * u[:, 1]
+        x[:, 2:11] = -3.0 + 6.0 * u[:, 2:11]
+        x[:, 11:17] = -3.0 + 6.0 * u[:, 11:17]
+        return x
+    else:
+        raise AssertionError("Input u must be 1-D or 2-D array")
 
 
 def naturalness(samples):
@@ -167,7 +191,7 @@ def naturalness(samples):
     y22=0 is excluded by the index range — never include it.
     Never include Majorana a_kl (x[10:16]).
     """
-    y  = np.abs(samples[:, 2:10])
+    y  = np.abs(samples[:, 2:11])
     ym = np.where(y > 1e-10, y, np.inf)
     return np.where(
         np.isfinite(ym.min(1)) & (ym.min(1) > 0),
@@ -232,9 +256,9 @@ def run_single(run_i):
     result = sampler.run(
         min_num_live_points     = MIN_LIVE,
         cluster_num_live_points = CLUSTER_LIVE,
-        dlogz                   = DLOGZ,
-        min_ess                 = 20_000,
-        max_ncalls              = 2_000_000_000,
+        dlogz                   = DLOGZ,        
+        min_ess      = 20000,
+        max_ncalls   = 2_000_000_000,
         show_status             = True,
     )
 
