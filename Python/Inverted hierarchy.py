@@ -1,8 +1,25 @@
 """
-CONVERGENCE CHECK:
-  After all runs, the script prints SD(logZ) and the Skilling ratio.
-  SD(logZ) < 3*sqrt(H/N_live) means converged.
-  If not converged, increase MIN_LIVE (see CONFIG section).
+Inverted Hierarchy: Type-I seesaw with FN U(1)_X symmetry.
+
+Majorana:   a12, a22, a23, a33  (no texture zeros)
+NDIM = 15: log10_M0, epsilon, 9 Yukawa, 4 Majorana
+
+Parameter layout (16 total):
+  x[0]     = log10(M0)          in [13, 17]
+  x[1]     = epsilon            in [0.1, 0.5]
+  x[2:10]  = y11,y12,y13,y21,y23,y31,y32,y33   (8 Yukawa, y22=0)
+  x[10:14] = a12,a22,a23,a33            (6 Majorana, no zeros)
+
+NuFIT 6.0 NH with SK atmospheric data:
+  dm21 = 7.49e-5  ± 0.19e-5  eV^2
+  dm31 = 2.513e-3 ± 0.021e-3 eV^2
+  s12  = 0.308    ± 0.0115
+  s13  = 0.02215  ± 0.00057
+  s23  = 0.470    ± 0.015    (lower octant NH best fit)
+
+Naturalness: r = max|y_ij| / min|y_ij| over x[2:10] (8 Yukawa only).
+             y22=0 is excluded by construction.
+
 """
 
 import numpy as np
@@ -19,21 +36,10 @@ OUTDIR = os.path.join(BASE, "IH_UltraNest")
 N_RUNS = 3
 
 # UltraNest live points.
-# Start with 10,000. If run-to-run SD(logZ) > 0.1 nats after completion,
-# delete IH_UltraNest/ and re-run with MIN_LIVE = 50_000.
-# H_IH ≈ 35 nats (measured from dynesty N_dead/N_live).
-# Skilling sigma = sqrt(35/10000) = 0.059 nats.
-# Target: SD(logZ) < 3 * 0.059 = 0.18 nats.
 MIN_LIVE     = 50_000
 
-# Minimum live points per detected cluster.
-# This prevents small modes from being prematurely dropped.
-# 50 is the minimum for reliable per-cluster compression tracking.
 CLUSTER_LIVE = 300
 
-# Convergence: stop when remaining evidence < DLOGZ nats.
-# UltraNest's dlogz is defined differently from dynesty's.
-# dlogz=0.5 here ≈ dlogz=0.01 in dynesty.
 DLOGZ        = 0.2
 NSTEPS       = 50   # pass to SliceSampler
 
@@ -292,18 +298,6 @@ def run_single(run_i):
 # CONVERGENCE CHECK
 # =============================================================================
 def convergence_check(results):
-    """
-    Print convergence diagnostics and advise whether to re-run with
-    larger MIN_LIVE.
-
-    Theory (Skilling 2006):
-      sigma(logZ) = sqrt(H / N_live)
-    where H = -integral P(x|d) log P(x|d)/pi(x) dx is the KL divergence
-    (information gain). H ≈ N_dead / N_live from the dynesty runs (~35 nats).
-
-    Observed SD(logZ) should be < 3 * sigma_Skilling for convergence.
-    If it is much larger, the sampler is still hitting mode-switching issues.
-    """
     logZs      = np.array([m['logZ'] for m in results])
     p30s       = np.array([m['p30']  for m in results])
     spike_fracs = np.array([m['spike_frac'] for m in results])

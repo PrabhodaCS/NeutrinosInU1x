@@ -1,11 +1,8 @@
 """
-mcmc_NH_ultranest.py  —  NH Nested Sampling with UltraNest
-===========================================================
 Normal Hierarchy: Type-I seesaw with FN U(1)_X symmetry.
 
-NH texture: y22 = 0  (one Yukawa texture zero)
 Majorana:   a11, a12, a13, a22, a23, a33  (no texture zeros)
-NDIM = 16: log10_M0, epsilon, 8 Yukawa, 6 Majorana
+NDIM = 17: log10_M0, epsilon, 9 Yukawa, 6 Majorana
 
 Parameter layout (16 total):
   x[0]     = log10(M0)          in [13, 17]
@@ -23,7 +20,6 @@ NuFIT 6.0 NH with SK atmospheric data:
 Naturalness: r = max|y_ij| / min|y_ij| over x[2:10] (8 Yukawa only).
              y22=0 is excluded by construction.
 
-Run: python3 mcmc_NH_ultranest.py
 """
 
 import numpy as np
@@ -77,7 +73,7 @@ def loglike(x):
 
     Y matrix (y22 = 0 texture zero):
         [[y11,    e*y12,     e*y13  ],
-         [e*y21,  0,         e^2*y23],
+         [e*y21,  y22,         e^2*y23],
          [e*y31,  e^2*y32,   y33    ]]
 
     MR matrix (no texture zeros for NH):
