@@ -9,10 +9,6 @@
   "p30_mean": 68.92576296251384,
   "p30_SD": 5.080972036346794,
   "skilling_sigma": 0.026457513110645904,
-  "excess_factor": 3.4470629699994175,
-  "converged": false,
-  "spike_frac_mean": 7.945809123839176,
-  "spike_frac_SD": 1.6904275002773894,
   "individual_runs": [
     {
       "run_i": 0,
@@ -26,7 +22,6 @@
       "dlogz": 0.2,
       "sampler": "ultranest",
       "elapsed_hours": 51.489881505436365,
-      "spike_frac": 7.323493891959683,
       "H_nats": 26.578214522783924,
       "Herr_nats": 0.01792230653501994,
       "samples_count": 1722320
@@ -43,7 +38,6 @@
       "dlogz": 0.2,
       "sampler": "ultranest",
       "elapsed_hours": 51.796440099875134,
-      "spike_frac": 6.654753287138437,
       "H_nats": 26.458148863232196,
       "Herr_nats": 0.018831458607302,
       "samples_count": 1718516
@@ -60,7 +54,6 @@
       "dlogz": 0.2,
       "sampler": "ultranest",
       "elapsed_hours": 57.98964543037945,
-      "spike_frac": 9.859180192419407,
       "H_nats": 26.692152357004737,
       "Herr_nats": 0.01524208995759922,
       "samples_count": 1728308
@@ -84,9 +77,6 @@
     "mean_niter": 1723048.0,
     "total_ess": 880118.8455084433,
     "total_samples": 5169144,
-    "spike_frac_mean": 7.945809123839176,
-    "spike_frac_SD": 1.6904275002773894,
-    "spike_frac_pooled": 7.9489756911395775,
     "total_elapsed_hours": 161.27596703569094,
     "mean_elapsed_hours": 53.75865567856365
   }

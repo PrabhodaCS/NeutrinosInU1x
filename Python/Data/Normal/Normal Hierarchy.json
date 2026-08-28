@@ -9,8 +9,6 @@
   "p30_mean": 77.92174890106162,
   "p30_SD": 0.3491742589532162,
   "skilling_sigma": 0.025922962793631443,
-  "excess_factor": 2.168331077921897,
-  "converged": true,
   "individual_runs": [
     {
       "run_i": 0,
